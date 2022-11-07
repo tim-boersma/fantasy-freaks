@@ -1,0 +1,15 @@
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\bin\Debug\Fantasy Freaks.exe.config
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\bin\Debug\Fantasy Freaks.exe
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\bin\Debug\Fantasy Freaks.pdb
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.AssemblyReference.cache
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.SuggestedBindingRedirects.cache
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy_Freaks.Properties.Resources.resources
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.GenerateResource.cache
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.CoreCompileInputs.cache
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy Freaks.exe
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy Freaks.pdb
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FFWindow.resources
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormHomeScreen.resources
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormSportSelection.resources
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormTeamMaker.resources
+D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormUpcomingSeason.resources
