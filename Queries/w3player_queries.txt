@@ -1,0 +1,890 @@
+INSERT INTO Week3_Players
+VALUES ('Kyle Allen', 'QB', 'CAR', 261, 4, 0, 26, 19, 3, -1, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Deshaun Watson', 'QB', 'HOU', 351, 3, 0, 34, 25, 7, 18, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Patrick Mahomes', 'QB', 'KAN', 374, 3, 0, 37, 27, 4, 9, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Matt Ryan', 'QB', 'ATL', 304, 3, 1, 34, 29, 2, 3, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Ryan Fitzpatrick', 'QB', 'MIA', 29, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jacoby Brissett', 'QB', 'IND', 310, 2, 0, 37, 28, 3, 4, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mitchell Trubisky', 'QB', 'CHI', 231, 3, 1, 31, 25, 1, 2, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Teddy Bridgewater', 'QB', 'NOR', 177, 2, 0, 27, 19, 3, 12, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Daniel Jones', 'QB', 'NYG', 336, 2, 0, 36, 23, 4, 28, 2, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jameis Winston', 'QB', 'TAM', 380, 3, 1, 37, 23, 4, 3, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Kirk Cousins', 'QB', 'MIN', 174, 1, 0, 21, 15, 4, 16, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Gardner Minshew', 'QB', 'JAX', 204, 2, 0, 30, 20, 4, 18, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Tom Brady', 'QB', 'NWE', 306, 2, 0, 42, 28, 2, -1, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Derek Carr', 'QB', 'OAK', 242, 2, 1, 34, 27, 1, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Russell Wilson', 'QB', 'SEA', 406, 2, 0, 50, 32, 7, 51, 2, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Philip Rivers', 'QB', 'LAC', 318, 2, 0, 46, 31, 2, 9, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Aaron Rodgers', 'QB', 'GNB', 235, 1, 0, 29, 17, 1, -1, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Carson Wentz', 'QB', 'PHI', 259, 2, 0, 36, 19, 4, 33, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Dak Prescott', 'QB', 'DAL', 246, 2, 1, 32, 19, 2, 7, 1, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Matthew Stafford', 'QB', 'DET', 201, 1, 0, 32, 18, 3, 1, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jimmy Garoppolo', 'QB', 'SFO', 277, 1, 2, 32, 23, 6, 3, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Marcus Mariota', 'QB', 'TEN', 304, 0, 0, 40, 23, 6, 34, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mason Rudolph', 'QB', 'PIT', 174, 2, 1, 27, 14, 4, 15, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Josh Allen', 'QB', 'BUF', 243, 1, 1, 36, 23, 9, 46, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jared Goff', 'QB', 'LAR', 268, 2, 2, 38, 24, 4, 14, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Case Keenum', 'QB', 'WAS', 332, 2, 3, 43, 30, 2, 3, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Joe Flacco', 'QB', 'DEN', 213, 0, 1, 29, 20, 2, 5, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Kyler Murray', 'QB', 'ARI', 173, 2, 2, 43, 30, 8, 69, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Lamar Jackson', 'QB', 'BAL', 267, 0, 0, 43, 22, 8, 46, 1, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Baker Mayfield', 'QB', 'CLE', 195, 1, 1, 36, 18, 1, -1, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Andy Dalton', 'QB', 'CIN', 250, 1, 2, 36, 20, 1, 1, 1, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Josh Rosen', 'QB', 'MIA', 200, 0, 0, 39, 18, 3, 13, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Luke Falk', 'QB', 'NYJ', 98, 0, 1, 22, 12, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jarrett Stidham', 'QB', 'NWE', 14, 0, 1, 3, 2, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Christian McCaffrey', 'RB', 'CAR', 0, 0, 0, 0, 0, 24, 153, 1, 3, 4, 35, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Ezekiel Elliott', 'RB', 'DAL', 0, 0, 0, 0, 0, 19, 125, 0, 2, 3, 14, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Dalvin Cook', 'RB', 'MIN', 0, 0, 0, 0, 0, 16, 110, 1, 4, 5, 33, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mark Ingram', 'RB', 'BAL', 0, 0, 0, 0, 0, 16, 103, 3, 4, 4, 32, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Tony Pollard', 'RB', 'DAL', 0, 0, 0, 0, 0, 13, 103, 1, 3, 3, 25, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Nick Chubb', 'RB', 'CLE', 0, 0, 0, 0, 0, 23, 96, 0, 4, 7, 35, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Devonta Freeman', 'RB', 'ATL', 0, 0, 0, 0, 0, 16, 88, 0, 3, 4, 7, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Phillip Lindsay', 'RB', 'DEN', 0, 0, 0, 0, 0, 21, 81, 2, 4, 5, 49, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Ronald Jones', 'RB', 'TAM', 0, 0, 0, 0, 0, 14, 80, 0, 1, 1, 41, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Raheem Mostert', 'RB', 'SFO', 0, 0, 0, 0, 0, 12, 79, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Frank Gore', 'RB', 'BUF', 0, 0, 0, 0, 0, 14, 76, 1, 2, 2, 13, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Marlon Mack', 'RB', 'IND', 0, 0, 0, 0, 0, 16, 74, 1, 2, 3, 14, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Alvin Kamara', 'RB', 'NOR', 0, 0, 0, 0, 0, 16, 69, 1, 9, 10, 92, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Matt Breida', 'RB', 'SFO', 0, 0, 0, 0, 0, 14, 68, 0, 2, 3, 20, 0);
+
+INSERT INTO Week3_Players
+VALUES ('David Montgomery', 'RB', 'CHI', 0, 0, 0, 0, 0, 13, 67, 0, 3, 3, 14, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Leonard Fournette', 'RB', 'JAX', 0, 0, 0, 0, 0, 15, 66, 0, 6, 8, 26, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Royce Freeman', 'RB', 'DEN', 0, 0, 0, 0, 0, 15, 63, 0, 4, 5, 10, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Darrel Williams', 'RB', 'KAN', 0, 0, 0, 0, 0, 9, 62, 0, 5, 5, 47, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Joe Mixon', 'HB', 'CIN', 0, 0, 0, 0, 0, 15, 60, 0, 2, 2, 34, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Jamaal Williams', 'RB', 'GNB', 0, 0, 0, 0, 0, 12, 59, 0, 2, 2, 27, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Alexander Mattison', 'RB', 'MIN', 0, 0, 0, 0, 0, 12, 58, 1, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('LeSean McCoy', 'RB', 'KAN', 0, 0, 0, 0, 0, 8, 54, 1, 3, 3, 26, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Gus Edwards', 'RB', 'BAL', 0, 0, 0, 0, 0, 7, 53, 0, 2, 2, 15, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Miles Sanders', 'RB', 'PHI', 0, 0, 0, 0, 0, 13, 53, 0, 2, 4, 73, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Chris Carson', 'RB', 'SEA', 0, 0, 0, 0, 0, 15, 52, 0, 1, 1, -2, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Peyton Barber', 'RB', 'TAM', 0, 0, 0, 0, 0, 13, 48, 0, 2, 2, 7, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Rex Burkhead', 'RB', 'NWE', 0, 0, 0, 0, 0, 11, 47, 1, 6, 7, 22, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Derrick Henry', 'RB', 'TEN', 0, 0, 0, 0, 0, 17, 44, 1, 1, 2, 2, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Josh Jacobs', 'RB', 'OAK', 0, 0, 0, 0, 0, 10, 44, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('J.D. McKissic', 'RB', 'DET', 0, 0, 0, 0, 0, 1, 44, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('James Conner', 'RB', 'PIT', 0, 0, 0, 0, 0, 13, 43, 0, 4, 4, 14, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Todd Gurley', 'RB', 'LAR', 0, 0, 0, 0, 0, 14, 43, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Kenyan Drake', 'RB', 'MIA', 0, 0, 0, 0, 0, 12, 38, 0, 3, 6, 34, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jordan Howard', 'RB', 'PHI', 0, 0, 0, 0, 0, 11, 37, 1, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('David Johnson', 'RB', 'ARI', 0, 0, 0, 0, 0, 11, 37, 0, 6, 9, 28, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Adrian Peterson', 'RB', 'WAS', 0, 0, 0, 0, 0, 12, 37, 0, 1, 3, -3, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Austin Ekeler', 'RB', 'LAC', 0, 0, 0, 0, 0, 9, 36, 0, 7, 7, 45, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Kerryon Johnson', 'RB', 'DET', 0, 0, 0, 0, 0, 20, 36, 1, 1, 1, 7, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Le'Veon Bell', 'RB', 'NYJ', 0, 0, 0, 0, 0, 18, 35, 0, 4, 4, 28, 0);
+
+INSERT INTO Week3_Players
+VALUES ('T.J. Yeldon', 'RB', 'BUF', 0, 0, 0, 0, 0, 8, 30, 0, 2, 3, 19, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Chris Thompson', 'RB', 'WAS', 0, 0, 0, 0, 0, 7, 29, 0, 4, 5, 79, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mike Boone', 'RB', 'MIN', 0, 0, 0, 0, 0, 3, 28, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Justin Jackson', 'RB', 'LAC', 0, 0, 0, 0, 0, 5, 26, 0, 4, 4, 4, 0);
+
+INSERT INTO Week3_Players
+VALUES ('DeAndre Washington', 'RB', 'OAK', 0, 0, 0, 0, 0, 6, 22, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Sterling Shepard', 'WR', 'NYG', 0, 0, 0, 0, 0, 2, 21, 0, 7, 9, 100, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Carlos Hyde', 'RB', 'HOU', 0, 0, 0, 0, 0, 10, 19, 1, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Aaron Jones', 'RB', 'GNB', 0, 0, 0, 0, 0, 10, 19, 2, 1, 1, 4, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jeff Wilson', 'RB', 'SFO', 0, 0, 0, 0, 0, 8, 18, 2, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Robert Woods', 'WR', 'LAR', 0, 0, 0, 0, 0, 2, 18, 0, 3, 8, 40, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Kalen Ballage', 'RB', 'MIA', 0, 0, 0, 0, 0, 8, 17, 0, 1, 3, 10, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Chase Edmonds', 'RB', 'ARI', 0, 0, 0, 0, 0, 3, 15, 0, 1, 2, 10, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jalen Richard', 'RB', 'OAK', 0, 0, 0, 0, 0, 2, 15, 0, 3, 3, 14, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Cordarrelle Patterson', 'WR', 'CHI', 0, 0, 0, 0, 0, 4, 14, 0, 1, 1, 6, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Wayne Gallman', 'RB', 'NYG', 0, 0, 0, 0, 0, 5, 13, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Dion Lewis', 'RB', 'TEN', 0, 0, 0, 0, 0, 3, 13, 0, 1, 1, 7, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Breshad Perriman', 'WR', 'TAM', 0, 0, 0, 0, 0, 1, 13, 0, 1, 2, 6, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Phillip Dorsett', 'WR', 'NWE', 0, 0, 0, 0, 0, 2, 12, 0, 6, 7, 53, 1);
+
+INSERT INTO Week3_Players
+VALUES ('D.J. Moore', 'WR', 'CAR', 0, 0, 0, 0, 0, 1, 12, 0, 1, 2, 52, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Sony Michel', 'RB', 'NWE', 0, 0, 0, 0, 0, 9, 11, 1, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Saquon Barkley', 'RB', 'NYG', 0, 0, 0, 0, 0, 8, 10, 0, 4, 5, 27, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Isaiah McKenzie', 'WR', 'BUF', 0, 0, 0, 0, 0, 3, 10, 0, 1, 1, 9, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Johnny Holton', 'WR', 'PIT', 0, 0, 0, 0, 0, 1, 9, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Dawson Knox', 'TE', 'BUF', 0, 0, 0, 0, 0, 1, 9, 0, 3, 4, 67, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Brandin Cooks', 'WR', 'LAR', 0, 0, 0, 0, 0, 1, 8, 0, 8, 12, 112, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Darwin Thompson', 'RB', 'KAN', 0, 0, 0, 0, 0, 3, 8, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Malcolm Brown', 'RB', 'LAR', 0, 0, 0, 0, 0, 3, 7, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Taylor Gabriel', 'WR', 'CHI', 0, 0, 0, 0, 0, 1, 7, 0, 6, 7, 75, 3);
+
+INSERT INTO Week3_Players
+VALUES ('Mecole Hardman', 'WR', 'KAN', 0, 0, 0, 0, 0, 1, 7, 0, 2, 5, 97, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Darren Waller', 'TE', 'OAK', 0, 0, 0, 0, 0, 1, 7, 0, 13, 14, 134, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Diontae Johnson', 'WR', 'PIT', 0, 0, 0, 0, 0, 1, 6, 0, 3, 6, 52, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Benny Snell', 'RB', 'PIT', 0, 0, 0, 0, 0, 3, 6, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Giovani Bernard', 'HB', 'CIN', 0, 0, 0, 0, 0, 3, 5, 0, 2, 2, 7, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Reggie Bonnafon', 'RB', 'CAR', 0, 0, 0, 0, 0, 2, 5, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Taysom Hill', 'QB', 'NOR', 0, 0, 0, 0, 0, 1, 5, 0, 1, 1, 5, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Ty Johnson', 'RB', 'DET', 0, 0, 0, 0, 0, 4, 5, 0, 1, 2, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('C.J. Prosise', 'RB', 'SEA', 0, 0, 0, 0, 0, 4, 5, 0, 5, 5, 38, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Alex Armah', 'FB', 'CAR', 0, 0, 0, 0, 0, 1, 4, 0, 1, 1, 2, 0);
+
+INSERT INTO Week3_Players
+VALUES ('John Brown', 'WR', 'BUF', 0, 0, 0, 0, 0, 1, 4, 0, 4, 5, 51, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jakeem Grant', 'WR', 'MIA', 0, 0, 0, 0, 0, 1, 4, 0, 4, 7, 27, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Darren Sproles', 'RB', 'PHI', 0, 0, 0, 0, 0, 2, 4, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Dede Westbrook', 'WR', 'JAX', 0, 0, 0, 0, 0, 1, 4, 0, 5, 9, 46, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Keenan Allen', 'WR', 'LAC', 0, 0, 0, 0, 0, 1, 3, 0, 13, 17, 183, 2);
+
+INSERT INTO Week3_Players
+VALUES ('Nyheim Hines', 'RB', 'IND', 0, 0, 0, 0, 0, 2, 3, 0, 3, 4, 26, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mike Davis', 'RB', 'CHI', 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Duke Johnson', 'RB', 'HOU', 0, 0, 0, 0, 0, 2, 2, 0, 2, 3, 22, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Latavius Murray', 'RB', 'NOR', 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mohamed Sanu', 'WR', 'ATL', 0, 0, 0, 0, 0, 1, 2, 0, 6, 6, 75, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Josh Gordon', 'WR', 'NWE', 0, 0, 0, 0, 0, 1, 1, 0, 6, 11, 83, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Justice Hill', 'RB', 'BAL', 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Ty Montgomery', 'RB', 'NYJ', 0, 0, 0, 0, 0, 2, 1, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Adam Thielen', 'WR', 'MIN', 0, 0, 0, 0, 0, 1, 1, 1, 3, 5, 55, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Zach Line', 'FB', 'NOR', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Ito Smith', 'RB', 'ATL', 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Derek Watt', 'FB', 'LAC', 0, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Brandon Bolden', 'RB', 'NWE', 0, 0, 0, 0, 0, 2, -2, 0, 2, 3, 21, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Tarik Cohen', 'RB', 'CHI', 0, 0, 0, 0, 0, 4, -2, 0, 2, 4, 26, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Sean Mannion', 'QB', 'MIN', 0, 0, 0, 0, 0, 2, -2, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jordan Wilkins', 'RB', 'IND', 0, 0, 0, 0, 0, 3, -2, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mike Evans', 'WR', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 8, 15, 190, 3);
+
+INSERT INTO Week3_Players
+VALUES ('Tyler Lockett', 'WR', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 11, 14, 154, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Julio Jones', 'WR', 'ATL', 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 128, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Evan Engram', 'TE', 'NYG', 0, 0, 0, 0, 0, 0, 0, 0, 6, 8, 113, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Marvin Jones', 'WR', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 6, 9, 101, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Cooper Kupp', 'WR', 'LAR', 0, 0, 0, 0, 0, 0, 0, 0, 11, 12, 101, 2);
+
+INSERT INTO Week3_Players
+VALUES ('Marquez Valdes-Scantling', 'WR', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 6, 10, 99, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Adam Humphries', 'WR', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 6, 9, 93, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Travis Kelce', 'TE', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 7, 8, 89, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Kenny Stills', 'WR', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 4, 6, 89, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Amari Cooper', 'WR', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 88, 2);
+
+INSERT INTO Week3_Players
+VALUES ('Auden Tate', 'WR', 'CIN', 0, 0, 0, 0, 0, 0, 0, 0, 6, 10, 88, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Courtland Sutton', 'WR', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 87, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Paul Richardson', 'WR', 'WAS', 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 83, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Darius Slayton', 'WR', 'NYG', 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 82, 0);
+
+INSERT INTO Week3_Players
+VALUES ('JuJu Smith-Schuster', 'WR', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 3, 7, 81, 1);
+
+INSERT INTO Week3_Players
+VALUES ('DJ Chark', 'WR', 'JAX', 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 76, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Greg Olsen', 'TE', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 75, 2);
+
+INSERT INTO Week3_Players
+VALUES ('Jordan Akins', 'TE', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 73, 2);
+
+INSERT INTO Week3_Players
+VALUES ('Terry McLaurin', 'WR', 'WAS', 0, 0, 0, 0, 0, 0, 0, 0, 6, 8, 70, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Tajae Sharpe', 'WR', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 70, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Tyler Boyd', 'WR', 'CIN', 0, 0, 0, 0, 0, 0, 0, 0, 6, 11, 68, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Preston Williams', 'WR', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 4, 12, 68, 0);
+
+INSERT INTO Week3_Players
+VALUES ('DeAndre Hopkins', 'WR', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 67, 0);
+
+INSERT INTO Week3_Players
+VALUES ('D.K. Metcalf', 'WR', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 2, 6, 67, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Austin Hooper', 'TE', 'ATL', 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 66, 2);
+
+INSERT INTO Week3_Players
+VALUES ('O.J. Howard', 'TE', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 66, 0);
+
+INSERT INTO Week3_Players
+VALUES ('T.Y. Hilton', 'WR', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 8, 10, 65, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Zach Ertz', 'TE', 'PHI', 0, 0, 0, 0, 0, 0, 0, 0, 4, 7, 64, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Delanie Walker', 'TE', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 64, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Sammy Watkins', 'WR', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 5, 8, 64, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Will Dissly', 'TE', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 62, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Julian Edelman', 'WR', 'NWE', 0, 0, 0, 0, 0, 0, 0, 0, 7, 10, 62, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Mack Hollins', 'WR', 'PHI', 0, 0, 0, 0, 0, 0, 0, 0, 4, 7, 62, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jarvis Landry', 'WR', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 3, 9, 62, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Allen Robinson', 'WR', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 6, 7, 60, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Irv Smith', 'TE', 'MIN', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 60, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Christian Kirk', 'WR', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 10, 12, 59, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Nick Boyle', 'TE', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 58, 0);
+
+INSERT INTO Week3_Players
+VALUES ('George Kittle', 'TE', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 6, 8, 57, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Davante Adams', 'WR', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 56, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Odell Beckham', 'WR', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 6, 9, 56, 0);
+
+INSERT INTO Week3_Players
+VALUES ('DeVante Parker', 'WR', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 56, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Michael Thomas', 'WR', 'NOR', 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 54, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Jason Witten', 'TE', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 54, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Zach Pascal', 'WR', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 53, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Curtis Samuel', 'WR', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 53, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Will Fuller', 'WR', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 51, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Kyle Juszczyk', 'RB', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 51, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Nelson Agholor', 'WR', 'PHI', 0, 0, 0, 0, 0, 0, 0, 0, 8, 12, 50, 2);
+
+INSERT INTO Week3_Players
+VALUES ('Marquise Brown', 'WR', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 2, 9, 49, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Darren Fells', 'TE', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 49, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Cole Beasley', 'WR', 'BUF', 0, 0, 0, 0, 0, 0, 0, 0, 8, 10, 48, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Eric Ebron', 'TE', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 47, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Willie Snead', 'WR/RS', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 47, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jack Doyle', 'TE', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 46, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mike Williams', 'WR', 'LAC', 0, 0, 0, 0, 0, 0, 0, 0, 3, 7, 45, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Corey Davis', 'WR', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 44, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Deebo Samuel', 'WR', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 44, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Demarcus Robinson', 'WR', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 43, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Marquise Goodwin', 'WR', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 41, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Ryan Izzo', 'TE', 'NWE', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 41, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Chris Godwin', 'WR', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 40, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Devin Smith', 'WR', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 39, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jakobi Meyers', 'WR', 'NWE', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 38, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jarius Wright', 'WR', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 38, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Danny Amendola', 'WR', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 37, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Noah Fant', 'TE', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 37, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Seth Roberts', 'WR', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 37, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Larry Fitzgerald', 'WR', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 36, 1);
+
+INSERT INTO Week3_Players
+VALUES ('JJ Nelson', 'WR', 'OAK', 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 36, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Zay Jones', 'WR', 'BUF', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 33, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jaron Brown', 'WR', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 30, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Chris Conley', 'WR', 'JAX', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 30, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Vernon Davis', 'TE', 'WAS', 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 30, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Trey Quinn', 'WR', 'WAS', 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 30, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Braxton Berrios', 'WR', 'NYJ', 0, 0, 0, 0, 0, 0, 0, 0, 2, 6, 29, 0);
+
+INSERT INTO Week3_Players
+VALUES ('David Moore', 'WR', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 29, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Tyrell Williams', 'WR', 'OAK', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 29, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Hunter Renfrow', 'WR', 'OAK', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 28, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Danny Vitale', 'FB', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 27, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Damion Ratley', 'WR', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 26, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mo Alie-Cox', 'TE', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 25, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jamison Crowder', 'WR', 'NYJ', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 25, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Parris Campbell', 'WR', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 24, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Steven Sims', 'WR', 'WAS', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 24, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Randall Cobb', 'WR', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 23, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Dontrelle Inman', 'WR', 'LAC', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 23, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Dare Ogunbowale', 'RB', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 23, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Kendrick Bourne', 'WR', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 22, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Richie James', 'WR', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 22, 0);
+
+INSERT INTO Week3_Players
+VALUES ('John Ross', 'WR', 'CIN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 6, 22, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Trey Burton', 'TE', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 20, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jeff Heuerman', 'TE', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 20, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Dante Pettis', 'WR', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 4, 5, 20, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Jonnu Smith', 'TE', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 20, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Marcedes Lewis', 'TE', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 19, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Nick O'Leary', 'TE', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 19, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jeremy Sprinkle', 'TE', 'WAS', 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 19, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Malik Turner', 'WR', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 19, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Tyler Eifert', 'TE', 'CIN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 18, 0);
+
+INSERT INTO Week3_Players
+VALUES ('James O'Shaughnessy', 'TE', 'JAX', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 18, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Kenny Golladay', 'WR', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 2, 8, 17, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mark Andrews', 'TE', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 3, 7, 15, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Stefon Diggs', 'WR', 'MIN', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 15, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Gerald Everett', 'TE', 'LAR', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 15, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Ted Ginn', 'WR', 'NOR', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 15, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Anthony Miller', 'WR', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 15, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Logan Thomas', 'TE', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 15, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Hayden Hurst', 'TE', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 14, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Ricky Seals-Jones', 'TE', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 14, 0);
+
+INSERT INTO Week3_Players
+VALUES ('James Washington', 'WR', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 14, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Alex Erickson', 'WR', 'CIN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 13, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jesse James', 'TE', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 13, 0);
+
+INSERT INTO Week3_Players
+VALUES ('KeeSean Johnson', 'WR', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 13, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Lance Kendricks', 'TE', 'LAC', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 13, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Luke Stocker', 'TE', 'ATL', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 12, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Robby Anderson', 'WR', 'NYJ', 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 11, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Kyle Rudolph', 'TE', 'MIN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 11, 0);
+
+INSERT INTO Week3_Players
+VALUES ('JJ Arcega-Whiteside', 'WR', 'PHI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 10, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Nick Bawden', 'FB', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 10, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Deon Cain', 'WR', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 10, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Vance McDonald', 'TE', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 10, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Emmanuel Sanders', 'WR', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 10, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Damiere Byrd', 'WR', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 9, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Charles Clay', 'TE', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 9, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Michael Crabtree', 'WR', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 9, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Mike Gesicki', 'TE', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 9, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Nick Vannett', 'TE', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 9, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Geoff Swaim', 'TE', 'JAX', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 8, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Javon Wims', 'WR', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 8, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Cameron Brate', 'TE', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Jared Cook', 'TE', 'NOR', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 7, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Byron Pringle', 'WR', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 7, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Adam Shaheen', 'TE', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 7, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Justin Hardy', 'WR', 'ATL', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 6, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Chris Hogan', 'WR', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 6, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Allen Hurns', 'WR', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 6, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Calvin Ridley', 'WR', 'ATL', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 6, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Russell Shepard', 'WR', 'NYG', 0, 0, 0, 0, 0, 0, 0, 0, 1, 5, 6, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Travis Benjamin', 'WR/PR', 'LAC', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 5, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Bennie Fowler', 'WR', 'NYG', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 5, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Ryan Griffin', 'TE', 'NYJ', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 5, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Kenjon Barner', 'RB', 'ATL', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 4, 0);
+
+INSERT INTO Week3_Players
+VALUES ('A.J. Brown', 'WR', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 5, 4, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Josh Hill', 'TE', 'NOR', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 4, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Robert Tonyan', 'TE', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 4, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Rhett Ellison', 'TE', 'NYG', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 3, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Xavier Grimble', 'TE', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Blake Jarwin', 'TE', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 3, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Tommy Sweeney', 'TE', 'BUF', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 3, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Demetrius Harris', 'TE', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 1);
+
+INSERT INTO Week3_Players
+VALUES ('Blake Bell', 'TE', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0);
+
+INSERT INTO Week3_Players
+VALUES ('T.J. Hockenson', 'TE', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 1, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Foster Moreau', 'TE', 'OAK', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1, 0);
+
+INSERT INTO Week3_Players
+VALUES ('C.J. Ham', 'FB', 'MIN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Geronimo Allison', 'WR', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, -1, 0);
+
+INSERT INTO Week3_Players
+VALUES ('T.J. Jones', 'WR', 'NYG', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Nick Martin', 'C', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Gunner Olszewski', 'WR', 'NWE', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Deonte Harris', 'WR/RS', 'NOR', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Chad Beebe', 'WR', 'MIN', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Bobby McCain', 'S', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Austin Reiter', 'C', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week3_Players
+VALUES ('Adoree' Jackson', 'CB', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
