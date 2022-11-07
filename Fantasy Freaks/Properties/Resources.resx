@@ -121,13 +121,16 @@
   <data name="FFicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FFicon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FFlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FFlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IBMPlexSansThaiLooped_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IBMPlexSansThaiLooped-Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="FFlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FFlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="titlepic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\titlepic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Group 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Group 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -43,11 +43,11 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("IBM Plex Sans Thai Looped", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Inter", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.title.Location = new System.Drawing.Point(0, 0);
+            this.title.Location = new System.Drawing.Point(12, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(453, 85);
+            this.title.Size = new System.Drawing.Size(439, 58);
             this.title.TabIndex = 3;
             this.title.Text = "PICK YOUR TEAM";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

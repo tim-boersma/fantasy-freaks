@@ -19,7 +19,6 @@ namespace Fantasy_Freaks {
         private void FormHomeScreen_Load(object sender, EventArgs e) {
             logo.Parent = titleBackground;
             title.Parent = titleBackground;
-            FFWindow.instance.loadFont(this);
         }
 
         private void btnPlay_Click(object sender, EventArgs e) {

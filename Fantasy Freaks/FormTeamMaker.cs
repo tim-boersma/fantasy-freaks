@@ -15,7 +15,6 @@ namespace Fantasy_Freaks {
         }
 
         private void FormTeamMaker_Load(object sender, EventArgs e) {
-            FFWindow.instance.loadFont(this);
         }
     }
 }
