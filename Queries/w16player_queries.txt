@@ -1,0 +1,917 @@
+INSERT INTO Week16_Players
+VALUES ('Dwayne Haskins', 'QB', 'WAS', 133, 2, 0, 15, 12, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ryan Tannehill', 'QB', 'TEN', 272, 3, 0, 27, 17, 1, 8, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Daniel Jones', 'QB', 'NYG', 352, 5, 0, 42, 28, 3, 12, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Lamar Jackson', 'QB', 'BAL', 238, 3, 0, 31, 20, 17, 103, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Drew Brees', 'QB', 'NOR', 279, 3, 0, 38, 27, 3, -3, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Derek Carr', 'QB', 'OAK', 291, 1, 0, 30, 26, 1, 3, 1, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Michael Palardy', 'P', 'CAR', 12, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kelvin Harmon', 'WR', 'WAS', 11, 0, 0, 1, 1, 0, 0, 0, 5, 6, 58, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Patrick Mahomes', 'QB', 'KAN', 251, 2, 0, 33, 23, 2, 14, 1, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tom Brady', 'QB', 'NWE', 271, 1, 0, 33, 26, 4, 4, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Carson Wentz', 'QB', 'PHI', 319, 1, 0, 40, 31, 6, 22, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Case Keenum', 'QB', 'WAS', 158, 1, 0, 22, 16, 1, 1, 1, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Andy Dalton', 'QB', 'CIN', 396, 4, 0, 56, 33, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Mason Rudolph', 'QB', 'PIT', 129, 1, 0, 20, 14, 2, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ryan Fitzpatrick', 'QB', 'MIA', 419, 4, 1, 52, 31, 5, 9, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Josh Allen', 'QB', 'BUF', 208, 2, 0, 26, 13, 7, 43, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Drew Lock', 'QB', 'DEN', 192, 1, 0, 33, 25, 4, 10, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kyler Murray', 'QB', 'ARI', 118, 1, 0, 18, 11, 6, 40, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Logan Cooke', 'P', 'JAX', 7, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Sam Darnold', 'QB', 'NYJ', 183, 1, 0, 26, 16, 4, 3, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Andrew Beck', 'FB/TE', 'DEN', 6, 0, 0, 1, 1, 1, 3, 0, 1, 1, 1, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Philip Rivers', 'QB', 'LAC', 279, 0, 0, 39, 27, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Matt Ryan', 'QB', 'ATL', 384, 1, 2, 45, 32, 4, 6, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jared Goff', 'QB', 'LAR', 323, 2, 1, 46, 27, 4, 12, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Taysom Hill', 'QB', 'NOR', 20, 0, 0, 2, 1, 2, 11, 0, 2, 2, 21, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Baker Mayfield', 'QB', 'CLE', 192, 2, 1, 33, 20, 2, 4, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Russell Wilson', 'QB', 'SEA', 169, 1, 0, 31, 16, 2, 2, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('David Blough', 'QB', 'DET', 117, 1, 0, 24, 12, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Dak Prescott', 'QB', 'DAL', 265, 0, 0, 44, 25, 1, 7, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Gardner Minshew', 'QB', 'JAX', 181, 1, 0, 31, 13, 7, 36, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jimmy Garoppolo', 'QB', 'SFO', 248, 1, 2, 27, 16, 4, 5, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Aaron Rodgers', 'QB', 'GNB', 216, 0, 1, 40, 26, 3, -3, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Mitchell Trubisky', 'QB', 'CHI', 157, 0, 0, 34, 18, 6, 20, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jacoby Brissett', 'QB', 'IND', 119, 0, 0, 27, 14, 3, 37, 1, 1, 1, 2, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Deshaun Watson', 'QB', 'HOU', 184, 0, 1, 32, 19, 7, 37, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Brett Hundley', 'QB', 'ARI', 49, 0, 0, 9, 4, 6, 35, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kirk Cousins', 'QB', 'MIN', 122, 1, 1, 31, 16, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jameis Winston', 'QB', 'TAM', 335, 1, 4, 48, 25, 2, 16, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Will Grier', 'QB', 'CAR', 224, 0, 3, 44, 27, 4, 17, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Stefon Diggs', 'WR', 'MIN', 0, 0, 0, 1, 0, 0, 0, 0, 3, 5, 57, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Devlin Hodges', 'QB', 'PIT', 84, 0, 2, 17, 11, 1, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Saquon Barkley', 'RB', 'NYG', 0, 0, 0, 0, 0, 22, 189, 1, 4, 4, 90, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Kenyan Drake', 'RB', 'ARI', 0, 0, 0, 0, 0, 24, 166, 2, 3, 4, 18, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Aaron Jones', 'RB', 'GNB', 0, 0, 0, 0, 0, 23, 154, 2, 2, 3, 6, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Phillip Lindsay', 'RB', 'DEN', 0, 0, 0, 0, 0, 19, 109, 1, 2, 3, 9, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Sony Michel', 'RB', 'NWE', 0, 0, 0, 0, 0, 21, 96, 0, 1, 2, 5, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Marlon Mack', 'RB', 'IND', 0, 0, 0, 0, 0, 16, 95, 1, 2, 2, 6, 0);
+
+INSERT INTO Week16_Players
+VALUES ('DeAndre Washington', 'RB', 'OAK', 0, 0, 0, 0, 0, 23, 85, 1, 2, 3, 21, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jordan Wilkins', 'RB', 'IND', 0, 0, 0, 0, 0, 9, 84, 1, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Alvin Kamara', 'RB', 'NOR', 0, 0, 0, 0, 0, 11, 80, 2, 6, 7, 30, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Miles Sanders', 'RB', 'PHI', 0, 0, 0, 0, 0, 20, 79, 1, 5, 6, 77, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ronald Jones', 'RB', 'TAM', 0, 0, 0, 0, 0, 14, 77, 1, 3, 4, 32, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Le'Veon Bell', 'RB', 'NYJ', 0, 0, 0, 0, 0, 25, 72, 0, 4, 4, 21, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Leonard Fournette', 'RB', 'JAX', 0, 0, 0, 0, 0, 15, 71, 0, 3, 6, 34, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Dion Lewis', 'RB', 'TEN', 0, 0, 0, 0, 0, 15, 68, 0, 1, 2, 19, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Gus Edwards', 'RB', 'BAL', 0, 0, 0, 0, 0, 12, 66, 0, 1, 1, 7, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Brian Hill', 'RB', 'ATL', 0, 0, 0, 0, 0, 7, 66, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Damien Williams', 'RB', 'KAN', 0, 0, 0, 0, 0, 16, 65, 0, 3, 3, 27, 1);
+
+INSERT INTO Week16_Players
+VALUES ('David Montgomery', 'RB', 'CHI', 0, 0, 0, 0, 0, 13, 57, 0, 1, 1, 2, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Myles Gaskin', 'RB', 'MIA', 0, 0, 0, 0, 0, 16, 55, 1, 1, 3, 3, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Mark Ingram', 'RB', 'BAL', 0, 0, 0, 0, 0, 8, 55, 0, 2, 2, 36, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Christian McCaffrey', 'RB', 'CAR', 0, 0, 0, 0, 0, 13, 54, 0, 15, 15, 119, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Devonta Freeman', 'RB', 'ATL', 0, 0, 0, 0, 0, 13, 53, 1, 9, 10, 74, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Raheem Mostert', 'RB', 'SFO', 0, 0, 0, 0, 0, 11, 53, 1, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Joe Mixon', 'HB', 'CIN', 0, 0, 0, 0, 0, 21, 50, 0, 2, 2, 23, 0);
+
+INSERT INTO Week16_Players
+VALUES ('A.J. Brown', 'WR', 'TEN', 0, 0, 0, 0, 0, 1, 49, 1, 1, 2, 34, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Todd Gurley', 'RB', 'LAR', 0, 0, 0, 0, 0, 15, 48, 2, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ezekiel Elliott', 'RB', 'DAL', 0, 0, 0, 0, 0, 13, 47, 0, 7, 7, 37, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Devin Singletary', 'RB', 'BUF', 0, 0, 0, 0, 0, 15, 46, 0, 1, 1, 2, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Nick Chubb', 'RB', 'CLE', 0, 0, 0, 0, 0, 15, 45, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kerryon Johnson', 'RB', 'DET', 0, 0, 0, 0, 0, 10, 42, 0, 1, 1, 1, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Chris Carson', 'RB', 'SEA', 0, 0, 0, 0, 0, 8, 40, 0, 1, 1, 20, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Adrian Peterson', 'RB', 'WAS', 0, 0, 0, 0, 0, 15, 36, 1, 2, 2, 19, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Bo Scarbrough', 'RB', 'DET', 0, 0, 0, 0, 0, 8, 34, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Chris Thompson', 'RB', 'WAS', 0, 0, 0, 0, 0, 8, 34, 0, 4, 4, 18, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tevin Coleman', 'RB', 'SFO', 0, 0, 0, 0, 0, 5, 33, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jamaal Williams', 'RB', 'GNB', 0, 0, 0, 0, 0, 6, 33, 0, 2, 2, 19, 0);
+
+INSERT INTO Week16_Players
+VALUES ('James Conner', 'RB', 'PIT', 0, 0, 0, 0, 0, 6, 32, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Mike Boone', 'RB', 'MIN', 0, 0, 0, 0, 0, 11, 28, 0, 1, 1, 5, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Royce Freeman', 'RB', 'DEN', 0, 0, 0, 0, 0, 9, 28, 1, 2, 2, 9, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Deebo Samuel', 'WR', 'SFO', 0, 0, 0, 0, 0, 3, 28, 1, 4, 6, 31, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ameer Abdullah', 'RB', 'MIN', 0, 0, 0, 0, 0, 4, 27, 0, 6, 7, 31, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Carlos Hyde', 'RB', 'HOU', 0, 0, 0, 0, 0, 17, 27, 1, 1, 1, 10, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Dalyn Dawkins', 'RB', 'TEN', 0, 0, 0, 0, 0, 9, 24, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kerrith Whyte', 'RB', 'PIT', 0, 0, 0, 0, 0, 6, 22, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Rex Burkhead', 'RB', 'NWE', 0, 0, 0, 0, 0, 5, 20, 1, 4, 4, 77, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ty Johnson', 'RB', 'DET', 0, 0, 0, 0, 0, 3, 20, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Justice Hill', 'RB', 'BAL', 0, 0, 0, 0, 0, 3, 19, 1, 3, 4, 32, 0);
+
+INSERT INTO Week16_Players
+VALUES ('David Moore', 'WR', 'SEA', 0, 0, 0, 0, 0, 1, 19, 0, 1, 2, 21, 0);
+
+INSERT INTO Week16_Players
+VALUES ('N'Keal Harry', 'WR', 'NWE', 0, 0, 0, 0, 0, 2, 18, 0, 2, 3, 21, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Patrick Laird', 'RB', 'MIA', 0, 0, 0, 0, 0, 8, 17, 0, 1, 1, 1, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Travis Homer', 'RB', 'SEA', 0, 0, 0, 0, 0, 5, 16, 0, 6, 8, 26, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Cordarrelle Patterson', 'WR', 'CHI', 0, 0, 0, 0, 0, 1, 16, 0, 1, 1, 5, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Melvin Gordon', 'RB', 'LAC', 0, 0, 0, 0, 0, 9, 15, 2, 6, 7, 32, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Latavius Murray', 'RB', 'NOR', 0, 0, 0, 0, 0, 7, 14, 0, 2, 3, 11, 0);
+
+INSERT INTO Week16_Players
+VALUES ('C.J. Prosise', 'RB', 'SEA', 0, 0, 0, 0, 0, 4, 14, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Benny Snell', 'RB', 'PIT', 0, 0, 0, 0, 0, 7, 14, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Darwin Thompson', 'RB', 'KAN', 0, 0, 0, 0, 0, 5, 14, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Spencer Ware', 'RB', 'KAN', 0, 0, 0, 0, 0, 5, 14, 0, 2, 3, 22, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Peyton Barber', 'RB', 'TAM', 0, 0, 0, 0, 0, 5, 13, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Reggie Bonnafon', 'RB', 'CAR', 0, 0, 0, 0, 0, 2, 12, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Boston Scott', 'RB', 'PHI', 0, 0, 0, 0, 0, 3, 12, 0, 6, 6, 7, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Austin Ekeler', 'RB', 'LAC', 0, 0, 0, 0, 0, 4, 11, 0, 5, 6, 58, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jalen Richard', 'RB', 'OAK', 0, 0, 0, 0, 0, 5, 11, 0, 4, 4, 18, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Christian Kirk', 'WR', 'ARI', 0, 0, 0, 0, 0, 2, 9, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Steven Sims', 'WR', 'WAS', 0, 0, 0, 0, 0, 2, 9, 0, 6, 10, 64, 2);
+
+INSERT INTO Week16_Players
+VALUES ('Albert Wilson', 'WR', 'MIA', 0, 0, 0, 0, 0, 1, 9, 0, 7, 7, 79, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tarik Cohen', 'RB', 'CHI', 0, 0, 0, 0, 0, 2, 8, 0, 3, 4, 25, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kareem Hunt', 'RB', 'CLE', 0, 0, 0, 0, 0, 2, 8, 0, 4, 4, 33, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Russell Gage', 'WR', 'ATL', 0, 0, 0, 0, 0, 2, 7, 0, 5, 6, 49, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Darrell Henderson', 'RB', 'LAR', 0, 0, 0, 0, 0, 2, 7, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ty Montgomery', 'RB', 'NYJ', 0, 0, 0, 0, 0, 2, 7, 0, 1, 1, 1, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jaylen Samuels', 'RB', 'PIT', 0, 0, 0, 0, 0, 3, 7, 0, 4, 6, 32, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Keelan Cole', 'WR', 'JAX', 0, 0, 0, 0, 0, 1, 6, 0, 1, 2, 23, 0);
+
+INSERT INTO Week16_Players
+VALUES ('John Ross', 'WR', 'CIN', 0, 0, 0, 0, 0, 2, 6, 0, 6, 13, 84, 0);
+
+INSERT INTO Week16_Players
+VALUES ('De'Lance Turner', 'RB', 'MIA', 0, 0, 0, 0, 0, 4, 6, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Robert Woods', 'WR', 'LAR', 0, 0, 0, 0, 0, 2, 6, 0, 8, 11, 117, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Da'Mari Scott', 'WR', 'NYG', 0, 0, 0, 0, 0, 1, 5, 0, 1, 1, 11, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Greg Ward', 'WR', 'PHI', 0, 0, 0, 0, 0, 1, 5, 0, 4, 5, 71, 0);
+
+INSERT INTO Week16_Players
+VALUES ('James White', 'RB', 'NWE', 0, 0, 0, 0, 0, 3, 5, 0, 4, 5, 24, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Nyheim Hines', 'RB', 'IND', 0, 0, 0, 0, 0, 1, 4, 0, 1, 1, 2, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Duke Johnson', 'RB', 'HOU', 0, 0, 0, 0, 0, 2, 4, 0, 1, 4, 12, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Curtis Samuel', 'WR', 'CAR', 0, 0, 0, 0, 0, 2, 4, 0, 2, 5, 17, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Giovani Bernard', 'HB', 'CIN', 0, 0, 0, 0, 0, 2, 3, 0, 2, 3, 12, 0);
+
+INSERT INTO Week16_Players
+VALUES ('John Brown', 'WR', 'BUF', 0, 0, 0, 0, 0, 1, 3, 0, 1, 4, 53, 1);
+
+INSERT INTO Week16_Players
+VALUES ('David Johnson', 'RB', 'ARI', 0, 0, 0, 0, 0, 2, 3, 0, 1, 1, 4, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Qadree Ollison', 'RB', 'ATL', 0, 0, 0, 0, 0, 1, 3, 1, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Bilal Powell', 'RB', 'NYJ', 0, 0, 0, 0, 0, 1, 3, 0, 1, 2, 5, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ryquell Armstead', 'RB', 'JAX', 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Adam Thielen', 'WR', 'MIN', 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tony Pollard', 'RB', 'DAL', 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Malcolm Brown', 'RB', 'LAR', 0, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Matt Moore', 'QB', 'KAN', 0, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Brian Hoyer', 'QB', 'IND', 0, 0, 0, 0, 0, 3, -2, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tyrod Taylor', 'QB', 'LAC', 0, 0, 0, 0, 0, 2, -2, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Keenan Allen', 'WR', 'LAC', 0, 0, 0, 0, 0, 1, -5, 0, 5, 10, 71, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Julio Jones', 'WR', 'ATL', 0, 0, 0, 0, 0, 0, 0, 0, 10, 15, 166, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Michael Thomas', 'WR', 'NOR', 0, 0, 0, 0, 0, 0, 0, 0, 12, 17, 136, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Tyler Boyd', 'WR', 'CIN', 0, 0, 0, 0, 0, 0, 0, 0, 9, 15, 128, 2);
+
+INSERT INTO Week16_Players
+VALUES ('Davante Adams', 'WR', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 13, 16, 116, 0);
+
+INSERT INTO Week16_Players
+VALUES ('DeVante Parker', 'WR', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 5, 15, 111, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Cole Beasley', 'WR', 'BUF', 0, 0, 0, 0, 0, 0, 0, 0, 7, 12, 108, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Hunter Renfrow', 'WR', 'OAK', 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 107, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Tyler Higbee', 'TE', 'LAR', 0, 0, 0, 0, 0, 0, 0, 0, 9, 11, 104, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Breshad Perriman', 'WR', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 7, 12, 102, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Michael Gallup', 'WR', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 5, 11, 98, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Golden Tate', 'WR', 'NYG', 0, 0, 0, 0, 0, 0, 0, 0, 6, 11, 96, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Mark Andrews', 'TE', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 6, 9, 93, 2);
+
+INSERT INTO Week16_Players
+VALUES ('Dallas Goedert', 'TE', 'PHI', 0, 0, 0, 0, 0, 0, 0, 0, 9, 12, 91, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Terry McLaurin', 'WR', 'WAS', 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 86, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jared Cook', 'TE', 'NOR', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 84, 2);
+
+INSERT INTO Week16_Players
+VALUES ('Mike Gesicki', 'TE', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 6, 12, 82, 2);
+
+INSERT INTO Week16_Players
+VALUES ('Austin Hooper', 'TE', 'ATL', 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 82, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tyrell Williams', 'WR', 'OAK', 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 82, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Diontae Johnson', 'WR', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 81, 1);
+
+INSERT INTO Week16_Players
+VALUES ('George Kittle', 'TE', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 5, 8, 79, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Sterling Shepard', 'WR', 'NYG', 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 76, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Travis Kelce', 'TE', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 8, 9, 74, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Jarvis Landry', 'WR', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 7, 9, 74, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Randall Cobb', 'WR', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 73, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Julian Edelman', 'WR', 'NWE', 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 72, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tyreek Hill', 'WR', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 72, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tajae Sharpe', 'WR', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 69, 2);
+
+INSERT INTO Week16_Players
+VALUES ('Isaiah Ford', 'WR', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 68, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kenny Golladay', 'WR', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 6, 12, 66, 1);
+
+INSERT INTO Week16_Players
+VALUES ('DaeSean Hamilton', 'WR', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 6, 6, 65, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Jacob Hollister', 'TE', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 64, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jonnu Smith', 'TE', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 63, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Emmanuel Sanders', 'WR', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 61, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jamison Crowder', 'WR', 'NYJ', 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 60, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tyler Eifert', 'TE', 'CIN', 0, 0, 0, 0, 0, 0, 0, 0, 4, 8, 57, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Kenny Stills', 'WR', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 5, 9, 57, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Chris Conley', 'WR', 'JAX', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 56, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Alex Erickson', 'WR', 'CIN', 0, 0, 0, 0, 0, 0, 0, 0, 6, 9, 55, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Allen Robinson', 'WR', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 6, 12, 53, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Mike Williams', 'WR', 'LAC', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 51, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Larry Fitzgerald', 'WR', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 4, 7, 48, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Tim Patrick', 'WR', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 5, 6, 48, 0);
+
+INSERT INTO Week16_Players
+VALUES ('O.J. Howard', 'TE', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 3, 7, 46, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Seth Devalve', 'TE', 'JAX', 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 45, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Hunter Henry', 'TE', 'LAC', 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 45, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Allen Lazard', 'WR', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 5, 9, 45, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Odell Beckham', 'WR', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 4, 6, 44, 1);
+
+INSERT INTO Week16_Players
+VALUES ('DeAndre Carter', 'WR', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 44, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Cody Latimer', 'WR', 'NYG', 0, 0, 0, 0, 0, 0, 0, 0, 5, 7, 44, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Justin Watson', 'WR', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 5, 10, 43, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Allen Hurns', 'WR', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 41, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Courtland Sutton', 'WR', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 5, 10, 41, 0);
+
+INSERT INTO Week16_Players
+VALUES ('James Washington', 'WR', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 5, 8, 41, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Corey Davis', 'WR', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 40, 0);
+
+INSERT INTO Week16_Players
+VALUES ('JJ Arcega-Whiteside', 'WR', 'PHI', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 39, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Brandin Cooks', 'WR', 'LAR', 0, 0, 0, 0, 0, 0, 0, 0, 4, 6, 39, 1);
+
+INSERT INTO Week16_Players
+VALUES ('C.J. Uzomah', 'TE', 'CIN', 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 37, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Darren Waller', 'TE', 'OAK', 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 37, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Maxx Williams', 'TE', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 36, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kaden Smith', 'TE', 'NYG', 0, 0, 0, 0, 0, 0, 0, 0, 6, 8, 35, 2);
+
+INSERT INTO Week16_Players
+VALUES ('Dare Ogunbowale', 'RB', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 34, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Dawson Knox', 'TE', 'BUF', 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 33, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Greg Olsen', 'TE', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 33, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Robby Anderson', 'WR', 'NYJ', 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 32, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Kalif Raymond', 'WR', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 32, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Josh Reynolds', 'WR', 'LAR', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 32, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Vyncint Smith', 'WR', 'NYJ', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 32, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Trevon Wesco', 'TE', 'NYJ', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 32, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ishmael Hyman', 'WR', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 31, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Cooper Kupp', 'WR', 'LAR', 0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 31, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Codey McElroy', 'WR', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 30, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kendrick Bourne', 'WR', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 29, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Zach Ertz', 'TE', 'PHI', 0, 0, 0, 0, 0, 0, 0, 0, 4, 6, 28, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Hale Hentges', 'TE', 'WAS', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 28, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Sammy Watkins', 'WR', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 28, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Darren Fells', 'TE', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 27, 0);
+
+INSERT INTO Week16_Players
+VALUES ('T.Y. Hilton', 'WR', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 26, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Javon Wims', 'WR', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 3, 9, 26, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ross Dwelley', 'TE', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 25, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jakobi Meyers', 'WR', 'NWE', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 25, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Nick Boyle', 'TE', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 3, 4, 24, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Amari Cooper', 'WR', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 4, 12, 24, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Mohamed Sanu', 'WR', 'NWE', 0, 0, 0, 0, 0, 0, 0, 0, 3, 5, 24, 0);
+
+INSERT INTO Week16_Players
+VALUES ('DeAndre Hopkins', 'WR', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 5, 9, 23, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kyle Juszczyk', 'FB', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 23, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Seth Roberts', 'WR', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 23, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ricky Seals-Jones', 'TE', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 23, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Malik Turner', 'WR', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 23, 0);
+
+INSERT INTO Week16_Players
+VALUES ('JuJu Smith-Schuster', 'WR', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 22, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Mo Alie-Cox', 'TE', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 21, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Danny Amendola', 'WR', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 21, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Dan Arnold', 'TE', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 20, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jesper Horsted', 'TE', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 20, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ross Travis', 'TE', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 19, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jarius Wright', 'WR', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 1, 5, 19, 0);
+
+INSERT INTO Week16_Players
+VALUES ('DJ Chark', 'WR', 'JAX', 0, 0, 0, 0, 0, 0, 0, 0, 2, 7, 18, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Dontrelle Inman', 'WR', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 18, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Andre Patton', 'WR', 'LAC', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 18, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Durham Smythe', 'TE', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 18, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Nick Vannett', 'TE', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 18, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Cameron Brate', 'TE', 'TAM', 0, 0, 0, 0, 0, 0, 0, 0, 2, 5, 17, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jack Doyle', 'TE', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 17, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Logan Thomas', 'TE', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 17, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Charles Clay', 'TE', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 16, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jimmy Graham', 'TE', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 16, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Chris Hogan', 'WR', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 16, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ian Thomas', 'TE', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 16, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Blake Bell', 'TE', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 15, 0);
+
+INSERT INTO Week16_Players
+VALUES ('MyCole Pruitt', 'TE', 'TEN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 15, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Cam Sims', 'WR', 'WAS', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 15, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Clive Walford', 'TE', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 15, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ben Watson', 'TE', 'NWE', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 15, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Pharoh Cooper', 'WR', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 14, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Blake Jarwin', 'TE', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 14, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Zay Jones', 'WR', 'OAK', 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 14, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jeremy Sprinkle', 'TE', 'WAS', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 14, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jason Witten', 'TE', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 14, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jeff Heuerman', 'TE', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 13, 0);
+
+INSERT INTO Week16_Players
+VALUES ('J.P. Holtz', 'TE', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 13, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Demarcus Robinson', 'WR', 'KAN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 13, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Keith Smith', 'FB', 'ATL', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 13, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tre'Quan Smith', 'WR', 'NOR', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 13, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Derek Carrier', 'TE', 'OAK', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 12, 0);
+
+INSERT INTO Week16_Players
+VALUES ('C.J. Ham', 'FB', 'MIN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 12, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Jesse James', 'TE', 'DET', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 12, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tyler Lockett', 'WR', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 1, 7, 12, 0);
+
+INSERT INTO Week16_Players
+VALUES ('DeAndrew White', 'WR', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 12, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Damiere Byrd', 'WR', 'ARI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 11, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Will Fuller', 'WR', 'HOU', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 11, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Isaiah McKenzie', 'WR', 'BUF', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 11, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Eric Saubert', 'TE', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 11, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Deon Cain', 'WR', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 10, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Noah Fant', 'TE', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 10, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Hayden Hurst', 'TE', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 9, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Vance McDonald', 'TE', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 3, 6, 9, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Miles Boykin', 'WR', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 8, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Matt LaCosse', 'TE', 'NWE', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 8, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Stephen Carlson', 'TE', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 7, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Cody Davis', 'S', 'JAX', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 7, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kyle Rudolph', 'TE', 'MIN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 7, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Marquise Brown', 'WR', 'BAL', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 6, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Robert Davis', 'WR', 'PHI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 6, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tyler Ervin', 'RB', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 6, 0);
+
+INSERT INTO Week16_Players
+VALUES ('KhaDarel Hodge', 'WR', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 6, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Olabisi Johnson', 'WR', 'MIN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 6, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Zach Pascal', 'WR', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 6, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Marquez Valdes-Scantling', 'WR', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 6, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Tavon Austin', 'WR', 'DAL', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 5, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Dede Westbrook', 'WR', 'JAX', 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 5, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Virgil Green', 'TE', 'LAC', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 4, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Dontrell Hilliard', 'RB', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 4, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Krishawn Hogan', 'WR', 'NOR', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 4, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Irv Smith', 'TE', 'MIN', 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 4, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Nick Bellore', 'FB', 'SEA', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 3, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Brandon Zylstra', 'WR', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 3, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Devontae Booker', 'RB', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Marcus Johnson', 'WR', 'IND', 0, 0, 0, 0, 0, 0, 0, 0, 1, 4, 2, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Marcedes Lewis', 'TE', 'GNB', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Anthony Miller', 'WR', 'CHI', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Dion Dawkins', 'T', 'BUF', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Demetrius Harris', 'TE', 'CLE', 0, 0, 0, 0, 0, 0, 0, 0, 1, 3, 1, 1);
+
+INSERT INTO Week16_Players
+VALUES ('D.J. Moore', 'WR', 'CAR', 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 1, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Christian Wilkins', 'DT', 'MIA', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1);
+
+INSERT INTO Week16_Players
+VALUES ('Deonte Harris', 'WR/RS', 'NOR', 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Nsimba Webster', 'WR', 'LAR', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Michael Walker', 'WR', 'JAX', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Kenjon Barner', 'RB', 'ATL', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Diontae Spencer', 'WR', 'DEN', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('Ben Garland', 'OL', 'SFO', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+INSERT INTO Week16_Players
+VALUES ('B.J. Finney', 'C/G', 'PIT', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
