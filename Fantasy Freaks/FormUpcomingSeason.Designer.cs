@@ -56,9 +56,9 @@
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("IBM Plex Sans Thai Looped", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.title.Location = new System.Drawing.Point(0, 0);
+            this.title.Location = new System.Drawing.Point(12, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(497, 85);
+            this.title.Size = new System.Drawing.Size(503, 56);
             this.title.TabIndex = 6;
             this.title.Text = "UPCOMING SEASON";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

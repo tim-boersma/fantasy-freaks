@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using System.IO;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace Fantasy_Freaks {
     public enum Sport {
@@ -40,13 +43,6 @@ namespace Fantasy_Freaks {
             this.mainPanel.Tag = newForm;
             newForm.BringToFront();
             newForm.Show();
-        }
-        public void loadFont(Form f) {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile("D:\\Downloads\\Chrome\\School\\2022 Fall\\Software Engineering\\Fantasy Freaks\\Resources\\IBMPlexSansThaiLooped-Bold.ttf");
-            foreach (Control c in f.Controls) {
-                c.Font = new Font(pfc.Families[0], c.Font.Size);
-            }
         }
     }
 }
