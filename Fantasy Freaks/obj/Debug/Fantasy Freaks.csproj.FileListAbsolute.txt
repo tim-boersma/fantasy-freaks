@@ -13,3 +13,18 @@ D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Deb
 D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormSportSelection.resources
 D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormTeamMaker.resources
 D:\Downloads\Chrome\School\2022 Fall\Software Engineering\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormUpcomingSeason.resources
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\bin\Debug\Fantasy Freaks.exe.config
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\bin\Debug\Fantasy Freaks.exe
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\bin\Debug\Fantasy Freaks.pdb
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.AssemblyReference.cache
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FFWindow.resources
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormHelpScreen.resources
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormHomeScreen.resources
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormSportSelection.resources
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormTeamMaker.resources
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormUpcomingSeason.resources
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy_Freaks.Properties.Resources.resources
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.GenerateResource.cache
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.CoreCompileInputs.cache
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy Freaks.exe
+C:\Users\Kaiden Bruhn\Source\Repos\fantasy-freaks\Fantasy Freaks\obj\Debug\Fantasy Freaks.pdb

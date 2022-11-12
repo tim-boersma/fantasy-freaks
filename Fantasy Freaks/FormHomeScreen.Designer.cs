@@ -39,7 +39,7 @@
             this.btnPlay.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnPlay.FlatAppearance.BorderSize = 0;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Font = new System.Drawing.Font("Inter", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
             this.btnPlay.Location = new System.Drawing.Point(328, 447);
             this.btnPlay.Name = "btnPlay";
@@ -55,7 +55,7 @@
             this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(0)))));
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelp.ForeColor = System.Drawing.Color.White;
             this.btnHelp.Location = new System.Drawing.Point(910, 600);
             this.btnHelp.Margin = new System.Windows.Forms.Padding(0);
@@ -64,6 +64,7 @@
             this.btnHelp.TabIndex = 2;
             this.btnHelp.Text = " ?";
             this.btnHelp.UseVisualStyleBackColor = false;
+            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // logo
             // 
@@ -89,7 +90,7 @@
             // title
             // 
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Inter", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.Location = new System.Drawing.Point(0, 132);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(984, 161);

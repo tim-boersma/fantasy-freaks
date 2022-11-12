@@ -24,6 +24,11 @@ namespace Fantasy_Freaks {
         private void btnPlay_Click(object sender, EventArgs e) {
             FFWindow.instance.changePanel(new FormSportSelection());
         }
+
+        private void btnHelp_Click(object sender, EventArgs e)
+        {
+            FFWindow.instance.changePanel(new FormHelpScreen());
+        }
     }
 
 }
