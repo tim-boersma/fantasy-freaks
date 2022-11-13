@@ -79,6 +79,12 @@
     <Compile Include="FormEndResults.Designer.cs">
       <DependentUpon>FormEndResults.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHelpScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHelpScreen.Designer.cs">
+      <DependentUpon>FormHelpScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FFWindow.resx">
       <DependentUpon>FFWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHelpScreen.resx">
+      <DependentUpon>FormHelpScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHomeScreen.resx">
       <DependentUpon>FormHomeScreen.cs</DependentUpon>
