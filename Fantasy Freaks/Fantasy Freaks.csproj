@@ -120,6 +120,12 @@
     <EmbeddedResource Include="FFWindow.resx">
       <DependentUpon>FFWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChangeRoster.resx">
+      <DependentUpon>FormChangeRoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEndResults.resx">
+      <DependentUpon>FormEndResults.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormHelpScreen.resx">
       <DependentUpon>FormHelpScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpcomingSeason.resx">
       <DependentUpon>FormUpcomingSeason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWeekResults.resx">
+      <DependentUpon>FormWeekResults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
