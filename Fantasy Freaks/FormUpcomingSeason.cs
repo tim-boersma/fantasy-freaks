@@ -13,5 +13,12 @@ namespace Fantasy_Freaks {
         public FormUpcomingSeason() {
             InitializeComponent();
         }
+
+        private void btnWeekResults_Click(object sender, EventArgs e)
+        {
+            FFWindow.instance.changePanel(new FormWeekResults());
+        }
+
+
     }
 }

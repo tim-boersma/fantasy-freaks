@@ -13,5 +13,28 @@ namespace Fantasy_Freaks {
         public FormWeekResults() {
             InitializeComponent();
         }
+
+
+        private void buttonChangeRoster_Click(object sender, EventArgs e)
+        {
+            FFWindow.instance.changePanel(new FormChangeRoster());
+        }
+
+        /*if (week == 17)
+        {
+            
+            private void btnNext_Click(object sender, EventArgs e)
+            {
+                FFWindow.instance.changePanel(new FormEndResults());
+            }
+            week++;
+        }
+        else
+        {*/
+        private void btnNext_Click(object sender, EventArgs e)
+            {
+                FFWindow.instance.changePanel(new FormUpcomingSeason());
+            }
+  
     }
 }

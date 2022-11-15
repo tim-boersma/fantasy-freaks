@@ -13,5 +13,15 @@ namespace Fantasy_Freaks {
         public FormEndResults() {
             InitializeComponent();
         }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonRestart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }
