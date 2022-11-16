@@ -13,11 +13,9 @@ namespace Fantasy_Freaks {
         public FormEndResults() {
             InitializeComponent();
         }
-<<<<<<< Updated upstream
-=======
+
 
         WinStat foo = new WinStat();
-        //SOS
         //int dayEvent = foo.eventDay();
         //int pointsAllowed = foo.TYscore(/*ty value*/);
         //int yardsAllowed = foo.Tpscore(/*tp value*/)
@@ -33,6 +31,5 @@ namespace Fantasy_Freaks {
         {
             Application.Restart();
         }
->>>>>>> Stashed changes
     }
 }

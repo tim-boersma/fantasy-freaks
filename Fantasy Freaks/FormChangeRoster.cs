@@ -13,8 +13,7 @@ namespace Fantasy_Freaks {
         public FormChangeRoster() {
             InitializeComponent();
         }
-<<<<<<< Updated upstream
-=======
+
 
         WinStat foo = new WinStat();
         //int dayEvent = foo.eventDay();
@@ -103,6 +102,5 @@ namespace Fantasy_Freaks {
         {
 
         }
->>>>>>> Stashed changes
     }
 }
