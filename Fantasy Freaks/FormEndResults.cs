@@ -13,5 +13,26 @@ namespace Fantasy_Freaks {
         public FormEndResults() {
             InitializeComponent();
         }
+<<<<<<< Updated upstream
+=======
+
+        WinStat foo = new WinStat();
+        //SOS
+        //int dayEvent = foo.eventDay();
+        //int pointsAllowed = foo.TYscore(/*ty value*/);
+        //int yardsAllowed = foo.Tpscore(/*tp value*/)
+        //foo.offScoreCalc(/*from table for off*/)
+        //foo.defScoreCalc(/*from table for off, pointsAllowed, yardsAllowed*/)
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonRestart_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+>>>>>>> Stashed changes
     }
 }

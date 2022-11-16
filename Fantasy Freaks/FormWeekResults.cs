@@ -13,5 +13,38 @@ namespace Fantasy_Freaks {
         public FormWeekResults() {
             InitializeComponent();
         }
+<<<<<<< Updated upstream
+=======
+
+        WinStat foo = new WinStat();
+        //SOS
+        //int dayEvent = foo.eventDay();
+        //int pointsAllowed = foo.TYscore(/*ty value*/);
+        //int yardsAllowed = foo.Tpscore(/*tp value*/)
+        //foo.offScoreCalc(/*from table for off*/)
+        //foo.defScoreCalc(/*from table for off, pointsAllowed, yardsAllowed*/)
+
+        private void buttonChangeRoster_Click(object sender, EventArgs e)
+        {
+            FFWindow.instance.changePanel(new FormChangeRoster());
+        }
+
+        /*if (week == 17)
+        {
+            
+            private void btnNext_Click(object sender, EventArgs e)
+            {
+                FFWindow.instance.changePanel(new FormEndResults());
+            }
+            week++;
+        }
+        else
+        {*/
+        private void btnNext_Click(object sender, EventArgs e)
+            {
+                FFWindow.instance.changePanel(new FormUpcomingSeason());
+            }
+  
+>>>>>>> Stashed changes
     }
 }

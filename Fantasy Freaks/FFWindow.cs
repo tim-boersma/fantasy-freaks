@@ -16,6 +16,7 @@ namespace Fantasy_Freaks {
     public enum Sport {
         Football
     }
+
     public partial class FFWindow : Form {
         public static FFWindow instance;
         private Form activeForm;
@@ -24,6 +25,7 @@ namespace Fantasy_Freaks {
         public FFWindow() {
             InitializeComponent();
             instance = this;
+            
         }
 
         private void FFWindow_Load(object sender, EventArgs e) {
