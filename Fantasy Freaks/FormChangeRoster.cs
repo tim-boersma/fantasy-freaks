@@ -14,9 +14,15 @@ namespace Fantasy_Freaks {
             InitializeComponent();
         }
 
+        //int pointsAllowed = WinStat.instance.TYscore(/*ty value*/);
+        //int yardsAllowed = WinStat.instance.Tpscore(/*tp value*/);
+        //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
+        //double defScore = WinStat.instance.defScoreCalc(/*from table for def, pointsAllowed, yardsAllowed*/);
+
+
         private void btnSeason_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormUpcomingSeason());
+            FFWindow.instance.changePanel(new FormSeason());
         }
 
         private void btnQB_Click(object sender, EventArgs e)

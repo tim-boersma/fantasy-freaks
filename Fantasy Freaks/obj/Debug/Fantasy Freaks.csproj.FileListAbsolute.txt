@@ -46,3 +46,23 @@ C:\Users\Kaiden Bruhn\source\repos\fantasy-freaks\Fantasy Freaks\Fantasy Freaks\
 C:\Users\Kaiden Bruhn\source\repos\fantasy-freaks\Fantasy Freaks\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.CoreCompileInputs.cache
 C:\Users\Kaiden Bruhn\source\repos\fantasy-freaks\Fantasy Freaks\Fantasy Freaks\obj\Debug\Fantasy Freaks.exe
 C:\Users\Kaiden Bruhn\source\repos\fantasy-freaks\Fantasy Freaks\Fantasy Freaks\obj\Debug\Fantasy Freaks.pdb
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\bin\Debug\Fantasy Freaks.exe.config
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\bin\Debug\Fantasy Freaks.exe
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\bin\Debug\Fantasy Freaks.pdb
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.AssemblyReference.cache
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.SuggestedBindingRedirects.cache
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FFWindow.resources
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormChangeRoster.resources
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormEndResults.resources
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormHelpScreen.resources
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormHomeScreen.resources
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormSportSelection.resources
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormTeamMaker.resources
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormWeekResults.resources
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.Properties.Resources.resources
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.GenerateResource.cache
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy Freaks.csproj.CoreCompileInputs.cache
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy Freaks.exe
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy Freaks.pdb
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormSeason.resources
+C:\Users\leohu\source\repos\fantasy-freaks-v0.02\Fantasy Freaks\obj\Debug\Fantasy_Freaks.FormPlayerSelection.resources
