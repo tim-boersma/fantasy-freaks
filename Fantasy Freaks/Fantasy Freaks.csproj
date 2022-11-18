@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DefensiveTeam.cs" />
     <Compile Include="FFWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,8 +122,10 @@
     <Compile Include="FormWeekResults.Designer.cs">
       <DependentUpon>FormWeekResults.cs</DependentUpon>
     </Compile>
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GameResult.cs" />
     <Compile Include="WinStat.cs" />
     <EmbeddedResource Include="FFWindow.resx">
       <DependentUpon>FFWindow.cs</DependentUpon>

@@ -14,10 +14,10 @@ namespace Fantasy_Freaks {
             InitializeComponent();
         }
 
-        //int pointsAllowed = WinStat.instance.TYscore(/*ty value*/);
-        //int yardsAllowed = WinStat.instance.Tpscore(/*tp value*/);
-        //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
-        //double defScore = WinStat.instance.defScoreCalc(/*from table for def, pointsAllowed, yardsAllowed*/);
+        //int pointsAllowed = WinStat.TYscore(/*ty value*/);
+        //int yardsAllowed = WinStat.Tpscore(/*tp value*/);
+        //int offScore = WinStat.offScoreCalc(/*from table for off*/);
+        //double defScore = WinStat.defScoreCalc(/*from table for def, pointsAllowed, yardsAllowed*/);
 
         private void buttonExit_Click(object sender, EventArgs e)
         {

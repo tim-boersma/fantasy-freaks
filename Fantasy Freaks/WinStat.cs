@@ -5,20 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Fantasy_Freaks {
-    internal class WinStat {
-        public static WinStat instance;
-
-        public WinStat() {
-            instance = this;
-        }
-
-        public int Week { get; set; }
-        public string OffName { get; set; }
-        public int OffScore { get; set; }
-        public int LowOffscore { get; set; }
-        public int HighOffscore { get; set; }
-        public string DefName { get; set; }
-        public int DefScore { get; set; }
+    public class WinStat {
 
         public int EventForDay() {
             Random rnd = new Random();
@@ -48,17 +35,15 @@ namespace Fantasy_Freaks {
             return 46 - 2 * score;
         }
 
-        public int CalculateDefensiveScore(int[] defense, int pointsAllowed, int yardsAllowed) {
-            int defInt = 0, defFum = 0;
-
-            return (defInt * 3) + (defFum * 2) + pointsAllowed + yardsAllowed;
+        public int CalculateDefensiveScore(DefensiveTeam defTeam, int pointsAllowed, int yardsAllowed) 
+        {
+            return (defTeam.defInt * 3) + (defTeam.defFum * 2) + pointsAllowed + yardsAllowed;
         }
 
 
-        public double CalculateOffensiveScore(int[] offense) {
-            int passTD = 0, rushTD = 0, recTD = 0, rec = 0, rushYRDs = 0, recYRDs = 0, passYRDs = 0, offInt = 0, offFum = 0;
-
-            return (passTD * 4) + (rushTD * 6) + (recTD * 6) + (rec * 1) + (rushYRDs * .1) + (recYRDs * .1) + (passYRDs * .04) + (offInt * -3) + (offFum * -3);
+        public double CalculateOffensiveScore(Player player) 
+        {
+            return (player.passTD * 4) + (player.rushTD * 6) + (player.recTD * 6) + (player.rec * 1) + (player.rushYRDs * .1) + (player.recYRDs * .1) + (player.passYRDs * .04) + (player.offInt * -3) + (player.offFum * -3);
         }
 
     }
