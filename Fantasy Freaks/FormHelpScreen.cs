@@ -12,14 +12,18 @@ namespace Fantasy_Freaks
 {
     public partial class FormHelpScreen : Form
     {
-        public FormHelpScreen()
+        private readonly IContributerService _contributerService;
+
+        public FormHelpScreen(IContributerService contributerService)
         {
             InitializeComponent();
+            this._contributerService = contributerService;
+            MessageBox.Show(_contributerService.SayHello());
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormHomeScreen());
+            FFWindow.instance.changePanel(new FormHomeScreen(_contributerService));
         }
     }
 }

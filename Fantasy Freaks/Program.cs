@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Authentication.ExtendedProtection;
 using System.Threading.Tasks;
@@ -16,8 +17,6 @@ namespace Fantasy_Freaks {
         /// The main entry point for the application.
         /// </summary>
         /// 
-        public static IServiceProvider ServiceProvider { get; private set; }
-        public static IConfiguration Configuration { get; set; }
 
         [STAThread]
         static void Main() {
@@ -29,14 +28,23 @@ namespace Fantasy_Freaks {
 
             Application.Run(ServiceProvider.GetRequiredService<FFWindow>());
         }
+        public static IServiceProvider ServiceProvider { get; private set; }
+        public static IConfiguration Configuration { get; set; }
 
         static IHostBuilder CreateHostBuilder()
         {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory().Replace("\\bin\\Debug", ""))
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            Configuration = builder.Build();
+
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) => {
-                    //services.AddTransient<IHelloService, HelloService>();
-                    services.AddDbContext<ContributerDataContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                    var test = Configuration.GetConnectionString("DefaultConnection");
+                    services.AddDbContext<ContributerDataContext>(options => options.UseSqlServer(test));
+                    services.AddTransient<IContributerService, ContributerService>();
                     services.AddTransient<FFWindow>();
+                    services.AddTransient<FormHomeScreen>();
                 });
         }
     }

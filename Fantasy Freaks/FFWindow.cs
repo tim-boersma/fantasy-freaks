@@ -20,14 +20,17 @@ namespace Fantasy_Freaks {
         public static FFWindow instance;
         private Form activeForm;
         public Sport activeSport;
+        private readonly IContributerService _contributerService;
 
-        public FFWindow() {
+        public FFWindow(IContributerService contributerService) {
             InitializeComponent();
             instance = this;
+            this._contributerService = contributerService;
+            MessageBox.Show(_contributerService.SayHello());
         }
 
         private void FFWindow_Load(object sender, EventArgs e) {
-            changePanel(new FormHomeScreen());
+            changePanel(new FormHomeScreen(_contributerService));
         }
         public void changePanel(Form newForm) {
             if (activeForm != null) {
@@ -43,6 +46,11 @@ namespace Fantasy_Freaks {
             this.mainPanel.Tag = newForm;
             newForm.BringToFront();
             newForm.Show();
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

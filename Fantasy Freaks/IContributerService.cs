@@ -8,5 +8,7 @@ namespace Fantasy_Freaks
 {
     public interface IContributerService
     {
+        string SayHello();
+        Task<string> AllContributers();
     }
 }
