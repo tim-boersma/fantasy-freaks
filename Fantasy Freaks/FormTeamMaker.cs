@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,13 +14,15 @@ namespace Fantasy_Freaks {
         public FormTeamMaker() {
             InitializeComponent();
         }
+        //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
 
         private void FormTeamMaker_Load(object sender, EventArgs e) {
+            new WinStat();
         }
 
         private void btnQB_Click(object sender, EventArgs e)
         {
-
+            choosingPlayer(btnQB);
         }
 
         private void btnRB1_Click(object sender, EventArgs e)
@@ -51,7 +54,7 @@ namespace Fantasy_Freaks {
         {
 
         }
-
+        //---------------------------------Bench-------------------------------------------------
         private void btnBe1_Click(object sender, EventArgs e)
         {
 
@@ -94,7 +97,11 @@ namespace Fantasy_Freaks {
 
         private void btnSeason_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormUpcomingSeason());
+            FFWindow.instance.changePanel(new FormSeason());
+        }
+        private void choosingPlayer(Button button) {
+            Form fPS = new FormPlayerSelection();
+            fPS.Show();
         }
     }
 }

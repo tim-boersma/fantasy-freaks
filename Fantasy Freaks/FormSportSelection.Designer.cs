@@ -34,11 +34,11 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Inter", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Segoe UI Variable Display", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.title.Location = new System.Drawing.Point(12, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(470, 58);
+            this.title.Size = new System.Drawing.Size(442, 64);
             this.title.TabIndex = 0;
             this.title.Text = "SPORT SELECTION";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -47,7 +47,7 @@
             // 
             this.btnFootball.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
             this.btnFootball.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFootball.Font = new System.Drawing.Font("Inter", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFootball.Font = new System.Drawing.Font("Segoe UI Variable Display", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFootball.Location = new System.Drawing.Point(223, 146);
             this.btnFootball.Name = "btnFootball";
             this.btnFootball.Size = new System.Drawing.Size(526, 121);
