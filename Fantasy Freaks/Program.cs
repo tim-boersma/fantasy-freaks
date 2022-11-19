@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Fantasy_Freaks.Interfaces;
+using Fantasy_Freaks.Models;
+using Fantasy_Freaks.Services;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -41,8 +44,10 @@ namespace Fantasy_Freaks {
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) => {
                     var test = Configuration.GetConnectionString("DefaultConnection");
-                    services.AddDbContext<ContributerDataContext>(options => options.UseSqlServer(test));
-                    services.AddTransient<IContributerService, ContributerService>();
+                    services.AddDbContext<FantasyDataContext>(options => options.UseSqlServer(test));
+                    services.AddTransient<IDefenseService, DefenseService>();
+                    services.AddTransient<IPreviousPlayerService, PreviousPlayerService>();
+                    services.AddTransient<IPlayerService, PlayerService>();
                     services.AddTransient<FFWindow>();
                     services.AddTransient<FormHomeScreen>();
                 });

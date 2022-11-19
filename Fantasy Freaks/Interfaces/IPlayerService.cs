@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fantasy_Freaks
+namespace Fantasy_Freaks.Interfaces
 {
-    public interface IContributerService
+    public interface IPlayerService
     {
-        string SayHello();
-        Task<string> AllContributers();
     }
 }

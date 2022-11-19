@@ -261,9 +261,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContributerService.cs" />
-    <Compile Include="IContributerService.cs" />
-    <Compile Include="Startup.cs" />
+    <Compile Include="Interfaces\IPlayerService.cs" />
+    <Compile Include="Models\DefenseDataModel.cs" />
+    <Compile Include="Services\DefenseService.cs" />
+    <Compile Include="Interfaces\IDefenseService.cs" />
+    <Compile Include="Interfaces\IPreviousPlayerService.cs" />
+    <Compile Include="Models\LastSeasonPlayersDataModel.cs" />
+    <Compile Include="Models\PlayerDataModel.cs" />
+    <Compile Include="Services\PlayerService.cs" />
+    <Compile Include="Services\PreviousPlayerService.cs" />
     <Compile Include="FFWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,8 +326,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ContributerDataContext.cs" />
-    <Compile Include="ContributerDataModel.cs" />
+    <Compile Include="FantasyDataContext.cs" />
     <EmbeddedResource Include="FFWindow.resx">
       <DependentUpon>FFWindow.cs</DependentUpon>
     </EmbeddedResource>
