@@ -17,34 +17,35 @@ namespace Fantasy_Freaks.Models
         public string TeamName { get; set; }
         [Column("Player_Pos")]
         public string PlayerPosition { get; set; }
-        public int Age { get; set; }
+        public double Age { get; set; }
         [Column("G")]
-        public int Games { get; set; }
+        public double Games { get; set; }
         [Column("GS")]
-        public int GamesStarted { get; set; }
+        public double GamesStarted { get; set; }
         [Column("Target")]
-        public int PassTarget { get; set; }
-        public int Receptions { get; set; }
+        public double PassTarget { get; set; }
+        public double Receptions { get; set; }
         [Column("PassYds")]
-        public int PassingYards { get; set; }
+        public double PassingYards { get; set; }
         [Column("PassTD")]
-        public int PassingTouchdowns { get; set; }
+        public double PassingTouchdowns { get; set; }
         [Column("PassAtmpt")]
-        public int PassAttempts { get; set; }
+        public double PassAttempts { get; set; }
         [Column("RushYds")]
-        public int RushingYards { get; set; }
+        public double RushingYards { get; set; }
         [Column("RushTD")]
-        public int RushingTouchdowns { get; set; }
+        public double RushingTouchdowns { get; set; }
         [Column("RushAtmpt")]
-        public int RushAttempts { get; set; }
+        public double RushAttempts { get; set; }
         [Column("RecYds")]
-        public int RecieivingYards { get; set; }
+        public double RecieivingYards { get; set; }
         [Column("RecTD")]
-        public int RecievingTouchdowns { get; set; }
+        public double RecievingTouchdowns { get; set; }
         [Column("Fantasy_Points")]
-        public int FantasyPoints { get; set; }
-        public int Interceptions { get; set; }
-        public int Fumbles { get; set; }
-        public int FumbleLost { get; set; }
+        public double FantasyPoints { get; set; }
+        [Column("Interception")]
+        public double Interceptions { get; set; }
+        public double Fumbles { get; set; }
+        public double FumblesLost { get; set; }
     }
 }

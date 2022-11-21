@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace Fantasy_Freaks.Models
 {
     public class PlayerDataModel
     {
+        [Key]
         [Column("Player_Name")]
         public string PlayerName { get; set; }
         [Column("Player_Pos")]
@@ -16,27 +18,28 @@ namespace Fantasy_Freaks.Models
         [Column("Team_Name")]
         public string TeamName { get; set; }
         [Column("PassYds")]
-        public int PassingYards { get; set; }
+        public double PassingYards { get; set; }
         [Column("PassTD")]
-        public int PassTD { get; set; }
-        public int Interceptions { get; set; }
+        public double PassTD { get; set; }
+        [Column("Interception")]
+        public double Interceptions { get; set; }
         [Column("PassAtmpt")]
-        public int PassAttempts { get; set; }
+        public double PassAttempts { get; set; }
         [Column("Completions")]
-        public int Completions { get; set; }
+        public double Completions { get; set; }
         [Column("RushAtmpt")]
-        public int RushAttempts { get; set; }
+        public double RushAttempts { get; set; }
         [Column("RushYds")]
-        public int RushingYards { get; set; }
+        public double RushingYards { get; set; }
         [Column("RushTD")]
-        public int RushingTouchdowns { get; set; }
-        public int Receptions { get; set; }
-        public int Target { get; set; }
+        public double RushingTouchdowns { get; set; }
+        public double Receptions { get; set; }
+        public double Target { get; set; }
         [Column("RecYds")]
-        public int RecievingYards { get; set; }
+        public double RecievingYards { get; set; }
         [Column("RecTD")]
-        public int RecievingTouchdowns { get; set; }
-        [Column("ID")]
-        public int ID { get; set; } 
+        public double RecievingTouchdowns { get; set; }
+        //[Column("ID")]
+        //public double? ID { get; set; } 
     }
 }

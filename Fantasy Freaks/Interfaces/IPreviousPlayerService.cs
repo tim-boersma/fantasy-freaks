@@ -8,5 +8,6 @@ namespace Fantasy_Freaks.Models
 {
     public interface IPreviousPlayerService
     {
+        Task<IEnumerable<LastSeasonPlayerDataModel>> AllPlayers();
     }
 }

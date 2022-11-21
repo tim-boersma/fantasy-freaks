@@ -11,6 +11,8 @@ using System.Drawing.Text;
 using System.IO;
 using System.Diagnostics;
 using System.Reflection;
+using Fantasy_Freaks.Models;
+using Fantasy_Freaks.Interfaces;
 
 namespace Fantasy_Freaks {
     public enum Sport {
@@ -21,13 +23,21 @@ namespace Fantasy_Freaks {
         private Form activeForm;
         public Sport activeSport;
 
-        public FFWindow() {
+        private readonly IDefenseService _defenseService;
+        private readonly IPreviousPlayerService _previousPlayerService;
+        private readonly IPlayerService _playerService;
+
+        public FFWindow(IDefenseService defenseService, IPreviousPlayerService previousPlayerService, IPlayerService playerService) {
             InitializeComponent();
             instance = this;
+            _defenseService= defenseService;
+            _previousPlayerService= previousPlayerService;
+            _playerService = playerService;
+            //activeForm = this;
         }
 
         private void FFWindow_Load(object sender, EventArgs e) {
-            changePanel(new FormHomeScreen());
+            changePanel(new FormHomeScreen(_defenseService, _previousPlayerService, _playerService));
         }
         public void changePanel(Form newForm) {
             if (activeForm != null) {
