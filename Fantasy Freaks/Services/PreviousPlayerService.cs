@@ -1,8 +1,12 @@
 ﻿using Fantasy_Freaks.Models;
+using LinqKit;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -31,52 +35,34 @@ namespace Fantasy_Freaks.Services
             return players;
         }
 
-        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllQuarterBacks() 
+        private Expression<Func<LastSeasonPlayerDataModel, bool>> IsPosition(string position)
         {
-            return await _context.LastSeasonPlayer.Where(x => x.IsPosition("QB")).ToListAsync();
+            string delimiter = "/";
+            return (LastSeasonPlayerDataModel x) => x.PlayerPosition == position || x.PlayerPosition.StartsWith(position + delimiter) ||
+            x.PlayerPosition.EndsWith(delimiter + position) || x.PlayerPosition.Contains(delimiter + position + delimiter);
         }
 
-        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllRunningBacks() 
+        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllQuarterbacks() 
         {
-            return await _context.LastSeasonPlayer.Where(x => x.IsPosition("RB")).ToListAsync();
+            return await _context.LastSeasonPlayer.Where(IsPosition("QB")).ToListAsync();
         }
 
-        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllFullBacks() 
+
+        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllRunningbacks() 
         {
-            return await _context.LastSeasonPlayer.Where(x => x.IsPosition("FB")).ToListAsync();
+            List<LastSeasonPlayerDataModel> runningbacks = new List<LastSeasonPlayerDataModel>();
+            runningbacks.AddRange(await _context.LastSeasonPlayer.Where(IsPosition("RB")).ToListAsync());
+            runningbacks.AddRange(await _context.LastSeasonPlayer.Where(IsPosition("HB")).ToListAsync());
+            runningbacks.AddRange(await _context.LastSeasonPlayer.Where(IsPosition("FB")).ToListAsync());
+            return runningbacks;
         }
 
-        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllHalfBacks() 
-        {
-            return await _context.LastSeasonPlayer.Where(x => x.IsPosition("HB")).ToListAsync();
-        }
-
-        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllOffensiveLinemen() 
-        {
-            return await _context.LastSeasonPlayer.Where(x => x.IsPosition("OL")).ToListAsync();
-        }
-
-        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllGuards() 
-        {
-            return await _context.LastSeasonPlayer.Where(x => x.IsPosition("G")).ToListAsync();
-        }
-
-        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllTackles() 
-        {
-            return await _context.LastSeasonPlayer.Where(x => x.IsPosition("T")).ToListAsync();
-        }
-
-        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllCenters() 
-        {
-            return await _context.LastSeasonPlayer.Where(x => x.IsPosition("C")).ToListAsync();
-        }
-
-        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllWideReceivers() 
+        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllWideReceivers()
         {
             return await _context.LastSeasonPlayer.Where(x => x.IsPosition("WR")).ToListAsync();
         }
 
-        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllTightEnds() 
+        public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllTightEnds()
         {
             return await _context.LastSeasonPlayer.Where(x => x.IsPosition("TE")).ToListAsync();
         }

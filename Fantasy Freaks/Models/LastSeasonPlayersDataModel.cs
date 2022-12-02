@@ -46,10 +46,14 @@ namespace Fantasy_Freaks.Models
         public double Interceptions { get; set; }
         public double Fumbles { get; set; }
         public double FumblesLost { get; set; }
+        [NotMapped]
+        public IEnumerable<string> Positions 
+        { 
+            get { return PlayerPosition.Split('/'); }
+        }
 
         public bool IsPosition(string position) {
-            IEnumerable<string> positions = PlayerPosition.Split('/');
-            return positions.Where(x => x == position).Any();
+            return false;
         }
     }
 

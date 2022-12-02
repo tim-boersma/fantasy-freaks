@@ -46,7 +46,7 @@ namespace Fantasy_Freaks {
 
         private async Task DBTest()
         {
-            var test = await _previousPlayerService.GetAllQuarterBacks();
+            var test = await _previousPlayerService.GetAllQuarterbacks();
         }
 
     }
