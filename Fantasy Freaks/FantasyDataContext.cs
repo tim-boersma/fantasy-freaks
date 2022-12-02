@@ -15,7 +15,7 @@ namespace Fantasy_Freaks
 
         public DbSet<DefenseDataModel> Defense { get; set; }
         public DbSet<LastSeasonPlayerDataModel> LastSeasonPlayer { get; set; }
-        public DbSet<PlayerDataModel> Player { get; set; }
+        public DbSet<CurrentPlayerModel> CurrentPlayer { get; set; }
 
         public DbSet<PlayerPerformanceDataModel> Week1Player { get; set; }
         public DbSet<PlayerPerformanceDataModel> Week2Player { get; set; }
@@ -39,7 +39,7 @@ namespace Fantasy_Freaks
         {
             modelBuilder.Entity<DefenseDataModel>().ToTable("Defense");
             modelBuilder.Entity<LastSeasonPlayerDataModel>().ToTable("LastSeasonPlayer");
-            modelBuilder.Entity<PlayerDataModel>().ToTable("Player");
+            modelBuilder.Entity<CurrentPlayerModel>().ToTable("NewSeasonPlayer");
 
             for(int i = 1; i <= 17; i++)
             {

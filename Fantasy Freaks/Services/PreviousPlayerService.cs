@@ -59,12 +59,12 @@ namespace Fantasy_Freaks.Services
 
         public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllWideReceivers()
         {
-            return await _context.LastSeasonPlayer.Where(x => x.IsPosition("WR")).ToListAsync();
+            return await _context.LastSeasonPlayer.Where(IsPosition("WR")).ToListAsync();
         }
 
         public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllTightEnds()
         {
-            return await _context.LastSeasonPlayer.Where(x => x.IsPosition("TE")).ToListAsync();
+            return await _context.LastSeasonPlayer.Where(IsPosition("TE")).ToListAsync();
         }
 
         public async Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllPlayers()

@@ -7,19 +7,21 @@ using System.Threading.Tasks;
 
 namespace Fantasy_Freaks
 {
-    public class CustomPlayerTeam
+    public class Game
     {
         public int CurrentWeek { get; set; }
-        public List<PlayerDataModel> ActivePlayers { get; set; }
-        public List<PlayerDataModel> BenchedPlayers { get; set; }
+        public List<CurrentPlayerModel> ActivePlayers { get; set; }
+        public List<CurrentPlayerModel> BenchedPlayers { get; set; }
+
+        public List<DefenseDataModel> EnemyTeams { get; set; }
 
         //speculation
         public int TotalPoints { get; set; }
 
-        public CustomPlayerTeam()
+        public Game()
         {
-            ActivePlayers = new List<PlayerDataModel>();
-            BenchedPlayers = new List<PlayerDataModel>();
+            ActivePlayers = new List<CurrentPlayerModel>();
+            BenchedPlayers = new List<CurrentPlayerModel>();
             CurrentWeek = 1;
             TotalPoints = 0;
         }

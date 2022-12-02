@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fantasy_Freaks.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,15 +36,20 @@ namespace Fantasy_Freaks {
             return 46 - 2 * score;
         }
 
-        public int CalculateDefensiveScore(DefensiveTeam defTeam, int pointsAllowed, int yardsAllowed) 
+        public int CalculateDefensiveScore(DefenseDataModel defTeam, int pointsAllowed, int yardsAllowed) 
         {
-            return (defTeam.defInt * 3) + (defTeam.defFum * 2) + pointsAllowed + yardsAllowed;
+            return (int)((defTeam.Interceptions * 3) + (defTeam.ForcedFumbles * 2) + defTeam.PointsAllowed + defTeam.TotalYardsAllowed);
         }
 
 
-        public double CalculateOffensiveScore(Player player) 
+        public double CalculateOffensiveScore(PlayerPerformanceDataModel player) 
         {
-            return (player.passTD * 4) + (player.rushTD * 6) + (player.recTD * 6) + (player.rec * 1) + (player.rushYRDs * .1) + (player.recYRDs * .1) + (player.passYRDs * .04) + (player.offInt * -3) + (player.offFum * -3);
+            return (player.PassingYards * 4) + (player.RushingTouchdowns * 6) +
+                (player.RecievingTouchdowns * 6) + (player.Receptions * 1) + (player.RushingYards * .1) +
+                (player.RecievingYards * .1) + (player.PassingYards * .04) +
+                (player.Interceptions * -3); 
+                //There are currently no Fumble stats for players, but when it is implemented this is what it'll look like
+                //+ (player.Fumbles * -3);
         }
 
     }

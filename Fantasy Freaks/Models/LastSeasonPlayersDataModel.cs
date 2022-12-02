@@ -51,10 +51,6 @@ namespace Fantasy_Freaks.Models
         { 
             get { return PlayerPosition.Split('/'); }
         }
-
-        public bool IsPosition(string position) {
-            return false;
-        }
     }
 
 }

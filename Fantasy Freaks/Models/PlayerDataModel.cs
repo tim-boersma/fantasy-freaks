@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace Fantasy_Freaks.Models
 {
-    public class PlayerDataModel
+    public class CurrentPlayerModel
     {
         [Key]
-        public int ID { get; set; }
+        [Column("ID")]
+        public int PlayerID { get; set; }
         [Column("Player_Name")]
         public string PlayerName { get; set; }
         [Column("Player_Position")]
