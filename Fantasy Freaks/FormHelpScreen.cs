@@ -12,6 +12,7 @@ namespace Fantasy_Freaks
 {
     public partial class FormHelpScreen : Form
     {
+
         public FormHelpScreen()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace Fantasy_Freaks
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormHomeScreen());
+            //FFWindow.instance.changePanel(new FormHomeScreen());
         }
     }
 }

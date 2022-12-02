@@ -14,7 +14,10 @@ namespace Fantasy_Freaks {
             InitializeComponent();
         }
 
-        int dayEvent = WinStat.instance.eventDay();
+        //int dayEvent = WinStat.instance.eventDay();
+
+
+
         //int pointsAllowed = WinStat.instance.TYscore(/*ty value*/);
         //int yardsAllowed = WinStat.instance.Tpscore(/*tp value*/);
         //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
