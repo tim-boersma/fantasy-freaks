@@ -13,5 +13,20 @@ namespace Fantasy_Freaks {
         public FormEndResults() {
             InitializeComponent();
         }
+
+        //int pointsAllowed = WinStat.TYscore(/*ty value*/);
+        //int yardsAllowed = WinStat.Tpscore(/*tp value*/);
+        //int offScore = WinStat.offScoreCalc(/*from table for off*/);
+        //double defScore = WinStat.defScoreCalc(/*from table for def, pointsAllowed, yardsAllowed*/);
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonRestart_Click(object sender, EventArgs e)
+        {
+            FFWindow.instance.changePanel(new FormHelpScreen());
+        }
     }
 }
