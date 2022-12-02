@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Fantasy_Freaks.Interfaces
 {
-    public interface IPlayerService
+    public interface IPlayerPerformanceService
     {
-        Task<IEnumerable<PlayerDataModel>> AllPlayers(int week);
+        Task<IEnumerable<PlayerPerformanceDataModel>> AllPlayers(int week);
     }
 }

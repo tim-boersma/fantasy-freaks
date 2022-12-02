@@ -8,6 +8,7 @@ namespace Fantasy_Freaks.Models
 {
     public interface IPreviousPlayerService
     {
-        Task<IEnumerable<LastSeasonPlayerDataModel>> AllPlayers();
+        Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllPlayers();
+        Task<IEnumerable<LastSeasonPlayerDataModel>> GetAllQuarterBacks();
     }
 }

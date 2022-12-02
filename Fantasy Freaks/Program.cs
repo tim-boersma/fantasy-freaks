@@ -47,7 +47,7 @@ namespace Fantasy_Freaks {
                     services.AddDbContext<FantasyDataContext>(options => options.UseSqlServer(test));
                     services.AddTransient<IDefenseService, DefenseService>();
                     services.AddTransient<IPreviousPlayerService, PreviousPlayerService>();
-                    services.AddTransient<IPlayerService, PlayerService>();
+                    services.AddTransient<IPlayerPerformanceService, PlayerPerformanceService>();
                     services.AddTransient<FFWindow>();
                     services.AddTransient<FormHomeScreen>();
                 });

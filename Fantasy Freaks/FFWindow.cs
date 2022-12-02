@@ -25,9 +25,9 @@ namespace Fantasy_Freaks {
 
         private readonly IDefenseService _defenseService;
         private readonly IPreviousPlayerService _previousPlayerService;
-        private readonly IPlayerService _playerService;
+        private readonly IPlayerPerformanceService _playerService;
 
-        public FFWindow(IDefenseService defenseService, IPreviousPlayerService previousPlayerService, IPlayerService playerService) {
+        public FFWindow(IDefenseService defenseService, IPreviousPlayerService previousPlayerService, IPlayerPerformanceService playerService) {
             InitializeComponent();
             instance = this;
             _defenseService= defenseService;

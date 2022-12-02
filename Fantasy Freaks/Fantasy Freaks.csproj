@@ -261,14 +261,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomPlayerTeam.cs" />
     <Compile Include="Interfaces\IPlayerService.cs" />
     <Compile Include="Models\DefenseDataModel.cs" />
+    <Compile Include="Models\PlayerDataModel.cs" />
     <Compile Include="Services\DefenseService.cs" />
     <Compile Include="Interfaces\IDefenseService.cs" />
     <Compile Include="Interfaces\IPreviousPlayerService.cs" />
     <Compile Include="Models\LastSeasonPlayersDataModel.cs" />
-    <Compile Include="Models\PlayerDataModel.cs" />
-    <Compile Include="Services\PlayerService.cs" />
+    <Compile Include="Models\PlayerPerformanceDataModel.cs" />
+    <Compile Include="Services\PlayerPerformanceService.cs" />
     <Compile Include="Services\PreviousPlayerService.cs" />
     <Compile Include="FFWindow.cs">
       <SubType>Form</SubType>

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Fantasy_Freaks.Services
 {
@@ -16,17 +17,41 @@ namespace Fantasy_Freaks.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<DefenseDataModel>> AllTeams()
+        public async Task<DefenseDataModel> GetTeam(int ID)
         {
-            var test = await _context.Defense.ToListAsync();
-            var assignment = 0;
-            StupidDebug(assignment);
-            return test;
+            return await _context.Defense.Where(x => x.ID == ID).FirstOrDefaultAsync();
         }
 
-        public static int StupidDebug(int sf)
+        public async Task<DefenseDataModel> GetTeam(string name)
         {
-            return sf * 2;
+            return await _context.Defense.Where(x => x.TeamName == name).FirstOrDefaultAsync();
+        }
+
+        public async Task<IEnumerable<DefenseDataModel>> AllTeams()
+        {
+            return await _context.Defense.ToListAsync();
+        }
+
+        public async Task<IEnumerable<DefenseDataModel>> RandomTeams(int amount)
+        {   
+            var teams = await _context.Defense.ToListAsync();
+            var rand = new Random();
+            List<int> listNumbers = new List<int>();
+            for (int i = 0; i < amount; i++)
+            {
+                int number;
+                do
+                {
+                    number = rand.Next(0, teams.Count);
+                } while (listNumbers.Contains(number));
+                listNumbers.Add(number);
+            }
+            List<DefenseDataModel> randomTeams = new List<DefenseDataModel>();
+            foreach(var number in listNumbers)
+            {
+                randomTeams.Add(teams[number]);
+            }
+            return randomTeams;
         }
     }
 }

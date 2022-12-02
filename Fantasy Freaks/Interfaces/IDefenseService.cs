@@ -9,5 +9,6 @@ namespace Fantasy_Freaks.Models
     public interface IDefenseService
     {
         Task<IEnumerable<DefenseDataModel>> AllTeams();
+        Task<IEnumerable<DefenseDataModel>> RandomTeams(int amount);
     }
 }

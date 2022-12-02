@@ -16,10 +16,10 @@ namespace Fantasy_Freaks {
 
         private readonly IDefenseService _defenseService;
         private readonly IPreviousPlayerService _previousPlayerService;
-        private readonly IPlayerService _playerService;
-        private IEnumerable<PlayerDataModel> _players;
+        private readonly IPlayerPerformanceService _playerService;
+        private IEnumerable<PlayerPerformanceDataModel> _players;
 
-        public FormHomeScreen(IDefenseService defenseService, IPreviousPlayerService previousPlayerService, IPlayerService playerService)
+        public FormHomeScreen(IDefenseService defenseService, IPreviousPlayerService previousPlayerService, IPlayerPerformanceService playerService)
         {
             InitializeComponent();
             instance = this;
@@ -46,9 +46,7 @@ namespace Fantasy_Freaks {
 
         private async Task DBTest()
         {
-            var test = await _defenseService.AllTeams();
-            var test1 = await _previousPlayerService.AllPlayers();
-            _players = await _playerService.AllPlayers(1);
+            var test = await _previousPlayerService.GetAllQuarterBacks();
         }
 
     }

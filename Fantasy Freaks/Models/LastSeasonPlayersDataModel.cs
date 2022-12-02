@@ -15,37 +15,42 @@ namespace Fantasy_Freaks.Models
         public int PlayerID { get; set; }
         [Column("Team_Name")]
         public string TeamName { get; set; }
-        [Column("Player_Pos")]
+        [Column("Player_Position")]
         public string PlayerPosition { get; set; }
         public double Age { get; set; }
-        [Column("G")]
+        [Column("Games")]
         public double Games { get; set; }
-        [Column("GS")]
+        [Column("Games_Started")]
         public double GamesStarted { get; set; }
         [Column("Target")]
         public double PassTarget { get; set; }
         public double Receptions { get; set; }
-        [Column("PassYds")]
+        [Column("Passing_Yards")]
         public double PassingYards { get; set; }
-        [Column("PassTD")]
+        [Column("Passing_Touchdowns")]
         public double PassingTouchdowns { get; set; }
-        [Column("PassAtmpt")]
+        [Column("Pass_Attempts")]
         public double PassAttempts { get; set; }
-        [Column("RushYds")]
+        [Column("Rushing_Yards")]
         public double RushingYards { get; set; }
-        [Column("RushTD")]
+        [Column("Rushing_Touchdowns")]
         public double RushingTouchdowns { get; set; }
-        [Column("RushAtmpt")]
+        [Column("Rushing_Attempts")]
         public double RushAttempts { get; set; }
-        [Column("RecYds")]
+        [Column("Receiving_Yards")]
         public double RecieivingYards { get; set; }
-        [Column("RecTD")]
+        [Column("Receiving_Touchdowns")]
         public double RecievingTouchdowns { get; set; }
         [Column("Fantasy_Points")]
         public double FantasyPoints { get; set; }
-        [Column("Interception")]
         public double Interceptions { get; set; }
         public double Fumbles { get; set; }
         public double FumblesLost { get; set; }
+
+        public bool IsPosition(string position) {
+            IEnumerable<string> positions = PlayerPosition.Split('/');
+            return positions.Where(x => x == position).Any();
+        }
     }
+
 }

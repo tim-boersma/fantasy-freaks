@@ -10,28 +10,36 @@ using System.Threading.Tasks;
 
 namespace Fantasy_Freaks.Services
 {
-    public class PlayerService : IPlayerService
+    public class PlayerPerformanceService : IPlayerPerformanceService
     {
         private readonly FantasyDataContext _context;
-        public PlayerService(FantasyDataContext context)
+        public PlayerPerformanceService(FantasyDataContext context)
         {
             _context = context;
         }
 
-        public async Task<IEnumerable<PlayerDataModel>> AllPlayers(int week)
+        public async Task<IEnumerable<PlayerPerformanceDataModel>> AllPlayers(int week)
         {
-            var players = GetPlayerWeek(week);
-            var retValue = await players.ToListAsync();
-            var assignment = 0;
-            StupidDebug(assignment);
-            return retValue;
-        }
-        public static int StupidDebug(int sf)
-        {
-            return sf * 2;
+            return await GetPlayerWeek(week).ToListAsync();
         }
 
-        public DbSet<PlayerDataModel> GetPlayerWeek(int week)
+        public async Task<PlayerPerformanceDataModel> GetPlayerPerformance(int playerID, int week)
+        {
+            var data = GetPlayerWeek(week);
+            return await data.Where(x => x.PlayerID == playerID).FirstOrDefaultAsync();
+        }
+
+        public async Task<IEnumerable<PlayerPerformanceDataModel>> GetPlayerPerformances(IEnumerable<int> playerIDs, int week)
+        {
+            List<PlayerPerformanceDataModel> players = new List<PlayerPerformanceDataModel>();
+            foreach(var id in playerIDs)
+            {
+                players.Add(await GetPlayerPerformance(id, week));
+            }
+            return players;
+        }
+
+        public DbSet<PlayerPerformanceDataModel> GetPlayerWeek(int week)
         {
             switch (week)
             {
