@@ -125,21 +125,11 @@ namespace Fantasy_Freaks {
 
         private void colorReset()
         {
-            btnQB.BackColor = Color.FromArgb(204, 239, 254);
-            btnRB1.BackColor = Color.FromArgb(204, 239, 254);
-            btnRB2.BackColor = Color.FromArgb(204, 239, 254);
-            btnWR1.BackColor = Color.FromArgb(204, 239, 254);
-            btnWR2.BackColor = Color.FromArgb(204, 239, 254);
-            btnTE.BackColor = Color.FromArgb(204, 239, 254);
-            btnFlex.BackColor = Color.FromArgb(204, 239, 254);
-            btnBe1.BackColor = Color.FromArgb(204, 239, 254);
-            btnBe2.BackColor = Color.FromArgb(204, 239, 254);
-            btnBe3.BackColor = Color.FromArgb(204, 239, 254);
-            btnBe4.BackColor = Color.FromArgb(204, 239, 254);
-            btnBe5.BackColor = Color.FromArgb(204, 239, 254);
-            btnBe6.BackColor = Color.FromArgb(204, 239, 254);
-            btnBe7.BackColor = Color.FromArgb(204, 239, 254);
-            btnBe8.BackColor = Color.FromArgb(204, 239, 254);
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                if(button.Name != "btnSeason")
+                    button.BackColor = Color.FromArgb(204, 239, 254);
+            }
         }
 
         private void PlayerSelected(CurrentPlayerModel player)
