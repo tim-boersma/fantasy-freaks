@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fantasy_Freaks.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,8 +12,10 @@ using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
     public partial class FormTeamMaker : Form {
-        public FormTeamMaker() {
+        private readonly ITeamService _teamService;
+        public FormTeamMaker(ITeamService teamService) {
             InitializeComponent();
+            _teamService = teamService;
         }
         //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
 

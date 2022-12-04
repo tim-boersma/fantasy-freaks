@@ -12,8 +12,6 @@ namespace Fantasy_Freaks
     public class TeamService : ITeamService
     {
         public int CurrentWeek { get; set; }
-
-
         public CurrentPlayerModel Quarterback { get; set; }
         public CurrentPlayerModel WideReceiverOne { get; set; }
         public CurrentPlayerModel WideReceiverTwo { get; set; }
