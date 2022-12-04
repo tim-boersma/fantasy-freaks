@@ -34,78 +34,112 @@ namespace Fantasy_Freaks {
 
         private void btnQB_Click(object sender, EventArgs e)
         {
-
+            btnQB.BackColor = Color.FromArgb(200, 200, 200);
+            PlayerSelected(_teamService.Quarterback);
         }
 
         private void btnRB1_Click(object sender, EventArgs e)
         {
-
+            btnRB1.BackColor = Color.FromArgb(200, 200, 200);
+            PlayerSelected(_teamService.RunningBackOne);
         }
 
         private void btnRB2_Click(object sender, EventArgs e)
         {
-
+            btnRB2.BackColor = Color.FromArgb(200, 200, 200);
+            PlayerSelected(_teamService.RunningBackTwo);
         }
 
         private void btnWR1_Click(object sender, EventArgs e)
         {
-
+            btnWR1.BackColor = Color.FromArgb(200, 200, 200);
+            PlayerSelected(_teamService.WideReceiverOne);
         }
 
         private void btnWR2_Click(object sender, EventArgs e)
         {
-
+            btnWR2.BackColor = Color.FromArgb(200, 200, 200);
+            PlayerSelected(_teamService.WideReceiverTwo);
         }
 
         private void btnTE_Click(object sender, EventArgs e)
         {
-
+            btnTE.BackColor = Color.FromArgb(200, 200, 200);
+            PlayerSelected(_teamService.TightEnd);
         }
 
         private void btnFlex_Click(object sender, EventArgs e)
         {
-
+            btnFlex.BackColor = Color.FromArgb(200, 200, 200);
+            PlayerSelected(_teamService.Flex);
         }
 
         private void btnBe1_Click(object sender, EventArgs e)
         {
-
+            btnBe1.BackColor = Color.FromArgb(200, 200, 200);
+            _teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe1.Text);
         }
 
         private void btnBe2_Click(object sender, EventArgs e)
         {
-
+            btnBe2.BackColor = Color.FromArgb(200, 200, 200);
+            _teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe2.Text);
         }
 
         private void btnBe3_Click(object sender, EventArgs e)
         {
-
+            btnBe3.BackColor = Color.FromArgb(200, 200, 200);
+            _teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe3.Text);
         }
 
         private void btnBe4_Click(object sender, EventArgs e)
         {
-
+            btnBe4.BackColor = Color.FromArgb(200, 200, 200);
+            _teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe4.Text);
         }
 
         private void btnBe5_Click(object sender, EventArgs e)
         {
-
+            btnBe5.BackColor = Color.FromArgb(200, 200, 200);
+            _teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe5.Text);
         }
 
         private void btnBe6_Click(object sender, EventArgs e)
         {
-
+            btnBe6.BackColor = Color.FromArgb(200, 200, 200);
+            _teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe6.Text);
         }
 
         private void btnBe7_Click(object sender, EventArgs e)
         {
-
+            btnBe7.BackColor = Color.FromArgb(200, 200, 200);
+            _teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe7.Text);
         }
 
         private void btnBe8_Click(object sender, EventArgs e)
         {
             //playerbutton changes color
-            PlayerSelected(_teamService.BenchedPlayers[7]);
+            btnBe8.BackColor = Color.FromArgb(200, 200, 200);
+            _teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe8.Text);
+        }
+
+        private void colorReset()
+        {
+            btnQB.BackColor = Color.FromArgb(204, 239, 254);
+            btnRB1.BackColor = Color.FromArgb(204, 239, 254);
+            btnRB2.BackColor = Color.FromArgb(204, 239, 254);
+            btnWR1.BackColor = Color.FromArgb(204, 239, 254);
+            btnWR2.BackColor = Color.FromArgb(204, 239, 254);
+            btnTE.BackColor = Color.FromArgb(204, 239, 254);
+            btnFlex.BackColor = Color.FromArgb(204, 239, 254);
+            btnBe1.BackColor = Color.FromArgb(204, 239, 254);
+            btnBe2.BackColor = Color.FromArgb(204, 239, 254);
+            btnBe3.BackColor = Color.FromArgb(204, 239, 254);
+            btnBe4.BackColor = Color.FromArgb(204, 239, 254);
+            btnBe5.BackColor = Color.FromArgb(204, 239, 254);
+            btnBe6.BackColor = Color.FromArgb(204, 239, 254);
+            btnBe7.BackColor = Color.FromArgb(204, 239, 254);
+            btnBe8.BackColor = Color.FromArgb(204, 239, 254);
         }
 
         private void PlayerSelected(CurrentPlayerModel player)
@@ -120,10 +154,12 @@ namespace Fantasy_Freaks {
                 if(_teamService.BenchedPlayers.Contains(initialPlayer) && _teamService.BenchedPlayers.Contains(player))
                 {
                     //let the user know they can't select two benched players or just deselect and don't do anything and they can figure it out
+                    MessageBox.Show("You can't select two benched players, reselect players");
                 }
                 else if (initialPlayer.PlayerPosition != player.PlayerPosition)
                 {
                     //let the user know they have to be the same position
+                    MessageBox.Show("Players must share same position, reselect players");
                 }
                 else if (_teamService.BenchedPlayers.Contains(initialPlayer) && !_teamService.BenchedPlayers.Contains(player))
                 {
@@ -133,10 +169,10 @@ namespace Fantasy_Freaks {
                 {
                     _teamService.SwapPlayers(initialPlayer, player);
                 }
+                colorReset();
                 swapActive = false;
             }
         }
-
 
 
         private void FormChangeRoster_Load(object sender, EventArgs e)
