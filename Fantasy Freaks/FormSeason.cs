@@ -27,7 +27,7 @@ namespace Fantasy_Freaks {
             } 
             else
             {
-                FFWindow.instance.changePanel(new FormWeekResults(_team));
+                FFWindow.instance.changePanel(new FormEndResults());
             }
         }
     }
