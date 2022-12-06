@@ -36,7 +36,7 @@ namespace Fantasy_Freaks {
             return 46 - 2 * score;
         }
 
-        public int CalculateDefensiveScore(DefenseDataModel defTeam, int pointsAllowed, int yardsAllowed) 
+        public int CalculateDefensiveScore(DefenseDataModel defTeam) 
         {
             return (int)((defTeam.Interceptions * 3) + (defTeam.ForcedFumbles * 2) + defTeam.PointsAllowed + defTeam.TotalYardsAllowed);
         }
@@ -47,9 +47,8 @@ namespace Fantasy_Freaks {
             return (player.PassingYards * 4) + (player.RushingTouchdowns * 6) +
                 (player.RecievingTouchdowns * 6) + (player.Receptions * 1) + (player.RushingYards * .1) +
                 (player.RecievingYards * .1) + (player.PassingYards * .04) +
-                (player.Interceptions * -3); 
-                //There are currently no Fumble stats for players, but when it is implemented this is what it'll look like
-                //+ (player.Fumbles * -3);
+                (player.Interceptions * -3)
+                + (player.Fumbles * -3);
         }
 
     }

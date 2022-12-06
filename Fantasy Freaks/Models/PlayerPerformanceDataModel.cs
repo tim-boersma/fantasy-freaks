@@ -40,5 +40,6 @@ namespace Fantasy_Freaks.Models
         public double RecievingTouchdowns { get; set; }
         [Column("ID")]
         public int PlayerID { get; set; }
+        public double Fumbles { get; set; }
     }
 }

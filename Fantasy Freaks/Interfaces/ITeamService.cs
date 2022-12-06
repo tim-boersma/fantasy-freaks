@@ -26,5 +26,6 @@ namespace Fantasy_Freaks.Interfaces
         //speculation
         int TotalPoints { get; set; }
         void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer);
+        void NextWeek();
     }
 }

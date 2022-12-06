@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fantasy_Freaks.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +11,11 @@ using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
     public partial class FormWeekResults : Form {
-        public FormWeekResults() {
+
+        private ITeamService _teamService;
+        public FormWeekResults(ITeamService teamService) {
             InitializeComponent();
+            _teamService = teamService;
         }
 
         //int dayEvent = WinStat.instance.eventDay();
@@ -26,11 +30,11 @@ namespace Fantasy_Freaks {
 
         private void buttonChangeRoster_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormChangeRoster());
+            FFWindow.instance.changePanel(new FormChangeRoster(_teamService));
         }
         private void btnNext_Click(object sender, EventArgs e)
-            {
-                FFWindow.instance.changePanel(new FormSeason());
-            }
+        {
+            FFWindow.instance.changePanel(new FormSeason());
+        }
     }
 }

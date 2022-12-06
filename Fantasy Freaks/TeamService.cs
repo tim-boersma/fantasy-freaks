@@ -24,12 +24,23 @@ namespace Fantasy_Freaks
 
         //speculation
         public int TotalPoints { get; set; }
+        public int TotalInjuries { get; set; }
+        public int TotalBadDays { get; set; }
+        public int AveragePoints { get; set; }
+        public int TotalGoodDays { get; set; }
+        public int TotalMiraclePlays { get; set; }
+
 
         public TeamService()
         {
             BenchedPlayers = new List<CurrentPlayerModel>();
             CurrentWeek = 1;
             TotalPoints = 0;
+        }
+
+        public void NextWeek()
+        {
+            CurrentWeek++;
         }
 
         public void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer)

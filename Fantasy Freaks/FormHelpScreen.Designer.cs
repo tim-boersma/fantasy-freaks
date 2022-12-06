@@ -50,10 +50,10 @@ namespace Fantasy_Freaks
             // 
             this.WhatIsFFDesc.AutoSize = true;
             this.WhatIsFFDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.WhatIsFFDesc.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhatIsFFDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WhatIsFFDesc.Location = new System.Drawing.Point(19, 161);
             this.WhatIsFFDesc.Name = "WhatIsFFDesc";
-            this.WhatIsFFDesc.Size = new System.Drawing.Size(941, 147);
+            this.WhatIsFFDesc.Size = new System.Drawing.Size(990, 140);
             this.WhatIsFFDesc.TabIndex = 0;
             this.WhatIsFFDesc.Text = resources.GetString("WhatIsFFDesc.Text");
             // 
@@ -61,10 +61,10 @@ namespace Fantasy_Freaks
             // 
             this.WhatIsFF.AutoSize = true;
             this.WhatIsFF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.WhatIsFF.Font = new System.Drawing.Font("Segoe UI Variable Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WhatIsFF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WhatIsFF.Location = new System.Drawing.Point(18, 121);
             this.WhatIsFF.Name = "WhatIsFF";
-            this.WhatIsFF.Size = new System.Drawing.Size(233, 28);
+            this.WhatIsFF.Size = new System.Drawing.Size(261, 25);
             this.WhatIsFF.TabIndex = 1;
             this.WhatIsFF.Text = "What is Fantasy Freaks";
             // 
@@ -72,10 +72,10 @@ namespace Fantasy_Freaks
             // 
             this.Rules.AutoSize = true;
             this.Rules.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.Rules.Font = new System.Drawing.Font("Segoe UI Variable Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Rules.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rules.Location = new System.Drawing.Point(19, 332);
             this.Rules.Name = "Rules";
-            this.Rules.Size = new System.Drawing.Size(279, 28);
+            this.Rules.Size = new System.Drawing.Size(305, 25);
             this.Rules.TabIndex = 2;
             this.Rules.Text = "How to play Fantasy Freaks";
             // 
@@ -83,10 +83,10 @@ namespace Fantasy_Freaks
             // 
             this.RulesDesc.AutoSize = true;
             this.RulesDesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.RulesDesc.Font = new System.Drawing.Font("Segoe UI Variable Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RulesDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RulesDesc.Location = new System.Drawing.Point(19, 369);
             this.RulesDesc.Name = "RulesDesc";
-            this.RulesDesc.Size = new System.Drawing.Size(948, 210);
+            this.RulesDesc.Size = new System.Drawing.Size(991, 200);
             this.RulesDesc.TabIndex = 3;
             this.RulesDesc.Text = resources.GetString("RulesDesc.Text");
             // 
@@ -95,7 +95,7 @@ namespace Fantasy_Freaks
             this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(255)))), ((int)(((byte)(165)))));
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI Variable Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.Location = new System.Drawing.Point(685, 602);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(287, 58);
@@ -111,7 +111,7 @@ namespace Fantasy_Freaks
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pictureBox1.Location = new System.Drawing.Point(0, 109);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(984, 563);
+            this.pictureBox1.Size = new System.Drawing.Size(1017, 563);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -128,11 +128,11 @@ namespace Fantasy_Freaks
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Segoe UI Variable Display", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.title.Location = new System.Drawing.Point(12, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(264, 64);
+            this.title.Size = new System.Drawing.Size(286, 55);
             this.title.TabIndex = 6;
             this.title.Text = "HELP INFO";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -161,7 +161,7 @@ namespace Fantasy_Freaks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 672);
+            this.ClientSize = new System.Drawing.Size(1017, 672);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
