@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 namespace Fantasy_Freaks {
     public class WinStat {
 
-        public int EventForDay() {
+        public static int EventForDay() {
             Random rnd = new Random();
             int num = rnd.Next(0, 5);
             return num;
         }
 
-        public int CalculateScoreFromTotalPoints(int PointsAllowed) {
+        public static int CalculateScoreFromTotalPoints(int PointsAllowed) {
             PointsAllowed -= 201;//lowest score
             int score = 0;
             while (PointsAllowed >= 0) {
@@ -36,13 +36,13 @@ namespace Fantasy_Freaks {
             return 46 - 2 * score;
         }
 
-        public int CalculateDefensiveScore(DefenseDataModel defTeam) 
+        public static int CalculateDefensiveScore(DefenseDataModel defTeam) 
         {
-            return (int)((defTeam.Interceptions * 3) + (defTeam.ForcedFumbles * 2) + defTeam.PointsAllowed + defTeam.TotalYardsAllowed);
+            return (int)((defTeam.Interceptions * 3) + (defTeam.ForcedFumbles * 2) + CalculateScoreFromTotalPoints((int)defTeam.PointsAllowed) + CalculateScoreFromTotalYards((int)defTeam.TotalYardsAllowed));
         }
 
 
-        public double CalculateOffensiveScore(PlayerPerformanceDataModel player) 
+        public static double CalculateOffensiveScore(PlayerPerformanceDataModel player) 
         {
             return (player.PassingYards * 4) + (player.RushingTouchdowns * 6) +
                 (player.RecievingTouchdowns * 6) + (player.Receptions * 1) + (player.RushingYards * .1) +

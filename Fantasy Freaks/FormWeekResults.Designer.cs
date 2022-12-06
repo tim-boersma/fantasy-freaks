@@ -49,7 +49,7 @@
             this.buttonChangeRoster.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.buttonChangeRoster.FlatAppearance.BorderSize = 0;
             this.buttonChangeRoster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonChangeRoster.Font = new System.Drawing.Font("Segoe UI Variable Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChangeRoster.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChangeRoster.ForeColor = System.Drawing.SystemColors.ControlText;
             this.buttonChangeRoster.Location = new System.Drawing.Point(12, 600);
             this.buttonChangeRoster.Name = "buttonChangeRoster";
@@ -64,11 +64,11 @@
             // 
             this.labelFFscore.AutoSize = true;
             this.labelFFscore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(255)))));
-            this.labelFFscore.Font = new System.Drawing.Font("Segoe UI Variable Display", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFFscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFFscore.ForeColor = System.Drawing.Color.White;
             this.labelFFscore.Location = new System.Drawing.Point(307, 253);
             this.labelFFscore.Name = "labelFFscore";
-            this.labelFFscore.Size = new System.Drawing.Size(148, 85);
+            this.labelFFscore.Size = new System.Drawing.Size(143, 73);
             this.labelFFscore.TabIndex = 3;
             this.labelFFscore.Text = "999";
             this.labelFFscore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -76,10 +76,10 @@
             // labelOPPscore
             // 
             this.labelOPPscore.AutoSize = true;
-            this.labelOPPscore.Font = new System.Drawing.Font("Segoe UI Variable Display", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOPPscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOPPscore.Location = new System.Drawing.Point(540, 253);
             this.labelOPPscore.Name = "labelOPPscore";
-            this.labelOPPscore.Size = new System.Drawing.Size(148, 85);
+            this.labelOPPscore.Size = new System.Drawing.Size(143, 73);
             this.labelOPPscore.TabIndex = 4;
             this.labelOPPscore.Text = "999";
             // 
@@ -87,10 +87,10 @@
             // 
             this.FFlabel.AutoSize = true;
             this.FFlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.FFlabel.Font = new System.Drawing.Font("Segoe UI Variable Display", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FFlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FFlabel.Location = new System.Drawing.Point(12, 358);
             this.FFlabel.Name = "FFlabel";
-            this.FFlabel.Size = new System.Drawing.Size(255, 38);
+            this.FFlabel.Size = new System.Drawing.Size(286, 33);
             this.FFlabel.TabIndex = 7;
             this.FFlabel.Text = "FANTASY FREAKS";
             // 
@@ -98,7 +98,7 @@
             // 
             this.OPPlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.OPPlabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.OPPlabel.Font = new System.Drawing.Font("Segoe UI Variable Display", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OPPlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OPPlabel.Location = new System.Drawing.Point(520, 358);
             this.OPPlabel.Name = "OPPlabel";
             this.OPPlabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -114,7 +114,7 @@
             this.btnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(255)))), ((int)(((byte)(138)))));
             this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(255)))), ((int)(((byte)(209)))));
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Segoe UI Variable Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.Location = new System.Drawing.Point(685, 600);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(287, 58);
@@ -148,11 +148,11 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Segoe UI Variable Display", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.title.Location = new System.Drawing.Point(12, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(375, 64);
+            this.title.Size = new System.Drawing.Size(421, 55);
             this.title.TabIndex = 73;
             this.title.Text = "WEEK # RESULT";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -217,6 +217,7 @@
             this.Controls.Add(this.title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormWeekResults";
+            this.Load += new System.EventHandler(this.FormWeekResults_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.line)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FFbanner)).EndInit();

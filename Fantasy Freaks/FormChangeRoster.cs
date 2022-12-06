@@ -14,11 +14,13 @@ using System.Windows.Forms;
 namespace Fantasy_Freaks {
     public partial class FormChangeRoster : Form {
         private readonly ITeamService _teamService;
+        private readonly IDefenseService _defenseService;
         private bool swapActive = false;
         private CurrentPlayerModel initialPlayer;
-        public FormChangeRoster(ITeamService teamService) {
+        public FormChangeRoster(ITeamService teamService, IDefenseService defenseService) {
             InitializeComponent();
             _teamService = teamService;
+            _defenseService = defenseService;
         }
 
         //int pointsAllowed = WinStat.TYscore(/*ty value*/);
@@ -29,7 +31,7 @@ namespace Fantasy_Freaks {
 
         private void btnSeason_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormSeason(_teamService));
+            FFWindow.instance.changePanel(new FormSeason(_teamService, _defenseService));
         }
 
         private void btnQB_Click(object sender, EventArgs e)

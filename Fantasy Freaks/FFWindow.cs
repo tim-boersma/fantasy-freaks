@@ -24,16 +24,18 @@ namespace Fantasy_Freaks {
         public Sport activeSport;
 
         private readonly ITeamService _teamService;
+        private readonly IDefenseService _defenseService;
 
-        public FFWindow(ITeamService teamService) {
+        public FFWindow(ITeamService teamService, IDefenseService defenseService) {
             InitializeComponent();
             instance = this;
             _teamService = teamService;
+            _defenseService = defenseService;
             //activeForm = this;
         }
 
         private void FFWindow_Load(object sender, EventArgs e) {
-            changePanel(new FormHomeScreen(_teamService));
+            changePanel(new FormHomeScreen(_teamService, _defenseService));
         }
         public void changePanel(Form newForm) {
             if (activeForm != null) {

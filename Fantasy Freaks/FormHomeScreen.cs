@@ -15,12 +15,14 @@ namespace Fantasy_Freaks {
         public static FormHomeScreen instance;
 
         private readonly ITeamService _teamService;
+        private readonly IDefenseService _defenseService;
 
-        public FormHomeScreen(ITeamService teamService)
+        public FormHomeScreen(ITeamService teamService, IDefenseService defenseService)
         {
             InitializeComponent();
             instance = this;
             _teamService = teamService;
+            _defenseService = defenseService;
             //activeForm = this;
         }
 
@@ -30,7 +32,7 @@ namespace Fantasy_Freaks {
         }
 
         private void btnPlay_Click(object sender, EventArgs e) {
-            FFWindow.instance.changePanel(new FormSportSelection(_teamService));
+            FFWindow.instance.changePanel(new FormSportSelection(_teamService, _defenseService));
         }
 
         private void btnHelp_Click(object sender, EventArgs e)

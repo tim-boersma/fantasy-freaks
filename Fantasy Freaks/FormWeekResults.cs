@@ -1,4 +1,5 @@
 ﻿using Fantasy_Freaks.Interfaces;
+using Fantasy_Freaks.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,28 +14,97 @@ namespace Fantasy_Freaks {
     public partial class FormWeekResults : Form {
 
         private ITeamService _teamService;
-        public FormWeekResults(ITeamService teamService) {
+        private IDefenseService _defenseService;
+        public FormWeekResults(ITeamService teamService, IDefenseService defenseService) {
             InitializeComponent();
             _teamService = teamService;
+            _defenseService = defenseService;
         }
-
-        //int dayEvent = WinStat.instance.eventDay();
-
-
-
-        //int pointsAllowed = WinStat.instance.TYscore(/*ty value*/);
-        //int yardsAllowed = WinStat.instance.Tpscore(/*tp value*/);
-        //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
-        //double defScore = WinStat.instance.defScoreCalc(/*from table for def, pointsAllowed, yardsAllowed*/);
 
 
         private void buttonChangeRoster_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormChangeRoster(_teamService));
+            FFWindow.instance.changePanel(new FormChangeRoster(_teamService, _defenseService));
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormSeason(_teamService));
+            FFWindow.instance.changePanel(new FormSeason(_teamService, _defenseService));
+        }
+
+        private async void FormWeekResults_Load(object sender, EventArgs e)
+        {
+            var EnemyTeam = _teamService.GetOpponents();
+
+            OPPlabel.Text = EnemyTeam.TeamName;
+
+            int FFeventDay = WinStat.EventForDay();
+            int OPPeventDay = WinStat.EventForDay();
+
+            if(FFeventDay == 0)
+            {
+                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day0;
+                _teamService.TotalInjuries++;
+            }
+            else if(FFeventDay == 1)
+            {
+                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day1;
+                _teamService.TotalBadDays++;
+            }
+            else if (FFeventDay == 2)
+            {
+                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day2;
+                _teamService.TotalAveragePoints++;
+
+            }
+            else if (FFeventDay == 3)
+            {
+                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day3;
+                _teamService.TotalGoodDays++;
+            }
+            else
+            {
+                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day4;
+                _teamService.TotalMiraclePlays++;
+            }
+
+            if (OPPeventDay == 0)
+            {
+                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day0;
+            }
+            else if (FFeventDay == 1)
+            {
+                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day1;
+            }
+            else if (FFeventDay == 2)
+            {
+                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day2;
+
+            }
+            else if (FFeventDay == 3)
+            {
+                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day3;
+            }
+            else
+            {
+                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day4;
+            }
+
+
+            double defScore = WinStat.CalculateDefensiveScore(EnemyTeam);
+
+            int offScore = 0;
+            var players = await _teamService.GetActivePlayers();
+            foreach (var player in players)
+            {
+                double currentPlayer = WinStat.CalculateOffensiveScore(player);
+                currentPlayer += offScore;
+            }
+
+            labelOPPscore.Text = defScore.ToString();
+            labelFFscore.Text = offScore.ToString();
+
+
+            _teamService.NextWeek();
         }
     }
 }
