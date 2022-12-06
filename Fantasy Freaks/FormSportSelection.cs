@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Fantasy_Freaks.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +11,10 @@ using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
     public partial class FormSportSelection : Form {
-        public FormSportSelection() {
+        private readonly ITeamService _teamService;
+        public FormSportSelection(ITeamService teamService) {
             InitializeComponent();
+            _teamService = teamService;
         }
 
         private void FormSportSelection_Load(object sender, EventArgs e) {
@@ -19,7 +22,7 @@ namespace Fantasy_Freaks {
 
         private void btnFootball_Click(object sender, EventArgs e) {
             FFWindow.instance.activeSport = Sport.Football;
-            FFWindow.instance.changePanel(new FormTeamMaker());
+            FFWindow.instance.changePanel(new FormTeamMaker(_teamService));
         }
 
         

@@ -34,7 +34,7 @@ namespace Fantasy_Freaks {
         }
         private void btnNext_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormSeason());
+            FFWindow.instance.changePanel(new FormSeason(_teamService));
         }
     }
 }
