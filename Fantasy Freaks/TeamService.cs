@@ -1,5 +1,6 @@
-﻿using Fantasy_Freaks.Interfaces;
-using Fantasy_Freaks.Models;
+﻿using DataAccess;
+using DataAccess.Interfaces;
+using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
