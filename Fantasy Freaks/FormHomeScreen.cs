@@ -14,18 +14,15 @@ namespace Fantasy_Freaks {
     public partial class FormHomeScreen : Form {
         public static FormHomeScreen instance;
 
+        private readonly ITeamService _teamService;
         private readonly IDefenseService _defenseService;
-        private readonly IPreviousPlayerService _previousPlayerService;
-        private readonly IPlayerPerformanceService _playerService;
-        private IEnumerable<PlayerPerformanceDataModel> _players;
 
-        public FormHomeScreen(IDefenseService defenseService, IPreviousPlayerService previousPlayerService, IPlayerPerformanceService playerService)
+        public FormHomeScreen(ITeamService teamService, IDefenseService defenseService)
         {
             InitializeComponent();
             instance = this;
+            _teamService = teamService;
             _defenseService = defenseService;
-            _previousPlayerService = previousPlayerService;
-            _playerService = playerService;
             //activeForm = this;
         }
 
@@ -35,20 +32,12 @@ namespace Fantasy_Freaks {
         }
 
         private void btnPlay_Click(object sender, EventArgs e) {
-            FFWindow.instance.changePanel(new FormSportSelection());
+            FFWindow.instance.changePanel(new FormSportSelection(_teamService, _defenseService));
         }
 
-        private async void btnHelp_Click(object sender, EventArgs e)
+        private void btnHelp_Click(object sender, EventArgs e)
         {
-            await DBTest();
-            //FFWindow.instance.changePanel(new FormHelpScreen());
+            FFWindow.instance.changePanel(new FormHelpScreen());
         }
-
-        private async Task DBTest()
-        {
-            var test = await _previousPlayerService.GetAllQuarterbacks();
-        }
-
     }
-
 }

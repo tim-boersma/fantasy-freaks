@@ -48,6 +48,7 @@ namespace Fantasy_Freaks {
                     services.AddTransient<IDefenseService, DefenseService>();
                     services.AddTransient<IPreviousPlayerService, PreviousPlayerService>();
                     services.AddTransient<IPlayerPerformanceService, PlayerPerformanceService>();
+                    services.AddSingleton<ITeamService, TeamService>();
                     services.AddTransient<FFWindow>();
                     services.AddTransient<FormHomeScreen>();
                 });

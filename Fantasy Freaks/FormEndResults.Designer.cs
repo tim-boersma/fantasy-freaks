@@ -49,9 +49,9 @@
             this.labelInjury.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInjury.Location = new System.Drawing.Point(44, 165);
             this.labelInjury.Name = "labelInjury";
-            this.labelInjury.Size = new System.Drawing.Size(98, 20);
+            this.labelInjury.Size = new System.Drawing.Size(51, 20);
             this.labelInjury.TabIndex = 1;
-            this.labelInjury.Text = "Injury: *num*";
+            this.labelInjury.Text = "Injury:";
             // 
             // labelBadDay
             // 
@@ -59,9 +59,9 @@
             this.labelBadDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBadDay.Location = new System.Drawing.Point(179, 165);
             this.labelBadDay.Name = "labelBadDay";
-            this.labelBadDay.Size = new System.Drawing.Size(121, 20);
+            this.labelBadDay.Size = new System.Drawing.Size(74, 20);
             this.labelBadDay.TabIndex = 2;
-            this.labelBadDay.Text = "Bad Day: *num*";
+            this.labelBadDay.Text = "Bad Day:";
             // 
             // labelAverage
             // 
@@ -69,9 +69,9 @@
             this.labelAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAverage.Location = new System.Drawing.Point(321, 165);
             this.labelAverage.Name = "labelAverage";
-            this.labelAverage.Size = new System.Drawing.Size(119, 20);
+            this.labelAverage.Size = new System.Drawing.Size(72, 20);
             this.labelAverage.TabIndex = 3;
-            this.labelAverage.Text = "Average: *num*";
+            this.labelAverage.Text = "Average:";
             // 
             // labelGoodDay
             // 
@@ -79,9 +79,9 @@
             this.labelGoodDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGoodDay.Location = new System.Drawing.Point(452, 165);
             this.labelGoodDay.Name = "labelGoodDay";
-            this.labelGoodDay.Size = new System.Drawing.Size(132, 20);
+            this.labelGoodDay.Size = new System.Drawing.Size(85, 20);
             this.labelGoodDay.TabIndex = 4;
-            this.labelGoodDay.Text = "Good Day: *num*";
+            this.labelGoodDay.Text = "Good Day:";
             // 
             // labelMiraclePlay
             // 
@@ -89,9 +89,9 @@
             this.labelMiraclePlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMiraclePlay.Location = new System.Drawing.Point(618, 165);
             this.labelMiraclePlay.Name = "labelMiraclePlay";
-            this.labelMiraclePlay.Size = new System.Drawing.Size(143, 20);
+            this.labelMiraclePlay.Size = new System.Drawing.Size(96, 20);
             this.labelMiraclePlay.TabIndex = 5;
-            this.labelMiraclePlay.Text = "Miracle Play: *num*";
+            this.labelMiraclePlay.Text = "Miracle Play:";
             // 
             // buttonRestart
             // 

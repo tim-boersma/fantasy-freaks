@@ -273,9 +273,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomPlayerTeam.cs" />
+    <Compile Include="TeamService.cs" />
     <Compile Include="Interfaces\ICurrentPlayerService.cs" />
     <Compile Include="Interfaces\IPlayerPerformanceService.cs" />
+    <Compile Include="Interfaces\ITeamService.cs" />
     <Compile Include="Models\DefenseDataModel.cs" />
     <Compile Include="Models\PlayerDataModel.cs" />
     <Compile Include="Services\CurrentPlayerService.cs" />

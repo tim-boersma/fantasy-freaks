@@ -23,21 +23,19 @@ namespace Fantasy_Freaks {
         private Form activeForm;
         public Sport activeSport;
 
+        private readonly ITeamService _teamService;
         private readonly IDefenseService _defenseService;
-        private readonly IPreviousPlayerService _previousPlayerService;
-        private readonly IPlayerPerformanceService _playerService;
 
-        public FFWindow(IDefenseService defenseService, IPreviousPlayerService previousPlayerService, IPlayerPerformanceService playerService) {
+        public FFWindow(ITeamService teamService, IDefenseService defenseService) {
             InitializeComponent();
             instance = this;
-            _defenseService= defenseService;
-            _previousPlayerService= previousPlayerService;
-            _playerService = playerService;
+            _teamService = teamService;
+            _defenseService = defenseService;
             //activeForm = this;
         }
 
         private void FFWindow_Load(object sender, EventArgs e) {
-            changePanel(new FormHomeScreen(_defenseService, _previousPlayerService, _playerService));
+            changePanel(new FormHomeScreen(_teamService, _defenseService));
         }
         public void changePanel(Form newForm) {
             if (activeForm != null) {

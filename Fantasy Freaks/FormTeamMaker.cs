@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Fantasy_Freaks.Interfaces;
+using Fantasy_Freaks.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,8 +13,12 @@ using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
     public partial class FormTeamMaker : Form {
-        public FormTeamMaker() {
+        private readonly ITeamService _teamService;
+        private readonly IDefenseService _defenseService;
+        public FormTeamMaker(ITeamService teamService, IDefenseService defenseService) {
             InitializeComponent();
+            _teamService = teamService;
+            _defenseService = defenseService;
         }
         //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
 
@@ -97,7 +103,7 @@ namespace Fantasy_Freaks {
 
         private void btnSeason_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormSeason());
+            FFWindow.instance.changePanel(new FormSeason(_teamService, _defenseService));
         }
         private void choosingPlayer(Button button) {
             Form fPS = new FormPlayerSelection();
