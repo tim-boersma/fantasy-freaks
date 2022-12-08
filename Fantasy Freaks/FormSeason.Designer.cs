@@ -26,11 +26,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.line = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
-            this.labelDash = new System.Windows.Forms.Label();
-            this.labelOPPscore = new System.Windows.Forms.Label();
-            this.labelScoreFF = new System.Windows.Forms.Label();
-            this.labelWeek = new System.Windows.Forms.Label();
             this.btnWeekResults = new System.Windows.Forms.Button();
+            this.panelOpponents = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.line)).BeginInit();
             this.SuspendLayout();
@@ -58,55 +55,14 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Segoe UI Variable Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.title.Location = new System.Drawing.Point(12, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(516, 55);
+            this.title.Size = new System.Drawing.Size(490, 64);
             this.title.TabIndex = 6;
             this.title.Text = "UPCOMING SEASON";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelDash
-            // 
-            this.labelDash.AutoSize = true;
-            this.labelDash.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDash.Location = new System.Drawing.Point(484, 250);
-            this.labelDash.Name = "labelDash";
-            this.labelDash.Size = new System.Drawing.Size(20, 25);
-            this.labelDash.TabIndex = 4;
-            this.labelDash.Text = "-";
-            // 
-            // labelOPPscore
-            // 
-            this.labelOPPscore.AutoSize = true;
-            this.labelOPPscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOPPscore.Location = new System.Drawing.Point(535, 250);
-            this.labelOPPscore.Name = "labelOPPscore";
-            this.labelOPPscore.Size = new System.Drawing.Size(163, 25);
-            this.labelOPPscore.TabIndex = 3;
-            this.labelOPPscore.Text = "*OPP SCORE*";
-            // 
-            // labelScoreFF
-            // 
-            this.labelScoreFF.AutoSize = true;
-            this.labelScoreFF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelScoreFF.Location = new System.Drawing.Point(319, 250);
-            this.labelScoreFF.Name = "labelScoreFF";
-            this.labelScoreFF.Size = new System.Drawing.Size(144, 25);
-            this.labelScoreFF.TabIndex = 2;
-            this.labelScoreFF.Text = "*FF SCORE*";
-            // 
-            // labelWeek
-            // 
-            this.labelWeek.AutoSize = true;
-            this.labelWeek.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWeek.Location = new System.Drawing.Point(403, 175);
-            this.labelWeek.Name = "labelWeek";
-            this.labelWeek.Size = new System.Drawing.Size(185, 50);
-            this.labelWeek.TabIndex = 1;
-            this.labelWeek.Text = "*INSERT WEEK*\r\nVS\r\n";
-            this.labelWeek.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnWeekResults
             // 
@@ -115,7 +71,7 @@
             this.btnWeekResults.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(255)))), ((int)(((byte)(138)))));
             this.btnWeekResults.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(255)))), ((int)(((byte)(209)))));
             this.btnWeekResults.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWeekResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWeekResults.Font = new System.Drawing.Font("Segoe UI Variable Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWeekResults.Location = new System.Drawing.Point(683, 600);
             this.btnWeekResults.Name = "btnWeekResults";
             this.btnWeekResults.Size = new System.Drawing.Size(287, 58);
@@ -125,16 +81,23 @@
             this.btnWeekResults.UseVisualStyleBackColor = false;
             this.btnWeekResults.Click += new System.EventHandler(this.btnWeekResults_Click);
             // 
+            // panelOpponents
+            // 
+            this.panelOpponents.BackColor = System.Drawing.Color.Transparent;
+            this.panelOpponents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelOpponents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelOpponents.Location = new System.Drawing.Point(22, 127);
+            this.panelOpponents.Name = "panelOpponents";
+            this.panelOpponents.Size = new System.Drawing.Size(938, 455);
+            this.panelOpponents.TabIndex = 10;
+            // 
             // FormSeason
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 672);
             this.ControlBox = false;
-            this.Controls.Add(this.labelDash);
-            this.Controls.Add(this.labelOPPscore);
-            this.Controls.Add(this.labelScoreFF);
-            this.Controls.Add(this.labelWeek);
+            this.Controls.Add(this.panelOpponents);
             this.Controls.Add(this.btnWeekResults);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.line);
@@ -157,9 +120,6 @@
         private System.Windows.Forms.PictureBox line;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Button btnWeekResults;
-        private System.Windows.Forms.Label labelDash;
-        private System.Windows.Forms.Label labelOPPscore;
-        private System.Windows.Forms.Label labelScoreFF;
-        private System.Windows.Forms.Label labelWeek;
+        private System.Windows.Forms.Panel panelOpponents;
     }
 }

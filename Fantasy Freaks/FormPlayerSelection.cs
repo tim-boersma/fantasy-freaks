@@ -10,8 +10,13 @@ using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
     public partial class FormPlayerSelection : Form {
-        public FormPlayerSelection() {
+        Button pos;
+        public FormPlayerSelection(Button button) {
             InitializeComponent();
+            this.pos = button;
+        }
+        private void FormPlayerSelection_Unload(object sender, EventArgs e) {
+            pos.Enabled = true;
         }
     }
 }

@@ -27,6 +27,7 @@ namespace Fantasy_Freaks {
         }
 
         private void FormHomeScreen_Load(object sender, EventArgs e) {
+            FFWindow.instance.setFont(this);
             logo.Parent = titleBackground;
             title.Parent = titleBackground;
         }
@@ -37,7 +38,7 @@ namespace Fantasy_Freaks {
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormHelpScreen());
+            FFWindow.instance.changePanel(new FormHelpScreen(_teamService, _defenseService));
         }
     }
 }

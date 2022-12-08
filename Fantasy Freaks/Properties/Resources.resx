@@ -130,9 +130,6 @@
   <data name="titlepic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\titlepic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FFbanner" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FFbanner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="day0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\day0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,5 +147,104 @@
   </data>
   <data name="DayBanner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DayBanner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bears" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Bears.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bengals" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Bengals.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bills" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Bills.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Broncos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Broncos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Browns" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Browns.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bucceneers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Bucceneers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cardinals" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Cardinals.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chargers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Chargers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cheifs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Cheifs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Colts" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Colts.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Commander" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Commander.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cowboys" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Cowboys.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dolphins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Dolphins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eagles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Eagles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Falcons" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Falcons.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\FF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Giants" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Giants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jaguars" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Jaguars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Jets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Jets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Lions" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Lions.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Packers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Packers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Panthers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Panthers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Patriots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Patriots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Raiders" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Raiders.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rams" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Rams.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ravens" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Ravens.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Saints" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Saints.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Seahawks" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Seahawks.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Steelers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Steelers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Texans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Texans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Titans" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Titans.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vikings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\Vikings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_49ers" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TeamBanner\49ers.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

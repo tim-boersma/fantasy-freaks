@@ -7,6 +7,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,6 +24,7 @@ namespace Fantasy_Freaks {
         //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
 
         private void FormTeamMaker_Load(object sender, EventArgs e) {
+            FFWindow.instance.setFont(this);
             new WinStat();
         }
 
@@ -105,8 +107,9 @@ namespace Fantasy_Freaks {
         {
             FFWindow.instance.changePanel(new FormSeason(_teamService, _defenseService));
         }
-        private void choosingPlayer(Button button) {
-            Form fPS = new FormPlayerSelection();
+        private void choosingPlayer(Button button) {//position parameter too Ex: Postion pos
+            button.Enabled = false;
+            Form fPS = new FormPlayerSelection(button);
             fPS.Show();
         }
     }

@@ -26,7 +26,7 @@ namespace Fantasy_Freaks {
 
         private void buttonRestart_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormHelpScreen());
+            Application.Restart();
         }
     }
 }

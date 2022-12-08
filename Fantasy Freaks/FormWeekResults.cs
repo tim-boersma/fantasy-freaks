@@ -33,6 +33,8 @@ namespace Fantasy_Freaks {
 
         private async void FormWeekResults_Load(object sender, EventArgs e)
         {
+            FFWindow.instance.setFont(this);
+
             var EnemyTeam = _teamService.GetOpponents();
 
             OPPlabel.Text = EnemyTeam.TeamName;

@@ -273,6 +273,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormSeasonOpponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSeasonOpponents.Designer.cs">
+      <DependentUpon>FormSeasonOpponents.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeamService.cs" />
     <Compile Include="Interfaces\ICurrentPlayerService.cs" />
     <Compile Include="Interfaces\IPlayerPerformanceService.cs" />
@@ -371,6 +377,9 @@
     <EmbeddedResource Include="FormPlayerSelection.resx">
       <DependentUpon>FormPlayerSelection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSeasonOpponents.resx">
+      <DependentUpon>FormSeasonOpponents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSportSelection.resx">
       <DependentUpon>FormSportSelection.cs</DependentUpon>
     </EmbeddedResource>
@@ -431,9 +440,6 @@
     <None Include="Resources\FFlogo_black.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FFbanner.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\day0.png" />
   </ItemGroup>
   <ItemGroup>
@@ -450,6 +456,105 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\DayBanner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\49ers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Bears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Bengals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Bills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Broncos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Browns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Bucceneers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Cardinals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Chargers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Cheifs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Colts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Commander.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Cowboys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Dolphins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Eagles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Falcons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\FF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Giants.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Jaguars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Jets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Lions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Packers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Panthers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Patriots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Raiders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Rams.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Ravens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Saints.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Seahawks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Steelers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Texans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Titans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Vikings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />

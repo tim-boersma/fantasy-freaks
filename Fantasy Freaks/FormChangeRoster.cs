@@ -169,6 +169,7 @@ namespace Fantasy_Freaks {
 
         private void FormChangeRoster_Load(object sender, EventArgs e)
         {
+            FFWindow.instance.setFont(this);
             btnQB.Text = _teamService.Quarterback.PlayerName;
             btnRB1.Text = _teamService.RunningBackOne.PlayerName;
             btnRB2.Text = _teamService.RunningBackTwo.PlayerName;

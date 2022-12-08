@@ -52,6 +52,11 @@ namespace Fantasy_Freaks {
             newForm.BringToFront();
             newForm.Show();
         }
+        public void setFont(Form form) {
+            foreach(Control c in form.Controls) {
+                c.Font = new Font("Segoe UI Variable Text", c.Font.Size, FontStyle.Bold);
+            }
+        }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
