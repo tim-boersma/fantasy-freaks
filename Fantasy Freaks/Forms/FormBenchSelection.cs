@@ -9,13 +9,13 @@ using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
 using static DataAccess.GlobalConstants;
 
 namespace Fantasy_Freaks {
-    public partial class FormPlayerSelection : Form {
+    public partial class FormBenchSelection : Form {
 
         private readonly ICurrentPlayerService _currentPlayer;
         private readonly ITeamService _team;
         private IEnumerable<CurrentPlayerModel> players;
         private readonly string _playerSelection;
-        public FormPlayerSelection(ICurrentPlayerService currentPlayer, ITeamService teamService, string playerSelection) {
+        public FormBenchSelection(ICurrentPlayerService currentPlayer, ITeamService teamService, string playerSelection) {
             InitializeComponent();
             _currentPlayer = currentPlayer;
             _playerSelection = playerSelection;

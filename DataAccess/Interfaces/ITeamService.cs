@@ -33,5 +33,6 @@ namespace DataAccess.Interfaces
         DefenseDataModel GetOpponents();
 
         Task<List<PlayerPerformanceDataModel>> GetActivePlayers();
+        bool SetPosition(string position, CurrentPlayerModel player);
     }
 }

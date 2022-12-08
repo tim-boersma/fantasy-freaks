@@ -12,5 +12,6 @@ namespace DataAccess.Models
         public string PlayerName { get; set; }
         [Column("Player_Position")]
         public string PlayerPosition { get; set; }
+        [NotMapped] public bool Selected { get; set; } = false;
     }
 }

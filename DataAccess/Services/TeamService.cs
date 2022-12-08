@@ -1,15 +1,14 @@
-﻿using DataAccess;
-using DataAccess.Interfaces;
+﻿using DataAccess.Interfaces;
 using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using static DataAccess.GlobalConstants;
 
-namespace Fantasy_Freaks
+namespace DataAccess.Services
 {
     public class TeamService : ITeamService
     {
@@ -35,7 +34,7 @@ namespace Fantasy_Freaks
         public CurrentPlayerModel RunningBackTwo { get; set; }
         public CurrentPlayerModel TightEnd { get; set; }
         public CurrentPlayerModel Flex { get; set; }
-        public List<CurrentPlayerModel> BenchedPlayers { get; set; }
+        public List<CurrentPlayerModel> BenchedPlayers { get; set; } = new List<CurrentPlayerModel>();
         public List<DefenseDataModel> EnemyTeams { get; set; }
 
         
@@ -72,6 +71,63 @@ namespace Fantasy_Freaks
                 players.Add(await GetPlayerPerformance(id, week));
             }
             return players;
+        }
+
+        public bool SetPosition(string position, CurrentPlayerModel player)
+        {
+            switch (position)
+            {
+                case PlayerTypes.Quarterback:
+                    if (player.PlayerPosition == PlayerTypes.Quarterback)
+                    {
+                        Quarterback = player;
+                        return true;
+                    }
+                    return false;
+                case PlayerTypes.WideReceiver:
+                    if (player.PlayerPosition == PlayerTypes.WideReceiver)
+                    {
+                        WideReceiverOne = player;
+                        return true;
+                    }
+                    return false;
+                case PlayerTypes.WideReceiverTwo:
+                    if (player.PlayerPosition == PlayerTypes.WideReceiver)
+                    {
+                        WideReceiverTwo = player;
+                        return true;
+                    }
+                    return false;
+                case PlayerTypes.RunningBack:
+                    if (player.PlayerPosition == PlayerTypes.RunningBack)
+                    {
+                        RunningBackOne = player;
+                        return true;
+                    }
+                    return false;
+                case PlayerTypes.RunningBackTwo:
+                    if (player.PlayerPosition == PlayerTypes.RunningBack)
+                    {
+                        RunningBackTwo = player;
+                        return true;
+                    }
+                    return false;
+                case PlayerTypes.TightEnd:
+                    if (player.PlayerPosition == PlayerTypes.TightEnd)
+                    {
+                        TightEnd = player;
+                        return true;
+                    }
+                    return false;
+                case PlayerTypes.Flex:
+                    Flex = player;
+                    return true;
+                case PlayerTypes.Bench:
+                    BenchedPlayers.Add(player);
+                    return true;
+                default:
+                    return false;
+            }
         }
 
         public DbSet<PlayerPerformanceDataModel> GetPlayerWeek(int week)

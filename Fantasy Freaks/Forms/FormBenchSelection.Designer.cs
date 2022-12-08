@@ -1,5 +1,5 @@
 ﻿namespace Fantasy_Freaks {
-    partial class FormPlayerSelection {
+    partial class FormBenchSelection {
         /// <summary>
         /// Required designer variable.
         /// </summary>
