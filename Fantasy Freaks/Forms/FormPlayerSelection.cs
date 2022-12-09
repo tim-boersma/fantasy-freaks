@@ -26,33 +26,12 @@ namespace Fantasy_Freaks {
         {
             // TODO: This line of code loads data into the 'fantasyFreaksDataSet.NewSeasonPlayer' table. You can move, or remove it, as needed.
             //this.newSeasonPlayerTableAdapter.Fill(this.fantasyFreaksDataSet.NewSeasonPlayer);
-            players = await GetSelectedPlayers();
+            players = await _currentPlayer.GetSelectedPlayers(_playerSelection);
 
             dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlayers.DataSource = players;
 
             lblSelection.Text = "Select your " + teamDictionary.fullPlayerTypeNames[_playerSelection];
-        }
-
-        private async Task<IEnumerable<CurrentPlayerModel>> GetSelectedPlayers()
-        {
-            switch (_playerSelection)
-            {
-                case PlayerTypes.Quarterback:
-                    return await _currentPlayer.GetAllQuarterbacks();
-                case PlayerTypes.RunningBack:
-                    return await _currentPlayer.GetAllRunningbacks();
-                case PlayerTypes.RunningBackTwo:
-                    return await _currentPlayer.GetAllRunningbacks();
-                case PlayerTypes.TightEnd:
-                    return await _currentPlayer.GetAllTightEnds();
-                case PlayerTypes.WideReceiver:
-                    return await _currentPlayer.GetAllWideReceivers();
-                case PlayerTypes.WideReceiverTwo:
-                    return await _currentPlayer.GetAllWideReceivers();
-                default:
-                    return await _currentPlayer.GetAllPlayers();
-            }
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
