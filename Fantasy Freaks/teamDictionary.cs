@@ -88,7 +88,8 @@ namespace Fantasy_Freaks
             {PlayerTypes.RunningBack, "Running Back" },
             {PlayerTypes.RunningBackTwo, "Running Back" },
             {PlayerTypes.WideReceiver, "Wide Receiver" },
-            {PlayerTypes.WideReceiverTwo, "Wide Receiver"  },
+            {PlayerTypes.WideReceiverTwo, "Wide Receiver" },
+            {PlayerTypes.TightEnd, "Tight End"  },
             {PlayerTypes.Flex, "Flex" },
             {PlayerTypes.Bench, "Bench" },
             

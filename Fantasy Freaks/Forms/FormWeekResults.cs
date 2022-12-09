@@ -96,24 +96,25 @@ namespace Fantasy_Freaks {
 
             double defScore = WinStat.CalculateDefensiveScore(EnemyTeam);
 
-            int offScore = 0;
+            double offScore = 0;
             var players = await _teamService.GetActivePlayers();
             foreach (var player in players)
             {
                 double currentPlayer = WinStat.CalculateOffensiveScore(player);
-                currentPlayer += offScore;
+                offScore += currentPlayer;
             }
+            int offFinalScore = (int)offScore;
 
-            var performance = new WeekPerformance(offScore, defScore);
+            var performance = new WeekPerformance(offFinalScore, defScore);
             _teamService.PlayerPerformance.Insert(_teamService.CurrentWeek - 1, performance);
             labelOPPscore.Text = defScore.ToString();
-            labelFFscore.Text = offScore.ToString();
+            labelFFscore.Text = offFinalScore.ToString();
 
 
             if (offScore > _teamService.BestWeek)
-                _teamService.BestWeek = offScore;
+                _teamService.BestWeek = offFinalScore;
             if (offScore < _teamService.WorstWeek)
-                _teamService.WorstWeek = offScore;
+                _teamService.WorstWeek = offFinalScore;
 
             _teamService.NextWeek();
         }

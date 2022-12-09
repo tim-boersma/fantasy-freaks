@@ -19,8 +19,8 @@ namespace DataAccess.Services
         }
 
         public int CurrentWeek { get; set; } = 1;
-        public int BestWeek { get; set; } = 0;
-        public int WorstWeek { get; set; } = 0;
+        public double BestWeek { get; set; } = 0;
+        public double WorstWeek { get; set; } = 0;
         public int TotalInjuries { get; set; } = 0;
         public int TotalBadDays { get; set; } = 0;
         public int TotalAveragePoints { get; set; } = 0;
@@ -57,7 +57,8 @@ namespace DataAccess.Services
                 WideReceiverTwo.PlayerID,
                 RunningBackOne.PlayerID,
                 RunningBackTwo.PlayerID,
-                TightEnd.PlayerID
+                TightEnd.PlayerID,
+                Flex.PlayerID
             };
         }
 
