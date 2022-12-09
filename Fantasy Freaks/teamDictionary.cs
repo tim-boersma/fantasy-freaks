@@ -63,12 +63,12 @@ namespace Fantasy_Freaks
             {"Houston Texans", Color.FromArgb(3,31,47) },
             {"Indianapolis Colts", Color.FromArgb(1,51,105) },
             {"Jacksonville Jaguars", Color.FromArgb(0,103,121) },
-            {"Kansas City Chiefs", Color.FromArgb(255,24,55) }, //CHECK COLOR IS RIGHT
+            {"Kansas City Chiefs", Color.FromArgb(227,24,55) }, //CHECK COLOR IS RIGHT
             {"Oakland Raiders", Color.FromArgb(169,169,169) },
             {"Los Angeles Chargers", Color.FromArgb(0,128,198) },
             {"Los Angeles Rams", Color.FromArgb(0,53,148) },
             {"Miami Dolphins", Color.FromArgb(1,144,158) },
-            {"Minnesota Vikings", Color.FromArgb(79,28,131) },
+            {"Minnesota Vikings", Color.FromArgb(79,38,131) },
             {"New England Patriots", Color.FromArgb(122,122,122) },
             {"New Orleans Saints", Color.FromArgb(37,37,37) },
             {"New York Giants", Color.FromArgb(9,32,103) },

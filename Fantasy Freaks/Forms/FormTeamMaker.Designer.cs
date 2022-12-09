@@ -37,7 +37,7 @@
             this.labelWR2 = new System.Windows.Forms.Label();
             this.btnWR2 = new System.Windows.Forms.Button();
             this.labelTE = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelFlex = new System.Windows.Forms.Label();
             this.btnFlex = new System.Windows.Forms.Button();
             this.labelBe1 = new System.Windows.Forms.Label();
             this.btnBe1 = new System.Windows.Forms.Button();
@@ -257,17 +257,17 @@
             this.labelTE.Text = "TE";
             this.labelTE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label6
+            // labelFlex
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(247, 543);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 24);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "FLEX";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelFlex.AutoSize = true;
+            this.labelFlex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelFlex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFlex.Location = new System.Drawing.Point(247, 543);
+            this.labelFlex.Name = "labelFlex";
+            this.labelFlex.Size = new System.Drawing.Size(63, 24);
+            this.labelFlex.TabIndex = 21;
+            this.labelFlex.Text = "FLEX";
+            this.labelFlex.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnFlex
             // 
@@ -527,8 +527,8 @@
             this.btnRandom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(255)))), ((int)(((byte)(165)))));
             this.btnRandom.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRandom.FlatAppearance.BorderSize = 0;
-            this.btnRandom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(255)))), ((int)(((byte)(165)))));
-            this.btnRandom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(255)))), ((int)(((byte)(165)))));
+            this.btnRandom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(255)))), ((int)(((byte)(138)))));
+            this.btnRandom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(255)))), ((int)(((byte)(209)))));
             this.btnRandom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRandom.Location = new System.Drawing.Point(685, 124);
@@ -565,7 +565,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.labelRB1);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelFlex);
             this.Controls.Add(this.labelTE);
             this.Controls.Add(this.labelWR2);
             this.Controls.Add(this.labelWR1);
@@ -622,7 +622,7 @@
         private System.Windows.Forms.Label labelWR2;
         private System.Windows.Forms.Button btnWR2;
         private System.Windows.Forms.Label labelTE;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelFlex;
         private System.Windows.Forms.Button btnFlex;
         private System.Windows.Forms.Label labelBe1;
         private System.Windows.Forms.Button btnBe1;

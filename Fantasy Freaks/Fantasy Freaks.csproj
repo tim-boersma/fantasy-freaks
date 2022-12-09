@@ -426,6 +426,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SEGUIVAR.TTF" />
     <None Include="Resources\titlepic.png" />
   </ItemGroup>
   <ItemGroup>

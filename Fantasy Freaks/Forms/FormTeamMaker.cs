@@ -45,7 +45,23 @@ namespace Fantasy_Freaks {
         //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
 
         private void FormTeamMaker_Load(object sender, EventArgs e) {
+            FFWindow.instance.setFont(this);
 
+            TransparentLabelonButton(labelQB, btnQB);
+            TransparentLabelonButton(labelRB1, btnRB1);
+            TransparentLabelonButton(labelRB2, btnRB2);
+            TransparentLabelonButton(labelWR1, btnWR1);
+            TransparentLabelonButton(labelWR2, btnWR2);
+            TransparentLabelonButton(labelTE, btnTE);
+            TransparentLabelonButton(labelFlex, btnFlex);
+            TransparentLabelonButton(labelBe1, btnBe1);
+            TransparentLabelonButton(labelBe2, btnBe2);
+            TransparentLabelonButton(labelBe3, btnBe3);
+            TransparentLabelonButton(labelBe4, btnBe4);
+            TransparentLabelonButton(labelBe5, btnBe5);
+            TransparentLabelonButton(labelBe6, btnBe6);
+            TransparentLabelonButton(labelBe7, btnBe7);
+            TransparentLabelonButton(labelBe8, btnBe8);
         }
 
         private void btnQB_Click(object sender, EventArgs e)
@@ -250,6 +266,11 @@ namespace Fantasy_Freaks {
                 selectedPlayers.Add(selectedPlayer);
             }
             return selectedPlayers;
+        }
+        private void TransparentLabelonButton(Label l, Button b) {
+            l.BackColor = Color.Transparent;
+            l.Location = b.PointToClient(l.Parent.PointToScreen(l.Location));
+            l.Parent = b;
         }
     }
 }
