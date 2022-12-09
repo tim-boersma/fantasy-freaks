@@ -108,35 +108,34 @@ namespace Fantasy_Freaks {
 
         private void btnSeason_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormSeason(_team, _defense));
+            if (_team.AllPlayersInitialized())
+            {
+                FFWindow.instance.changePanel(new FormSeason(_team, _defense));
+            }
+            else
+            {
+                // TODO: Warn user they have players they still need to add
+            }
         }
         private void ChoosingPlayer(Button button, string position) {
-            
-            Form frmPS = new FormPlayerSelection(_currentPlayer, _team, position);
-            frmPS.Show();
-            frmPS.FormClosed += new FormClosedEventHandler(Form_Closed);
+            if(position == PlayerTypes.Bench)
+            {
+                Form frmBS = new FormBenchSelection(_currentPlayer, _team, position);
+                frmBS.Show();
+                frmBS.FormClosed += new FormClosedEventHandler(BenchSelectionForm_Closed);
+            } 
+            else
+            {
+                Form frmPS = new FormPlayerSelection(_currentPlayer, _team, position);
+                frmPS.Show();
+                frmPS.FormClosed += new FormClosedEventHandler(PlayerSelectionForm_Closed);
+            }
         }
 
-        private void Form_Closed(object sender, FormClosedEventArgs e)
+        private void BenchSelectionForm_Closed(object sender, FormClosedEventArgs e)
         {
-            if (_team.Quarterback != null)
-                btnQB.Text = _team.Quarterback.PlayerName;
-            if (_team.RunningBackOne != null)
-                btnRB1.Text = _team.RunningBackOne.PlayerName;
-            if (_team.RunningBackTwo != null)
-                btnRB2.Text = _team.RunningBackTwo.PlayerName;
-            if (_team.WideReceiverOne != null)
-                btnWR1.Text = _team.WideReceiverOne.PlayerName;
-            if (_team.WideReceiverTwo != null)
-                btnWR2.Text = _team.WideReceiverTwo.PlayerName;
-            if (_team.TightEnd != null)
-                btnTE.Text = _team.TightEnd.PlayerName;
-            if (_team.Flex != null)
-                btnFlex.Text = _team.Flex.PlayerName;
-
             if (_team.BenchedPlayers.Any())
             {
-
                 List<Button> buttons = new List<Button>();
                 foreach (var button in this.Controls.OfType<Button>())
                 {
@@ -153,6 +152,24 @@ namespace Fantasy_Freaks {
                     index++;
                 }
             }
+        }
+
+        private void PlayerSelectionForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            if (_team.Quarterback != null)
+                btnQB.Text = _team.Quarterback.PlayerName;
+            if (_team.RunningBackOne != null)
+                btnRB1.Text = _team.RunningBackOne.PlayerName;
+            if (_team.RunningBackTwo != null)
+                btnRB2.Text = _team.RunningBackTwo.PlayerName;
+            if (_team.WideReceiverOne != null)
+                btnWR1.Text = _team.WideReceiverOne.PlayerName;
+            if (_team.WideReceiverTwo != null)
+                btnWR2.Text = _team.WideReceiverTwo.PlayerName;
+            if (_team.TightEnd != null)
+                btnTE.Text = _team.TightEnd.PlayerName;
+            if (_team.Flex != null)
+                btnFlex.Text = _team.Flex.PlayerName;
         }
     }
 }

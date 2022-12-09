@@ -37,7 +37,17 @@ namespace DataAccess.Services
         public List<CurrentPlayerModel> BenchedPlayers { get; set; } = new List<CurrentPlayerModel>();
         public List<DefenseDataModel> EnemyTeams { get; set; }
 
-        
+        public bool AllPlayersInitialized()
+        {
+            return Quarterback != null &&
+                  WideReceiverOne != null &&
+                  WideReceiverTwo != null &&
+                  RunningBackOne != null &&
+                  RunningBackTwo != null &&
+                  TightEnd != null &&
+                  Flex != null &&
+                  BenchedPlayers.Count == 8;
+        }
         public IEnumerable<int> GetActivePlayerIDs()
         {
             return new List<int>() {
@@ -60,7 +70,13 @@ namespace DataAccess.Services
         public async Task<PlayerPerformanceDataModel> GetPlayerPerformance(int playerID, int week)
         {
             var data = GetPlayerWeek(week);
-            return await data.Where(x => x.PlayerID == playerID).FirstOrDefaultAsync();
+            var player = await data.Where(x => x.PlayerID == playerID).FirstOrDefaultAsync();
+            if(player == null)
+            {
+                var noGametimePlayer = _context.CurrentPlayer.Where(x => x.PlayerID == playerID).FirstOrDefault();
+                player = PlayerPerformanceDataModel.NoGametimePlayer(noGametimePlayer);
+            }
+            return player;
         }
 
         public async Task<IEnumerable<PlayerPerformanceDataModel>> GetPlayerPerformances(IEnumerable<int> playerIDs, int week)

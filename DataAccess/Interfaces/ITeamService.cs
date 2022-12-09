@@ -34,5 +34,6 @@ namespace DataAccess.Interfaces
 
         Task<List<PlayerPerformanceDataModel>> GetActivePlayers();
         bool SetPosition(string position, CurrentPlayerModel player);
+        bool AllPlayersInitialized();
     }
 }

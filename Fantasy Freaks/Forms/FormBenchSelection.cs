@@ -7,6 +7,9 @@ using System.Windows.Forms;
 using DataAccess;
 using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
 using static DataAccess.GlobalConstants;
+using System.Linq;
+using System.Drawing;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Fantasy_Freaks {
     public partial class FormBenchSelection : Form {
@@ -14,7 +17,10 @@ namespace Fantasy_Freaks {
         private readonly ICurrentPlayerService _currentPlayer;
         private readonly ITeamService _team;
         private IEnumerable<CurrentPlayerModel> players;
+        private List<CurrentPlayerModel> selectedPlayers = new List<CurrentPlayerModel>();
         private readonly string _playerSelection;
+        private int playerLabelTopStart = 146;
+        private int removeButtonTopStart = 146;
         public FormBenchSelection(ICurrentPlayerService currentPlayer, ITeamService teamService, string playerSelection) {
             InitializeComponent();
             _currentPlayer = currentPlayer;
@@ -31,7 +37,6 @@ namespace Fantasy_Freaks {
             dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlayers.DataSource = players;
 
-            lblSelection.Text = "Select your " + _playerSelection;
         }
 
         private async Task<IEnumerable<CurrentPlayerModel>> GetSelectedPlayers()
@@ -55,11 +60,114 @@ namespace Fantasy_Freaks {
             }
         }
 
-        private async void btnSubmit_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (selectedPlayers.Count() == 8)
+            {
+                _team.BenchedPlayers = selectedPlayers;
+                this.Close();
+            }
+            else
+            {
+                // TODO: Warn user you must choose 8 players for a bench
+            }
+        }
+
+        private void btnAddPlayer_Click(object sender, EventArgs e)
         {
             var selectedPlayer = (CurrentPlayerModel)dgvPlayers.SelectedRows[0].DataBoundItem;
-            _team.SetPosition(_playerSelection, selectedPlayer);
-            this.Close();
+            if(selectedPlayers.Count >= 8)
+            {
+                // TODO: Warn user they can only have 8 players
+            } 
+            else if (selectedPlayers.Contains(selectedPlayer))
+            {
+                // TODO: Warn user player is already on bench
+            }
+            else
+            {
+                selectedPlayers.Add(selectedPlayer);
+                RemoveSelectedPlayerLabels();
+                RemoveSelectedPlayerButtons();
+                RenderPlayerList();
+            }
+        }
+
+        private void RenderPlayerList()
+        {
+            playerLabelTopStart = 146;
+            removeButtonTopStart = 146;
+            foreach(var player in selectedPlayers)
+            {
+                AddPlayerLabel(player);
+                AddPlayerRemovalButton(player);
+            }
+        }
+
+        private void RemoveSelectedPlayerButtons()
+        {
+            var playerIDs = selectedPlayers.Select(x => x.PlayerID).ToList();
+            var buttons = this.Controls.OfType<Button>().ToList();
+            var tags = buttons.Select(x => x.Tag).ToList();
+            foreach (var button in buttons)
+            {
+                if (button.Tag != null && playerIDs.Contains((int)button.Tag))
+                {
+                    this.Controls.Remove(button);
+                }
+            }
+        }
+
+        private void RemoveSelectedPlayerLabels()
+        {
+            var playerIDs = selectedPlayers.Select(x => x.PlayerID).ToList();
+            foreach (var label in this.Controls.OfType<Label>())
+            {
+                if (label.Tag != null && playerIDs.Contains((int)label.Tag))
+                {
+                    this.Controls.Remove(label);
+                }
+            }
+        }
+
+        private void btnRemovePlayer_Click(object sender, EventArgs e)
+        {
+            if(sender is Button)
+            {
+                var btn = (Button)sender;
+                var removedPlayer = selectedPlayers.Where(x => x.PlayerID == (int)btn.Tag).FirstOrDefault();
+                RemoveSelectedPlayerLabels();
+                RemoveSelectedPlayerButtons();
+                selectedPlayers.Remove(removedPlayer);
+                RenderPlayerList();
+            }
+        }
+
+        private void AddPlayerRemovalButton(CurrentPlayerModel player)
+        {
+            Button btn = new Button();
+            btn.Location = new Point(524, removeButtonTopStart);
+            btn.Size = new Size(57, 20);
+            btn.Text = "Remove";
+            btn.Tag = player.PlayerID;
+            btn.Click += btnRemovePlayer_Click;
+            this.Controls.Add(btn);
+
+            removeButtonTopStart += 28;
+        }
+
+        private void AddPlayerLabel(CurrentPlayerModel player)
+        {
+            Label label = new Label();
+            label.Location = new Point(372, playerLabelTopStart);
+            label.Size = new Size(148, 20);
+            label.Text = player.PlayerName;
+            label.Font = new Font("Microsoft YaHei", 11);
+            label.AutoEllipsis = true;
+            label.Tag = player.PlayerID;
+            this.Controls.Add(label);
+
+            playerLabelTopStart += 28;
         }
     }
 }

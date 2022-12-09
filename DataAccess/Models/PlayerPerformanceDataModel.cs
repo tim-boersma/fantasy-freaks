@@ -28,7 +28,8 @@ namespace DataAccess.Models
         [Column("Rushing_Touchdowns")]
         public double RushingTouchdowns { get; set; }
         public double Receptions { get; set; }
-        public double Target { get; set; }
+        [Column("Passed_Ball")]
+        public double PassedBall { get; set; }
         [Column("Receiving_Yards")]
         public double RecievingYards { get; set; }
         [Column("Receiving_Touchdowns")]
@@ -36,5 +37,30 @@ namespace DataAccess.Models
         [Column("ID")]
         public int PlayerID { get; set; }
         public double Fumbles { get; set; }
+
+        public static PlayerPerformanceDataModel NoGametimePlayer(CurrentPlayerModel player)
+        {
+            return new PlayerPerformanceDataModel()
+            {
+                PlayerName = player.PlayerName,
+                PlayerPosition = player.PlayerPosition,
+                TeamName = "",
+                PassingYards = 0,
+                PassingTouchdowns = 0,
+                Interceptions =0,
+                PassAttempts = 0,
+                Completions = 0,
+                RushingAttempts = 0,
+                RushingYards = 0,
+                RushingTouchdowns = 0,
+                Receptions = 0,
+                PassedBall = 0,
+                RecievingYards = 0,
+                RecievingTouchdowns = 0,
+                PlayerID = player.PlayerID,
+                Fumbles = 0
+            };
+        }
     }
+
 }
