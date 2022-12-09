@@ -13,15 +13,10 @@ namespace DataAccess.Services
     public class TeamService : ITeamService
     {
         private readonly FantasyDataContext _context;
-        private readonly FantasyDataContext _weekScore;
-        public TeamService(FantasyDataContext context/*, weekScore*/)
+        public TeamService(FantasyDataContext context)
         {
             _context = context;
         }
-        /*public TeamService(FantasyDataContext weekScore)
-        {
-            _weekScore = weekScore;
-        }*/
 
         public int CurrentWeek { get; set; } = 1;
         public int BestWeek { get; set; } = 0;
