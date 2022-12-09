@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
-    struct Week {
+    struct WeekPanel {
         public PictureBox ffBanner;
         public Label ffScore;
         public PictureBox defBanner;
@@ -20,7 +20,7 @@ namespace Fantasy_Freaks {
     }
 
     public partial class FormSeasonOpponents : Form {
-        private List<Week> seasonWeek = new List<Week>();
+        private List<WeekPanel> seasonWeek = new List<WeekPanel>();
         private readonly ITeamService _team;
         public FormSeasonOpponents(ITeamService teamService) {
             _team = teamService;
@@ -35,14 +35,14 @@ namespace Fantasy_Freaks {
             }
             this.Size = new Size(this.Size.Width, this.Size.Height + 100);
         }
-        private void WeekGenerator(int weekNum) {
-            var EnemyTeam = _team.EnemyTeams[weekNum];
+        private async void WeekGenerator(int weekNum) {
+            var enemyTeam = _team.EnemyTeams[weekNum];
 
-            var teamBanner = teamDictionary.bannerSeason[EnemyTeam.TeamName];
+            var teamBanner = teamDictionary.bannerSeason[enemyTeam.TeamName];
 
-            Color colorTeam = teamDictionary.labelSeason[EnemyTeam.TeamName];
+            Color colorTeam = teamDictionary.labelSeason[enemyTeam.TeamName];
 
-            Week week = new Week();
+            WeekPanel week = new WeekPanel();
             GenerateBanner(week.ffBanner, week.ffScore, weekNum, 999, 12, 269, Properties.Resources.FF, Color.FromArgb(0, 163, 255)); //999 is your score
             GenerateBanner(week.defBanner, week.defScore, weekNum, 999, 537, 547, teamBanner, colorTeam); //999 is defscore, last parameter is def banner
 
@@ -55,27 +55,15 @@ namespace Fantasy_Freaks {
             week.weekInfo.FlatAppearance.BorderSize = 4;
             week.weekInfo.Text = "WEEK " + (weekNum + 1) + "\nVS";
 
-            //foreach()? go through each week and record if it is loss or win then produce color for box based on that. If yet to come turn grey
-            // if yellow is current week -- something to go through each week
-            //change this
-            if (true) {//week == current week
+            if (weekNum == _team.CurrentWeek) {
                 week.weekInfo.BackColor = Color.Gold;
-            } else if(true) {//loss, ffScore < defScore
+            } else if(_team.PlayerPerformance.ElementAtOrDefault(weekNum) != null && !_team.PlayerPerformance[weekNum].UserWon) {//loss, ffScore < defScore
                 week.weekInfo.BackColor = Color.Firebrick;
-            } else {//win
+            } else if (_team.PlayerPerformance.ElementAtOrDefault(weekNum) != null && _team.PlayerPerformance[weekNum].UserWon) {
                 week.weekInfo.BackColor = Color.ForestGreen;
+            } else {
+                week.weekInfo.BackColor = Color.Black;
             }
-
-            /*would go in weekResults.
-             * if(currentWeek.score? > bestWeek)
-             * {
-             *      bestWeek = currentWeek.score?;
-             * }
-             * if(currentWeek.score? < worstWeek)
-             * {
-             *      worstWeek = currentWeek.score?;
-             * }
-            */
 
             week.weekInfo.FlatAppearance.MouseOverBackColor = week.weekInfo.BackColor;
             week.weekInfo.FlatAppearance.MouseDownBackColor = week.weekInfo.BackColor;

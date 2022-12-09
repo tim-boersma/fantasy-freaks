@@ -363,6 +363,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameResult.cs" />
+    <Compile Include="WeekPerformance.cs" />
     <Compile Include="WinStat.cs" />
     <Compile Include="FantasyDataContext.cs" />
     <EmbeddedResource Include="FFWindow.resx">

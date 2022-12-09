@@ -41,6 +41,7 @@ namespace Fantasy_Freaks
         public CurrentPlayerModel Flex { get; set; }
         public List<CurrentPlayerModel> BenchedPlayers { get; set; }
         public List<DefenseDataModel> EnemyTeams { get; set; }
+        public List<WeekPerformance> PlayerPerformance { get; set; } = new List<WeekPerformance>();
 
         
         public IEnumerable<int> GetActivePlayerIDs()

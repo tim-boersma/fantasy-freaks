@@ -25,10 +25,9 @@ namespace Fantasy_Freaks.Interfaces
         CurrentPlayerModel RunningBackTwo { get; set; }
         CurrentPlayerModel TightEnd { get; set; }
         CurrentPlayerModel Flex { get; set; }
-
         List<CurrentPlayerModel> BenchedPlayers { get; set; }
-
         List<DefenseDataModel> EnemyTeams { get; set; }
+        List<WeekPerformance> PlayerPerformance { get; set; }
 
         //speculation
         int TotalPoints { get; set; }
