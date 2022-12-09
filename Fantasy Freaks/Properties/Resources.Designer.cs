@@ -313,6 +313,16 @@ namespace Fantasy_Freaks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FFLongBanner {
+            get {
+                object obj = ResourceManager.GetObject("FFLongBanner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fourtyniners {
             get {
                 object obj = ResourceManager.GetObject("fourtyniners", resourceCulture);

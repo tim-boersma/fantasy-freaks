@@ -63,24 +63,24 @@ namespace Fantasy_Freaks {
             }
             else if (FFeventDay == 1)
             {
-                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day1;
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day1;
                 _teamService.TotalBadDays++;
                 offScore = offScore * .75;
             }
             else if (FFeventDay == 2)
             {
-                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day2;
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day2;
                 _teamService.TotalAveragePoints++;
             }
             else if (FFeventDay == 3)
             {
-                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day3;
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day3;
                 _teamService.TotalGoodDays++;
                 offScore = offScore * 1.25;
             }
             else
             {
-                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day4;
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day4;
                 _teamService.TotalMiraclePlays++;
                 offScore = offScore * 1.5;
             }
@@ -90,18 +90,18 @@ namespace Fantasy_Freaks {
                 OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day0;
                 defScore = defScore * .5;
             }
-            else if (FFeventDay == 1)
+            else if (OPPeventDay == 1)
             {
                 OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day1;
                 defScore = defScore * .75;
 
             }
-            else if (FFeventDay == 2)
+            else if (OPPeventDay == 2)
             {
-                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day2;
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day2;
 
             }
-            else if (FFeventDay == 3)
+            else if (OPPeventDay == 3)
             {
                 OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day3;
                 defScore = defScore * 1.25;
@@ -128,7 +128,6 @@ namespace Fantasy_Freaks {
             if (offScore < _teamService.WorstWeek)
                 _teamService.WorstWeek = offFinalScore;
 
-            _teamService.NextWeek();
         }
 
 
