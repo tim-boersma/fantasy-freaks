@@ -1,6 +1,7 @@
-﻿using Fantasy_Freaks.Interfaces;
-using Fantasy_Freaks.Models;
-using Fantasy_Freaks.Services;
+﻿using DataAccess;
+using DataAccess.Interfaces;
+using DataAccess.Models;
+using DataAccess.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -49,6 +50,7 @@ namespace Fantasy_Freaks {
                     services.AddTransient<IPreviousPlayerService, PreviousPlayerService>();
                     services.AddTransient<IPlayerPerformanceService, PlayerPerformanceService>();
                     services.AddSingleton<ITeamService, TeamService>();
+                    services.AddSingleton<ICurrentPlayerService, CurrentPlayerService>();
                     services.AddTransient<FFWindow>();
                     services.AddTransient<FormHomeScreen>();
                 });
