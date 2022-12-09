@@ -62,13 +62,14 @@
             this.playerPositionDataGridViewTextBoxColumn});
             this.dgvPlayers.DataSource = this.currentPlayerModelBindingSource;
             this.dgvPlayers.Location = new System.Drawing.Point(8, 51);
-            this.dgvPlayers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPlayers.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPlayers.MultiSelect = false;
             this.dgvPlayers.Name = "dgvPlayers";
             this.dgvPlayers.RowHeadersWidth = 62;
             this.dgvPlayers.RowTemplate.Height = 28;
             this.dgvPlayers.Size = new System.Drawing.Size(351, 610);
             this.dgvPlayers.TabIndex = 0;
+            this.dgvPlayers.SelectionChanged += new System.EventHandler(this.dgvPlayers_SelectionChanged);
             // 
             // Selected
             // 
@@ -123,7 +124,7 @@
             // btnSubmit
             // 
             this.btnSubmit.Location = new System.Drawing.Point(376, 383);
-            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(204, 40);
             this.btnSubmit.TabIndex = 1;

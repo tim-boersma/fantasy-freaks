@@ -75,22 +75,7 @@ namespace Fantasy_Freaks {
 
         private void btnAddPlayer_Click(object sender, EventArgs e)
         {
-            var selectedPlayer = (CurrentPlayerModel)dgvPlayers.SelectedRows[0].DataBoundItem;
-            if(selectedPlayers.Count >= 8)
-            {
-                // TODO: Warn user they can only have 8 players
-            } 
-            else if (selectedPlayers.Contains(selectedPlayer))
-            {
-                // TODO: Warn user player is already on bench
-            }
-            else
-            {
-                selectedPlayers.Add(selectedPlayer);
-                RemoveSelectedPlayerLabels();
-                RemoveSelectedPlayerButtons();
-                RenderPlayerList();
-            }
+            
         }
 
         private void RenderPlayerList()
@@ -168,6 +153,26 @@ namespace Fantasy_Freaks {
             this.Controls.Add(label);
 
             playerLabelTopStart += 28;
+        }
+
+        private void dgvPlayers_SelectionChanged(object sender, EventArgs e)
+        {
+            var selectedPlayer = (CurrentPlayerModel)dgvPlayers.SelectedRows[0].DataBoundItem;
+            if (selectedPlayers.Count >= 8)
+            {
+                // TODO: Warn user they can only have 8 players
+            }
+            else if (selectedPlayers.Contains(selectedPlayer))
+            {
+                // TODO: Warn user player is already on bench
+            }
+            else
+            {
+                selectedPlayers.Add(selectedPlayer);
+                RemoveSelectedPlayerLabels();
+                RemoveSelectedPlayerButtons();
+                RenderPlayerList();
+            }
         }
     }
 }

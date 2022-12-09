@@ -68,9 +68,8 @@
             this.labelFFscore.ForeColor = System.Drawing.Color.White;
             this.labelFFscore.Location = new System.Drawing.Point(307, 253);
             this.labelFFscore.Name = "labelFFscore";
-            this.labelFFscore.Size = new System.Drawing.Size(143, 73);
+            this.labelFFscore.Size = new System.Drawing.Size(0, 73);
             this.labelFFscore.TabIndex = 3;
-            this.labelFFscore.Text = "999";
             this.labelFFscore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelOPPscore
@@ -79,9 +78,8 @@
             this.labelOPPscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelOPPscore.Location = new System.Drawing.Point(540, 253);
             this.labelOPPscore.Name = "labelOPPscore";
-            this.labelOPPscore.Size = new System.Drawing.Size(143, 73);
+            this.labelOPPscore.Size = new System.Drawing.Size(0, 73);
             this.labelOPPscore.TabIndex = 4;
-            this.labelOPPscore.Text = "999";
             // 
             // FFlabel
             // 
