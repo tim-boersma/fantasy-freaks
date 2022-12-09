@@ -36,6 +36,13 @@ namespace Fantasy_Freaks {
         private async void FormWeekResults_Load(object sender, EventArgs e)
         {
             FFWindow.instance.setFont(this);
+            TransparentLabelonBanner(labelFFscore, FFbanner);
+            TransparentLabelonBanner(labelOPPscore, OPPbanner);
+            var enemyTeam = _teamService.EnemyTeams[_teamService.CurrentWeek - 1];
+            var teamBanner = teamDictionary.bannerSeason[enemyTeam.TeamName];
+            OPPbanner.BackgroundImage = teamBanner;
+
+            FFWindow.instance.setFont(this);
             title.Text = "WEEK " + _teamService.CurrentWeek + " RESULT";
 
             var EnemyTeam = _teamService.GetCurrentOpponent();
@@ -57,7 +64,7 @@ namespace Fantasy_Freaks {
 
             if (FFeventDay == 0)
             {
-                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day0;
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day0;
                 _teamService.TotalInjuries++;
                 offScore = offScore * .5;
             }
@@ -87,12 +94,12 @@ namespace Fantasy_Freaks {
 
             if (OPPeventDay == 0)
             {
-                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day0;
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day0;
                 defScore = defScore * .5;
             }
             else if (OPPeventDay == 1)
             {
-                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day1;
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day1;
                 defScore = defScore * .75;
 
             }
@@ -103,13 +110,13 @@ namespace Fantasy_Freaks {
             }
             else if (OPPeventDay == 3)
             {
-                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day3;
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day3;
                 defScore = defScore * 1.25;
 
             }
             else
             {
-                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day4;
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day4;
                 defScore = defScore * 1.5;
 
             }
@@ -128,8 +135,14 @@ namespace Fantasy_Freaks {
             if (offScore < _teamService.WorstWeek)
                 _teamService.WorstWeek = offFinalScore;
 
+
+            _teamService.NextWeek();
         }
 
-
+        private void TransparentLabelonBanner(Label l, PictureBox b) {
+            l.BackColor = Color.Transparent;
+            l.Location = b.PointToClient(l.Parent.PointToScreen(l.Location));
+            l.Parent = b;
+        }
     }
 }

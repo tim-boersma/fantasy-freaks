@@ -13,12 +13,14 @@ using System.Diagnostics;
 using System.Reflection;
 using DataAccess.Models;
 using DataAccess.Interfaces;
+using System.Runtime.InteropServices;
 
 namespace Fantasy_Freaks {
     public enum Sport {
         Football
     }
     public partial class FFWindow : Form {
+        private PrivateFontCollection pfc;
         public static FFWindow instance;
         private Form activeForm;
         public Sport activeSport;
@@ -38,6 +40,7 @@ namespace Fantasy_Freaks {
         }
 
         private void FFWindow_Load(object sender, EventArgs e) {
+            loadFont();
             changePanel(new FormHomeScreen(_teamService, _defenseService, _currentPlayerService));
         }
         public void changePanel(Form newForm) {
@@ -55,9 +58,17 @@ namespace Fantasy_Freaks {
             newForm.BringToFront();
             newForm.Show();
         }
+        private void loadFont() {
+            pfc = new PrivateFontCollection();
+            int fontLength = Properties.Resources.SEGUIVAR.Length;
+            byte[] fontdata = Properties.Resources.SEGUIVAR;
+            System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
+            Marshal.Copy(fontdata, 0, data, fontLength);
+            pfc.AddMemoryFont(data, fontLength);
+        }
         public void setFont(Form form) {
             foreach(Control c in form.Controls) {
-                c.Font = new Font("Segoe UI Variable Text", c.Font.Size, FontStyle.Bold);
+                c.Font = new Font(pfc.Families[0], c.Font.Size, FontStyle.Bold);
             }
         }
 

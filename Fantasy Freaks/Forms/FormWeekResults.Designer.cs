@@ -74,7 +74,9 @@
             // 
             // labelOPPscore
             // 
+            this.labelOPPscore.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelOPPscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOPPscore.ForeColor = System.Drawing.Color.White;
             this.labelOPPscore.Location = new System.Drawing.Point(536, 253);
             this.labelOPPscore.Name = "labelOPPscore";
             this.labelOPPscore.Size = new System.Drawing.Size(162, 90);
