@@ -46,51 +46,51 @@ namespace Fantasy_Freaks {
 
             if(FFeventDay == 0)
             {
-                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day0;
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day0;
                 _teamService.TotalInjuries++;
             }
             else if(FFeventDay == 1)
             {
-                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day1;
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day1;
                 _teamService.TotalBadDays++;
             }
             else if (FFeventDay == 2)
             {
-                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day2;
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day2;
                 _teamService.TotalAveragePoints++;
 
             }
             else if (FFeventDay == 3)
             {
-                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day3;
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day3;
                 _teamService.TotalGoodDays++;
             }
             else
             {
-                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day4;
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day4;
                 _teamService.TotalMiraclePlays++;
             }
 
             if (OPPeventDay == 0)
             {
-                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day0;
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day0;
             }
-            else if (FFeventDay == 1)
+            else if (OPPeventDay == 1)
             {
-                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day1;
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day1;
             }
-            else if (FFeventDay == 2)
+            else if (OPPeventDay == 2)
             {
-                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day2;
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day2;
 
             }
-            else if (FFeventDay == 3)
+            else if (OPPeventDay == 3)
             {
-                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day3;
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day3;
             }
             else
             {
-                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day4;
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day4;
             }
 
 
@@ -114,8 +114,11 @@ namespace Fantasy_Freaks {
                 _teamService.BestWeek = offScore;
             if (offScore < _teamService.WorstWeek)
                 _teamService.WorstWeek = offScore;
-
             _teamService.NextWeek();
+        }
+
+        private void FFbanner_Click(object sender, EventArgs e) {
+
         }
     }
 }

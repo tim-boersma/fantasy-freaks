@@ -62,24 +62,25 @@
             // 
             // labelFFscore
             // 
-            this.labelFFscore.AutoSize = true;
             this.labelFFscore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(255)))));
             this.labelFFscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFFscore.ForeColor = System.Drawing.Color.White;
-            this.labelFFscore.Location = new System.Drawing.Point(307, 253);
+            this.labelFFscore.Location = new System.Drawing.Point(273, 253);
             this.labelFFscore.Name = "labelFFscore";
-            this.labelFFscore.Size = new System.Drawing.Size(0, 73);
+            this.labelFFscore.Size = new System.Drawing.Size(184, 90);
             this.labelFFscore.TabIndex = 3;
+            this.labelFFscore.Text = "000";
             this.labelFFscore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // labelOPPscore
             // 
-            this.labelOPPscore.AutoSize = true;
             this.labelOPPscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOPPscore.Location = new System.Drawing.Point(540, 253);
+            this.labelOPPscore.Location = new System.Drawing.Point(536, 253);
             this.labelOPPscore.Name = "labelOPPscore";
-            this.labelOPPscore.Size = new System.Drawing.Size(0, 73);
+            this.labelOPPscore.Size = new System.Drawing.Size(162, 90);
             this.labelOPPscore.TabIndex = 4;
+            this.labelOPPscore.Text = "000";
+            this.labelOPPscore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FFlabel
             // 
@@ -164,6 +165,7 @@
             this.FFbanner.Size = new System.Drawing.Size(452, 115);
             this.FFbanner.TabIndex = 76;
             this.FFbanner.TabStop = false;
+            this.FFbanner.Click += new System.EventHandler(this.FFbanner_Click);
             // 
             // OPPbanner
             // 
@@ -177,7 +179,7 @@
             // FFDayimg
             // 
             this.FFDayimg.BackgroundImage = global::Fantasy_Freaks.Properties.Resources.day0;
-            this.FFDayimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FFDayimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.FFDayimg.Location = new System.Drawing.Point(12, 416);
             this.FFDayimg.Name = "FFDayimg";
             this.FFDayimg.Size = new System.Drawing.Size(315, 89);
@@ -187,7 +189,7 @@
             // OPPDayimg
             // 
             this.OPPDayimg.BackgroundImage = global::Fantasy_Freaks.Properties.Resources.day0;
-            this.OPPDayimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OPPDayimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.OPPDayimg.Location = new System.Drawing.Point(657, 416);
             this.OPPDayimg.Name = "OPPDayimg";
             this.OPPDayimg.Size = new System.Drawing.Size(315, 89);

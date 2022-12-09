@@ -42,5 +42,9 @@ namespace Fantasy_Freaks {
         {
             FFWindow.instance.changePanel(new FormHelpScreen(_teamService, _defenseService, _currentPlayer));
         }
+
+        private void button1_Click(object sender, EventArgs e) {
+            FFWindow.instance.changePanel(new FormEndResults(_teamService));
+        }
     }
 }
