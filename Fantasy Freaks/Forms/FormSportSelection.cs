@@ -20,6 +20,7 @@ namespace Fantasy_Freaks {
             _teamService = teamService;
             _defenseService = defenseService;
             _currentPlayer = currentPlayer;
+            _teamService.WaitSomeTime(btnFootball);
         }
 
         private void FormSportSelection_Load(object sender, EventArgs e) {

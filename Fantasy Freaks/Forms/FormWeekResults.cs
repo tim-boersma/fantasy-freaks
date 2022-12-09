@@ -20,6 +20,7 @@ namespace Fantasy_Freaks {
             InitializeComponent();
             _teamService = teamService;
             _defenseService = defenseService;
+            _teamService.WaitSomeTime(buttonChangeRoster);
         }
 
 
@@ -44,56 +45,6 @@ namespace Fantasy_Freaks {
             int FFeventDay = WinStat.EventForDay();
             int OPPeventDay = WinStat.EventForDay();
 
-            if(FFeventDay == 0)
-            {
-                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day0;
-                _teamService.TotalInjuries++;
-            }
-            else if(FFeventDay == 1)
-            {
-                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day1;
-                _teamService.TotalBadDays++;
-            }
-            else if (FFeventDay == 2)
-            {
-                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day2;
-                _teamService.TotalAveragePoints++;
-
-            }
-            else if (FFeventDay == 3)
-            {
-                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day3;
-                _teamService.TotalGoodDays++;
-            }
-            else
-            {
-                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day4;
-                _teamService.TotalMiraclePlays++;
-            }
-
-            if (OPPeventDay == 0)
-            {
-                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day0;
-            }
-            else if (OPPeventDay == 1)
-            {
-                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day1;
-            }
-            else if (OPPeventDay == 2)
-            {
-                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day2;
-
-            }
-            else if (OPPeventDay == 3)
-            {
-                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day3;
-            }
-            else
-            {
-                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day4;
-            }
-
-
             double defScore = WinStat.CalculateDefensiveScore(EnemyTeam);
 
             double offScore = 0;
@@ -104,21 +55,81 @@ namespace Fantasy_Freaks {
                 offScore += currentPlayer;
             }
 
-            var performance = new WeekPerformance(offScore, defScore);
+            if (FFeventDay == 0)
+            {
+                FFDayimg.Image = Fantasy_Freaks.Properties.Resources.day0;
+                _teamService.TotalInjuries++;
+                offScore = offScore * .5;
+            }
+            else if (FFeventDay == 1)
+            {
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day1;
+                _teamService.TotalBadDays++;
+                offScore = offScore * .75;
+            }
+            else if (FFeventDay == 2)
+            {
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day2;
+                _teamService.TotalAveragePoints++;
+            }
+            else if (FFeventDay == 3)
+            {
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day3;
+                _teamService.TotalGoodDays++;
+                offScore = offScore * 1.25;
+            }
+            else
+            {
+                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day4;
+                _teamService.TotalMiraclePlays++;
+                offScore = offScore * 1.5;
+            }
+
+            if (OPPeventDay == 0)
+            {
+                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day0;
+                defScore = defScore * .5;
+            }
+            else if (OPPeventDay == 1)
+            {
+                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day1;
+                defScore = defScore * .75;
+
+            }
+            else if (OPPeventDay == 2)
+            {
+                OPPDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day2;
+
+            }
+            else if (OPPeventDay == 3)
+            {
+                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day3;
+                defScore = defScore * 1.25;
+
+            }
+            else
+            {
+                OPPDayimg.Image = Fantasy_Freaks.Properties.Resources.day4;
+                defScore = defScore * 1.5;
+
+            }
+
+            int offFinalScore = (int)offScore;
+            int defFinalScore = (int)defScore;
+
+            var performance = new WeekPerformance(offFinalScore, defFinalScore);
             _teamService.PlayerPerformance.Insert(_teamService.CurrentWeek - 1, performance);
-            labelOPPscore.Text = defScore.ToString();
-            labelFFscore.Text = offScore.ToString();
+            labelOPPscore.Text = defFinalScore.ToString();
+            labelFFscore.Text = offFinalScore.ToString();
 
 
             if (offScore > _teamService.BestWeek)
-                _teamService.BestWeek = offScore;
+                _teamService.BestWeek = offFinalScore;
             if (offScore < _teamService.WorstWeek)
-                _teamService.WorstWeek = offScore;
-            _teamService.NextWeek();
-        }
-
-        private void FFbanner_Click(object sender, EventArgs e) {
+                _teamService.WorstWeek = offFinalScore;
 
         }
+
+
     }
 }

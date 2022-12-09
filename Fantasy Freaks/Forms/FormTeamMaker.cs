@@ -24,6 +24,23 @@ namespace Fantasy_Freaks {
             _team = teamService;
             _defense = defenseService;
             _currentPlayer = currentPlayer;
+            _team.WaitSomeTime(btnQB);
+            _team.WaitSomeTime(btnRB1);
+            _team.WaitSomeTime(btnRB2);
+            _team.WaitSomeTime(btnWR1);
+            _team.WaitSomeTime(btnWR2);
+            _team.WaitSomeTime(btnTE);
+            _team.WaitSomeTime(btnFlex);
+            _team.WaitSomeTime(btnBe1);
+            _team.WaitSomeTime(btnBe2);
+            _team.WaitSomeTime(btnBe3);
+            _team.WaitSomeTime(btnBe4);
+            _team.WaitSomeTime(btnBe5);
+            _team.WaitSomeTime(btnBe6);
+            _team.WaitSomeTime(btnBe7);
+            _team.WaitSomeTime(btnBe8);
+            _team.WaitSomeTime(btnSeason);
+            _team.WaitSomeTime(btnRandom);
         }
         //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
 
@@ -114,7 +131,7 @@ namespace Fantasy_Freaks {
             }
             else
             {
-                // TODO: Warn user they have players they still need to add
+                MessageBox.Show("You must have a full rooster before continuing");
             }
         }
         private void ChoosingPlayer(Button button, string position) {
@@ -183,7 +200,7 @@ namespace Fantasy_Freaks {
         }
 
 
-        private async void btnWinStat_Click(object sender, EventArgs e)
+        private async void btnRandom_Click(object sender, EventArgs e)
         {
             _team.Quarterback = await GetRandomPlayer(PlayerTypes.Quarterback);
             _team.WideReceiverOne = await GetRandomPlayer(PlayerTypes.WideReceiver);
@@ -209,6 +226,7 @@ namespace Fantasy_Freaks {
                 var playerNum = rand.Next(0, players.Count);
                 selectedPlayer = players[playerNum];
             //TODO: break loop if position isn't valid
+            
             } while (selectedPlayer.PlayerPosition != playerType && playerType != PlayerTypes.Flex);
 
             return selectedPlayer;

@@ -17,7 +17,7 @@ namespace Fantasy_Freaks
             _defenseService = defenseService;
             _defenseService = defenseService;
             _currentPlayer = currentPlayer;
-            //activeForm = this;
+            _teamService.WaitSomeTime(btnHome);
         }
 
         private void btnHome_Click(object sender, EventArgs e)

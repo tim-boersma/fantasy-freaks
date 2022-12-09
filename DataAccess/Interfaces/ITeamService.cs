@@ -1,6 +1,7 @@
 ﻿using DataAccess.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DataAccess.Interfaces
 {
@@ -29,6 +30,8 @@ namespace DataAccess.Interfaces
         int TotalPoints { get; set; }
         void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer);
         void NextWeek();
+
+        Task WaitSomeTime(Button button);
         DefenseDataModel GetCurrentOpponent();
 
         Task<List<PlayerPerformanceDataModel>> GetActivePlayers();

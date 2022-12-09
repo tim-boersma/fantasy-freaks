@@ -44,7 +44,7 @@ namespace Fantasy_Freaks {
 
         public static double CalculateOffensiveScore(PlayerPerformanceDataModel player) 
         {
-            return (player.PassingYards * 4) + (player.RushingTouchdowns * 6) +
+            return (player.PassingTouchdowns * 4) + (player.RushingTouchdowns * 6) +
                 (player.RecievingTouchdowns * 6) + (player.Receptions * 1) + (player.RushingYards * .1) +
                 (player.RecievingYards * .1) + (player.PassingYards * .04) +
                 (player.Interceptions * -3)
