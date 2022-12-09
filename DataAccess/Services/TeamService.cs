@@ -19,8 +19,8 @@ namespace DataAccess.Services
         }
 
         public int CurrentWeek { get; set; } = 1;
-        public int BestWeek { get; set; } = 0;
-        public int WorstWeek { get; set; } = 0;
+        public double BestWeek { get; set; } = 0;
+        public double WorstWeek { get; set; } = 0;
         public int TotalInjuries { get; set; } = 0;
         public int TotalBadDays { get; set; } = 0;
         public int TotalAveragePoints { get; set; } = 0;
@@ -71,8 +71,7 @@ namespace DataAccess.Services
 
         public async Task<PlayerPerformanceDataModel> GetPlayerPerformance(int playerID, int week)
         {
-            var data = GetPlayerWeek(week);
-            var player = await data.Where(x => x.PlayerID == playerID).FirstOrDefaultAsync();
+            var player = await _context.PlayerPerformance.Where(x => x.WeekPlayed == week && x.PlayerID == playerID).FirstOrDefaultAsync();
             if(player == null)
             {
                 var noGametimePlayer = _context.CurrentPlayer.Where(x => x.PlayerID == playerID).FirstOrDefault();
@@ -147,50 +146,6 @@ namespace DataAccess.Services
                     return false;
             }
         }
-
-        public DbSet<PlayerPerformanceDataModel> GetPlayerWeek(int week)
-        {
-            switch (week)
-            {
-                case 1:
-                    return _context.Week1Player;
-                case 2:
-                    return _context.Week2Player;
-                case 3:
-                    return _context.Week3Player;
-                case 4:
-                    return _context.Week4Player;
-                case 5:
-                    return _context.Week5Player;
-                case 6:
-                    return _context.Week6Player;
-                case 7:
-                    return _context.Week7Player;
-                case 8:
-                    return _context.Week8Player;
-                case 9:
-                    return _context.Week9Player;
-                case 10:
-                    return _context.Week10Player;
-                case 11:
-                    return _context.Week11Player;
-                case 12:
-                    return _context.Week12Player;
-                case 13:
-                    return _context.Week13Player;
-                case 14:
-                    return _context.Week14Player;
-                case 15:
-                    return _context.Week15Player;
-                case 16:
-                    return _context.Week16Player;
-                case 17:
-                    return _context.Week17Player;
-                default:
-                    return _context.Week1Player;
-            }
-        }
-
 
         public TeamService()
         {

@@ -7,8 +7,8 @@ namespace DataAccess.Interfaces
     public interface ITeamService
     {
         int CurrentWeek { get; set; }
-        int BestWeek { get; set; }
-        int WorstWeek { get; set; }
+        double BestWeek { get; set; }
+        double WorstWeek { get; set; }
         int TotalInjuries { get; set; }
         int TotalBadDays { get; set; }
         int TotalAveragePoints { get; set; }

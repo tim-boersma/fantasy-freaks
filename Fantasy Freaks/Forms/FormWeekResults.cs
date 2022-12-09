@@ -96,12 +96,12 @@ namespace Fantasy_Freaks {
 
             double defScore = WinStat.CalculateDefensiveScore(EnemyTeam);
 
-            int offScore = 0;
+            double offScore = 0;
             var players = await _teamService.GetActivePlayers();
             foreach (var player in players)
             {
                 double currentPlayer = WinStat.CalculateOffensiveScore(player);
-                currentPlayer += offScore;
+                offScore += currentPlayer;
             }
 
             var performance = new WeekPerformance(offScore, defScore);
