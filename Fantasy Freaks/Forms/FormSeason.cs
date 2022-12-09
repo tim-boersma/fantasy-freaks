@@ -1,5 +1,6 @@
 ﻿using DataAccess.Interfaces;
 using DataAccess.Models;
+using DataAccess.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +31,7 @@ namespace Fantasy_Freaks {
             } 
             else
             {
-                FFWindow.instance.changePanel(new FormEndResults());
+                FFWindow.instance.changePanel(new FormEndResults(_teamService));
             }
         }
 
