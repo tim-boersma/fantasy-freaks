@@ -9,7 +9,7 @@ namespace Fantasy_Freaks {
     public class WinStat {
 
         public static int EventForDay() {
-            Random rnd = new Random();
+            Random rnd = new Random(Guid.NewGuid().GetHashCode());
             int num = rnd.Next(0, 5);
             return num;
         }
