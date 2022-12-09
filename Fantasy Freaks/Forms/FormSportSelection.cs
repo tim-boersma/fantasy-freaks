@@ -23,6 +23,7 @@ namespace Fantasy_Freaks {
         }
 
         private void FormSportSelection_Load(object sender, EventArgs e) {
+            FFWindow.instance.setFont(this);
         }
 
         private void btnFootball_Click(object sender, EventArgs e) {

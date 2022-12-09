@@ -35,13 +35,28 @@ namespace Fantasy_Freaks {
 
         private async void FormSeason_Load(object sender, EventArgs e)
         {
-
+            FFWindow.instance.setFont(this);
+            
             if (_team.EnemyTeams == null)
             {
                 var teams = await _defense.RandomTeams(17);
                 _team.EnemyTeams = teams.ToList();
             }
 
+            LoadPanel(new FormSeasonOpponents(_team));
+
+        }
+
+        private void LoadPanel(Form newForm) {
+            newForm.TopLevel = false;
+            newForm.FormBorderStyle = FormBorderStyle.None;
+            newForm.Dock = DockStyle.Fill;
+            newForm.ControlBox = false;
+            newForm.Text = "";
+            this.panelOpponents.Controls.Add(newForm);
+            this.panelOpponents.Tag = newForm;
+            newForm.BringToFront();
+            newForm.Show();
         }
     }
 }

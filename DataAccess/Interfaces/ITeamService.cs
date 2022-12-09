@@ -21,16 +21,15 @@ namespace DataAccess.Interfaces
         CurrentPlayerModel RunningBackTwo { get; set; }
         CurrentPlayerModel TightEnd { get; set; }
         CurrentPlayerModel Flex { get; set; }
-
         List<CurrentPlayerModel> BenchedPlayers { get; set; }
-
         List<DefenseDataModel> EnemyTeams { get; set; }
+        List<WeekPerformance> PlayerPerformance { get; set; }
 
         //speculation
         int TotalPoints { get; set; }
         void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer);
         void NextWeek();
-        DefenseDataModel GetOpponents();
+        DefenseDataModel GetCurrentOpponent();
 
         Task<List<PlayerPerformanceDataModel>> GetActivePlayers();
         bool SetPosition(string position, CurrentPlayerModel player);

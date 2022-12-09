@@ -274,6 +274,33 @@
       <DependentUpon>fantasyFreaksDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Forms\FFWindow.cs">
+    <Compile Include="FormSeasonOpponents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSeasonOpponents.Designer.cs">
+      <DependentUpon>FormSeasonOpponents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="teamDictionary.cs" />
+    <Compile Include="TeamService.cs" />
+    <Compile Include="Interfaces\ICurrentPlayerService.cs" />
+    <Compile Include="Interfaces\IPlayerPerformanceService.cs" />
+    <Compile Include="Interfaces\ITeamService.cs" />
+    <Compile Include="Models\DefenseDataModel.cs" />
+    <Compile Include="Models\PlayerDataModel.cs" />
+    <Compile Include="Services\CurrentPlayerService.cs" />
+    <Compile Include="Services\DefenseService.cs" />
+    <Compile Include="Interfaces\IDefenseService.cs" />
+    <Compile Include="Interfaces\IPreviousPlayerService.cs" />
+    <Compile Include="Models\LastSeasonPlayersDataModel.cs" />
+    <Compile Include="Models\PlayerPerformanceDataModel.cs" />
+    <Compile Include="Services\PlayerPerformanceService.cs" />
+    <Compile Include="Services\PreviousPlayerService.cs" />
+    <Compile Include="FFWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FFWindow.Designer.cs">
@@ -343,6 +370,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameResult.cs" />
+    <Compile Include="WeekPerformance.cs" />
     <Compile Include="WinStat.cs" />
     <EmbeddedResource Include="Forms\FFWindow.resx">
       <DependentUpon>FFWindow.cs</DependentUpon>
@@ -365,6 +393,10 @@
     <EmbeddedResource Include="Forms\FormPlayerSelection.resx">
       <DependentUpon>FormPlayerSelection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSeasonOpponents.resx">
+      <DependentUpon>FormSeasonOpponents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSportSelection.resx">
     <EmbeddedResource Include="Forms\FormSportSelection.resx">
       <DependentUpon>FormSportSelection.cs</DependentUpon>
     </EmbeddedResource>
@@ -400,11 +432,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -437,9 +464,6 @@
     <None Include="Resources\FFlogo_black.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FFbanner.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\day0.png" />
   </ItemGroup>
   <ItemGroup>
@@ -458,12 +482,104 @@
     <None Include="Resources\DayBanner.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
-      <Project>{33a170b3-ce81-40bb-847c-102c6bc986c4}</Project>
-      <Name>DataAccess</Name>
-    </ProjectReference>
+    <None Include="Resources\TeamBanner\fourtyniners.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Bears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Bengals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Bills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Broncos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Browns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Bucceneers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Cardinals.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Chargers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Chiefs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Colts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Commanders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Cowboys.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Dolphins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Eagles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Falcons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\FF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Giants.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Jaguars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Jets.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Lions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Packers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Panthers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Patriots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Raiders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Rams.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Ravens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Saints.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Seahawks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Steelers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Texans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Titans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeamBanner\Vikings.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.1.1.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

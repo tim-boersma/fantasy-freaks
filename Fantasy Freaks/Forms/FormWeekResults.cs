@@ -33,7 +33,9 @@ namespace Fantasy_Freaks {
 
         private async void FormWeekResults_Load(object sender, EventArgs e)
         {
-            var EnemyTeam = _teamService.GetOpponents();
+            FFWindow.instance.setFont(this);
+
+            var EnemyTeam = _teamService.GetCurrentOpponent();
 
             OPPlabel.Text = EnemyTeam.TeamName;
 
@@ -100,9 +102,18 @@ namespace Fantasy_Freaks {
                 currentPlayer += offScore;
             }
 
+            var performance = _teamService.PlayerPerformance[_teamService.CurrentWeek];
+            performance.OppScore = defScore;
+            performance.UserScore = offScore;
+            performance.UserWon = offScore >= defScore; 
             labelOPPscore.Text = defScore.ToString();
             labelFFscore.Text = offScore.ToString();
 
+
+            if (offScore > _teamService.BestWeek)
+                _teamService.BestWeek = offScore;
+            if (offScore < _teamService.WorstWeek)
+                _teamService.WorstWeek = offScore;
 
             _teamService.NextWeek();
         }

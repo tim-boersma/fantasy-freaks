@@ -1,7 +1,5 @@
-﻿using System.Windows.Forms;
-
-namespace Fantasy_Freaks {
-    partial class FFWindow {
+﻿namespace Fantasy_Freaks {
+    partial class FormSeasonOpponents {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -18,8 +16,6 @@ namespace Fantasy_Freaks {
             base.Dispose(disposing);
         }
 
-
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -27,36 +23,24 @@ namespace Fantasy_Freaks {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FFWindow));
-            this.mainPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // mainPanel
-            // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(984, 672);
-            this.mainPanel.TabIndex = 0;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
-            // 
-            // FFWindow
+            // FormSeasonOpponents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 672);
-            this.Controls.Add(this.mainPanel);
+            this.AutoScroll = true;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.ClientSize = new System.Drawing.Size(936, 41);
+            this.ControlBox = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FFWindow";
-            this.Text = "Fantasy Freaks";
-            this.Load += new System.EventHandler(this.FFWindow_Load);
+            this.Name = "FormSeasonOpponents";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.Load += new System.EventHandler(this.FormSeasonOpponents_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel mainPanel;
     }
 }

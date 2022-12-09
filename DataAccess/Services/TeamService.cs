@@ -13,10 +13,15 @@ namespace DataAccess.Services
     public class TeamService : ITeamService
     {
         private readonly FantasyDataContext _context;
-        public TeamService(FantasyDataContext context)
+        private readonly FantasyDataContext _weekScore;
+        public TeamService(FantasyDataContext context/*, weekScore*/)
         {
             _context = context;
         }
+        /*public TeamService(FantasyDataContext weekScore)
+        {
+            _weekScore = weekScore;
+        }*/
 
         public int CurrentWeek { get; set; } = 1;
         public int BestWeek { get; set; } = 0;
@@ -36,6 +41,7 @@ namespace DataAccess.Services
         public CurrentPlayerModel Flex { get; set; }
         public List<CurrentPlayerModel> BenchedPlayers { get; set; } = new List<CurrentPlayerModel>();
         public List<DefenseDataModel> EnemyTeams { get; set; }
+        public List<WeekPerformance> PlayerPerformance { get; set; } = new List<WeekPerformance>();
 
         public bool AllPlayersInitialized()
         {
@@ -201,9 +207,11 @@ namespace DataAccess.Services
             CurrentWeek++;
         }
 
-        public DefenseDataModel GetOpponents()
+        public DefenseDataModel GetCurrentOpponent()
         {
-            return EnemyTeams[CurrentWeek - 1];
+            if(EnemyTeams != null && EnemyTeams.Count >= CurrentWeek)
+                return EnemyTeams[CurrentWeek - 1];
+            return null;
         }
         public void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer)
         {

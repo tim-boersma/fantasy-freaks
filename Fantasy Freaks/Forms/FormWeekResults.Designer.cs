@@ -33,13 +33,13 @@
             this.line = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
             this.FFbanner = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.OPPbanner = new System.Windows.Forms.PictureBox();
             this.FFDayimg = new System.Windows.Forms.PictureBox();
             this.OPPDayimg = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.line)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FFbanner)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OPPbanner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FFDayimg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OPPDayimg)).BeginInit();
             this.SuspendLayout();
@@ -159,7 +159,7 @@
             // 
             // FFbanner
             // 
-            this.FFbanner.BackgroundImage = global::Fantasy_Freaks.Properties.Resources.FFbanner;
+            this.FFbanner.BackgroundImage = global::Fantasy_Freaks.Properties.Resources.FF;
             this.FFbanner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FFbanner.Location = new System.Drawing.Point(12, 240);
             this.FFbanner.Name = "FFbanner";
@@ -167,14 +167,14 @@
             this.FFbanner.TabIndex = 76;
             this.FFbanner.TabStop = false;
             // 
-            // pictureBox2
+            // OPPbanner
             // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(520, 240);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(452, 115);
-            this.pictureBox2.TabIndex = 77;
-            this.pictureBox2.TabStop = false;
+            this.OPPbanner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OPPbanner.Location = new System.Drawing.Point(520, 240);
+            this.OPPbanner.Name = "OPPbanner";
+            this.OPPbanner.Size = new System.Drawing.Size(452, 115);
+            this.OPPbanner.TabIndex = 77;
+            this.OPPbanner.TabStop = false;
             // 
             // FFDayimg
             // 
@@ -205,7 +205,7 @@
             this.Controls.Add(this.OPPDayimg);
             this.Controls.Add(this.FFDayimg);
             this.Controls.Add(this.labelOPPscore);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.OPPbanner);
             this.Controls.Add(this.labelFFscore);
             this.Controls.Add(this.FFbanner);
             this.Controls.Add(this.btnNext);
@@ -221,7 +221,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.line)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FFbanner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OPPbanner)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FFDayimg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OPPDayimg)).EndInit();
             this.ResumeLayout(false);
@@ -240,7 +240,7 @@
         private System.Windows.Forms.PictureBox line;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.PictureBox FFbanner;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox OPPbanner;
         private System.Windows.Forms.PictureBox FFDayimg;
         private System.Windows.Forms.PictureBox OPPDayimg;
     }
