@@ -24,6 +24,7 @@ namespace Fantasy_Freaks {
             _team = teamService;
             _defense = defenseService;
             _currentPlayer = currentPlayer;
+            //TODO: use a foreach loop of buttins in form for this
             _team.WaitSomeTime(btnQB);
             _team.WaitSomeTime(btnRB1);
             _team.WaitSomeTime(btnRB2);

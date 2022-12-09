@@ -26,6 +26,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPlayerSelection));
             this.dgvPlayers = new System.Windows.Forms.DataGridView();
+            this.currentPlayerModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newSeasonPlayerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fantasyFreaksDataSet = new Fantasy_Freaks.fantasyFreaksDataSet();
             this.newSeasonPlayerTableAdapter = new Fantasy_Freaks.fantasyFreaksDataSetTableAdapters.NewSeasonPlayerTableAdapter();
@@ -36,14 +37,12 @@
             this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblSelection = new System.Windows.Forms.Label();
-            this.Selected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.playerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.playerPositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.currentPlayerModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentPlayerModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newSeasonPlayerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fantasyFreaksDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currentPlayerModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPlayers
@@ -55,17 +54,21 @@
             this.dgvPlayers.AutoGenerateColumns = false;
             this.dgvPlayers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlayers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Selected,
             this.playerNameDataGridViewTextBoxColumn,
             this.playerPositionDataGridViewTextBoxColumn});
             this.dgvPlayers.DataSource = this.currentPlayerModelBindingSource;
-            this.dgvPlayers.Location = new System.Drawing.Point(12, 79);
+            this.dgvPlayers.Location = new System.Drawing.Point(8, 51);
+            this.dgvPlayers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvPlayers.MultiSelect = false;
             this.dgvPlayers.Name = "dgvPlayers";
             this.dgvPlayers.RowHeadersWidth = 62;
             this.dgvPlayers.RowTemplate.Height = 28;
-            this.dgvPlayers.Size = new System.Drawing.Size(527, 939);
+            this.dgvPlayers.Size = new System.Drawing.Size(351, 610);
             this.dgvPlayers.TabIndex = 0;
+            // 
+            // currentPlayerModelBindingSource
+            // 
+            this.currentPlayerModelBindingSource.DataSource = typeof(DataAccess.Models.CurrentPlayerModel);
             // 
             // newSeasonPlayerBindingSource
             // 
@@ -90,9 +93,10 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(408, 12);
+            this.btnSubmit.Location = new System.Drawing.Point(272, 8);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(131, 61);
+            this.btnSubmit.Size = new System.Drawing.Size(87, 40);
             this.btnSubmit.TabIndex = 1;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -101,19 +105,13 @@
             // lblSelection
             // 
             this.lblSelection.AutoSize = true;
-            this.lblSelection.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelection.Location = new System.Drawing.Point(12, 32);
+            this.lblSelection.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelection.Location = new System.Drawing.Point(8, 21);
+            this.lblSelection.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelection.Name = "lblSelection";
-            this.lblSelection.Size = new System.Drawing.Size(292, 41);
+            this.lblSelection.Size = new System.Drawing.Size(177, 25);
             this.lblSelection.TabIndex = 2;
             this.lblSelection.Text = "Select Your Player";
-            // 
-            // Selected
-            // 
-            this.Selected.HeaderText = "Select Player";
-            this.Selected.MinimumWidth = 8;
-            this.Selected.Name = "Selected";
-            this.Selected.Width = 50;
             // 
             // playerNameDataGridViewTextBoxColumn
             // 
@@ -133,22 +131,17 @@
             this.playerPositionDataGridViewTextBoxColumn.ReadOnly = true;
             this.playerPositionDataGridViewTextBoxColumn.Width = 50;
             // 
-            // currentPlayerModelBindingSource
-            // 
-            this.currentPlayerModelBindingSource.DataSource = typeof(DataAccess.Models.CurrentPlayerModel);
-            // 
             // FormPlayerSelection
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(560, 1034);
+            this.ClientSize = new System.Drawing.Size(373, 672);
             this.Controls.Add(this.lblSelection);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dgvPlayers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPlayerSelection";
@@ -156,9 +149,9 @@
             this.Text = "Player Selection";
             this.Load += new System.EventHandler(this.FormPlayerSelection_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currentPlayerModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.newSeasonPlayerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fantasyFreaksDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currentPlayerModelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,7 +171,6 @@
         private System.Data.SqlClient.SqlDataAdapter sqlDataAdapter1;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblSelection;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Selected;
         private System.Windows.Forms.DataGridViewTextBoxColumn playerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn playerPositionDataGridViewTextBoxColumn;
     }

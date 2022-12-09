@@ -19,8 +19,8 @@ namespace Fantasy_Freaks {
         private IEnumerable<CurrentPlayerModel> players;
         private List<CurrentPlayerModel> selectedPlayers = new List<CurrentPlayerModel>();
         private readonly string _playerSelection;
-        private int playerLabelTopStart = 146;
-        private int removeButtonTopStart = 146;
+        private int playerLabelTopStart;
+        private int removeButtonTopStart;
         public FormBenchSelection(ICurrentPlayerService currentPlayer, ITeamService teamService, string playerSelection) {
             InitializeComponent();
             _currentPlayer = currentPlayer;
@@ -85,8 +85,8 @@ namespace Fantasy_Freaks {
 
         private void RenderPlayerList()
         {
-            playerLabelTopStart = 146;
-            removeButtonTopStart = 146;
+            playerLabelTopStart = 92;
+            removeButtonTopStart = 92;
             foreach(var player in selectedPlayers)
             {
                 AddPlayerLabel(player);
