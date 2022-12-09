@@ -28,7 +28,7 @@ namespace Fantasy_Freaks
             {"Indianapolis Colts", Properties.Resources.Colts },
             {"Jacksonville Jaguars", Properties.Resources.Jaguars },
             {"Kansas City Chiefs", Properties.Resources.Chiefs },
-            {"Las Vegas Raiders", Properties.Resources.Raiders },
+            {"Oakland Raiders", Properties.Resources.Raiders },
             {"Los Angeles Chargers", Properties.Resources.Chargers },
             {"Los Angeles Rams", Properties.Resources.Rams },
             {"Miami Dolphins", Properties.Resources.Dolphins },
@@ -43,7 +43,7 @@ namespace Fantasy_Freaks
             {"Seattle Seahawks", Properties.Resources.Seahawks },
             {"Tampa Bay Buccaneers", Properties.Resources.Bucceneers },
             {"Tennessee Titans", Properties.Resources.Titans },
-            {"Washington Commanders", Properties.Resources.Commanders }
+            {"Washington Redskins", Properties.Resources.Commanders }
         }; //sets the string of the team, and the string (image?) in the recourse folder equal to each other
 
         public static Dictionary<string, Color> labelSeason = new Dictionary<string, Color>()
@@ -64,7 +64,7 @@ namespace Fantasy_Freaks
             {"Indianapolis Colts", Color.FromArgb(1,51,105) },
             {"Jacksonville Jaguars", Color.FromArgb(0,103,121) },
             {"Kansas City Chiefs", Color.FromArgb(255,24,55) }, //CHECK COLOR IS RIGHT
-            {"Las Vegas Raiders", Color.FromArgb(169,169,169) },
+            {"Oakland Raiders", Color.FromArgb(169,169,169) },
             {"Los Angeles Chargers", Color.FromArgb(0,128,198) },
             {"Los Angeles Rams", Color.FromArgb(0,53,148) },
             {"Miami Dolphins", Color.FromArgb(1,144,158) },
@@ -79,7 +79,7 @@ namespace Fantasy_Freaks
             {"Seattle Seahawks", Color.FromArgb(84,185,87) },
             {"Tampa Bay Buccaneers", Color.FromArgb(31,31,31) },
             {"Tennessee Titans", Color.FromArgb(0,41,91) },
-            {"Washington Commanders", Color.FromArgb(90,20,20) }
+            {"Washington Redskins", Color.FromArgb(90,20,20) }
         }; //takes in location of label in season then sets it equal to that rgb value
 
         

@@ -35,7 +35,7 @@ namespace Fantasy_Freaks {
         {
             FFWindow.instance.setFont(this);
 
-            var EnemyTeam = _teamService.GetOpponents();
+            var EnemyTeam = _teamService.GetCurrentOpponent();
 
             OPPlabel.Text = EnemyTeam.TeamName;
 

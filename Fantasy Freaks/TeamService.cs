@@ -133,7 +133,7 @@ namespace Fantasy_Freaks
             CurrentWeek++;
         }
 
-        public DefenseDataModel GetOpponents()
+        public DefenseDataModel GetCurrentOpponent()
         {
             if(EnemyTeams != null && EnemyTeams.Count >= CurrentWeek)
                 return EnemyTeams[CurrentWeek - 1];

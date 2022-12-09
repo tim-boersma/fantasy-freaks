@@ -34,7 +34,7 @@ namespace Fantasy_Freaks.Interfaces
         int TotalPoints { get; set; }
         void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer);
         void NextWeek();
-        DefenseDataModel GetOpponents();
+        DefenseDataModel GetCurrentOpponent();
 
         Task<List<PlayerPerformanceDataModel>> GetActivePlayers();
     }

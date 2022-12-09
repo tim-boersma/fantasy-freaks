@@ -36,16 +36,15 @@ namespace Fantasy_Freaks {
             this.Size = new Size(this.Size.Width, this.Size.Height + 100);
         }
         private void WeekGenerator(int weekNum) {
-            var EnemyTeam = _team.GetOpponents();
+            var EnemyTeam = _team.EnemyTeams[weekNum];
 
-            //picturebox.Source = resourcedictionary[teamName];
-            var BS = teamDictionary.bannerSeason[EnemyTeam.TeamName];
+            var teamBanner = teamDictionary.bannerSeason[EnemyTeam.TeamName];
 
             Color colorTeam = teamDictionary.labelSeason[EnemyTeam.TeamName];
 
             Week week = new Week();
             GenerateBanner(week.ffBanner, week.ffScore, weekNum, 999, 12, 269, Properties.Resources.FF, Color.FromArgb(0, 163, 255)); //999 is your score
-            GenerateBanner(week.defBanner, week.defScore, weekNum, 999, 537, 547, BS, colorTeam); //999 is defscore, last parameter is def banner
+            GenerateBanner(week.defBanner, week.defScore, weekNum, 999, 537, 547, teamBanner, colorTeam); //999 is defscore, last parameter is def banner
 
             week.weekInfo = new Button();
             week.weekInfo.Location = new Point(396, 12 + weekNum * 110);
