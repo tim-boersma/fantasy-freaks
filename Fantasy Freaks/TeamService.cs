@@ -135,7 +135,9 @@ namespace Fantasy_Freaks
 
         public DefenseDataModel GetOpponents()
         {
-            return EnemyTeams[CurrentWeek - 1];
+            if(EnemyTeams != null && EnemyTeams.Count >= CurrentWeek)
+                return EnemyTeams[CurrentWeek - 1];
+            return null;
         }
         public void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer)
         {

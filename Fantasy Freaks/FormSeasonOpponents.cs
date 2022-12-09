@@ -39,14 +39,13 @@ namespace Fantasy_Freaks {
             var EnemyTeam = _team.GetOpponents();
 
             //picturebox.Source = resourcedictionary[teamName];
-            teamDictionary.bannerSeason[EnemyTeam.TeamName];
-            var BS = bannerSeason[EnemyTeam.TeamName];
+            var BS = teamDictionary.bannerSeason[EnemyTeam.TeamName];
 
-            Color colorTeam = labelSeason[EnemyTeam.TeamName];
+            Color colorTeam = teamDictionary.labelSeason[EnemyTeam.TeamName];
 
             Week week = new Week();
             GenerateBanner(week.ffBanner, week.ffScore, weekNum, 999, 12, 269, Properties.Resources.FF, Color.FromArgb(0, 163, 255)); //999 is your score
-            GenerateBanner(week.defBanner, week.defScore, weekNum, 999, 537, 547, Properties.Resources.Bears, colorTeam); //999 is defscore, last parameter is def banner
+            GenerateBanner(week.defBanner, week.defScore, weekNum, 999, 537, 547, BS, colorTeam); //999 is defscore, last parameter is def banner
 
             week.weekInfo = new Button();
             week.weekInfo.Location = new Point(396, 12 + weekNum * 110);
@@ -103,7 +102,7 @@ namespace Fantasy_Freaks {
             scoreLabel.Font = new Font("Segoe UI Variable Text", 36, FontStyle.Bold);
             scoreLabel.AutoSize = true;
             scoreLabel.ForeColor = Color.White;
-            scoreLabel.BackColor = teamColor; //Color.FromArgb(0, 163, 255); //change the label color here
+            scoreLabel.BackColor = colorTeam; //Color.FromArgb(0, 163, 255); //change the label color here
             scoreLabel.Parent = banner;
 
             scoreLabel.Text = score.ToString();

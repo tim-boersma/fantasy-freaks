@@ -36,13 +36,14 @@ namespace Fantasy_Freaks {
         private async void FormSeason_Load(object sender, EventArgs e)
         {
             FFWindow.instance.setFont(this);
-            LoadPanel(new FormSeasonOpponents());
             
             if (_team.EnemyTeams == null)
             {
                 var teams = await _defense.RandomTeams(17);
                 _team.EnemyTeams = teams.ToList();
             }
+
+            LoadPanel(new FormSeasonOpponents(_team));
 
         }
 
