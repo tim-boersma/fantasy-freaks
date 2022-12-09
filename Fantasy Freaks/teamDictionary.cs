@@ -4,12 +4,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DataAccess.GlobalConstants;
 
 namespace Fantasy_Freaks
 {
     class teamDictionary
     {
-
         public static Dictionary<string, Bitmap> bannerSeason = new Dictionary<string, Bitmap>()
         {
             {"Arizona Cardinals", Properties.Resources.Cardinals },
@@ -82,6 +82,16 @@ namespace Fantasy_Freaks
             {"Washington Redskins", Color.FromArgb(90,20,20) }
         }; //takes in location of label in season then sets it equal to that rgb value
 
-        
+        public static Dictionary<string, string> fullPlayerTypeNames = new Dictionary<string, string>()
+        {
+            {PlayerTypes.Quarterback, "Quarterback" },
+            {PlayerTypes.RunningBack, "Running Back" },
+            {PlayerTypes.RunningBackTwo, "Running Back" },
+            {PlayerTypes.WideReceiver, "Wide Receiver" },
+            {PlayerTypes.WideReceiverTwo, "Wide Receiver"  },
+            {PlayerTypes.TightEnd, "Tight End"  },
+            {PlayerTypes.Flex, "Flex Player" },
+            {PlayerTypes.Bench, "Bench" },
+        };
     }
 }

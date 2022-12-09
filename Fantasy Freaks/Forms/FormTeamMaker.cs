@@ -28,7 +28,7 @@ namespace Fantasy_Freaks {
         //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
 
         private void FormTeamMaker_Load(object sender, EventArgs e) {
-        
+
         }
 
         private void btnQB_Click(object sender, EventArgs e)
@@ -118,12 +118,12 @@ namespace Fantasy_Freaks {
             }
         }
         private void ChoosingPlayer(Button button, string position) {
-            if(position == PlayerTypes.Bench)
+            if (position == PlayerTypes.Bench)
             {
                 Form frmBS = new FormBenchSelection(_currentPlayer, _team, position);
                 frmBS.Show();
                 frmBS.FormClosed += new FormClosedEventHandler(BenchSelectionForm_Closed);
-            } 
+            }
             else
             {
                 Form frmPS = new FormPlayerSelection(_currentPlayer, _team, position);
@@ -133,6 +133,11 @@ namespace Fantasy_Freaks {
         }
 
         private void BenchSelectionForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            RefreshBenchSelection();
+        }
+
+        private void RefreshBenchSelection()
         {
             if (_team.BenchedPlayers.Any())
             {
@@ -156,6 +161,11 @@ namespace Fantasy_Freaks {
 
         private void PlayerSelectionForm_Closed(object sender, FormClosedEventArgs e)
         {
+            RefreshPlayerSelection();
+        }
+
+        private void RefreshPlayerSelection()
+        {
             if (_team.Quarterback != null)
                 btnQB.Text = _team.Quarterback.PlayerName;
             if (_team.RunningBackOne != null)
@@ -170,6 +180,58 @@ namespace Fantasy_Freaks {
                 btnTE.Text = _team.TightEnd.PlayerName;
             if (_team.Flex != null)
                 btnFlex.Text = _team.Flex.PlayerName;
+        }
+
+
+        private async void btnWinStat_Click(object sender, EventArgs e)
+        {
+            _team.Quarterback = await GetRandomPlayer(PlayerTypes.Quarterback);
+            _team.WideReceiverOne = await GetRandomPlayer(PlayerTypes.WideReceiver);
+            _team.WideReceiverTwo = await GetRandomPlayer(PlayerTypes.WideReceiver);
+            _team.RunningBackOne = await GetRandomPlayer(PlayerTypes.RunningBack);
+            _team.RunningBackTwo = await GetRandomPlayer(PlayerTypes.RunningBack);
+            _team.TightEnd = await GetRandomPlayer(PlayerTypes.TightEnd);
+            _team.Flex = await GetRandomPlayer(PlayerTypes.Flex);
+            var bench = await GetRandomBench();
+            _team.BenchedPlayers = bench.ToList();
+            RefreshPlayerSelection();
+            RefreshBenchSelection();
+        }
+
+        private async Task<CurrentPlayerModel> GetRandomPlayer(string playerType)
+        {
+            var result = await _currentPlayer.GetSelectedPlayers(playerType);
+            var players = result.ToList();
+            CurrentPlayerModel selectedPlayer;
+            Random rand = new Random(Guid.NewGuid().GetHashCode());
+            do
+            {
+                var playerNum = rand.Next(0, players.Count);
+                selectedPlayer = players[playerNum];
+            //TODO: break loop if position isn't valid
+            } while (selectedPlayer.PlayerPosition != playerType && playerType != PlayerTypes.Flex);
+
+            return selectedPlayer;
+        }
+
+        private async Task<IEnumerable<CurrentPlayerModel>> GetRandomBench()
+        {
+            List<CurrentPlayerModel> selectedPlayers = new List<CurrentPlayerModel>();
+
+            var result = await _currentPlayer.GetSelectedPlayers(PlayerTypes.Bench);
+            var players = result.ToList();
+            CurrentPlayerModel selectedPlayer;
+            Random rand = new Random(Guid.NewGuid().GetHashCode());
+            for(int i = 0; i < 8; i++)
+            {
+                do
+                {
+                    var playerNum = rand.Next(0, players.Count);
+                    selectedPlayer = players[playerNum];
+                } while (selectedPlayers.Contains(selectedPlayer));
+                selectedPlayers.Add(selectedPlayer);
+            }
+            return selectedPlayers;
         }
     }
 }
