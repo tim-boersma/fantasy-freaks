@@ -44,8 +44,8 @@ namespace Fantasy_Freaks {
 
 
             WeekPanel week = new WeekPanel();
-            GenerateBanner(week.ffBanner, week.ffScore, weekNum, offScore, 12, 269, Properties.Resources.FF, Color.FromArgb(0, 163, 255)); //999 is your score
-            GenerateBanner(week.defBanner, week.defScore, weekNum, defScore, 537, 547, teamBanner, colorTeam); //999 is defscore, last parameter is def banner
+            GenerateBanner(weekNum, offScore, 12, 269, Properties.Resources.FF, Color.FromArgb(0, 163, 255)); //999 is your score
+            GenerateBanner(weekNum, defScore, 537, 547, teamBanner, colorTeam); //999 is defscore, last parameter is def banner
 
             week.weekInfo = new Button();
             week.weekInfo.Location = new Point(396, 12 + weekNum * 110);
@@ -78,14 +78,14 @@ namespace Fantasy_Freaks {
         //defBanner x,y = 537,12
         //defScore x,y = 547, 30
 
-        private void GenerateBanner(PictureBox banner, Label scoreLabel, int weekNum, double score, int xBanner, int xScore, Image bImg, Color colorTeam) {
-            banner = new PictureBox();
+        private void GenerateBanner(int weekNum, double score, int xBanner, int xScore, Image bImg, Color colorTeam) {
+            var banner = new PictureBox();
             banner.Location = new Point(xBanner, 12 + weekNum * 110);
             banner.Size = new Size(378, 99);
             banner.BackgroundImageLayout = ImageLayout.Zoom;
             banner.BackgroundImage = bImg; //changes image 
 
-            scoreLabel = new Label();
+            var scoreLabel = new Label();
             scoreLabel.Location = new Point(xScore, 30 + weekNum * 110);
             scoreLabel.Font = new Font("Segoe UI Variable Text", 36, FontStyle.Bold);
             scoreLabel.AutoSize = true;

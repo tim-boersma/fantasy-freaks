@@ -37,6 +37,7 @@ namespace DataAccess.Models
         [Column("ID")]
         public int PlayerID { get; set; }
         public double Fumbles { get; set; }
+        public int WeekPlayed { get; set; }
 
         public static PlayerPerformanceDataModel NoGametimePlayer(CurrentPlayerModel player)
         {
@@ -47,7 +48,7 @@ namespace DataAccess.Models
                 TeamName = "",
                 PassingYards = 0,
                 PassingTouchdowns = 0,
-                Interceptions =0,
+                Interceptions = 0,
                 PassAttempts = 0,
                 Completions = 0,
                 RushingAttempts = 0,

@@ -19,8 +19,8 @@ namespace Fantasy_Freaks {
         private IEnumerable<CurrentPlayerModel> players;
         private List<CurrentPlayerModel> selectedPlayers = new List<CurrentPlayerModel>();
         private readonly string _playerSelection;
-        private int playerLabelTopStart = 146;
-        private int removeButtonTopStart = 146;
+        private int playerLabelTopStart;
+        private int removeButtonTopStart;
         public FormBenchSelection(ICurrentPlayerService currentPlayer, ITeamService teamService, string playerSelection) {
             InitializeComponent();
             _currentPlayer = currentPlayer;
@@ -30,7 +30,8 @@ namespace Fantasy_Freaks {
 
         private async void FormPlayerSelection_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fantasyFreaksDataSet.NewSeasonPlayer' table. You can move, or remove it, as needed.
+            //
+            // : This line of code loads data into the 'fantasyFreaksDataSet.NewSeasonPlayer' table. You can move, or remove it, as needed.
             //this.newSeasonPlayerTableAdapter.Fill(this.fantasyFreaksDataSet.NewSeasonPlayer);
 
             players = await GetSelectedPlayers();
@@ -73,6 +74,7 @@ namespace Fantasy_Freaks {
             else
             {
                 // TODO: Warn user you must choose 8 players for a bench
+                MessageBox.Show("You must have a full bench before submitting");
             }
         }
 
@@ -83,8 +85,8 @@ namespace Fantasy_Freaks {
 
         private void RenderPlayerList()
         {
-            playerLabelTopStart = 146;
-            removeButtonTopStart = 146;
+            playerLabelTopStart = 92;
+            removeButtonTopStart = 92;
             foreach(var player in selectedPlayers)
             {
                 AddPlayerLabel(player);
@@ -164,10 +166,12 @@ namespace Fantasy_Freaks {
             if (selectedPlayers.Count >= 8)
             {
                 // TODO: Warn user they can only have 8 players
+                MessageBox.Show("You can only have eight players on your team");
             }
             else if (selectedPlayers.Contains(selectedPlayer))
             {
                 // TODO: Warn user player is already on bench
+                MessageBox.Show("Player is already on the bench");
             }
             else
             {

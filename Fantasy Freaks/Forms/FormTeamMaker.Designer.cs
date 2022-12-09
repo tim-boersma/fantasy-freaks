@@ -37,7 +37,7 @@
             this.labelWR2 = new System.Windows.Forms.Label();
             this.btnWR2 = new System.Windows.Forms.Button();
             this.labelTE = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelFlex = new System.Windows.Forms.Label();
             this.btnFlex = new System.Windows.Forms.Button();
             this.labelBe1 = new System.Windows.Forms.Label();
             this.btnBe1 = new System.Windows.Forms.Button();
@@ -56,7 +56,7 @@
             this.labelBe8 = new System.Windows.Forms.Label();
             this.btnBe8 = new System.Windows.Forms.Button();
             this.labelRB1 = new System.Windows.Forms.Label();
-            this.btnWinStat = new System.Windows.Forms.Button();
+            this.btnRandom = new System.Windows.Forms.Button();
             this.btnTE = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.line)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -257,17 +257,17 @@
             this.labelTE.Text = "TE";
             this.labelTE.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label6
+            // labelFlex
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(247, 543);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 24);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "FLEX";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelFlex.AutoSize = true;
+            this.labelFlex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelFlex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFlex.Location = new System.Drawing.Point(247, 543);
+            this.labelFlex.Name = "labelFlex";
+            this.labelFlex.Size = new System.Drawing.Size(63, 24);
+            this.labelFlex.TabIndex = 21;
+            this.labelFlex.Text = "FLEX";
+            this.labelFlex.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnFlex
             // 
@@ -522,23 +522,23 @@
             this.labelRB1.Text = "RB1";
             this.labelRB1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // btnWinStat
+            // btnRandom
             // 
-            this.btnWinStat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(255)))), ((int)(((byte)(165)))));
-            this.btnWinStat.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnWinStat.FlatAppearance.BorderSize = 0;
-            this.btnWinStat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(255)))), ((int)(((byte)(165)))));
-            this.btnWinStat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(255)))), ((int)(((byte)(165)))));
-            this.btnWinStat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWinStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWinStat.Location = new System.Drawing.Point(685, 124);
-            this.btnWinStat.Name = "btnWinStat";
-            this.btnWinStat.Size = new System.Drawing.Size(287, 61);
-            this.btnWinStat.TabIndex = 40;
-            this.btnWinStat.Text = "Random Players";
-            this.btnWinStat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWinStat.UseVisualStyleBackColor = false;
-            this.btnWinStat.Click += new System.EventHandler(this.btnWinStat_Click);
+            this.btnRandom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(255)))), ((int)(((byte)(165)))));
+            this.btnRandom.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRandom.FlatAppearance.BorderSize = 0;
+            this.btnRandom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(255)))), ((int)(((byte)(138)))));
+            this.btnRandom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(255)))), ((int)(((byte)(209)))));
+            this.btnRandom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRandom.Location = new System.Drawing.Point(685, 124);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(287, 61);
+            this.btnRandom.TabIndex = 40;
+            this.btnRandom.Text = "Random Players";
+            this.btnRandom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRandom.UseVisualStyleBackColor = false;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
             // 
             // btnTE
             // 
@@ -563,9 +563,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 672);
             this.ControlBox = false;
-            this.Controls.Add(this.btnWinStat);
+            this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.labelRB1);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelFlex);
             this.Controls.Add(this.labelTE);
             this.Controls.Add(this.labelWR2);
             this.Controls.Add(this.labelWR1);
@@ -622,7 +622,7 @@
         private System.Windows.Forms.Label labelWR2;
         private System.Windows.Forms.Button btnWR2;
         private System.Windows.Forms.Label labelTE;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelFlex;
         private System.Windows.Forms.Button btnFlex;
         private System.Windows.Forms.Label labelBe1;
         private System.Windows.Forms.Button btnBe1;
@@ -642,7 +642,7 @@
         private System.Windows.Forms.Button btnBe8;
         private System.Windows.Forms.Label labelRB1;
         private System.Windows.Forms.Button btnQB;
-        private System.Windows.Forms.Button btnWinStat;
+        private System.Windows.Forms.Button btnRandom;
         private System.Windows.Forms.Button btnTE;
     }
 }

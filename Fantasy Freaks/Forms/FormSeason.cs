@@ -14,23 +14,24 @@ using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
     public partial class FormSeason : Form {
-        private readonly ITeamService _team;
+        private readonly ITeamService _teamService;
         private readonly IDefenseService _defense;
         public FormSeason(ITeamService teamService, IDefenseService defenseService) {
             InitializeComponent();
-            _team = teamService;
+            _teamService = teamService;
             _defense = defenseService;
+            _teamService.WaitSomeTime(btnWeekResults);
         }
 
         private void btnWeekResults_Click(object sender, EventArgs e)
         {
-            if(_team.CurrentWeek < 18)
+            if(_teamService.CurrentWeek < 18)
             {
-                FFWindow.instance.changePanel(new FormWeekResults(_team, _defense));
-            }
+                FFWindow.instance.changePanel(new FormWeekResults(_teamService, _defense));
+            } 
             else
             {
-                FFWindow.instance.changePanel(new FormEndResults(_team));
+                FFWindow.instance.changePanel(new FormEndResults(_teamService));
             }
         }
 
@@ -38,13 +39,13 @@ namespace Fantasy_Freaks {
         {
             FFWindow.instance.setFont(this);
             
-            if (_team.EnemyTeams == null)
+            if (_teamService.EnemyTeams == null)
             {
                 var teams = await _defense.RandomTeams(17);
-                _team.EnemyTeams = teams.ToList();
+                _teamService.EnemyTeams = teams.ToList();
             }
 
-            LoadPanel(new FormSeasonOpponents(_team));
+            LoadPanel(new FormSeasonOpponents(_teamService));
 
         }
 

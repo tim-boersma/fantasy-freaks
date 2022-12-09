@@ -24,11 +24,45 @@ namespace Fantasy_Freaks {
             _team = teamService;
             _defense = defenseService;
             _currentPlayer = currentPlayer;
+            //TODO: use a foreach loop of buttins in form for this
+            _team.WaitSomeTime(btnQB);
+            _team.WaitSomeTime(btnRB1);
+            _team.WaitSomeTime(btnRB2);
+            _team.WaitSomeTime(btnWR1);
+            _team.WaitSomeTime(btnWR2);
+            _team.WaitSomeTime(btnTE);
+            _team.WaitSomeTime(btnFlex);
+            _team.WaitSomeTime(btnBe1);
+            _team.WaitSomeTime(btnBe2);
+            _team.WaitSomeTime(btnBe3);
+            _team.WaitSomeTime(btnBe4);
+            _team.WaitSomeTime(btnBe5);
+            _team.WaitSomeTime(btnBe6);
+            _team.WaitSomeTime(btnBe7);
+            _team.WaitSomeTime(btnBe8);
+            _team.WaitSomeTime(btnSeason);
+            _team.WaitSomeTime(btnRandom);
         }
         //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
 
         private void FormTeamMaker_Load(object sender, EventArgs e) {
+            FFWindow.instance.setFont(this);
 
+            TransparentLabelonButton(labelQB, btnQB);
+            TransparentLabelonButton(labelRB1, btnRB1);
+            TransparentLabelonButton(labelRB2, btnRB2);
+            TransparentLabelonButton(labelWR1, btnWR1);
+            TransparentLabelonButton(labelWR2, btnWR2);
+            TransparentLabelonButton(labelTE, btnTE);
+            TransparentLabelonButton(labelFlex, btnFlex);
+            TransparentLabelonButton(labelBe1, btnBe1);
+            TransparentLabelonButton(labelBe2, btnBe2);
+            TransparentLabelonButton(labelBe3, btnBe3);
+            TransparentLabelonButton(labelBe4, btnBe4);
+            TransparentLabelonButton(labelBe5, btnBe5);
+            TransparentLabelonButton(labelBe6, btnBe6);
+            TransparentLabelonButton(labelBe7, btnBe7);
+            TransparentLabelonButton(labelBe8, btnBe8);
         }
 
         private void btnQB_Click(object sender, EventArgs e)
@@ -114,7 +148,7 @@ namespace Fantasy_Freaks {
             }
             else
             {
-                // TODO: Warn user they have players they still need to add
+                MessageBox.Show("You must have a full rooster before continuing");
             }
         }
         private void ChoosingPlayer(Button button, string position) {
@@ -183,7 +217,7 @@ namespace Fantasy_Freaks {
         }
 
 
-        private async void btnWinStat_Click(object sender, EventArgs e)
+        private async void btnRandom_Click(object sender, EventArgs e)
         {
             _team.Quarterback = await GetRandomPlayer(PlayerTypes.Quarterback);
             _team.WideReceiverOne = await GetRandomPlayer(PlayerTypes.WideReceiver);
@@ -209,6 +243,7 @@ namespace Fantasy_Freaks {
                 var playerNum = rand.Next(0, players.Count);
                 selectedPlayer = players[playerNum];
             //TODO: break loop if position isn't valid
+            
             } while (selectedPlayer.PlayerPosition != playerType && playerType != PlayerTypes.Flex);
 
             return selectedPlayer;
@@ -232,6 +267,11 @@ namespace Fantasy_Freaks {
                 selectedPlayers.Add(selectedPlayer);
             }
             return selectedPlayers;
+        }
+        private void TransparentLabelonButton(Label l, Button b) {
+            l.BackColor = Color.Transparent;
+            l.Location = b.PointToClient(l.Parent.PointToScreen(l.Location));
+            l.Parent = b;
         }
     }
 }

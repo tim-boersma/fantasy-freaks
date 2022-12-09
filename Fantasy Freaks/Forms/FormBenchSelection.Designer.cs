@@ -26,9 +26,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBenchSelection));
             this.dgvPlayers = new System.Windows.Forms.DataGridView();
-            this.Selected = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.playerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerPositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.currentPlayerModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newSeasonPlayerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fantasyFreaksDataSet = new Fantasy_Freaks.fantasyFreaksDataSet();
@@ -41,7 +38,8 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblSelection = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnAddPlayer = new System.Windows.Forms.Button();
+            this.playerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playerPositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentPlayerModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newSeasonPlayerBindingSource)).BeginInit();
@@ -57,7 +55,6 @@
             this.dgvPlayers.AutoGenerateColumns = false;
             this.dgvPlayers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlayers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Selected,
             this.playerNameDataGridViewTextBoxColumn,
             this.playerPositionDataGridViewTextBoxColumn});
             this.dgvPlayers.DataSource = this.currentPlayerModelBindingSource;
@@ -70,31 +67,6 @@
             this.dgvPlayers.Size = new System.Drawing.Size(351, 610);
             this.dgvPlayers.TabIndex = 0;
             this.dgvPlayers.SelectionChanged += new System.EventHandler(this.dgvPlayers_SelectionChanged);
-            // 
-            // Selected
-            // 
-            this.Selected.HeaderText = "Select Player";
-            this.Selected.MinimumWidth = 8;
-            this.Selected.Name = "Selected";
-            this.Selected.Width = 50;
-            // 
-            // playerNameDataGridViewTextBoxColumn
-            // 
-            this.playerNameDataGridViewTextBoxColumn.DataPropertyName = "PlayerName";
-            this.playerNameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.playerNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.playerNameDataGridViewTextBoxColumn.Name = "playerNameDataGridViewTextBoxColumn";
-            this.playerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.playerNameDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // playerPositionDataGridViewTextBoxColumn
-            // 
-            this.playerPositionDataGridViewTextBoxColumn.DataPropertyName = "PlayerPosition";
-            this.playerPositionDataGridViewTextBoxColumn.HeaderText = "Position";
-            this.playerPositionDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.playerPositionDataGridViewTextBoxColumn.Name = "playerPositionDataGridViewTextBoxColumn";
-            this.playerPositionDataGridViewTextBoxColumn.ReadOnly = true;
-            this.playerPositionDataGridViewTextBoxColumn.Width = 50;
             // 
             // currentPlayerModelBindingSource
             // 
@@ -123,7 +95,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(376, 383);
+            this.btnSubmit.Location = new System.Drawing.Point(376, 325);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(204, 40);
@@ -135,11 +107,11 @@
             // lblSelection
             // 
             this.lblSelection.AutoSize = true;
-            this.lblSelection.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelection.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelection.Location = new System.Drawing.Point(8, 21);
             this.lblSelection.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelection.Name = "lblSelection";
-            this.lblSelection.Size = new System.Drawing.Size(340, 30);
+            this.lblSelection.Size = new System.Drawing.Size(298, 25);
             this.lblSelection.TabIndex = 2;
             this.lblSelection.Text = "Select 8 Players for Your Bench";
             // 
@@ -147,23 +119,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(371, 105);
+            this.label1.Location = new System.Drawing.Point(371, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 28);
             this.label1.TabIndex = 3;
             this.label1.Text = "Currently Selected:";
             // 
-            // btnAddPlayer
+            // playerNameDataGridViewTextBoxColumn
             // 
-            this.btnAddPlayer.Location = new System.Drawing.Point(376, 51);
-            this.btnAddPlayer.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddPlayer.Name = "btnAddPlayer";
-            this.btnAddPlayer.Size = new System.Drawing.Size(204, 40);
-            this.btnAddPlayer.TabIndex = 4;
-            this.btnAddPlayer.Text = "Add Player";
-            this.btnAddPlayer.UseVisualStyleBackColor = true;
-            this.btnAddPlayer.Click += new System.EventHandler(this.btnAddPlayer_Click);
+            this.playerNameDataGridViewTextBoxColumn.DataPropertyName = "PlayerName";
+            this.playerNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.playerNameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.playerNameDataGridViewTextBoxColumn.Name = "playerNameDataGridViewTextBoxColumn";
+            this.playerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.playerNameDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // playerPositionDataGridViewTextBoxColumn
+            // 
+            this.playerPositionDataGridViewTextBoxColumn.DataPropertyName = "PlayerPosition";
+            this.playerPositionDataGridViewTextBoxColumn.HeaderText = "Position";
+            this.playerPositionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.playerPositionDataGridViewTextBoxColumn.Name = "playerPositionDataGridViewTextBoxColumn";
+            this.playerPositionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.playerPositionDataGridViewTextBoxColumn.Width = 50;
             // 
             // FormBenchSelection
             // 
@@ -171,7 +150,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(602, 672);
-            this.Controls.Add(this.btnAddPlayer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblSelection);
             this.Controls.Add(this.btnSubmit);
@@ -207,10 +185,8 @@
         private System.Data.SqlClient.SqlDataAdapter sqlDataAdapter1;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblSelection;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Selected;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn playerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn playerPositionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnAddPlayer;
     }
 }
