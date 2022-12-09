@@ -35,6 +35,7 @@ namespace Fantasy_Freaks {
         private async void FormWeekResults_Load(object sender, EventArgs e)
         {
             FFWindow.instance.setFont(this);
+            title.Text = "WEEK " + _teamService.CurrentWeek + " RESULT";
 
             var EnemyTeam = _teamService.GetCurrentOpponent();
 

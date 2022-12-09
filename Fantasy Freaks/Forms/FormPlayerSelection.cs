@@ -31,7 +31,7 @@ namespace Fantasy_Freaks {
             dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlayers.DataSource = players;
 
-            lblSelection.Text = "Select your " + _playerSelection;
+            lblSelection.Text = "Select your " + teamDictionary.fullPlayerTypeNames[_playerSelection];
         }
 
         private async Task<IEnumerable<CurrentPlayerModel>> GetSelectedPlayers()

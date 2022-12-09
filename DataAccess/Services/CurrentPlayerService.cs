@@ -32,36 +32,28 @@ namespace DataAccess.Services
             return players;
         }
 
-        private Expression<Func<CurrentPlayerModel, bool>> IsPosition(string position)
-        {
-            string delimiter = "/";
-            return (CurrentPlayerModel x) => x.PlayerPosition == position || x.PlayerPosition.StartsWith(position + delimiter) ||
-            x.PlayerPosition.EndsWith(delimiter + position) || x.PlayerPosition.Contains(delimiter + position + delimiter);
-        }
-
         public async Task<IEnumerable<CurrentPlayerModel>> GetAllQuarterbacks()
         {
-            return await _context.CurrentPlayer.Where(IsPosition("QB")).ToListAsync();
+            return await _context.CurrentPlayer.Where(x => x.PlayerPosition == "QB").ToListAsync();
         }
-
 
         public async Task<IEnumerable<CurrentPlayerModel>> GetAllRunningbacks()
         {
             List<CurrentPlayerModel> runningbacks = new List<CurrentPlayerModel>();
-            runningbacks.AddRange(await _context.CurrentPlayer.Where(IsPosition("RB")).ToListAsync());
-            runningbacks.AddRange(await _context.CurrentPlayer.Where(IsPosition("HB")).ToListAsync());
-            runningbacks.AddRange(await _context.CurrentPlayer.Where(IsPosition("FB")).ToListAsync());
+            runningbacks.AddRange(await _context.CurrentPlayer.Where(x => x.PlayerPosition == "RB").ToListAsync());
+            runningbacks.AddRange(await _context.CurrentPlayer.Where(x => x.PlayerPosition == "HB").ToListAsync());
+            runningbacks.AddRange(await _context.CurrentPlayer.Where(x => x.PlayerPosition == "FB").ToListAsync());
             return runningbacks;
         }
 
         public async Task<IEnumerable<CurrentPlayerModel>> GetAllWideReceivers()
         {
-            return await _context.CurrentPlayer.Where(IsPosition("WR")).ToListAsync();
+            return await _context.CurrentPlayer.Where(x => x.PlayerPosition == "WR").ToListAsync();
         }
 
         public async Task<IEnumerable<CurrentPlayerModel>> GetAllTightEnds()
         {
-            return await _context.CurrentPlayer.Where(IsPosition("TE")).ToListAsync();
+            return await _context.CurrentPlayer.Where(x => x.PlayerPosition == "TE").ToListAsync();
         }
 
         public async Task<IEnumerable<CurrentPlayerModel>> GetAllPlayers()
