@@ -63,9 +63,9 @@ namespace Fantasy_Freaks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _49ers {
+        internal static System.Drawing.Bitmap fourtyniners {
             get {
-                object obj = ResourceManager.GetObject("_49ers", resourceCulture);
+                object obj = ResourceManager.GetObject("fourtyniners", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Fantasy_Freaks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Cheifs {
+        internal static System.Drawing.Bitmap Chiefs {
             get {
-                object obj = ResourceManager.GetObject("Cheifs", resourceCulture);
+                object obj = ResourceManager.GetObject("Chiefs", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace Fantasy_Freaks.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Commander {
+        internal static System.Drawing.Bitmap Commanders {
             get {
-                object obj = ResourceManager.GetObject("Commander", resourceCulture);
+                object obj = ResourceManager.GetObject("Commanders", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -459,7 +459,7 @@
     <None Include="Resources\DayBanner.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TeamBanner\49ers.png" />
+    <None Include="Resources\TeamBanner\fourtyniners.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TeamBanner\Bears.png" />
@@ -486,7 +486,7 @@
     <None Include="Resources\TeamBanner\Chargers.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TeamBanner\Cheifs.png" />
+    <None Include="Resources\TeamBanner\Chiefs.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TeamBanner\Colts.png" />

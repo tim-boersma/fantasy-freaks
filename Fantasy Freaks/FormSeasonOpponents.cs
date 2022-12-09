@@ -39,7 +39,7 @@ namespace Fantasy_Freaks {
             var EnemyTeam = _team.GetOpponents();
 
             //picturebox.Source = resourcedictionary[teamName];
-            bannerSeason[EnemyTeam.TeamName];
+            teamDictionary.bannerSeason[EnemyTeam.TeamName];
             var BS = bannerSeason[EnemyTeam.TeamName];
 
             Color colorTeam = labelSeason[EnemyTeam.TeamName];
