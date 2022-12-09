@@ -165,7 +165,6 @@
             this.FFbanner.Size = new System.Drawing.Size(452, 115);
             this.FFbanner.TabIndex = 76;
             this.FFbanner.TabStop = false;
-            this.FFbanner.Click += new System.EventHandler(this.FFbanner_Click);
             // 
             // OPPbanner
             // 
