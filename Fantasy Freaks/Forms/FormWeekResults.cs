@@ -128,7 +128,6 @@ namespace Fantasy_Freaks {
             if (offScore < _teamService.WorstWeek)
                 _teamService.WorstWeek = offFinalScore;
 
-            _teamService.NextWeek();
         }
 
 
