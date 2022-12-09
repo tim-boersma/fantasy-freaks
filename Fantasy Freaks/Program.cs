@@ -17,15 +17,11 @@ using System.Windows.Forms;
 namespace Fantasy_Freaks {
 
     internal static class Program {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        /// 
 
         [STAThread]
         static void Main() {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(true);
 
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
