@@ -1,5 +1,6 @@
 ﻿using DataAccess.Interfaces;
 using DataAccess.Models;
+using DataAccess.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,10 +27,10 @@ namespace Fantasy_Freaks {
             if(_team.CurrentWeek < 18)
             {
                 FFWindow.instance.changePanel(new FormWeekResults(_team, _defense));
-            } 
+            }
             else
             {
-                FFWindow.instance.changePanel(new FormEndResults());
+                FFWindow.instance.changePanel(new FormEndResults(_team));
             }
         }
 
