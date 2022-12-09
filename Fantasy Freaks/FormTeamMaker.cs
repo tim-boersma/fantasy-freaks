@@ -1,5 +1,5 @@
-﻿using Fantasy_Freaks.Interfaces;
-using Fantasy_Freaks.Models;
+﻿using DataAccess.Interfaces;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

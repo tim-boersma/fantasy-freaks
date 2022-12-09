@@ -125,6 +125,7 @@
     <Compile Include="Services\PreviousPlayerService.cs" />
     <Compile Include="Services\TeamService.cs" />
     <Compile Include="StringConstants.cs" />
+    <Compile Include="WeekPerformance.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

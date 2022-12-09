@@ -1,4 +1,5 @@
-﻿using DataAccess.Interfaces;
+﻿using DataAccess;
+using DataAccess.Interfaces;
 using DataAccess.Models;
 using System;
 using System.Collections.Generic;
@@ -102,10 +103,8 @@ namespace Fantasy_Freaks {
                 currentPlayer += offScore;
             }
 
-            var performance = _teamService.PlayerPerformance[_teamService.CurrentWeek];
-            performance.OppScore = defScore;
-            performance.UserScore = offScore;
-            performance.UserWon = offScore >= defScore; 
+            var performance = new WeekPerformance(offScore, defScore);
+            _teamService.PlayerPerformance.Insert(_teamService.CurrentWeek - 1, performance);
             labelOPPscore.Text = defScore.ToString();
             labelFFscore.Text = offScore.ToString();
 

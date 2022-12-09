@@ -55,7 +55,7 @@ namespace Fantasy_Freaks {
             }
         }
 
-        private async void btnSubmit_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
             var selectedPlayer = (CurrentPlayerModel)dgvPlayers.SelectedRows[0].DataBoundItem;
             _team.SetPosition(_playerSelection, selectedPlayer);

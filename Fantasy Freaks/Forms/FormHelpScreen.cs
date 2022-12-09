@@ -1,13 +1,6 @@
-﻿using Fantasy_Freaks.Interfaces;
-using Fantasy_Freaks.Models;
+﻿using DataAccess.Interfaces;
+using DataAccess.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fantasy_Freaks
@@ -16,17 +9,20 @@ namespace Fantasy_Freaks
     {
         private readonly ITeamService _teamService;
         private readonly IDefenseService _defenseService;
+        private readonly ICurrentPlayerService _currentPlayer;
 
-        public FormHelpScreen(ITeamService teamService, IDefenseService defenseService) {
+        public FormHelpScreen(ITeamService teamService, IDefenseService defenseService, ICurrentPlayerService currentPlayer) {
             InitializeComponent();
             _teamService = teamService;
             _defenseService = defenseService;
+            _defenseService = defenseService;
+            _currentPlayer = currentPlayer;
             //activeForm = this;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            FFWindow.instance.changePanel(new FormHomeScreen(_teamService, _defenseService));
+            FFWindow.instance.changePanel(new FormHomeScreen(_teamService, _defenseService, _currentPlayer));
         }
 
         private void FormHelpScreen_Load(object sender, EventArgs e) {

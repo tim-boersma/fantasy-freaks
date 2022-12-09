@@ -1,5 +1,5 @@
-﻿using Fantasy_Freaks.Interfaces;
-using Fantasy_Freaks.Models;
+﻿using DataAccess.Interfaces;
+using DataAccess.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +35,7 @@ namespace Fantasy_Freaks {
             }
             this.Size = new Size(this.Size.Width, this.Size.Height + 100);
         }
-        private async void WeekGenerator(int weekNum) {
+        private void WeekGenerator(int weekNum) {
             var enemyTeam = _team.EnemyTeams[weekNum];
 
             var teamBanner = teamDictionary.bannerSeason[enemyTeam.TeamName];
@@ -55,7 +55,7 @@ namespace Fantasy_Freaks {
             week.weekInfo.FlatAppearance.BorderSize = 4;
             week.weekInfo.Text = "WEEK " + (weekNum + 1) + "\nVS";
 
-            if (weekNum == _team.CurrentWeek) {
+            if (weekNum + 1 == _team.CurrentWeek) {
                 week.weekInfo.BackColor = Color.Gold;
             } else if(_team.PlayerPerformance.ElementAtOrDefault(weekNum) != null && !_team.PlayerPerformance[weekNum].UserWon) {//loss, ffScore < defScore
                 week.weekInfo.BackColor = Color.Firebrick;
