@@ -28,10 +28,14 @@ namespace Fantasy_Freaks {
             //activeForm = this;
         }
 
+
+
         private void FormHomeScreen_Load(object sender, EventArgs e) {
             FFWindow.instance.setFont(this);
             logo.Parent = titleBackground;
             title.Parent = titleBackground;
+            _teamService.WaitSomeTime(btnPlay);
+            _teamService.WaitSomeTime(btnHelp);
         }
 
         private void btnPlay_Click(object sender, EventArgs e) {
@@ -42,5 +46,6 @@ namespace Fantasy_Freaks {
         {
             FFWindow.instance.changePanel(new FormHelpScreen(_teamService, _defenseService, _currentPlayer));
         }
+
     }
 }

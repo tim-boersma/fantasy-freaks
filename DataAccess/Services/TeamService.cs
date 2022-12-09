@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using static DataAccess.GlobalConstants;
+using System.Windows.Forms;
 
 namespace DataAccess.Services
 {
@@ -37,6 +38,13 @@ namespace DataAccess.Services
         public List<CurrentPlayerModel> BenchedPlayers { get; set; } = new List<CurrentPlayerModel>();
         public List<DefenseDataModel> EnemyTeams { get; set; }
         public List<WeekPerformance> PlayerPerformance { get; set; } = new List<WeekPerformance>();
+
+        public async Task WaitSomeTime(Button button)
+        {
+            button.Enabled = false;
+            await Task.Delay(1000);
+            button.Enabled = true;
+        }
 
         public bool AllPlayersInitialized()
         {

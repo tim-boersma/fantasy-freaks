@@ -6,6 +6,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using static DataAccess.GlobalConstants;
 
 namespace DataAccess.Services
 {
@@ -30,6 +31,27 @@ namespace DataAccess.Services
                 players.Add(await GetPlayer(id));
             }
             return players;
+        }
+
+        public async Task<IEnumerable<CurrentPlayerModel>> GetSelectedPlayers(string playerSelection)
+        {
+            switch (playerSelection)
+            {
+                case PlayerTypes.Quarterback:
+                    return await GetAllQuarterbacks();
+                case PlayerTypes.RunningBack:
+                    return await GetAllRunningbacks();
+                case PlayerTypes.RunningBackTwo:
+                    return await GetAllRunningbacks();
+                case PlayerTypes.TightEnd:
+                    return await GetAllTightEnds();
+                case PlayerTypes.WideReceiver:
+                    return await GetAllWideReceivers();
+                case PlayerTypes.WideReceiverTwo:
+                    return await GetAllWideReceivers();
+                default:
+                    return await GetAllPlayers();
+            }
         }
 
         public async Task<IEnumerable<CurrentPlayerModel>> GetAllQuarterbacks()

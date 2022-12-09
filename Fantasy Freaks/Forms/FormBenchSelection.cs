@@ -30,12 +30,16 @@ namespace Fantasy_Freaks {
 
         private async void FormPlayerSelection_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'fantasyFreaksDataSet.NewSeasonPlayer' table. You can move, or remove it, as needed.
+            //
+            // : This line of code loads data into the 'fantasyFreaksDataSet.NewSeasonPlayer' table. You can move, or remove it, as needed.
             //this.newSeasonPlayerTableAdapter.Fill(this.fantasyFreaksDataSet.NewSeasonPlayer);
+
             players = await GetSelectedPlayers();
 
             dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlayers.DataSource = players;
+
+
 
         }
 
@@ -70,6 +74,7 @@ namespace Fantasy_Freaks {
             else
             {
                 // TODO: Warn user you must choose 8 players for a bench
+                MessageBox.Show("You must have a full bench before submitting");
             }
         }
 
@@ -161,10 +166,12 @@ namespace Fantasy_Freaks {
             if (selectedPlayers.Count >= 8)
             {
                 // TODO: Warn user they can only have 8 players
+                MessageBox.Show("You can only have eight players on your team");
             }
             else if (selectedPlayers.Contains(selectedPlayer))
             {
                 // TODO: Warn user player is already on bench
+                MessageBox.Show("Player is already on the bench");
             }
             else
             {
