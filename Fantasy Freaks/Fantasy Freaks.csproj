@@ -279,6 +279,7 @@
     <Compile Include="FormSeasonOpponents.Designer.cs">
       <DependentUpon>FormSeasonOpponents.cs</DependentUpon>
     </Compile>
+    <Compile Include="teamDictionary.cs" />
     <Compile Include="TeamService.cs" />
     <Compile Include="Interfaces\ICurrentPlayerService.cs" />
     <Compile Include="Interfaces\IPlayerPerformanceService.cs" />
@@ -491,7 +492,7 @@
     <None Include="Resources\TeamBanner\Colts.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\TeamBanner\Commander.png" />
+    <None Include="Resources\TeamBanner\Commanders.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TeamBanner\Cowboys.png" />

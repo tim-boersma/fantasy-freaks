@@ -1,4 +1,5 @@
-﻿using Fantasy_Freaks.Models;
+﻿using Fantasy_Freaks.Interfaces;
+using Fantasy_Freaks.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +18,12 @@ namespace Fantasy_Freaks {
         public Label defScore;
         public Button weekInfo;
     }
+
     public partial class FormSeasonOpponents : Form {
         private List<Week> seasonWeek = new List<Week>();
-        public FormSeasonOpponents() {
+        private readonly ITeamService _team;
+        public FormSeasonOpponents(ITeamService teamService) {
+            _team = teamService;
             InitializeComponent();
         }
 
@@ -32,9 +36,17 @@ namespace Fantasy_Freaks {
             this.Size = new Size(this.Size.Width, this.Size.Height + 100);
         }
         private void WeekGenerator(int weekNum) {
+            var EnemyTeam = _team.GetOpponents();
+
+            //picturebox.Source = resourcedictionary[teamName];
+            bannerSeason[EnemyTeam.TeamName];
+            var BS = bannerSeason[EnemyTeam.TeamName];
+
+            Color colorTeam = labelSeason[EnemyTeam.TeamName];
+
             Week week = new Week();
-            GenerateBanner(week.ffBanner, week.ffScore, weekNum, 999, 12, 269, Properties.Resources.FF); //999 is your score
-            GenerateBanner(week.defBanner, week.defScore, weekNum, 999, 537, 547, Properties.Resources.Bears); //999 is defscore, last parameter is def banner
+            GenerateBanner(week.ffBanner, week.ffScore, weekNum, 999, 12, 269, Properties.Resources.FF, Color.FromArgb(0, 163, 255)); //999 is your score
+            GenerateBanner(week.defBanner, week.defScore, weekNum, 999, 537, 547, Properties.Resources.Bears, colorTeam); //999 is defscore, last parameter is def banner
 
             week.weekInfo = new Button();
             week.weekInfo.Location = new Point(396, 12 + weekNum * 110);
@@ -45,6 +57,8 @@ namespace Fantasy_Freaks {
             week.weekInfo.FlatAppearance.BorderSize = 4;
             week.weekInfo.Text = "WEEK " + (weekNum + 1) + "\nVS";
 
+            //foreach()? go through each week and record if it is loss or win then produce color for box based on that. If yet to come turn grey
+            // if yellow is current week -- something to go through each week
             //change this
             if (true) {//week == current week
                 week.weekInfo.BackColor = Color.Gold;
@@ -53,6 +67,17 @@ namespace Fantasy_Freaks {
             } else {//win
                 week.weekInfo.BackColor = Color.ForestGreen;
             }
+
+            /*would go in weekResults.
+             * if(currentWeek.score? > bestWeek)
+             * {
+             *      bestWeek = currentWeek.score?;
+             * }
+             * if(currentWeek.score? < worstWeek)
+             * {
+             *      worstWeek = currentWeek.score?;
+             * }
+            */
 
             week.weekInfo.FlatAppearance.MouseOverBackColor = week.weekInfo.BackColor;
             week.weekInfo.FlatAppearance.MouseDownBackColor = week.weekInfo.BackColor;
@@ -66,19 +91,19 @@ namespace Fantasy_Freaks {
         //defBanner x,y = 537,12
         //defScore x,y = 547, 30
 
-        private void GenerateBanner(PictureBox banner, Label scoreLabel, int weekNum, int score, int xBanner, int xScore, Image bImg) {
+        private void GenerateBanner(PictureBox banner, Label scoreLabel, int weekNum, int score, int xBanner, int xScore, Image bImg, Color colorTeam) {
             banner = new PictureBox();
             banner.Location = new Point(xBanner, 12 + weekNum * 110);
             banner.Size = new Size(378, 99);
             banner.BackgroundImageLayout = ImageLayout.Zoom;
-            banner.BackgroundImage = bImg; //change image 
+            banner.BackgroundImage = bImg; //changes image 
 
             scoreLabel = new Label();
             scoreLabel.Location = new Point(xScore, 30 + weekNum * 110);
             scoreLabel.Font = new Font("Segoe UI Variable Text", 36, FontStyle.Bold);
             scoreLabel.AutoSize = true;
             scoreLabel.ForeColor = Color.White;
-            scoreLabel.BackColor = Color.FromArgb(0, 163, 255);
+            scoreLabel.BackColor = teamColor; //Color.FromArgb(0, 163, 255); //change the label color here
             scoreLabel.Parent = banner;
 
             scoreLabel.Text = score.ToString();
