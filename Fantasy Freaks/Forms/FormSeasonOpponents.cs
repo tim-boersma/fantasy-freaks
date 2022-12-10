@@ -35,6 +35,15 @@ namespace Fantasy_Freaks {
             }
             this.Size = new Size(this.Size.Width, this.Size.Height + 100);
             FFWindow.instance.setFont(this);
+            if(_team.CurrentWeek <= 17)
+                VerticalScroll.Value = scroll(_team.CurrentWeek);
+        }
+
+        private int scroll(int week)
+        {
+            int num = 9;
+            num = num + ((week - 1) * 110);
+            return num;
         }
 
         private void WeekGenerator(int weekNum) {

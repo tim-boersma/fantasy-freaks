@@ -46,7 +46,6 @@ namespace Fantasy_Freaks {
             }
 
             LoadPanel(new FormSeasonOpponents(_teamService));
-
         }
 
         private void LoadPanel(Form newForm) {

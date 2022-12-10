@@ -48,6 +48,7 @@ namespace Fantasy_Freaks {
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "FFWindow";
             this.Text = "Fantasy Freaks";
             this.Load += new System.EventHandler(this.FFWindow_Load);

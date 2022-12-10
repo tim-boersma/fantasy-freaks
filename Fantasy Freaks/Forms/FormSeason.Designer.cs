@@ -55,11 +55,11 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Segoe UI Variable Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.title.Location = new System.Drawing.Point(12, 9);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(490, 64);
+            this.title.Size = new System.Drawing.Size(516, 55);
             this.title.TabIndex = 6;
             this.title.Text = "UPCOMING SEASON";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -71,7 +71,7 @@
             this.btnWeekResults.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(255)))), ((int)(((byte)(138)))));
             this.btnWeekResults.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(255)))), ((int)(((byte)(209)))));
             this.btnWeekResults.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWeekResults.Font = new System.Drawing.Font("Segoe UI Variable Display", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWeekResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWeekResults.Location = new System.Drawing.Point(683, 600);
             this.btnWeekResults.Name = "btnWeekResults";
             this.btnWeekResults.Size = new System.Drawing.Size(287, 58);
@@ -83,6 +83,7 @@
             // 
             // panelOpponents
             // 
+            this.panelOpponents.AutoScroll = true;
             this.panelOpponents.BackColor = System.Drawing.Color.Transparent;
             this.panelOpponents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelOpponents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;

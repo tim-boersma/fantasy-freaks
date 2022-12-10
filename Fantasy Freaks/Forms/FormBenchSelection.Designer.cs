@@ -212,6 +212,7 @@
             this.textBoxBenchSearch.Name = "textBoxBenchSearch";
             this.textBoxBenchSearch.Size = new System.Drawing.Size(352, 26);
             this.textBoxBenchSearch.TabIndex = 0;
+            this.textBoxBenchSearch.TextChanged += new System.EventHandler(this.textBoxBenchSearch_TextChanged);
             // 
             // FormBenchSelection
             // 
