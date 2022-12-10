@@ -20,8 +20,8 @@ namespace DataAccess.Services
         }
 
         public int CurrentWeek { get; set; } = 1;
-        public double BestWeek { get; set; } = 0;
-        public double WorstWeek { get; set; } = 0;
+        public WeekPerformance BestWeek { get; set; }
+        public WeekPerformance WorstWeek { get; set; }
         public int TotalInjuries { get; set; } = 0;
         public int TotalBadDays { get; set; } = 0;
         public int TotalAveragePoints { get; set; } = 0;
@@ -59,22 +59,36 @@ namespace DataAccess.Services
         }
         public IEnumerable<int> GetActivePlayerIDs()
         {
-            return new List<int>() {
-                Quarterback.PlayerID,
-                WideReceiverOne.PlayerID,
-                WideReceiverTwo.PlayerID,
-                RunningBackOne.PlayerID,
-                RunningBackTwo.PlayerID,
-                TightEnd.PlayerID,
-                Flex.PlayerID
-            };
+            List<int> activePlayerIDs = new List<int>();
+            if (Quarterback != null)
+                activePlayerIDs.Add(Quarterback.PlayerID);
+            if (WideReceiverOne != null)
+                activePlayerIDs.Add(WideReceiverOne.PlayerID);
+            if (WideReceiverTwo != null)
+                activePlayerIDs.Add(WideReceiverTwo.PlayerID);
+            if (RunningBackOne != null)
+                activePlayerIDs.Add(RunningBackOne.PlayerID);
+            if (RunningBackTwo != null)
+                activePlayerIDs.Add(RunningBackTwo.PlayerID);
+            if (TightEnd != null)
+                activePlayerIDs.Add(TightEnd.PlayerID);
+            if (Flex != null)
+                activePlayerIDs.Add(Flex.PlayerID);
+
+            return activePlayerIDs;
         }
 
-        public async Task<List<PlayerPerformanceDataModel>> GetActivePlayers()
+        public async Task<List<PlayerPerformanceDataModel>> GetActivePlayerPerformances()
         {
             var playerIDs = GetActivePlayerIDs();
             var players = await GetPlayerPerformances(playerIDs, CurrentWeek);
             return players.ToList();
+        }
+
+        public async Task<List<CurrentPlayerModel>> GetActivePlayers()
+        {
+            var playerIDs = GetActivePlayerIDs();
+            return await _context.CurrentPlayer.Where(x => playerIDs.Contains(x.PlayerID)).ToListAsync();
         }
 
         public async Task<PlayerPerformanceDataModel> GetPlayerPerformance(int playerID, int week)
@@ -172,48 +186,48 @@ namespace DataAccess.Services
                 return EnemyTeams[CurrentWeek - 1];
             return null;
         }
+
+        private void ReplaceOnBench(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer)
+        {
+            var index = BenchedPlayers.IndexOf(benchedPlayer);
+            BenchedPlayers[index] = activePlayer;
+        }
+
         public void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer)
         {
             if (Quarterback.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(Quarterback);
+                ReplaceOnBench(Quarterback, benchedPlayer);
                 Quarterback = benchedPlayer;
             }
             else if (WideReceiverOne.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(WideReceiverOne);
+                ReplaceOnBench(WideReceiverOne, benchedPlayer);
                 WideReceiverOne = benchedPlayer;
             }
             else if (WideReceiverTwo.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(WideReceiverTwo);
+                ReplaceOnBench(WideReceiverTwo, benchedPlayer);
                 WideReceiverTwo = benchedPlayer;
             }
             else if (RunningBackOne.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(RunningBackOne);
+                ReplaceOnBench(RunningBackOne, benchedPlayer);
                 RunningBackOne = benchedPlayer;
             }
             else if (RunningBackTwo.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(RunningBackTwo);
+                ReplaceOnBench(RunningBackTwo, benchedPlayer);
                 RunningBackTwo = benchedPlayer;
             }
             else if (TightEnd.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(TightEnd);
+                ReplaceOnBench(TightEnd, benchedPlayer);
                 TightEnd = benchedPlayer;
             }
             else if (Flex.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(Flex);
+                ReplaceOnBench(Flex, benchedPlayer);
                 Flex = benchedPlayer;
             }
         }

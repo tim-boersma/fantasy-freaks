@@ -30,6 +30,11 @@ namespace Fantasy_Freaks {
 
         private async void FormPlayerSelection_Load(object sender, EventArgs e)
         {
+            FFWindow.instance.setFont(this);
+            dgvPlayers.ColumnHeadersDefaultCellStyle.Font = FFWindow.instance.getFont(dgvPlayers);
+            dgvPlayers.DefaultCellStyle.Font = FFWindow.instance.getFont(dgvPlayers);
+            dgvPlayers.RowsDefaultCellStyle.Font = FFWindow.instance.getFont(dgvPlayers);
+
             //
             // : This line of code loads data into the 'fantasyFreaksDataSet.NewSeasonPlayer' table. You can move, or remove it, as needed.
             //this.newSeasonPlayerTableAdapter.Fill(this.fantasyFreaksDataSet.NewSeasonPlayer);
@@ -38,9 +43,7 @@ namespace Fantasy_Freaks {
 
             dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlayers.DataSource = players;
-
-
-
+            dgvPlayers.ClearSelection();
         }
 
         private async Task<IEnumerable<CurrentPlayerModel>> GetSelectedPlayers()
@@ -73,20 +76,14 @@ namespace Fantasy_Freaks {
             }
             else
             {
-                // TODO: Warn user you must choose 8 players for a bench
                 MessageBox.Show("You must have a full bench before submitting");
             }
         }
 
-        private void btnAddPlayer_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void RenderPlayerList()
         {
-            playerLabelTopStart = 92;
-            removeButtonTopStart = 92;
+            playerLabelTopStart = 125;
+            removeButtonTopStart = 125;
             foreach(var player in selectedPlayers)
             {
                 AddPlayerLabel(player);
@@ -137,11 +134,19 @@ namespace Fantasy_Freaks {
         {
             Button btn = new Button();
             btn.Location = new Point(524, removeButtonTopStart);
+            btn.FlatStyle = FlatStyle.Flat;
+            btn.FlatAppearance.BorderSize = 0;
+            btn.BackColor = Color.Firebrick;
+            btn.FlatAppearance.MouseOverBackColor = Color.LightCoral;
+            btn.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            btn.Font = FFWindow.instance.getFont(btn);
+            btn.ForeColor = Color.White;
             btn.Size = new Size(57, 20);
             btn.Text = "Remove";
             btn.Tag = player.PlayerID;
             btn.Click += btnRemovePlayer_Click;
             this.Controls.Add(btn);
+            btn.BringToFront();
 
             removeButtonTopStart += 28;
         }
@@ -149,28 +154,36 @@ namespace Fantasy_Freaks {
         private void AddPlayerLabel(CurrentPlayerModel player)
         {
             Label label = new Label();
-            label.Location = new Point(372, playerLabelTopStart);
+            label.Location = new Point(365, playerLabelTopStart);
             label.Size = new Size(148, 20);
             label.Text = player.PlayerName;
-            label.Font = new Font("Microsoft YaHei", 11);
+            label.Font = FFWindow.instance.getFont(label);
+            label.BackColor = Color.FromArgb(217, 217, 217);
             label.AutoEllipsis = true;
             label.Tag = player.PlayerID;
             this.Controls.Add(label);
+            label.BringToFront();
 
             playerLabelTopStart += 28;
         }
 
         private void dgvPlayers_SelectionChanged(object sender, EventArgs e)
         {
+            if(dgvPlayers.SelectedRows.Count == 0)
+            {
+                RemoveSelectedPlayerLabels();
+                RemoveSelectedPlayerButtons();
+                selectedPlayers.Clear();
+                RenderPlayerList();
+                return;
+            }
             var selectedPlayer = (CurrentPlayerModel)dgvPlayers.SelectedRows[0].DataBoundItem;
             if (selectedPlayers.Count >= 8)
             {
-                // TODO: Warn user they can only have 8 players
                 MessageBox.Show("You can only have eight players on your team");
             }
             else if (selectedPlayers.Contains(selectedPlayer))
             {
-                // TODO: Warn user player is already on bench
                 MessageBox.Show("Player is already on the bench");
             }
             else

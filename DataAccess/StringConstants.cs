@@ -12,12 +12,26 @@ namespace DataAccess
         {
             public const string Quarterback = "QB";
             public const string RunningBack = "RB";
+            public const string RunningBackOne = "RB1";
             public const string RunningBackTwo = "RB2";
             public const string WideReceiver = "WR";
+            public const string WideReceiverOne = "WR1";
             public const string WideReceiverTwo = "WR2";
             public const string TightEnd = "TE";
             public const string Flex = "FL";
             public const string Bench = "BE";
+            public static readonly List<string> AllTypes = new List<string>() { 
+                Quarterback,
+                RunningBack,
+                RunningBackTwo,
+                WideReceiver, 
+                WideReceiverTwo,
+                TightEnd,
+                Flex,
+                Bench,
+                WideReceiverOne,
+                RunningBackOne
+            };
         }
     }
 }

@@ -19,33 +19,21 @@ namespace Fantasy_Freaks {
         private readonly ITeamService _team;
         private readonly IDefenseService _defense;
         private readonly ICurrentPlayerService _currentPlayer;
+        private IEnumerable<CurrentPlayerModel> allPlayers;
+        private bool selecting = false;
         public FormTeamMaker(ITeamService teamService, IDefenseService defenseService, ICurrentPlayerService currentPlayer) {
             InitializeComponent();
             _team = teamService;
             _defense = defenseService;
             _currentPlayer = currentPlayer;
-            //TODO: use a foreach loop of buttins in form for this
-            _team.WaitSomeTime(btnQB);
-            _team.WaitSomeTime(btnRB1);
-            _team.WaitSomeTime(btnRB2);
-            _team.WaitSomeTime(btnWR1);
-            _team.WaitSomeTime(btnWR2);
-            _team.WaitSomeTime(btnTE);
-            _team.WaitSomeTime(btnFlex);
-            _team.WaitSomeTime(btnBe1);
-            _team.WaitSomeTime(btnBe2);
-            _team.WaitSomeTime(btnBe3);
-            _team.WaitSomeTime(btnBe4);
-            _team.WaitSomeTime(btnBe5);
-            _team.WaitSomeTime(btnBe6);
-            _team.WaitSomeTime(btnBe7);
-            _team.WaitSomeTime(btnBe8);
-            _team.WaitSomeTime(btnSeason);
-            _team.WaitSomeTime(btnRandom);
-        }
-        //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
 
-        private void FormTeamMaker_Load(object sender, EventArgs e) {
+            foreach(var button in this.Controls.OfType<Button>())
+            {
+                _team.WaitSomeTime(button);
+            }
+        }
+
+        private async void FormTeamMaker_Load(object sender, EventArgs e) {
             FFWindow.instance.setFont(this);
 
             TransparentLabelonButton(labelQB, btnQB);
@@ -54,7 +42,7 @@ namespace Fantasy_Freaks {
             TransparentLabelonButton(labelWR1, btnWR1);
             TransparentLabelonButton(labelWR2, btnWR2);
             TransparentLabelonButton(labelTE, btnTE);
-            TransparentLabelonButton(labelFlex, btnFlex);
+            TransparentLabelonButton(labelFlex, btnFL);
             TransparentLabelonButton(labelBe1, btnBe1);
             TransparentLabelonButton(labelBe2, btnBe2);
             TransparentLabelonButton(labelBe3, btnBe3);
@@ -63,81 +51,25 @@ namespace Fantasy_Freaks {
             TransparentLabelonButton(labelBe6, btnBe6);
             TransparentLabelonButton(labelBe7, btnBe7);
             TransparentLabelonButton(labelBe8, btnBe8);
+
+            allPlayers = await _currentPlayer.GetAllPlayers();
         }
 
-        private void btnQB_Click(object sender, EventArgs e)
+        private void Bench_Click(object sender, EventArgs e)
         {
-            ChoosingPlayer(btnQB, PlayerTypes.Quarterback);
+            var btn = (Button)sender;
+            ChoosingPlayer(btn, PlayerTypes.Bench);
         }
 
-        private void btnRB1_Click(object sender, EventArgs e)
+        private void ActiveRoster_Click(object sender, EventArgs e)
         {
-            ChoosingPlayer(btnRB1, PlayerTypes.RunningBack);
-        }
-
-        private void btnRB2_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnRB2, PlayerTypes.RunningBackTwo);
-        }
-
-        private void btnWR1_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnWR1, PlayerTypes.WideReceiver);
-        }
-
-        private void btnWR2_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnWR2, PlayerTypes.WideReceiverTwo);
-        }
-
-        private void btnTE_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnTE, PlayerTypes.TightEnd);
-        }
-
-        private void btnFlex_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnFlex, PlayerTypes.Flex);
-        }
-        //---------------------------------Bench-------------------------------------------------
-        private void btnBe1_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnBe1, PlayerTypes.Bench);
-        }
-
-        private void btnBe2_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnBe2, PlayerTypes.Bench);
-        }
-
-        private void btnBe3_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnBe3, PlayerTypes.Bench);
-        }
-
-        private void btnBe4_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnBe4, PlayerTypes.Bench);
-        }
-
-        private void btnBe5_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnBe5, PlayerTypes.Bench);
-        }
-
-        private void btnBe6_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnBe6, PlayerTypes.Bench);
-        }
-
-        private void btnBe7_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnBe7, PlayerTypes.Bench);
-        }
-
-        private void btnBe8_Click(object sender, EventArgs e)
-        {
-            ChoosingPlayer(btnBe8, PlayerTypes.Bench);
+            var btn = (Button)sender;
+            var position = btn.Name.Replace("btn", "");
+            position = position.Length > 3 ? position : position.Substring(0, 2);
+            if (PlayerTypes.AllTypes.Contains(position))
+            {
+                ChoosingPlayer(btn, position);
+            }
         }
 
         private void btnSeason_Click(object sender, EventArgs e)
@@ -152,6 +84,11 @@ namespace Fantasy_Freaks {
             }
         }
         private void ChoosingPlayer(Button button, string position) {
+            if (selecting)
+            {
+                return;
+            }
+            selecting = true;
             if (position == PlayerTypes.Bench)
             {
                 Form frmBS = new FormBenchSelection(_currentPlayer, _team, position);
@@ -169,6 +106,13 @@ namespace Fantasy_Freaks {
         private void BenchSelectionForm_Closed(object sender, FormClosedEventArgs e)
         {
             RefreshBenchSelection();
+            selecting = false;
+        }
+
+        private void PlayerSelectionForm_Closed(object sender, FormClosedEventArgs e)
+        {
+            RefreshPlayerSelection();
+            selecting = false;
         }
 
         private void RefreshBenchSelection()
@@ -193,11 +137,6 @@ namespace Fantasy_Freaks {
             }
         }
 
-        private void PlayerSelectionForm_Closed(object sender, FormClosedEventArgs e)
-        {
-            RefreshPlayerSelection();
-        }
-
         private void RefreshPlayerSelection()
         {
             if (_team.Quarterback != null)
@@ -213,56 +152,64 @@ namespace Fantasy_Freaks {
             if (_team.TightEnd != null)
                 btnTE.Text = _team.TightEnd.PlayerName;
             if (_team.Flex != null)
-                btnFlex.Text = _team.Flex.PlayerName;
+                btnFL.Text = _team.Flex.PlayerName;
         }
 
-
-        private async void btnRandom_Click(object sender, EventArgs e)
+        private void btnRandom_Click(object sender, EventArgs e)
         {
-            _team.Quarterback = await GetRandomPlayer(PlayerTypes.Quarterback);
-            _team.WideReceiverOne = await GetRandomPlayer(PlayerTypes.WideReceiver);
-            _team.WideReceiverTwo = await GetRandomPlayer(PlayerTypes.WideReceiver);
-            _team.RunningBackOne = await GetRandomPlayer(PlayerTypes.RunningBack);
-            _team.RunningBackTwo = await GetRandomPlayer(PlayerTypes.RunningBack);
-            _team.TightEnd = await GetRandomPlayer(PlayerTypes.TightEnd);
-            _team.Flex = await GetRandomPlayer(PlayerTypes.Flex);
-            var bench = await GetRandomBench();
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                button.Enabled = false;
+            }
+            _team.Quarterback = GetRandomPlayer(allPlayers, PlayerTypes.Quarterback);
+            _team.WideReceiverOne = GetRandomPlayer(allPlayers, PlayerTypes.WideReceiver);
+            _team.WideReceiverTwo = GetRandomPlayer(allPlayers, PlayerTypes.WideReceiver);
+            _team.RunningBackOne = GetRandomPlayer(allPlayers, PlayerTypes.RunningBack);
+            _team.RunningBackTwo = GetRandomPlayer(allPlayers, PlayerTypes.RunningBack);
+            _team.TightEnd = GetRandomPlayer(allPlayers, PlayerTypes.TightEnd);
+            _team.Flex = GetRandomPlayer(allPlayers, PlayerTypes.Flex);
+            var bench = GetRandomBench(allPlayers);
             _team.BenchedPlayers = bench.ToList();
             RefreshPlayerSelection();
             RefreshBenchSelection();
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                button.Enabled = true;
+            }
         }
 
-        private async Task<CurrentPlayerModel> GetRandomPlayer(string playerType)
+        private CurrentPlayerModel GetRandomPlayer(IEnumerable<CurrentPlayerModel> players, string playerType)
         {
-            var result = await _currentPlayer.GetSelectedPlayers(playerType);
-            var players = result.ToList();
+            if (!PlayerTypes.AllTypes.Contains(playerType))
+            {
+                return null;
+            }
             CurrentPlayerModel selectedPlayer;
+            var activePlayers = _team.GetActivePlayerIDs();
+            var playerPool = players.ToList();
             Random rand = new Random(Guid.NewGuid().GetHashCode());
             do
             {
-                var playerNum = rand.Next(0, players.Count);
-                selectedPlayer = players[playerNum];
-            //TODO: break loop if position isn't valid
-            
-            } while (selectedPlayer.PlayerPosition != playerType && playerType != PlayerTypes.Flex);
+                var playerNum = rand.Next(0, playerPool.Count);
+                selectedPlayer = playerPool[playerNum];
+            } while ((selectedPlayer.PlayerPosition != playerType || activePlayers.Contains(selectedPlayer.PlayerID))
+                   && playerType != PlayerTypes.Flex);
 
             return selectedPlayer;
         }
 
-        private async Task<IEnumerable<CurrentPlayerModel>> GetRandomBench()
+        private IEnumerable<CurrentPlayerModel> GetRandomBench(IEnumerable<CurrentPlayerModel> players)
         {
             List<CurrentPlayerModel> selectedPlayers = new List<CurrentPlayerModel>();
-
-            var result = await _currentPlayer.GetSelectedPlayers(PlayerTypes.Bench);
-            var players = result.ToList();
+            var playerPool = players.ToList();
             CurrentPlayerModel selectedPlayer;
             Random rand = new Random(Guid.NewGuid().GetHashCode());
             for(int i = 0; i < 8; i++)
             {
                 do
                 {
-                    var playerNum = rand.Next(0, players.Count);
-                    selectedPlayer = players[playerNum];
+                    var playerNum = rand.Next(0, playerPool.Count);
+                    selectedPlayer = playerPool[playerNum];
                 } while (selectedPlayers.Contains(selectedPlayer));
                 selectedPlayers.Add(selectedPlayer);
             }

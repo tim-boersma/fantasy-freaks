@@ -63,10 +63,10 @@
             // 
             this.labelFF.AutoSize = true;
             this.labelFF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.labelFF.Font = new System.Drawing.Font("Segoe UI Variable Text", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFF.Location = new System.Drawing.Point(99, 207);
+            this.labelFF.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFF.Location = new System.Drawing.Point(109, 213);
             this.labelFF.Name = "labelFF";
-            this.labelFF.Size = new System.Drawing.Size(285, 43);
+            this.labelFF.Size = new System.Drawing.Size(318, 37);
             this.labelFF.TabIndex = 0;
             this.labelFF.Text = "FANTASY FREAKS";
             // 
@@ -74,7 +74,7 @@
             // 
             this.labelInjury.BackColor = System.Drawing.Color.Transparent;
             this.labelInjury.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelInjury.Font = new System.Drawing.Font("Segoe UI Variable Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelInjury.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInjury.ForeColor = System.Drawing.Color.White;
             this.labelInjury.Location = new System.Drawing.Point(154, 256);
             this.labelInjury.Name = "labelInjury";
@@ -87,7 +87,7 @@
             // labelBadDay
             // 
             this.labelBadDay.BackColor = System.Drawing.Color.Transparent;
-            this.labelBadDay.Font = new System.Drawing.Font("Segoe UI Variable Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBadDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBadDay.ForeColor = System.Drawing.Color.White;
             this.labelBadDay.Location = new System.Drawing.Point(340, 256);
             this.labelBadDay.Name = "labelBadDay";
@@ -100,7 +100,7 @@
             // labelAverage
             // 
             this.labelAverage.BackColor = System.Drawing.Color.Transparent;
-            this.labelAverage.Font = new System.Drawing.Font("Segoe UI Variable Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAverage.ForeColor = System.Drawing.Color.White;
             this.labelAverage.Location = new System.Drawing.Point(530, 256);
             this.labelAverage.Name = "labelAverage";
@@ -113,7 +113,7 @@
             // labelGoodDay
             // 
             this.labelGoodDay.BackColor = System.Drawing.Color.Transparent;
-            this.labelGoodDay.Font = new System.Drawing.Font("Segoe UI Variable Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGoodDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGoodDay.ForeColor = System.Drawing.Color.White;
             this.labelGoodDay.Location = new System.Drawing.Point(716, 256);
             this.labelGoodDay.Name = "labelGoodDay";
@@ -126,7 +126,7 @@
             // labelMiraclePlay
             // 
             this.labelMiraclePlay.BackColor = System.Drawing.Color.Transparent;
-            this.labelMiraclePlay.Font = new System.Drawing.Font("Segoe UI Variable Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMiraclePlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMiraclePlay.ForeColor = System.Drawing.Color.White;
             this.labelMiraclePlay.Location = new System.Drawing.Point(905, 256);
             this.labelMiraclePlay.Name = "labelMiraclePlay";
@@ -160,11 +160,11 @@
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Segoe UI Variable Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.title.Location = new System.Drawing.Point(12, 5);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(308, 64);
+            this.title.Size = new System.Drawing.Size(339, 55);
             this.title.TabIndex = 76;
             this.title.Text = "END RESULT";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -212,13 +212,14 @@
             // 
             // bestButton
             // 
-            this.bestButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.bestButton.BackColor = System.Drawing.Color.White;
             this.bestButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.bestButton.FlatAppearance.BorderSize = 3;
-            this.bestButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
-            this.bestButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
+            this.bestButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bestButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bestButton.Font = new System.Drawing.Font("Segoe UI Variable Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bestButton.ForeColor = System.Drawing.Color.White;
             this.bestButton.Location = new System.Drawing.Point(419, 349);
             this.bestButton.Name = "bestButton";
             this.bestButton.Size = new System.Drawing.Size(135, 99);
@@ -228,13 +229,14 @@
             // 
             // worstButton
             // 
-            this.worstButton.BackColor = System.Drawing.Color.Firebrick;
+            this.worstButton.BackColor = System.Drawing.Color.White;
             this.worstButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.worstButton.FlatAppearance.BorderSize = 3;
-            this.worstButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
-            this.worstButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.worstButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.worstButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.worstButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.worstButton.Font = new System.Drawing.Font("Segoe UI Variable Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.worstButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.worstButton.ForeColor = System.Drawing.Color.White;
             this.worstButton.Location = new System.Drawing.Point(419, 483);
             this.worstButton.Name = "worstButton";
             this.worstButton.Size = new System.Drawing.Size(135, 99);
@@ -265,7 +267,7 @@
             // bestFFScore
             // 
             this.bestFFScore.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bestFFScore.Font = new System.Drawing.Font("Segoe UI Variable Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bestFFScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bestFFScore.ForeColor = System.Drawing.Color.White;
             this.bestFFScore.Location = new System.Drawing.Point(274, 364);
             this.bestFFScore.Name = "bestFFScore";
@@ -277,7 +279,7 @@
             // bestOppScore
             // 
             this.bestOppScore.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bestOppScore.Font = new System.Drawing.Font("Segoe UI Variable Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bestOppScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bestOppScore.ForeColor = System.Drawing.Color.White;
             this.bestOppScore.Location = new System.Drawing.Point(567, 364);
             this.bestOppScore.Name = "bestOppScore";
@@ -289,7 +291,7 @@
             // worstFFScore
             // 
             this.worstFFScore.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.worstFFScore.Font = new System.Drawing.Font("Segoe UI Variable Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.worstFFScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.worstFFScore.ForeColor = System.Drawing.Color.White;
             this.worstFFScore.Location = new System.Drawing.Point(274, 498);
             this.worstFFScore.Name = "worstFFScore";
@@ -301,7 +303,7 @@
             // worstOppScore
             // 
             this.worstOppScore.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.worstOppScore.Font = new System.Drawing.Font("Segoe UI Variable Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.worstOppScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.worstOppScore.ForeColor = System.Drawing.Color.White;
             this.worstOppScore.Location = new System.Drawing.Point(567, 498);
             this.worstOppScore.Name = "worstOppScore";
@@ -314,10 +316,10 @@
             // 
             this.labelBest.AutoSize = true;
             this.labelBest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.labelBest.Font = new System.Drawing.Font("Segoe UI Variable Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBest.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBest.Location = new System.Drawing.Point(29, 310);
             this.labelBest.Name = "labelBest";
-            this.labelBest.Size = new System.Drawing.Size(157, 36);
+            this.labelBest.Size = new System.Drawing.Size(180, 31);
             this.labelBest.TabIndex = 92;
             this.labelBest.Text = "BEST WEEK";
             // 
@@ -325,23 +327,22 @@
             // 
             this.labelWorst.AutoSize = true;
             this.labelWorst.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.labelWorst.Font = new System.Drawing.Font("Segoe UI Variable Text", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWorst.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWorst.Location = new System.Drawing.Point(29, 451);
             this.labelWorst.Name = "labelWorst";
-            this.labelWorst.Size = new System.Drawing.Size(191, 36);
+            this.labelWorst.Size = new System.Drawing.Size(211, 31);
             this.labelWorst.TabIndex = 93;
             this.labelWorst.Text = "WORST WEEK";
             // 
             // labelFFTotalScore
             // 
             this.labelFFTotalScore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(163)))), ((int)(((byte)(255)))));
-            this.labelFFTotalScore.Font = new System.Drawing.Font("Segoe UI Variable Text", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFFTotalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFFTotalScore.ForeColor = System.Drawing.Color.White;
             this.labelFFTotalScore.Location = new System.Drawing.Point(419, 134);
             this.labelFFTotalScore.Name = "labelFFTotalScore";
             this.labelFFTotalScore.Size = new System.Drawing.Size(427, 64);
             this.labelFFTotalScore.TabIndex = 94;
-            this.labelFFTotalScore.Text = "00 - 12";
             this.labelFFTotalScore.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // buttonExit
@@ -349,7 +350,7 @@
             this.buttonExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.buttonExit.FlatAppearance.BorderSize = 0;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonExit.Font = new System.Drawing.Font("Segoe UI Variable Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonExit.Location = new System.Drawing.Point(683, 600);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(287, 58);
@@ -364,7 +365,7 @@
             this.buttonRestart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonRestart.FlatAppearance.BorderSize = 0;
             this.buttonRestart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRestart.Font = new System.Drawing.Font("Segoe UI Variable Text", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRestart.Location = new System.Drawing.Point(12, 600);
             this.buttonRestart.Name = "buttonRestart";
             this.buttonRestart.Size = new System.Drawing.Size(287, 58);

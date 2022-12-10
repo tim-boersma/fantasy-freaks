@@ -34,7 +34,9 @@ namespace Fantasy_Freaks {
                 this.Size = new Size(this.Size.Width, this.Size.Height + 100);
             }
             this.Size = new Size(this.Size.Width, this.Size.Height + 100);
+            FFWindow.instance.setFont(this);
         }
+
         private void WeekGenerator(int weekNum) {
             var enemyTeam = _team.EnemyTeams[weekNum];
             var teamBanner = teamDictionary.bannerSeason[enemyTeam.TeamName];
@@ -44,8 +46,8 @@ namespace Fantasy_Freaks {
 
 
             WeekPanel week = new WeekPanel();
-            GenerateBanner(weekNum, offScore, 12, 269, Properties.Resources.FF, Color.FromArgb(0, 163, 255)); //999 is your score
-            GenerateBanner(weekNum, defScore, 537, 547, teamBanner, colorTeam); //999 is defscore, last parameter is def banner
+            GenerateBanner(weekNum, offScore, 12, 280, Properties.Resources.FF, Color.FromArgb(0, 163, 255), true);
+            GenerateBanner(weekNum, defScore, 537, 547, teamBanner, colorTeam,false);
 
             week.weekInfo = new Button();
             week.weekInfo.Location = new Point(396, 12 + weekNum * 110);
@@ -74,11 +76,11 @@ namespace Fantasy_Freaks {
         }
         //gap = 110
         //ffBanner x,y = 12, 12
-        //ffScore x,y = 269, 30
+        //ffScore x,y = 280, 30
         //defBanner x,y = 537,12
         //defScore x,y = 547, 30
 
-        private void GenerateBanner(int weekNum, double score, int xBanner, int xScore, Image bImg, Color colorTeam) {
+        private void GenerateBanner(int weekNum, double score, int xBanner, int xScore, Image bImg, Color colorTeam, bool ffteam) {
             var banner = new PictureBox();
             banner.Location = new Point(xBanner, 12 + weekNum * 110);
             banner.Size = new Size(378, 99);
@@ -92,6 +94,12 @@ namespace Fantasy_Freaks {
             scoreLabel.ForeColor = Color.White;
             scoreLabel.BackColor = colorTeam;
             scoreLabel.Parent = banner;
+
+            if (ffteam) {
+                scoreLabel.AutoSize = false;
+                scoreLabel.Size = new Size(100, 70);
+                scoreLabel.TextAlign = ContentAlignment.MiddleRight;
+            }
 
             scoreLabel.Text = score.ToString();
 

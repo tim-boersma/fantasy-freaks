@@ -1,4 +1,5 @@
-﻿using DataAccess.Interfaces;
+﻿using DataAccess;
+using DataAccess.Interfaces;
 using DataAccess.Services;
 using System;
 using System.Collections.Generic;
@@ -21,13 +22,8 @@ namespace Fantasy_Freaks {
             _teamService = teamService;
         }
 
-        //int pointsAllowed = WinStat.TYscore(/*ty value*/);
-        //int yardsAllowed = WinStat.Tpscore(/*tp value*/);
-        //int offScore = WinStat.offScoreCalc(/*from table for off*/);
-        //double defScore = WinStat.defScoreCalc(/*from table for def, pointsAllowed, yardsAllowed*/);
-
         private void FormEndResults_Load(object sender, EventArgs e) {
-
+            FFWindow.instance.setFont(this);
 
             TransparentBackgroundLabel(labelInjury, pictureDayType);
             TransparentBackgroundLabel(labelBadDay, pictureDayType);
@@ -35,23 +31,30 @@ namespace Fantasy_Freaks {
             TransparentBackgroundLabel(labelGoodDay, pictureDayType);
             TransparentBackgroundLabel(labelMiraclePlay, pictureDayType);
 
+            
+
             labelInjury.Text = _teamService.TotalInjuries.ToString();
             labelBadDay.Text = _teamService.TotalBadDays.ToString();
             labelAverage.Text = _teamService.TotalAveragePoints.ToString();
             labelGoodDay.Text = _teamService.TotalGoodDays.ToString();
             labelMiraclePlay.Text = _teamService.TotalMiraclePlays.ToString();
 
+            var userTotalWins = _teamService.PlayerPerformance.Where(x => x.UserWon).Count();
+            var userTotalLosses = _teamService.PlayerPerformance.Where(x => !x.UserWon).Count();
 
-            //FF Total Score
-            labelFFTotalScore.Text = 0/*wins*/ + " - " + 12/*loses*/;
+            labelFFTotalScore.Text = userTotalWins+ " - " + userTotalLosses;
+
             //Best Game
-            GenerateBanner(bestFFBanner, bestFFScore, bestButton, 1/*FFBest Week*/, 999/*FFBest Score*/, Properties.Resources.FF);
-            GenerateBanner(bestOppBanner, bestOppScore, worstButton, 1/*OppBest Week*/, 999/*OppBest Score*/, Properties.Resources.Bears/*Opp banner*/);// opponeent
-            
-            //Worst Game
-            GenerateBanner(worstFFBanner, worstFFScore, bestButton, 1/*FFBest Week*/, 999/*FFBest Score*/, Properties.Resources.FF);
-            GenerateBanner(worstOppBanner, worstOppScore, worstButton, 1/*OppBest Week*/, 999/*OppBest Score*/, Properties.Resources.Bears/*Opp banner*/);// opponeent
+            var oppBannerImg = teamDictionary.bannerSeason[_teamService.BestWeek.OpposingTeam.TeamName];
+            var bestWeekNum = _teamService.EnemyTeams.IndexOf(_teamService.BestWeek.OpposingTeam) + 1;
+            GenerateBanner(bestFFBanner, bestFFScore, bestButton, bestWeekNum, _teamService.BestWeek.UserScore, Properties.Resources.FF);
+            GenerateBanner(bestOppBanner, bestOppScore, bestButton, bestWeekNum, _teamService.BestWeek.OppScore, oppBannerImg);// opponeent
 
+            //Worst Game
+            oppBannerImg = teamDictionary.bannerSeason[_teamService.WorstWeek.OpposingTeam.TeamName];
+            var worstWeekNum = _teamService.EnemyTeams.IndexOf(_teamService.WorstWeek.OpposingTeam) + 1;
+            GenerateBanner(worstFFBanner, worstFFScore, worstButton, worstWeekNum, _teamService.WorstWeek.UserScore, Properties.Resources.FF);
+            GenerateBanner(worstOppBanner, worstOppScore, worstButton, worstWeekNum, _teamService.WorstWeek.OppScore, oppBannerImg);// opponeent
         }
 
         private void GenerateBanner(PictureBox banner, Label scoreLabel, Button button, int weekNum, double score, Image bImg) {
@@ -59,7 +62,32 @@ namespace Fantasy_Freaks {
             banner.BackgroundImage = bImg;
             scoreLabel.Text = score.ToString();
             button.Text = "WEEK " + weekNum + "\nVS";
+            if (_teamService.BestWeek.UserWon)
+            {
+                bestButton.BackColor = Color.ForestGreen;
+                bestButton.FlatAppearance.MouseDownBackColor = Color.ForestGreen;
+                bestButton.FlatAppearance.MouseOverBackColor = Color.ForestGreen;
+            }
+            else
+            {
+                bestButton.BackColor = Color.Firebrick;
+                bestButton.FlatAppearance.MouseDownBackColor = Color.Firebrick;
+                bestButton.FlatAppearance.MouseOverBackColor = Color.Firebrick;
+            }
+            if (_teamService.WorstWeek.UserWon)
+            {
+                worstButton.BackColor = Color.ForestGreen;
+                worstButton.FlatAppearance.MouseDownBackColor = Color.ForestGreen;
+                worstButton.FlatAppearance.MouseOverBackColor = Color.ForestGreen;
+            }
+            else
+            {
+                worstButton.BackColor = Color.Firebrick;
+                worstButton.FlatAppearance.MouseDownBackColor = Color.Firebrick;
+                worstButton.FlatAppearance.MouseOverBackColor = Color.Firebrick;
+            }
         }
+
         private void TransparentBackgroundLabel (Label l , PictureBox p) {
             l.BackColor = Color.Transparent;
             l.Location = p.PointToClient(l.Parent.PointToScreen(l.Location));
