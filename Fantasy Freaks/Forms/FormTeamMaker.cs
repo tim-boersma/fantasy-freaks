@@ -236,14 +236,20 @@ namespace Fantasy_Freaks {
             var activePlayers = _team.GetActivePlayerIDs();
             var playerPool = players.ToList();
             Random rand = new Random(Guid.NewGuid().GetHashCode());
+            bool one = true;
+            bool two = true;
+            bool three = true;
             do
             {
                 var playerNum = rand.Next(0, playerPool.Count);
                 selectedPlayer = playerPool[playerNum];
+                one = selectedPlayer.PlayerPosition != playerType;
+                two = playerType != PlayerTypes.Flex;
+                three = activePlayers.Contains(selectedPlayer.PlayerID);
             //TODO: break loop if position isn't valid
-            } while (selectedPlayer.PlayerPosition != playerType 
-                  && playerType != PlayerTypes.Flex 
-                  && activePlayers.Contains(selectedPlayer.PlayerID));
+
+            } while ((selectedPlayer.PlayerPosition != playerType || activePlayers.Contains(selectedPlayer.PlayerID))
+                   && playerType != PlayerTypes.Flex);
 
             return selectedPlayer;
         }

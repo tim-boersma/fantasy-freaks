@@ -186,48 +186,48 @@ namespace DataAccess.Services
                 return EnemyTeams[CurrentWeek - 1];
             return null;
         }
+
+        private void ReplaceOnBench(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer)
+        {
+            var index = BenchedPlayers.IndexOf(benchedPlayer);
+            BenchedPlayers[index] = activePlayer;
+        }
+
         public void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer)
         {
             if (Quarterback.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(Quarterback);
+                ReplaceOnBench(Quarterback, benchedPlayer);
                 Quarterback = benchedPlayer;
             }
             else if (WideReceiverOne.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(WideReceiverOne);
+                ReplaceOnBench(WideReceiverOne, benchedPlayer);
                 WideReceiverOne = benchedPlayer;
             }
             else if (WideReceiverTwo.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(WideReceiverTwo);
+                ReplaceOnBench(WideReceiverTwo, benchedPlayer);
                 WideReceiverTwo = benchedPlayer;
             }
             else if (RunningBackOne.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(RunningBackOne);
+                ReplaceOnBench(RunningBackOne, benchedPlayer);
                 RunningBackOne = benchedPlayer;
             }
             else if (RunningBackTwo.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(RunningBackTwo);
+                ReplaceOnBench(RunningBackTwo, benchedPlayer);
                 RunningBackTwo = benchedPlayer;
             }
             else if (TightEnd.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(TightEnd);
+                ReplaceOnBench(TightEnd, benchedPlayer);
                 TightEnd = benchedPlayer;
             }
             else if (Flex.PlayerID == activePlayer.PlayerID)
             {
-                BenchedPlayers.Remove(benchedPlayer);
-                BenchedPlayers.Add(Flex);
+                ReplaceOnBench(Flex, benchedPlayer);
                 Flex = benchedPlayer;
             }
         }
