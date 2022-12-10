@@ -212,11 +212,11 @@
             // 
             // bestButton
             // 
-            this.bestButton.BackColor = System.Drawing.Color.ForestGreen;
+            this.bestButton.BackColor = System.Drawing.Color.White;
             this.bestButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.bestButton.FlatAppearance.BorderSize = 3;
-            this.bestButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
-            this.bestButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
+            this.bestButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bestButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bestButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bestButton.ForeColor = System.Drawing.Color.White;
@@ -229,11 +229,11 @@
             // 
             // worstButton
             // 
-            this.worstButton.BackColor = System.Drawing.Color.Firebrick;
+            this.worstButton.BackColor = System.Drawing.Color.White;
             this.worstButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.worstButton.FlatAppearance.BorderSize = 3;
-            this.worstButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Firebrick;
-            this.worstButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.worstButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.worstButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.worstButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.worstButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.worstButton.ForeColor = System.Drawing.Color.White;
