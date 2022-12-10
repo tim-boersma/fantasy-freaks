@@ -194,5 +194,12 @@ namespace Fantasy_Freaks {
                 RenderPlayerList();
             }
         }
+
+        private void textBenchSearch_TextChanged(object sender, EventArgs e)
+        {
+            string text = "";
+            var searchResult = players.Where(x => x.PlayerName.ToLower().Contains(text.ToLower())).ToList();
+            dgvPlayers.DataSource = searchResult;
+        }
     }
 }

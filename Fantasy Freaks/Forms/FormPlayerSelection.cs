@@ -53,5 +53,12 @@ namespace Fantasy_Freaks {
                 MessageBox.Show("You already have that player on your team");
             }
         }
+
+        private void textBoxPlayerSearch_TextChanged(object sender, EventArgs e)
+        {
+            string text = "";
+            var searchResult = players.Where(x => x.PlayerName.ToLower().Contains(text.ToLower())).ToList();
+            dgvPlayers.DataSource = searchResult;
+        }
     }
 }
