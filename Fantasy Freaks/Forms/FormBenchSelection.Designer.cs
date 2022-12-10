@@ -28,6 +28,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBenchSelection));
             this.dgvPlayers = new System.Windows.Forms.DataGridView();
+            this.playerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.playerPositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.currentPlayerModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.newSeasonPlayerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fantasyFreaksDataSet = new Fantasy_Freaks.fantasyFreaksDataSet();
@@ -41,15 +43,15 @@
             this.lblSelection = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.line = new System.Windows.Forms.PictureBox();
-            this.playerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerPositionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentPlayerModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newSeasonPlayerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fantasyFreaksDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.line)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPlayers
@@ -91,6 +93,23 @@
             this.dgvPlayers.TabIndex = 0;
             this.dgvPlayers.SelectionChanged += new System.EventHandler(this.dgvPlayers_SelectionChanged);
             // 
+            // playerNameDataGridViewTextBoxColumn
+            // 
+            this.playerNameDataGridViewTextBoxColumn.DataPropertyName = "PlayerName";
+            this.playerNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.playerNameDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.playerNameDataGridViewTextBoxColumn.Name = "playerNameDataGridViewTextBoxColumn";
+            this.playerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // playerPositionDataGridViewTextBoxColumn
+            // 
+            this.playerPositionDataGridViewTextBoxColumn.DataPropertyName = "PlayerPosition";
+            this.playerPositionDataGridViewTextBoxColumn.FillWeight = 30F;
+            this.playerPositionDataGridViewTextBoxColumn.HeaderText = "Position";
+            this.playerPositionDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.playerPositionDataGridViewTextBoxColumn.Name = "playerPositionDataGridViewTextBoxColumn";
+            this.playerPositionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // currentPlayerModelBindingSource
             // 
             this.currentPlayerModelBindingSource.DataSource = typeof(DataAccess.Models.CurrentPlayerModel);
@@ -123,7 +142,7 @@
             this.btnSubmit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(255)))), ((int)(((byte)(138)))));
             this.btnSubmit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(255)))), ((int)(((byte)(209)))));
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI Variable Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(470, 8);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmit.Name = "btnSubmit";
@@ -136,11 +155,11 @@
             // lblSelection
             // 
             this.lblSelection.AutoSize = true;
-            this.lblSelection.Font = new System.Drawing.Font("Segoe UI Variable Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSelection.Location = new System.Drawing.Point(3, 13);
             this.lblSelection.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelection.Name = "lblSelection";
-            this.lblSelection.Size = new System.Drawing.Size(284, 26);
+            this.lblSelection.Size = new System.Drawing.Size(305, 24);
             this.lblSelection.TabIndex = 2;
             this.lblSelection.Text = "Select 8 Players for Your Bench";
             // 
@@ -148,11 +167,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI Variable Text", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(363, 94);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 26);
+            this.label1.Size = new System.Drawing.Size(188, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = "Currently Selected:";
             // 
@@ -166,23 +185,6 @@
             this.line.TabIndex = 6;
             this.line.TabStop = false;
             // 
-            // playerNameDataGridViewTextBoxColumn
-            // 
-            this.playerNameDataGridViewTextBoxColumn.DataPropertyName = "PlayerName";
-            this.playerNameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.playerNameDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.playerNameDataGridViewTextBoxColumn.Name = "playerNameDataGridViewTextBoxColumn";
-            this.playerNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // playerPositionDataGridViewTextBoxColumn
-            // 
-            this.playerPositionDataGridViewTextBoxColumn.DataPropertyName = "PlayerPosition";
-            this.playerPositionDataGridViewTextBoxColumn.FillWeight = 30F;
-            this.playerPositionDataGridViewTextBoxColumn.HeaderText = "Position";
-            this.playerPositionDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.playerPositionDataGridViewTextBoxColumn.Name = "playerPositionDataGridViewTextBoxColumn";
-            this.playerPositionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
@@ -191,6 +193,16 @@
             this.pictureBox1.Size = new System.Drawing.Size(604, 617);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Black;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Location = new System.Drawing.Point(290, 349);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(300, 3);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // FormBenchSelection
             // 
@@ -203,6 +215,7 @@
             this.Controls.Add(this.lblSelection);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.dgvPlayers);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -218,6 +231,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.fantasyFreaksDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.line)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +256,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn playerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn playerPositionDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
