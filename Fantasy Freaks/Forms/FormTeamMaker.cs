@@ -36,6 +36,7 @@ namespace Fantasy_Freaks {
         private async void FormTeamMaker_Load(object sender, EventArgs e) {
             FFWindow.instance.setFont(this);
 
+            //TODO: turn this into a foreach loop and use a dictionary to connect the buttons to labels
             TransparentLabelonButton(labelQB, btnQB);
             TransparentLabelonButton(labelRB1, btnRB1);
             TransparentLabelonButton(labelRB2, btnRB2);

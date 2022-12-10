@@ -1,3 +1,4 @@
+using DataAccess;
 using Fantasy_Freaks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
@@ -8,49 +9,31 @@ namespace WinStat_Unit_Test
     public class WinStatTests
     {
         [TestMethod]
-        public void TestPoints()
+        public void CalculateScoreFromTotalPoints_ReturnsCorrectValue()
         {
-            int result, PointsAllowed, actual;
-            int score;
-            for (int i = 100; i <= 1000; i += 50)
-            {
-                result = Fantasy_Freaks.WinStat.CalculateScoreFromTotalPoints(i);
+            //Arrange
+            int totalPoints = 100;
+            int expected = 48;
 
-                PointsAllowed = i - 201;
-                score = 0;
-                while (PointsAllowed >= 0)
-                {
-                    PointsAllowed = PointsAllowed - 20;
-                    if (PointsAllowed >= 0)
-                        score++;
-                }
-                actual = 48 - 2 * score;
+            //Act
+            int result = WinStat.CalculateScoreFromTotalPoints(totalPoints);
 
-                Assert.IsTrue(result == actual);
-            }
+            //Assert
+            Assert.AreEqual(result, expected);
         }
 
         [TestMethod]
-        public void TestYards()
+        public void CalculateScoreFromTotalYards_ReturnsCorrectValue()
         {
-            int result, TotalYards, actual;
-            int score;
-            for (int i = 100; i <= 1000; i += 50)
-            {
-                result = Fantasy_Freaks.WinStat.CalculateScoreFromTotalYards(i);
+            //Arrange
+            int totalYards = 100;
+            int expected = 46;
 
-                TotalYards = i - 4301;
-                score = 0;
-                while (TotalYards >= 0)
-                {
-                    TotalYards = TotalYards - 150;
-                    if (TotalYards >= 0)
-                        score++;
-                }
-                actual = 46 - 2 * score;
+            //Act
+            int result = WinStat.CalculateScoreFromTotalYards(totalYards);
 
-                Assert.IsTrue(result == actual);
-            }
+            //Assert
+            Assert.AreEqual(expected, result);
         }
     }
 }
