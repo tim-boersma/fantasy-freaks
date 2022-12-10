@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fantasy Freaks", "Fantasy F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{33A170B3-CE81-40BB-847C-102C6BC986C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinStat Unit Test", "..\WinStat Unit Test\WinStat Unit Test.csproj", "{29649032-3779-435C-AD0B-89C682AC1BEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{33A170B3-CE81-40BB-847C-102C6BC986C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33A170B3-CE81-40BB-847C-102C6BC986C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33A170B3-CE81-40BB-847C-102C6BC986C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29649032-3779-435C-AD0B-89C682AC1BEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29649032-3779-435C-AD0B-89C682AC1BEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29649032-3779-435C-AD0B-89C682AC1BEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29649032-3779-435C-AD0B-89C682AC1BEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
