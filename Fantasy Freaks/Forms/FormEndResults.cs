@@ -36,6 +36,8 @@ namespace Fantasy_Freaks {
             TransparentBackgroundLabel(labelGoodDay, pictureDayType);
             TransparentBackgroundLabel(labelMiraclePlay, pictureDayType);
 
+            FFWindow.instance.setFont(this);
+
             labelInjury.Text = _teamService.TotalInjuries.ToString();
             labelBadDay.Text = _teamService.TotalBadDays.ToString();
             labelAverage.Text = _teamService.TotalAveragePoints.ToString();

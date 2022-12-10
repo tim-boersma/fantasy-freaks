@@ -24,26 +24,13 @@ namespace Fantasy_Freaks {
             _team = teamService;
             _defense = defenseService;
             _currentPlayer = currentPlayer;
-            //TODO: use a foreach loop of buttins in form for this
-            _team.WaitSomeTime(btnQB);
-            _team.WaitSomeTime(btnRB1);
-            _team.WaitSomeTime(btnRB2);
-            _team.WaitSomeTime(btnWR1);
-            _team.WaitSomeTime(btnWR2);
-            _team.WaitSomeTime(btnTE);
-            _team.WaitSomeTime(btnFlex);
-            _team.WaitSomeTime(btnBe1);
-            _team.WaitSomeTime(btnBe2);
-            _team.WaitSomeTime(btnBe3);
-            _team.WaitSomeTime(btnBe4);
-            _team.WaitSomeTime(btnBe5);
-            _team.WaitSomeTime(btnBe6);
-            _team.WaitSomeTime(btnBe7);
-            _team.WaitSomeTime(btnBe8);
-            _team.WaitSomeTime(btnSeason);
-            _team.WaitSomeTime(btnRandom);
+            //TODO: use a foreach loop of buttins in form for this - Done
+
+            foreach(var button in this.Controls.OfType<Button>())
+            {
+                _team.WaitSomeTime(button);
+            }
         }
-        //int offScore = WinStat.instance.offScoreCalc(/*from table for off*/);
 
         private void FormTeamMaker_Load(object sender, EventArgs e) {
             FFWindow.instance.setFont(this);
@@ -219,6 +206,10 @@ namespace Fantasy_Freaks {
 
         private async void btnRandom_Click(object sender, EventArgs e)
         {
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                button.Enabled = false;
+            }
             _team.Quarterback = await GetRandomPlayer(PlayerTypes.Quarterback);
             _team.WideReceiverOne = await GetRandomPlayer(PlayerTypes.WideReceiver);
             _team.WideReceiverTwo = await GetRandomPlayer(PlayerTypes.WideReceiver);
@@ -230,6 +221,10 @@ namespace Fantasy_Freaks {
             _team.BenchedPlayers = bench.ToList();
             RefreshPlayerSelection();
             RefreshBenchSelection();
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                button.Enabled = true;
+            }
         }
 
         private async Task<CurrentPlayerModel> GetRandomPlayer(string playerType)

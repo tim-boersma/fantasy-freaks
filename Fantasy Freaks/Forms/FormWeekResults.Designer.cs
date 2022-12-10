@@ -179,7 +179,6 @@
             // 
             // FFDayimg
             // 
-            this.FFDayimg.BackgroundImage = global::Fantasy_Freaks.Properties.Resources.day0;
             this.FFDayimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.FFDayimg.Location = new System.Drawing.Point(12, 416);
             this.FFDayimg.Name = "FFDayimg";
@@ -189,7 +188,6 @@
             // 
             // OPPDayimg
             // 
-            this.OPPDayimg.BackgroundImage = global::Fantasy_Freaks.Properties.Resources.day0;
             this.OPPDayimg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.OPPDayimg.Location = new System.Drawing.Point(657, 416);
             this.OPPDayimg.Name = "OPPDayimg";

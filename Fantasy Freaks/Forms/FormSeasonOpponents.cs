@@ -34,7 +34,9 @@ namespace Fantasy_Freaks {
                 this.Size = new Size(this.Size.Width, this.Size.Height + 100);
             }
             this.Size = new Size(this.Size.Width, this.Size.Height + 100);
+            FFWindow.instance.setFont(this);
         }
+
         private void WeekGenerator(int weekNum) {
             var enemyTeam = _team.EnemyTeams[weekNum];
             var teamBanner = teamDictionary.bannerSeason[enemyTeam.TeamName];

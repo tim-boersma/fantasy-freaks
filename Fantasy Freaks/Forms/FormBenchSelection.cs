@@ -73,7 +73,6 @@ namespace Fantasy_Freaks {
             }
             else
             {
-                // TODO: Warn user you must choose 8 players for a bench
                 MessageBox.Show("You must have a full bench before submitting");
             }
         }
@@ -165,12 +164,10 @@ namespace Fantasy_Freaks {
             var selectedPlayer = (CurrentPlayerModel)dgvPlayers.SelectedRows[0].DataBoundItem;
             if (selectedPlayers.Count >= 8)
             {
-                // TODO: Warn user they can only have 8 players
                 MessageBox.Show("You can only have eight players on your team");
             }
             else if (selectedPlayers.Contains(selectedPlayer))
             {
-                // TODO: Warn user player is already on bench
                 MessageBox.Show("Player is already on the bench");
             }
             else

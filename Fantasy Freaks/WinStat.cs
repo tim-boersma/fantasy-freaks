@@ -10,8 +10,25 @@ namespace Fantasy_Freaks {
 
         public static int EventForDay() {
             Random rnd = new Random(Guid.NewGuid().GetHashCode());
-            int num = rnd.Next(0, 5);
-            return num;
+            int num = rnd.Next(0, 99);
+            if (num >= 0 && 10 >= num)
+            {
+                return 0;
+            }
+            else if (num >= 11 && 32 >= num)
+            {
+                return 1;
+            }
+            else if (num >= 33 && 66 >= num)
+            {
+                return 2;
+            }
+            else if (num >= 67 && 88 >= num)
+            {
+                return 3;
+            }
+            else
+                return 4;
         }
 
         public static int CalculateScoreFromTotalPoints(int PointsAllowed) {

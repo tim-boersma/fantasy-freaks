@@ -26,22 +26,10 @@ namespace Fantasy_Freaks {
             InitializeComponent();
             _teamService = teamService;
             _defenseService = defenseService;
-            _teamService.WaitSomeTime(btnQB);
-            _teamService.WaitSomeTime(btnRB1);
-            _teamService.WaitSomeTime(btnRB2);
-            _teamService.WaitSomeTime(btnWR1);
-            _teamService.WaitSomeTime(btnWR2);
-            _teamService.WaitSomeTime(btnTE);
-            _teamService.WaitSomeTime(btnFlex);
-            _teamService.WaitSomeTime(btnBe1);
-            _teamService.WaitSomeTime(btnBe2);
-            _teamService.WaitSomeTime(btnBe3);
-            _teamService.WaitSomeTime(btnBe4);
-            _teamService.WaitSomeTime(btnBe5);
-            _teamService.WaitSomeTime(btnBe6);
-            _teamService.WaitSomeTime(btnBe7);
-            _teamService.WaitSomeTime(btnBe8);
-            _teamService.WaitSomeTime(btnSeason);
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                _teamService.WaitSomeTime(button);
+            }
 
             benchLabel = new Dictionary<string, Label>
             {

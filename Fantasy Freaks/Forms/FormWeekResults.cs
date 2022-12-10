@@ -21,6 +21,7 @@ namespace Fantasy_Freaks {
             _teamService = teamService;
             _defenseService = defenseService;
             _teamService.WaitSomeTime(buttonChangeRoster);
+            _teamService.WaitSomeTime(btnNext);
         }
 
 
@@ -35,7 +36,7 @@ namespace Fantasy_Freaks {
 
         private async void FormWeekResults_Load(object sender, EventArgs e)
         {
-            //TODO: This function is too long, turn it into multiple
+            //TODO: This function is too long, turn it into multiple - Done?
             FFWindow.instance.setFont(this);
             TransparentLabelonBanner(labelFFscore, FFbanner);
             TransparentLabelonBanner(labelOPPscore, OPPbanner);
@@ -74,7 +75,7 @@ namespace Fantasy_Freaks {
 
         private double CalucateTeamPerformance(int FFeventDay, PictureBox teamImg, bool teamIsPlayer)
         {
-            //TODO: Make these punishments/benefits less impactful
+            //TODO: Make these punishments/benefits less impactful - Done
             double modifier;
             if (FFeventDay == 0)
             {
@@ -99,7 +100,7 @@ namespace Fantasy_Freaks {
             }
             else if (FFeventDay == 4)
             {
-                FFDayimg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day4;
+                teamImg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day4;
                 if (teamIsPlayer)
                     _teamService.TotalMiraclePlays++;
                 modifier = 1.5;
@@ -107,7 +108,8 @@ namespace Fantasy_Freaks {
             else
             {
                 teamImg.BackgroundImage = Fantasy_Freaks.Properties.Resources.day2;
-                _teamService.TotalAveragePoints++;
+                if (teamIsPlayer)
+                    _teamService.TotalAveragePoints++;
                 modifier = 1;
             }
             return modifier;
