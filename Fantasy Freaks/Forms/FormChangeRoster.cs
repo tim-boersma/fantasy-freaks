@@ -33,14 +33,14 @@ namespace Fantasy_Freaks {
 
             benchLabel = new Dictionary<string, Label>
             {
-                { "btnBe1", labelBe1},
-                { "btnBe2", labelBe2},
-                { "btnBe3", labelBe3},
-                { "btnBe4", labelBe4},
-                { "btnBe5", labelBe5},
-                { "btnBe6", labelBe6},
-                { "btnBe7", labelBe7},
-                { "btnBe8", labelBe8}
+                { "btnBe1", labelBtnBe1},
+                { "btnBe2", labelBtnBe2},
+                { "btnBe3", labelBtnBe3},
+                { "btnBe4", labelBtnBe4},
+                { "btnBe5", labelBtnBe5},
+                { "btnBe6", labelBtnBe6},
+                { "btnBe7", labelBtnBe7},
+                { "btnBe8", labelBtnBe8}
             };
         }
 
@@ -52,24 +52,28 @@ namespace Fantasy_Freaks {
         private void btnQB_Click(object sender, EventArgs e)
         {
             btnQB.BackColor = Color.FromArgb(200, 200, 200);
+            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.Quarterback);
         }
 
         private void btnRB1_Click(object sender, EventArgs e)
         {
             btnRB1.BackColor = Color.FromArgb(200, 200, 200);
+            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.RunningBackOne);
         }
 
         private void btnRB2_Click(object sender, EventArgs e)
         {
             btnRB2.BackColor = Color.FromArgb(200, 200, 200);
+            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.RunningBackTwo);
         }
 
         private void btnWR1_Click(object sender, EventArgs e)
         {
             btnWR1.BackColor = Color.FromArgb(200, 200, 200);
+            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             btnWR1.Update();
             PlayerSelected(_teamService.WideReceiverOne);
 
@@ -78,24 +82,28 @@ namespace Fantasy_Freaks {
         private void btnWR2_Click(object sender, EventArgs e)
         {
             btnWR2.BackColor = Color.FromArgb(200, 200, 200);
+            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.WideReceiverTwo);
         }
 
         private void btnTE_Click(object sender, EventArgs e)
         {
             btnTE.BackColor = Color.FromArgb(200, 200, 200);
+            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.TightEnd);
         }
 
         private void btnFlex_Click(object sender, EventArgs e)
         {
             btnFlex.BackColor = Color.FromArgb(200, 200, 200);
+            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.Flex);
         }
 
         private void btnBe1_Click(object sender, EventArgs e)
         {
             btnBe1.BackColor = Color.FromArgb(200, 200, 200);
+            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe1.Text).First());
         }
 

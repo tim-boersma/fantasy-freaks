@@ -25,35 +25,35 @@
         private void InitializeComponent() {
             this.btnSeason = new System.Windows.Forms.Button();
             this.btnQB = new System.Windows.Forms.Button();
-            this.labelRB1 = new System.Windows.Forms.Label();
-            this.labelBe8 = new System.Windows.Forms.Label();
+            this.labelBtnRB1 = new System.Windows.Forms.Label();
+            this.labelBtnBe8 = new System.Windows.Forms.Label();
             this.btnBe8 = new System.Windows.Forms.Button();
-            this.labelBe7 = new System.Windows.Forms.Label();
+            this.labelBtnBe7 = new System.Windows.Forms.Label();
             this.btnBe7 = new System.Windows.Forms.Button();
-            this.labelBe6 = new System.Windows.Forms.Label();
+            this.labelBtnBe6 = new System.Windows.Forms.Label();
             this.btnBe6 = new System.Windows.Forms.Button();
-            this.labelBe5 = new System.Windows.Forms.Label();
+            this.labelBtnBe5 = new System.Windows.Forms.Label();
             this.btnBe5 = new System.Windows.Forms.Button();
-            this.labelBe4 = new System.Windows.Forms.Label();
+            this.labelBtnBe4 = new System.Windows.Forms.Label();
             this.btnBe4 = new System.Windows.Forms.Button();
-            this.labelBe3 = new System.Windows.Forms.Label();
+            this.labelBtnBe3 = new System.Windows.Forms.Label();
             this.btnBe3 = new System.Windows.Forms.Button();
-            this.labelBe2 = new System.Windows.Forms.Label();
+            this.labelBtnBe2 = new System.Windows.Forms.Label();
             this.btnBe2 = new System.Windows.Forms.Button();
-            this.labelBe1 = new System.Windows.Forms.Label();
+            this.labelBtnBe1 = new System.Windows.Forms.Label();
             this.btnBe1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelBtnFlex = new System.Windows.Forms.Label();
             this.btnFlex = new System.Windows.Forms.Button();
-            this.labelTE = new System.Windows.Forms.Label();
+            this.labelBtnTE = new System.Windows.Forms.Label();
             this.btnTE = new System.Windows.Forms.Button();
-            this.labelWR2 = new System.Windows.Forms.Label();
+            this.labelBtnWR2 = new System.Windows.Forms.Label();
             this.btnWR2 = new System.Windows.Forms.Button();
-            this.labelWR1 = new System.Windows.Forms.Label();
+            this.labelBtnWR1 = new System.Windows.Forms.Label();
             this.btnWR1 = new System.Windows.Forms.Button();
-            this.labelRB2 = new System.Windows.Forms.Label();
+            this.labelBtnRB2 = new System.Windows.Forms.Label();
             this.btnRB2 = new System.Windows.Forms.Button();
             this.btnRB1 = new System.Windows.Forms.Button();
-            this.labelQB = new System.Windows.Forms.Label();
+            this.labelBtnQB = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.line = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
@@ -80,7 +80,6 @@
             // 
             this.btnQB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnQB.FlatAppearance.BorderSize = 0;
-            this.btnQB.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnQB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQB.Location = new System.Drawing.Point(23, 124);
@@ -92,35 +91,34 @@
             this.btnQB.UseVisualStyleBackColor = false;
             this.btnQB.Click += new System.EventHandler(this.btnQB_Click);
             // 
-            // labelRB1
+            // labelBtnRB1
             // 
-            this.labelRB1.AutoSize = true;
-            this.labelRB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelRB1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelRB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRB1.Location = new System.Drawing.Point(256, 208);
-            this.labelRB1.Name = "labelRB1";
-            this.labelRB1.Size = new System.Drawing.Size(48, 24);
-            this.labelRB1.TabIndex = 68;
-            this.labelRB1.Text = "RB1";
+            this.labelBtnRB1.AutoSize = true;
+            this.labelBtnRB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnRB1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnRB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnRB1.Location = new System.Drawing.Point(256, 208);
+            this.labelBtnRB1.Name = "labelBtnRB1";
+            this.labelBtnRB1.Size = new System.Drawing.Size(48, 24);
+            this.labelBtnRB1.TabIndex = 68;
+            this.labelBtnRB1.Text = "RB1";
             // 
-            // labelBe8
+            // labelBtnBe8
             // 
-            this.labelBe8.AutoSize = true;
-            this.labelBe8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelBe8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBe8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBe8.Location = new System.Drawing.Point(593, 610);
-            this.labelBe8.Name = "labelBe8";
-            this.labelBe8.Size = new System.Drawing.Size(37, 24);
-            this.labelBe8.TabIndex = 67;
-            this.labelBe8.Text = "BE";
+            this.labelBtnBe8.AutoSize = true;
+            this.labelBtnBe8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnBe8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnBe8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnBe8.Location = new System.Drawing.Point(593, 610);
+            this.labelBtnBe8.Name = "labelBtnBe8";
+            this.labelBtnBe8.Size = new System.Drawing.Size(37, 24);
+            this.labelBtnBe8.TabIndex = 67;
+            this.labelBtnBe8.Text = "BE";
             // 
             // btnBe8
             // 
             this.btnBe8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe8.FlatAppearance.BorderSize = 0;
-            this.btnBe8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBe8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBe8.Location = new System.Drawing.Point(349, 593);
@@ -132,23 +130,22 @@
             this.btnBe8.UseVisualStyleBackColor = false;
             this.btnBe8.Click += new System.EventHandler(this.btnBe8_Click);
             // 
-            // labelBe7
+            // labelBtnBe7
             // 
-            this.labelBe7.AutoSize = true;
-            this.labelBe7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelBe7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBe7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBe7.Location = new System.Drawing.Point(593, 543);
-            this.labelBe7.Name = "labelBe7";
-            this.labelBe7.Size = new System.Drawing.Size(37, 24);
-            this.labelBe7.TabIndex = 65;
-            this.labelBe7.Text = "BE";
+            this.labelBtnBe7.AutoSize = true;
+            this.labelBtnBe7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnBe7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnBe7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnBe7.Location = new System.Drawing.Point(593, 543);
+            this.labelBtnBe7.Name = "labelBtnBe7";
+            this.labelBtnBe7.Size = new System.Drawing.Size(37, 24);
+            this.labelBtnBe7.TabIndex = 65;
+            this.labelBtnBe7.Text = "BE";
             // 
             // btnBe7
             // 
             this.btnBe7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe7.FlatAppearance.BorderSize = 0;
-            this.btnBe7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBe7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBe7.Location = new System.Drawing.Point(349, 526);
@@ -160,23 +157,22 @@
             this.btnBe7.UseVisualStyleBackColor = false;
             this.btnBe7.Click += new System.EventHandler(this.btnBe7_Click);
             // 
-            // labelBe6
+            // labelBtnBe6
             // 
-            this.labelBe6.AutoSize = true;
-            this.labelBe6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelBe6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBe6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBe6.Location = new System.Drawing.Point(593, 476);
-            this.labelBe6.Name = "labelBe6";
-            this.labelBe6.Size = new System.Drawing.Size(37, 24);
-            this.labelBe6.TabIndex = 63;
-            this.labelBe6.Text = "BE";
+            this.labelBtnBe6.AutoSize = true;
+            this.labelBtnBe6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnBe6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnBe6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnBe6.Location = new System.Drawing.Point(593, 476);
+            this.labelBtnBe6.Name = "labelBtnBe6";
+            this.labelBtnBe6.Size = new System.Drawing.Size(37, 24);
+            this.labelBtnBe6.TabIndex = 63;
+            this.labelBtnBe6.Text = "BE";
             // 
             // btnBe6
             // 
             this.btnBe6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe6.FlatAppearance.BorderSize = 0;
-            this.btnBe6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBe6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBe6.Location = new System.Drawing.Point(349, 459);
@@ -188,23 +184,22 @@
             this.btnBe6.UseVisualStyleBackColor = false;
             this.btnBe6.Click += new System.EventHandler(this.btnBe6_Click);
             // 
-            // labelBe5
+            // labelBtnBe5
             // 
-            this.labelBe5.AutoSize = true;
-            this.labelBe5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelBe5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBe5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBe5.Location = new System.Drawing.Point(593, 409);
-            this.labelBe5.Name = "labelBe5";
-            this.labelBe5.Size = new System.Drawing.Size(37, 24);
-            this.labelBe5.TabIndex = 61;
-            this.labelBe5.Text = "BE";
+            this.labelBtnBe5.AutoSize = true;
+            this.labelBtnBe5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnBe5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnBe5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnBe5.Location = new System.Drawing.Point(593, 409);
+            this.labelBtnBe5.Name = "labelBtnBe5";
+            this.labelBtnBe5.Size = new System.Drawing.Size(37, 24);
+            this.labelBtnBe5.TabIndex = 61;
+            this.labelBtnBe5.Text = "BE";
             // 
             // btnBe5
             // 
             this.btnBe5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe5.FlatAppearance.BorderSize = 0;
-            this.btnBe5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBe5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBe5.Location = new System.Drawing.Point(349, 392);
@@ -216,23 +211,22 @@
             this.btnBe5.UseVisualStyleBackColor = false;
             this.btnBe5.Click += new System.EventHandler(this.btnBe5_Click);
             // 
-            // labelBe4
+            // labelBtnBe4
             // 
-            this.labelBe4.AutoSize = true;
-            this.labelBe4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelBe4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBe4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBe4.Location = new System.Drawing.Point(593, 342);
-            this.labelBe4.Name = "labelBe4";
-            this.labelBe4.Size = new System.Drawing.Size(37, 24);
-            this.labelBe4.TabIndex = 59;
-            this.labelBe4.Text = "BE";
+            this.labelBtnBe4.AutoSize = true;
+            this.labelBtnBe4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnBe4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnBe4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnBe4.Location = new System.Drawing.Point(593, 342);
+            this.labelBtnBe4.Name = "labelBtnBe4";
+            this.labelBtnBe4.Size = new System.Drawing.Size(37, 24);
+            this.labelBtnBe4.TabIndex = 59;
+            this.labelBtnBe4.Text = "BE";
             // 
             // btnBe4
             // 
             this.btnBe4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe4.FlatAppearance.BorderSize = 0;
-            this.btnBe4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBe4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBe4.Location = new System.Drawing.Point(349, 325);
@@ -244,23 +238,22 @@
             this.btnBe4.UseVisualStyleBackColor = false;
             this.btnBe4.Click += new System.EventHandler(this.btnBe4_Click);
             // 
-            // labelBe3
+            // labelBtnBe3
             // 
-            this.labelBe3.AutoSize = true;
-            this.labelBe3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelBe3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBe3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBe3.Location = new System.Drawing.Point(593, 275);
-            this.labelBe3.Name = "labelBe3";
-            this.labelBe3.Size = new System.Drawing.Size(37, 24);
-            this.labelBe3.TabIndex = 57;
-            this.labelBe3.Text = "BE";
+            this.labelBtnBe3.AutoSize = true;
+            this.labelBtnBe3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnBe3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnBe3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnBe3.Location = new System.Drawing.Point(593, 275);
+            this.labelBtnBe3.Name = "labelBtnBe3";
+            this.labelBtnBe3.Size = new System.Drawing.Size(37, 24);
+            this.labelBtnBe3.TabIndex = 57;
+            this.labelBtnBe3.Text = "BE";
             // 
             // btnBe3
             // 
             this.btnBe3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe3.FlatAppearance.BorderSize = 0;
-            this.btnBe3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBe3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBe3.Location = new System.Drawing.Point(349, 258);
@@ -272,23 +265,22 @@
             this.btnBe3.UseVisualStyleBackColor = false;
             this.btnBe3.Click += new System.EventHandler(this.btnBe3_Click);
             // 
-            // labelBe2
+            // labelBtnBe2
             // 
-            this.labelBe2.AutoSize = true;
-            this.labelBe2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelBe2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBe2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBe2.Location = new System.Drawing.Point(593, 208);
-            this.labelBe2.Name = "labelBe2";
-            this.labelBe2.Size = new System.Drawing.Size(37, 24);
-            this.labelBe2.TabIndex = 55;
-            this.labelBe2.Text = "BE";
+            this.labelBtnBe2.AutoSize = true;
+            this.labelBtnBe2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnBe2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnBe2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnBe2.Location = new System.Drawing.Point(593, 208);
+            this.labelBtnBe2.Name = "labelBtnBe2";
+            this.labelBtnBe2.Size = new System.Drawing.Size(37, 24);
+            this.labelBtnBe2.TabIndex = 55;
+            this.labelBtnBe2.Text = "BE";
             // 
             // btnBe2
             // 
             this.btnBe2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe2.FlatAppearance.BorderSize = 0;
-            this.btnBe2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBe2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBe2.Location = new System.Drawing.Point(349, 191);
@@ -300,23 +292,22 @@
             this.btnBe2.UseVisualStyleBackColor = false;
             this.btnBe2.Click += new System.EventHandler(this.btnBe2_Click);
             // 
-            // labelBe1
+            // labelBtnBe1
             // 
-            this.labelBe1.AutoSize = true;
-            this.labelBe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelBe1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelBe1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBe1.Location = new System.Drawing.Point(593, 141);
-            this.labelBe1.Name = "labelBe1";
-            this.labelBe1.Size = new System.Drawing.Size(37, 24);
-            this.labelBe1.TabIndex = 53;
-            this.labelBe1.Text = "BE";
+            this.labelBtnBe1.AutoSize = true;
+            this.labelBtnBe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnBe1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnBe1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnBe1.Location = new System.Drawing.Point(593, 141);
+            this.labelBtnBe1.Name = "labelBtnBe1";
+            this.labelBtnBe1.Size = new System.Drawing.Size(37, 24);
+            this.labelBtnBe1.TabIndex = 53;
+            this.labelBtnBe1.Text = "BE";
             // 
             // btnBe1
             // 
             this.btnBe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe1.FlatAppearance.BorderSize = 0;
-            this.btnBe1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnBe1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBe1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBe1.Location = new System.Drawing.Point(349, 124);
@@ -328,23 +319,22 @@
             this.btnBe1.UseVisualStyleBackColor = false;
             this.btnBe1.Click += new System.EventHandler(this.btnBe1_Click);
             // 
-            // label6
+            // labelBtnFlex
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(246, 543);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 24);
-            this.label6.TabIndex = 51;
-            this.label6.Text = "FLEX";
+            this.labelBtnFlex.AutoSize = true;
+            this.labelBtnFlex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnFlex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnFlex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnFlex.Location = new System.Drawing.Point(246, 543);
+            this.labelBtnFlex.Name = "labelBtnFlex";
+            this.labelBtnFlex.Size = new System.Drawing.Size(63, 24);
+            this.labelBtnFlex.TabIndex = 51;
+            this.labelBtnFlex.Text = "FLEX";
             // 
             // btnFlex
             // 
             this.btnFlex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnFlex.FlatAppearance.BorderSize = 0;
-            this.btnFlex.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnFlex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFlex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFlex.Location = new System.Drawing.Point(23, 526);
@@ -356,23 +346,22 @@
             this.btnFlex.UseVisualStyleBackColor = false;
             this.btnFlex.Click += new System.EventHandler(this.btnFlex_Click);
             // 
-            // labelTE
+            // labelBtnTE
             // 
-            this.labelTE.AutoSize = true;
-            this.labelTE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelTE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTE.Location = new System.Drawing.Point(267, 476);
-            this.labelTE.Name = "labelTE";
-            this.labelTE.Size = new System.Drawing.Size(37, 24);
-            this.labelTE.TabIndex = 49;
-            this.labelTE.Text = "TE";
+            this.labelBtnTE.AutoSize = true;
+            this.labelBtnTE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnTE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnTE.Location = new System.Drawing.Point(267, 476);
+            this.labelBtnTE.Name = "labelBtnTE";
+            this.labelBtnTE.Size = new System.Drawing.Size(37, 24);
+            this.labelBtnTE.TabIndex = 49;
+            this.labelBtnTE.Text = "TE";
             // 
             // btnTE
             // 
             this.btnTE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnTE.FlatAppearance.BorderSize = 0;
-            this.btnTE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnTE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTE.Location = new System.Drawing.Point(23, 459);
@@ -384,23 +373,22 @@
             this.btnTE.UseVisualStyleBackColor = false;
             this.btnTE.Click += new System.EventHandler(this.btnTE_Click);
             // 
-            // labelWR2
+            // labelBtnWR2
             // 
-            this.labelWR2.AutoSize = true;
-            this.labelWR2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelWR2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelWR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWR2.Location = new System.Drawing.Point(246, 409);
-            this.labelWR2.Name = "labelWR2";
-            this.labelWR2.Size = new System.Drawing.Size(54, 24);
-            this.labelWR2.TabIndex = 47;
-            this.labelWR2.Text = "WR2";
+            this.labelBtnWR2.AutoSize = true;
+            this.labelBtnWR2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnWR2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnWR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnWR2.Location = new System.Drawing.Point(246, 409);
+            this.labelBtnWR2.Name = "labelBtnWR2";
+            this.labelBtnWR2.Size = new System.Drawing.Size(54, 24);
+            this.labelBtnWR2.TabIndex = 47;
+            this.labelBtnWR2.Text = "WR2";
             // 
             // btnWR2
             // 
             this.btnWR2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnWR2.FlatAppearance.BorderSize = 0;
-            this.btnWR2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnWR2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWR2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWR2.Location = new System.Drawing.Point(23, 392);
@@ -412,23 +400,22 @@
             this.btnWR2.UseVisualStyleBackColor = false;
             this.btnWR2.Click += new System.EventHandler(this.btnWR2_Click);
             // 
-            // labelWR1
+            // labelBtnWR1
             // 
-            this.labelWR1.AutoSize = true;
-            this.labelWR1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelWR1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelWR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelWR1.Location = new System.Drawing.Point(249, 342);
-            this.labelWR1.Name = "labelWR1";
-            this.labelWR1.Size = new System.Drawing.Size(54, 24);
-            this.labelWR1.TabIndex = 45;
-            this.labelWR1.Text = "WR1";
+            this.labelBtnWR1.AutoSize = true;
+            this.labelBtnWR1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnWR1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnWR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnWR1.Location = new System.Drawing.Point(249, 342);
+            this.labelBtnWR1.Name = "labelBtnWR1";
+            this.labelBtnWR1.Size = new System.Drawing.Size(54, 24);
+            this.labelBtnWR1.TabIndex = 45;
+            this.labelBtnWR1.Text = "WR1";
             // 
             // btnWR1
             // 
             this.btnWR1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnWR1.FlatAppearance.BorderSize = 0;
-            this.btnWR1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnWR1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWR1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWR1.Location = new System.Drawing.Point(23, 325);
@@ -440,23 +427,22 @@
             this.btnWR1.UseVisualStyleBackColor = false;
             this.btnWR1.Click += new System.EventHandler(this.btnWR1_Click);
             // 
-            // labelRB2
+            // labelBtnRB2
             // 
-            this.labelRB2.AutoSize = true;
-            this.labelRB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelRB2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelRB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRB2.Location = new System.Drawing.Point(253, 275);
-            this.labelRB2.Name = "labelRB2";
-            this.labelRB2.Size = new System.Drawing.Size(48, 24);
-            this.labelRB2.TabIndex = 43;
-            this.labelRB2.Text = "RB2";
+            this.labelBtnRB2.AutoSize = true;
+            this.labelBtnRB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnRB2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnRB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnRB2.Location = new System.Drawing.Point(253, 275);
+            this.labelBtnRB2.Name = "labelBtnRB2";
+            this.labelBtnRB2.Size = new System.Drawing.Size(48, 24);
+            this.labelBtnRB2.TabIndex = 43;
+            this.labelBtnRB2.Text = "RB2";
             // 
             // btnRB2
             // 
             this.btnRB2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnRB2.FlatAppearance.BorderSize = 0;
-            this.btnRB2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnRB2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRB2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRB2.Location = new System.Drawing.Point(23, 258);
@@ -472,7 +458,6 @@
             // 
             this.btnRB1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnRB1.FlatAppearance.BorderSize = 0;
-            this.btnRB1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
             this.btnRB1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRB1.Location = new System.Drawing.Point(23, 191);
@@ -484,17 +469,17 @@
             this.btnRB1.UseVisualStyleBackColor = false;
             this.btnRB1.Click += new System.EventHandler(this.btnRB1_Click);
             // 
-            // labelQB
+            // labelBtnQB
             // 
-            this.labelQB.AutoSize = true;
-            this.labelQB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.labelQB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelQB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelQB.Location = new System.Drawing.Point(262, 141);
-            this.labelQB.Name = "labelQB";
-            this.labelQB.Size = new System.Drawing.Size(39, 24);
-            this.labelQB.TabIndex = 40;
-            this.labelQB.Text = "QB";
+            this.labelBtnQB.AutoSize = true;
+            this.labelBtnQB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.labelBtnQB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelBtnQB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBtnQB.Location = new System.Drawing.Point(262, 141);
+            this.labelBtnQB.Name = "labelBtnQB";
+            this.labelBtnQB.Size = new System.Drawing.Size(39, 24);
+            this.labelBtnQB.TabIndex = 40;
+            this.labelBtnQB.Text = "QB";
             // 
             // pictureBox1
             // 
@@ -534,34 +519,34 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 672);
             this.ControlBox = false;
-            this.Controls.Add(this.labelQB);
+            this.Controls.Add(this.labelBtnQB);
             this.Controls.Add(this.btnQB);
-            this.Controls.Add(this.labelRB1);
-            this.Controls.Add(this.labelBe8);
+            this.Controls.Add(this.labelBtnRB1);
+            this.Controls.Add(this.labelBtnBe8);
             this.Controls.Add(this.btnBe8);
-            this.Controls.Add(this.labelBe7);
+            this.Controls.Add(this.labelBtnBe7);
             this.Controls.Add(this.btnBe7);
-            this.Controls.Add(this.labelBe6);
+            this.Controls.Add(this.labelBtnBe6);
             this.Controls.Add(this.btnBe6);
-            this.Controls.Add(this.labelBe5);
+            this.Controls.Add(this.labelBtnBe5);
             this.Controls.Add(this.btnBe5);
-            this.Controls.Add(this.labelBe4);
+            this.Controls.Add(this.labelBtnBe4);
             this.Controls.Add(this.btnBe4);
-            this.Controls.Add(this.labelBe3);
+            this.Controls.Add(this.labelBtnBe3);
             this.Controls.Add(this.btnBe3);
-            this.Controls.Add(this.labelBe2);
+            this.Controls.Add(this.labelBtnBe2);
             this.Controls.Add(this.btnBe2);
-            this.Controls.Add(this.labelBe1);
+            this.Controls.Add(this.labelBtnBe1);
             this.Controls.Add(this.btnBe1);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.labelBtnFlex);
             this.Controls.Add(this.btnFlex);
-            this.Controls.Add(this.labelTE);
+            this.Controls.Add(this.labelBtnTE);
             this.Controls.Add(this.btnTE);
-            this.Controls.Add(this.labelWR2);
+            this.Controls.Add(this.labelBtnWR2);
             this.Controls.Add(this.btnWR2);
-            this.Controls.Add(this.labelWR1);
+            this.Controls.Add(this.labelBtnWR1);
             this.Controls.Add(this.btnWR1);
-            this.Controls.Add(this.labelRB2);
+            this.Controls.Add(this.labelBtnRB2);
             this.Controls.Add(this.btnRB2);
             this.Controls.Add(this.btnRB1);
             this.Controls.Add(this.btnSeason);
@@ -582,35 +567,35 @@
 
         private System.Windows.Forms.Button btnSeason;
         private System.Windows.Forms.Button btnQB;
-        private System.Windows.Forms.Label labelRB1;
-        private System.Windows.Forms.Label labelBe8;
+        private System.Windows.Forms.Label labelBtnRB1;
+        private System.Windows.Forms.Label labelBtnBe8;
         private System.Windows.Forms.Button btnBe8;
-        private System.Windows.Forms.Label labelBe7;
+        private System.Windows.Forms.Label labelBtnBe7;
         private System.Windows.Forms.Button btnBe7;
-        private System.Windows.Forms.Label labelBe6;
+        private System.Windows.Forms.Label labelBtnBe6;
         private System.Windows.Forms.Button btnBe6;
-        private System.Windows.Forms.Label labelBe5;
+        private System.Windows.Forms.Label labelBtnBe5;
         private System.Windows.Forms.Button btnBe5;
-        private System.Windows.Forms.Label labelBe4;
+        private System.Windows.Forms.Label labelBtnBe4;
         private System.Windows.Forms.Button btnBe4;
-        private System.Windows.Forms.Label labelBe3;
+        private System.Windows.Forms.Label labelBtnBe3;
         private System.Windows.Forms.Button btnBe3;
-        private System.Windows.Forms.Label labelBe2;
+        private System.Windows.Forms.Label labelBtnBe2;
         private System.Windows.Forms.Button btnBe2;
-        private System.Windows.Forms.Label labelBe1;
+        private System.Windows.Forms.Label labelBtnBe1;
         private System.Windows.Forms.Button btnBe1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelBtnFlex;
         private System.Windows.Forms.Button btnFlex;
-        private System.Windows.Forms.Label labelTE;
+        private System.Windows.Forms.Label labelBtnTE;
         private System.Windows.Forms.Button btnTE;
-        private System.Windows.Forms.Label labelWR2;
+        private System.Windows.Forms.Label labelBtnWR2;
         private System.Windows.Forms.Button btnWR2;
-        private System.Windows.Forms.Label labelWR1;
+        private System.Windows.Forms.Label labelBtnWR1;
         private System.Windows.Forms.Button btnWR1;
-        private System.Windows.Forms.Label labelRB2;
+        private System.Windows.Forms.Label labelBtnRB2;
         private System.Windows.Forms.Button btnRB2;
         private System.Windows.Forms.Button btnRB1;
-        private System.Windows.Forms.Label labelQB;
+        private System.Windows.Forms.Label labelBtnQB;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox line;
         private System.Windows.Forms.Label title;

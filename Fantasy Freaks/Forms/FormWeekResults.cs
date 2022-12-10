@@ -36,7 +36,6 @@ namespace Fantasy_Freaks {
 
         private async void FormWeekResults_Load(object sender, EventArgs e)
         {
-            //TODO: This function is too long, turn it into multiple - Done?
             FFWindow.instance.setFont(this);
             TransparentLabelonBanner(labelFFscore, FFbanner);
             TransparentLabelonBanner(labelOPPscore, OPPbanner);
@@ -65,9 +64,9 @@ namespace Fantasy_Freaks {
             labelFFscore.Text = offFinalScore.ToString();
 
 
-            if (_teamService.BestWeek == null || offScore > _teamService.BestWeek.UserScore)
+            if (_teamService.BestWeek == null || offFinalScore > _teamService.BestWeek.UserScore)
                 _teamService.BestWeek = performance;
-            if (_teamService.WorstWeek == null || offScore < _teamService.WorstWeek.UserScore)
+            if (_teamService.WorstWeek == null || offFinalScore < _teamService.WorstWeek.UserScore)
                 _teamService.WorstWeek = performance;
 
             _teamService.NextWeek();
@@ -75,7 +74,6 @@ namespace Fantasy_Freaks {
 
         private double CalucateTeamPerformance(int FFeventDay, PictureBox teamImg, bool teamIsPlayer)
         {
-            //TODO: Make these punishments/benefits less impactful - Done
             double modifier;
             if (FFeventDay == 0)
             {

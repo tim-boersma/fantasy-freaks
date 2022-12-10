@@ -38,9 +38,7 @@ namespace Fantasy_Freaks {
 
             dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlayers.DataSource = players;
-
-
-
+            dgvPlayers.ClearSelection();
         }
 
         private async Task<IEnumerable<CurrentPlayerModel>> GetSelectedPlayers()
@@ -75,11 +73,6 @@ namespace Fantasy_Freaks {
             {
                 MessageBox.Show("You must have a full bench before submitting");
             }
-        }
-
-        private void btnAddPlayer_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void RenderPlayerList()
@@ -161,6 +154,14 @@ namespace Fantasy_Freaks {
 
         private void dgvPlayers_SelectionChanged(object sender, EventArgs e)
         {
+            if(dgvPlayers.SelectedRows.Count == 0)
+            {
+                RemoveSelectedPlayerLabels();
+                RemoveSelectedPlayerButtons();
+                selectedPlayers.Clear();
+                RenderPlayerList();
+                return;
+            }
             var selectedPlayer = (CurrentPlayerModel)dgvPlayers.SelectedRows[0].DataBoundItem;
             if (selectedPlayers.Count >= 8)
             {
