@@ -70,7 +70,9 @@ namespace Fantasy_Freaks {
         private void btnWR1_Click(object sender, EventArgs e)
         {
             btnWR1.BackColor = Color.FromArgb(200, 200, 200);
+            btnWR1.Update();
             PlayerSelected(_teamService.WideReceiverOne);
+
         }
 
         private void btnWR2_Click(object sender, EventArgs e)
@@ -135,7 +137,6 @@ namespace Fantasy_Freaks {
 
         private void btnBe8_Click(object sender, EventArgs e)
         {
-            //playerbutton changes color
             btnBe8.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe8.Text).First());
         }
@@ -158,26 +159,13 @@ namespace Fantasy_Freaks {
             }
             else
             {
-                if (_teamService.BenchedPlayers.Contains(initialPlayer) && _teamService.BenchedPlayers.Contains(player))
-                {
-                    //let the user know they can't select two benched players or just deselect and don't do anything and they can figure it out
-                    MessageBox.Show("You can't select two benched players");
-                }
-                if (activePlayers.Contains(initialPlayer.PlayerID) && activePlayers.Contains(player.PlayerID))
-                {
-                    MessageBox.Show("You can't select two active players");
-                }
-                else if (initialPlayer.PlayerPosition != player.PlayerPosition)
-                {
-                    //let the user know they have to be the same position
-                    MessageBox.Show("Players must share same position");
-                }
-                else if (_teamService.BenchedPlayers.Contains(initialPlayer) && !_teamService.BenchedPlayers.Contains(player))
+                bool validSelection = ValidatePlayerSwap(player);
+                if (_teamService.BenchedPlayers.Contains(initialPlayer) && !_teamService.BenchedPlayers.Contains(player) && validSelection)
                 {
                     _teamService.SwapPlayers(player, initialPlayer);
                     RenderPlayerNames();
                 }
-                else
+                else if (validSelection)
                 {
                     _teamService.SwapPlayers(initialPlayer, player);
                     RenderPlayerNames();
@@ -185,6 +173,31 @@ namespace Fantasy_Freaks {
                 colorReset();
                 swapActive = false;
             }
+        }
+
+        private bool ValidatePlayerSwap(CurrentPlayerModel player)
+        {
+            if (player.PlayerID == initialPlayer.PlayerID)
+            {
+                initialPlayer = null;
+                return false;
+            }
+            else if (_teamService.BenchedPlayers.Contains(initialPlayer) && _teamService.BenchedPlayers.Contains(player))
+            {
+                MessageBox.Show("You can't select two benched players");
+                return false;
+            }
+            else if (activePlayers.Contains(initialPlayer.PlayerID) && activePlayers.Contains(player.PlayerID))
+            {
+                MessageBox.Show("You can't select two active players");
+                return false;
+            }
+            else if (initialPlayer.PlayerPosition != player.PlayerPosition)
+            {
+                MessageBox.Show("Players must share same position");
+                return false;
+            }
+            return true;
         }
 
 
@@ -200,11 +213,10 @@ namespace Fantasy_Freaks {
             btnQB.Text = _teamService.Quarterback.PlayerName;
             btnRB1.Text = _teamService.RunningBackOne.PlayerName;
             btnRB2.Text = _teamService.RunningBackTwo.PlayerName;
+            btnWR1.Text = _teamService.WideReceiverOne.PlayerName;
+            btnWR2.Text = _teamService.WideReceiverTwo.PlayerName;
             btnTE.Text = _teamService.TightEnd.PlayerName;
-            btnWR1.Text = _teamService.Quarterback.PlayerName;
-            btnWR2.Text = _teamService.Quarterback.PlayerName;
-            btnFlex.Text = _teamService.Quarterback.PlayerName;
-            btnQB.Text = _teamService.Quarterback.PlayerName;
+            btnFlex.Text = _teamService.Flex.PlayerName;
 
             int index = 0;
             foreach (var button in this.Controls.OfType<Button>())
