@@ -39,8 +39,8 @@ namespace Fantasy_Freaks {
 
         private void WeekGenerator(int weekNum) {
             var enemyTeam = _team.EnemyTeams[weekNum];
-            var teamBanner = teamDictionary.bannerSeason[enemyTeam.TeamName];
-            Color colorTeam = teamDictionary.labelSeason[enemyTeam.TeamName];
+            var teamBanner = ResourceDictionaries.bannerSeason[enemyTeam.TeamName];
+            Color colorTeam = ResourceDictionaries.labelSeason[enemyTeam.TeamName];
             double offScore = _team.PlayerPerformance.ElementAtOrDefault(weekNum) != null ? _team.PlayerPerformance[weekNum].UserScore : 0;
             double defScore = _team.PlayerPerformance.ElementAtOrDefault(weekNum) != null ? _team.PlayerPerformance[weekNum].OppScore : 0;
 

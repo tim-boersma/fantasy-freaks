@@ -45,13 +45,13 @@ namespace Fantasy_Freaks {
             labelFFTotalScore.Text = userTotalWins+ " - " + userTotalLosses;
 
             //Best Game
-            var oppBannerImg = teamDictionary.bannerSeason[_teamService.BestWeek.OpposingTeam.TeamName];
+            var oppBannerImg = ResourceDictionaries.bannerSeason[_teamService.BestWeek.OpposingTeam.TeamName];
             var bestWeekNum = _teamService.EnemyTeams.IndexOf(_teamService.BestWeek.OpposingTeam) + 1;
             GenerateBanner(bestFFBanner, bestFFScore, bestButton, bestWeekNum, _teamService.BestWeek.UserScore, Properties.Resources.FF);
             GenerateBanner(bestOppBanner, bestOppScore, bestButton, bestWeekNum, _teamService.BestWeek.OppScore, oppBannerImg);// opponeent
 
             //Worst Game
-            oppBannerImg = teamDictionary.bannerSeason[_teamService.WorstWeek.OpposingTeam.TeamName];
+            oppBannerImg = ResourceDictionaries.bannerSeason[_teamService.WorstWeek.OpposingTeam.TeamName];
             var worstWeekNum = _teamService.EnemyTeams.IndexOf(_teamService.WorstWeek.OpposingTeam) + 1;
             GenerateBanner(worstFFBanner, worstFFScore, worstButton, worstWeekNum, _teamService.WorstWeek.UserScore, Properties.Resources.FF);
             GenerateBanner(worstOppBanner, worstOppScore, worstButton, worstWeekNum, _teamService.WorstWeek.OppScore, oppBannerImg);// opponeent

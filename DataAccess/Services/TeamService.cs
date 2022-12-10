@@ -123,7 +123,7 @@ namespace DataAccess.Services
                         return true;
                     }
                     return false;
-                case PlayerTypes.WideReceiver:
+                case PlayerTypes.WideReceiverOne:
                     if (player.PlayerPosition == PlayerTypes.WideReceiver)
                     {
                         WideReceiverOne = player;
@@ -137,7 +137,7 @@ namespace DataAccess.Services
                         return true;
                     }
                     return false;
-                case PlayerTypes.RunningBack:
+                case PlayerTypes.RunningBackOne:
                     if (player.PlayerPosition == PlayerTypes.RunningBack)
                     {
                         RunningBackOne = player;

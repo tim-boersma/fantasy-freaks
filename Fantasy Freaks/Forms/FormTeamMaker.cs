@@ -66,7 +66,6 @@ namespace Fantasy_Freaks {
         {
             var btn = (Button)sender;
             var position = btn.Name.Replace("btn", "");
-            position = position.Length > 3 ? position : position.Substring(0, 2);
             if (PlayerTypes.AllTypes.Contains(position))
             {
                 ChoosingPlayer(btn, position);

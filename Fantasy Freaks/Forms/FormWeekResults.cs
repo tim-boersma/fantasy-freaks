@@ -40,7 +40,7 @@ namespace Fantasy_Freaks {
             TransparentLabelonBanner(labelFFscore, FFbanner);
             TransparentLabelonBanner(labelOPPscore, OPPbanner);
             var enemyTeam = _teamService.GetCurrentOpponent();
-            var teamBanner = teamDictionary.bannerSeason[enemyTeam.TeamName];
+            var teamBanner = ResourceDictionaries.bannerSeason[enemyTeam.TeamName];
             OPPbanner.BackgroundImage = teamBanner;
 
             FFWindow.instance.setFont(this);

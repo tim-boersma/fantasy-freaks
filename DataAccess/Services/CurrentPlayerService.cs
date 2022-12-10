@@ -41,11 +41,15 @@ namespace DataAccess.Services
                     return await GetAllQuarterbacks();
                 case PlayerTypes.RunningBack:
                     return await GetAllRunningbacks();
+                case PlayerTypes.RunningBackOne:
+                    return await GetAllRunningbacks();
                 case PlayerTypes.RunningBackTwo:
                     return await GetAllRunningbacks();
                 case PlayerTypes.TightEnd:
                     return await GetAllTightEnds();
                 case PlayerTypes.WideReceiver:
+                    return await GetAllWideReceivers();
+                case PlayerTypes.WideReceiverOne:
                     return await GetAllWideReceivers();
                 case PlayerTypes.WideReceiverTwo:
                     return await GetAllWideReceivers();
