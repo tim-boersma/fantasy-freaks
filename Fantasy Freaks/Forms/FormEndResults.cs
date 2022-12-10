@@ -23,7 +23,7 @@ namespace Fantasy_Freaks {
         }
 
         private void FormEndResults_Load(object sender, EventArgs e) {
-
+            FFWindow.instance.setFont(this);
 
             TransparentBackgroundLabel(labelInjury, pictureDayType);
             TransparentBackgroundLabel(labelBadDay, pictureDayType);
@@ -31,7 +31,7 @@ namespace Fantasy_Freaks {
             TransparentBackgroundLabel(labelGoodDay, pictureDayType);
             TransparentBackgroundLabel(labelMiraclePlay, pictureDayType);
 
-            FFWindow.instance.setFont(this);
+            
 
             labelInjury.Text = _teamService.TotalInjuries.ToString();
             labelBadDay.Text = _teamService.TotalBadDays.ToString();

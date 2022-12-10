@@ -66,9 +66,12 @@ namespace Fantasy_Freaks {
             Marshal.Copy(fontdata, 0, data, fontLength);
             pfc.AddMemoryFont(data, fontLength);
         }
+        public Font getFont(Control c) {
+            return new Font(pfc.Families[0], c.Font.Size, FontStyle.Bold);
+        }
         public void setFont(Form form) {
             foreach(Control c in form.Controls) {
-                c.Font = new Font(pfc.Families[0], c.Font.Size, FontStyle.Bold);
+                c.Font = getFont(c);
             }
         }
 
