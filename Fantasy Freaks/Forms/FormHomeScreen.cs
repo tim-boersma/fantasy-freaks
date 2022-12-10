@@ -25,7 +25,6 @@ namespace Fantasy_Freaks {
             _teamService = teamService;
             _defenseService = defenseService;
             _currentPlayer = currentPlayer;
-            //activeForm = this;
         }
 
 
@@ -34,8 +33,8 @@ namespace Fantasy_Freaks {
             FFWindow.instance.setFont(this);
             logo.Parent = titleBackground;
             title.Parent = titleBackground;
-            _teamService.WaitSomeTime(btnPlay);
-            _teamService.WaitSomeTime(btnHelp);
+            _teamService.WaitSomeTime(btnPlay, 1000);
+            _teamService.WaitSomeTime(btnHelp, 1000);
         }
 
         private void btnPlay_Click(object sender, EventArgs e) {

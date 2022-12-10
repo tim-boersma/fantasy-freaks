@@ -29,7 +29,7 @@ namespace Fantasy_Freaks {
 
             foreach(var button in this.Controls.OfType<Button>())
             {
-                _team.WaitSomeTime(button);
+                _team.WaitSomeTime(button, 2500);
             }
         }
 

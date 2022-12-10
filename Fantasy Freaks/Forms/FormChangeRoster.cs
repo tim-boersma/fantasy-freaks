@@ -28,7 +28,7 @@ namespace Fantasy_Freaks {
             _defenseService = defenseService;
             foreach (var button in this.Controls.OfType<Button>())
             {
-                _teamService.WaitSomeTime(button);
+                _teamService.WaitSomeTime(button, 1500);
             }
 
             benchLabel = new Dictionary<string, Label>
@@ -52,28 +52,24 @@ namespace Fantasy_Freaks {
         private void btnQB_Click(object sender, EventArgs e)
         {
             btnQB.BackColor = Color.FromArgb(200, 200, 200);
-            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.Quarterback);
         }
 
         private void btnRB1_Click(object sender, EventArgs e)
         {
             btnRB1.BackColor = Color.FromArgb(200, 200, 200);
-            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.RunningBackOne);
         }
 
         private void btnRB2_Click(object sender, EventArgs e)
         {
             btnRB2.BackColor = Color.FromArgb(200, 200, 200);
-            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.RunningBackTwo);
         }
 
         private void btnWR1_Click(object sender, EventArgs e)
         {
             btnWR1.BackColor = Color.FromArgb(200, 200, 200);
-            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             btnWR1.Update();
             PlayerSelected(_teamService.WideReceiverOne);
 
@@ -82,28 +78,24 @@ namespace Fantasy_Freaks {
         private void btnWR2_Click(object sender, EventArgs e)
         {
             btnWR2.BackColor = Color.FromArgb(200, 200, 200);
-            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.WideReceiverTwo);
         }
 
         private void btnTE_Click(object sender, EventArgs e)
         {
             btnTE.BackColor = Color.FromArgb(200, 200, 200);
-            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.TightEnd);
         }
 
         private void btnFlex_Click(object sender, EventArgs e)
         {
             btnFlex.BackColor = Color.FromArgb(200, 200, 200);
-            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.Flex);
         }
 
         private void btnBe1_Click(object sender, EventArgs e)
         {
             btnBe1.BackColor = Color.FromArgb(200, 200, 200);
-            labelBtnQB.BackColor = Color.FromArgb(200, 200, 200);
             PlayerSelected(_teamService.BenchedPlayers.Where(x => x.PlayerName == btnBe1.Text).First());
         }
 
@@ -213,6 +205,21 @@ namespace Fantasy_Freaks {
         {
             FFWindow.instance.setFont(this);
             RenderPlayerNames();
+            TransparentLabelonButton(labelBtnQB, btnQB);
+            TransparentLabelonButton(labelBtnRB1, btnRB1);
+            TransparentLabelonButton(labelBtnRB2, btnRB2);
+            TransparentLabelonButton(labelBtnWR1, btnWR1);
+            TransparentLabelonButton(labelBtnWR2, btnWR2);
+            TransparentLabelonButton(labelBtnTE, btnTE);
+            TransparentLabelonButton(labelBtnFlex, btnFlex);
+            TransparentLabelonButton(labelBtnBe1, btnBe1);
+            TransparentLabelonButton(labelBtnBe2, btnBe2);
+            TransparentLabelonButton(labelBtnBe3, btnBe3);
+            TransparentLabelonButton(labelBtnBe4, btnBe4);
+            TransparentLabelonButton(labelBtnBe5, btnBe5);
+            TransparentLabelonButton(labelBtnBe6, btnBe6);
+            TransparentLabelonButton(labelBtnBe7, btnBe7);
+            TransparentLabelonButton(labelBtnBe8, btnBe8);
         }
 
         private void RenderPlayerNames()
@@ -237,6 +244,12 @@ namespace Fantasy_Freaks {
                     index++;
                 }
             }
+        }
+        private void TransparentLabelonButton(Label l, Button b)
+        {
+            l.BackColor = Color.Transparent;
+            l.Location = b.PointToClient(l.Parent.PointToScreen(l.Location));
+            l.Parent = b;
         }
     }
 }

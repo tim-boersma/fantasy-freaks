@@ -29,7 +29,7 @@ namespace DataAccess.Interfaces
         int TotalPoints { get; set; }
         void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer);
         void NextWeek();
-        Task WaitSomeTime(Button button);
+        Task WaitSomeTime(Button button, int time);
         DefenseDataModel GetCurrentOpponent();
         IEnumerable<int> GetActivePlayerIDs();
         Task<List<CurrentPlayerModel>> GetActivePlayers();

@@ -39,10 +39,10 @@ namespace DataAccess.Services
         public List<DefenseDataModel> EnemyTeams { get; set; }
         public List<WeekPerformance> PlayerPerformance { get; set; } = new List<WeekPerformance>();
 
-        public async Task WaitSomeTime(Button button)
+        public async Task WaitSomeTime(Button button, int time)
         {
             button.Enabled = false;
-            await Task.Delay(1000);
+            await Task.Delay(time);
             button.Enabled = true;
         }
 
