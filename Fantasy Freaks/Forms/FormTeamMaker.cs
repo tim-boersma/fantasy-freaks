@@ -19,6 +19,7 @@ namespace Fantasy_Freaks {
         private readonly ITeamService _team;
         private readonly IDefenseService _defense;
         private readonly ICurrentPlayerService _currentPlayer;
+        private IEnumerable<CurrentPlayerModel> allPlayers;
         public FormTeamMaker(ITeamService teamService, IDefenseService defenseService, ICurrentPlayerService currentPlayer) {
             InitializeComponent();
             _team = teamService;
@@ -32,7 +33,7 @@ namespace Fantasy_Freaks {
             }
         }
 
-        private void FormTeamMaker_Load(object sender, EventArgs e) {
+        private async void FormTeamMaker_Load(object sender, EventArgs e) {
             FFWindow.instance.setFont(this);
 
             TransparentLabelonButton(labelQB, btnQB);
@@ -50,6 +51,8 @@ namespace Fantasy_Freaks {
             TransparentLabelonButton(labelBe6, btnBe6);
             TransparentLabelonButton(labelBe7, btnBe7);
             TransparentLabelonButton(labelBe8, btnBe8);
+
+            allPlayers = await _currentPlayer.GetAllPlayers();
         }
 
         private void btnQB_Click(object sender, EventArgs e)
@@ -204,20 +207,20 @@ namespace Fantasy_Freaks {
         }
 
 
-        private async void btnRandom_Click(object sender, EventArgs e)
+        private void btnRandom_Click(object sender, EventArgs e)
         {
             foreach (var button in this.Controls.OfType<Button>())
             {
                 button.Enabled = false;
             }
-            _team.Quarterback = await GetRandomPlayer(PlayerTypes.Quarterback);
-            _team.WideReceiverOne = await GetRandomPlayer(PlayerTypes.WideReceiver);
-            _team.WideReceiverTwo = await GetRandomPlayer(PlayerTypes.WideReceiver);
-            _team.RunningBackOne = await GetRandomPlayer(PlayerTypes.RunningBack);
-            _team.RunningBackTwo = await GetRandomPlayer(PlayerTypes.RunningBack);
-            _team.TightEnd = await GetRandomPlayer(PlayerTypes.TightEnd);
-            _team.Flex = await GetRandomPlayer(PlayerTypes.Flex);
-            var bench = await GetRandomBench();
+            _team.Quarterback = GetRandomPlayer(allPlayers, PlayerTypes.Quarterback);
+            _team.WideReceiverOne = GetRandomPlayer(allPlayers, PlayerTypes.WideReceiver);
+            _team.WideReceiverTwo = GetRandomPlayer(allPlayers, PlayerTypes.WideReceiver);
+            _team.RunningBackOne = GetRandomPlayer(allPlayers, PlayerTypes.RunningBack);
+            _team.RunningBackTwo = GetRandomPlayer(allPlayers, PlayerTypes.RunningBack);
+            _team.TightEnd = GetRandomPlayer(allPlayers, PlayerTypes.TightEnd);
+            _team.Flex = GetRandomPlayer(allPlayers, PlayerTypes.Flex);
+            var bench = GetRandomBench(allPlayers);
             _team.BenchedPlayers = bench.ToList();
             RefreshPlayerSelection();
             RefreshBenchSelection();
@@ -227,37 +230,36 @@ namespace Fantasy_Freaks {
             }
         }
 
-        private async Task<CurrentPlayerModel> GetRandomPlayer(string playerType)
+        private CurrentPlayerModel GetRandomPlayer(IEnumerable<CurrentPlayerModel> players, string playerType)
         {
-            var result = await _currentPlayer.GetSelectedPlayers(playerType);
-            var players = result.ToList();
             CurrentPlayerModel selectedPlayer;
+            var activePlayers = _team.GetActivePlayerIDs();
+            var playerPool = players.ToList();
             Random rand = new Random(Guid.NewGuid().GetHashCode());
             do
             {
-                var playerNum = rand.Next(0, players.Count);
-                selectedPlayer = players[playerNum];
+                var playerNum = rand.Next(0, playerPool.Count);
+                selectedPlayer = playerPool[playerNum];
             //TODO: break loop if position isn't valid
-            
-            } while (selectedPlayer.PlayerPosition != playerType && playerType != PlayerTypes.Flex);
+            } while (selectedPlayer.PlayerPosition != playerType 
+                  && playerType != PlayerTypes.Flex 
+                  && activePlayers.Contains(selectedPlayer.PlayerID));
 
             return selectedPlayer;
         }
 
-        private async Task<IEnumerable<CurrentPlayerModel>> GetRandomBench()
+        private IEnumerable<CurrentPlayerModel> GetRandomBench(IEnumerable<CurrentPlayerModel> players)
         {
             List<CurrentPlayerModel> selectedPlayers = new List<CurrentPlayerModel>();
-
-            var result = await _currentPlayer.GetSelectedPlayers(PlayerTypes.Bench);
-            var players = result.ToList();
+            var playerPool = players.ToList();
             CurrentPlayerModel selectedPlayer;
             Random rand = new Random(Guid.NewGuid().GetHashCode());
             for(int i = 0; i < 8; i++)
             {
                 do
                 {
-                    var playerNum = rand.Next(0, players.Count);
-                    selectedPlayer = players[playerNum];
+                    var playerNum = rand.Next(0, playerPool.Count);
+                    selectedPlayer = playerPool[playerNum];
                 } while (selectedPlayers.Contains(selectedPlayer));
                 selectedPlayers.Add(selectedPlayer);
             }

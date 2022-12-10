@@ -59,15 +59,23 @@ namespace DataAccess.Services
         }
         public IEnumerable<int> GetActivePlayerIDs()
         {
-            return new List<int>() {
-                Quarterback.PlayerID,
-                WideReceiverOne.PlayerID,
-                WideReceiverTwo.PlayerID,
-                RunningBackOne.PlayerID,
-                RunningBackTwo.PlayerID,
-                TightEnd.PlayerID,
-                Flex.PlayerID
-            };
+            List<int> activePlayerIDs = new List<int>();
+            if (Quarterback != null)
+                activePlayerIDs.Add(Quarterback.PlayerID);
+            if (WideReceiverOne != null)
+                activePlayerIDs.Add(WideReceiverOne.PlayerID);
+            if (WideReceiverTwo != null)
+                activePlayerIDs.Add(WideReceiverTwo.PlayerID);
+            if (RunningBackOne != null)
+                activePlayerIDs.Add(RunningBackOne.PlayerID);
+            if (RunningBackTwo != null)
+                activePlayerIDs.Add(RunningBackTwo.PlayerID);
+            if (TightEnd != null)
+                activePlayerIDs.Add(TightEnd.PlayerID);
+            if (Flex != null)
+                activePlayerIDs.Add(Flex.PlayerID);
+
+            return activePlayerIDs;
         }
 
         public async Task<List<PlayerPerformanceDataModel>> GetActivePlayerPerformances()
