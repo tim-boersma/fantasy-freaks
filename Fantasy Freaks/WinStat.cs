@@ -64,9 +64,9 @@ namespace Fantasy_Freaks {
             double totalScore = 0;
             foreach (var player in players)
             {
-                var playerScore = (player.PassingTouchdowns * 4) + (player.RushingTouchdowns * 6) +
-                (player.RecievingTouchdowns * 6) + (player.Receptions * 1) + (player.RushingYards * .1) +
-                (player.RecievingYards * .1) + (player.PassingYards * .04) +
+                var playerScore = (player.PassingTouchdowns * 5) + (player.RushingTouchdowns * 7) +
+                (player.RecievingTouchdowns * 7) + (player.Receptions * 1) + (player.RushingYards * .125) +
+                (player.RecievingYards * .125) + (player.PassingYards * .06) +
                 (player.Interceptions * -3)
                 + (player.Fumbles * -3); 
                 totalScore += playerScore;
