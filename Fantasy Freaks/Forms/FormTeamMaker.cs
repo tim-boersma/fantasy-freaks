@@ -27,9 +27,11 @@ namespace Fantasy_Freaks {
             _defense = defenseService;
             _currentPlayer = currentPlayer;
 
+            _team.WaitSomeTime(btnRandom, 1250);
             foreach(var button in this.Controls.OfType<Button>())
             {
-                _team.WaitSomeTime(button, 2500);
+                if(button.Name != "btnRandom")
+                _team.WaitSomeTime(button, 300);
             }
         }
 

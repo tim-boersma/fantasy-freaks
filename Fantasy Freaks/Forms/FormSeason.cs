@@ -20,7 +20,7 @@ namespace Fantasy_Freaks {
             InitializeComponent();
             _teamService = teamService;
             _defense = defenseService;
-            _teamService.WaitSomeTime(btnWeekResults, 1000);
+            _teamService.WaitSomeTime(btnWeekResults, 500);
         }
 
         private void btnWeekResults_Click(object sender, EventArgs e)

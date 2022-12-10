@@ -20,10 +20,9 @@ namespace Fantasy_Freaks {
             InitializeComponent();
             _teamService = teamService;
             _defenseService = defenseService;
-            _teamService.WaitSomeTime(buttonChangeRoster, 1000);
-            _teamService.WaitSomeTime(btnNext, 1000);
+            _teamService.WaitSomeTime(buttonChangeRoster, 500);
+            _teamService.WaitSomeTime(btnNext, 500);
         }
-
 
         private void buttonChangeRoster_Click(object sender, EventArgs e)
         {

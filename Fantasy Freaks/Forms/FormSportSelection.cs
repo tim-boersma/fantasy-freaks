@@ -20,7 +20,7 @@ namespace Fantasy_Freaks {
             _teamService = teamService;
             _defenseService = defenseService;
             _currentPlayer = currentPlayer;
-            _teamService.WaitSomeTime(btnFootball, 1000);
+            _teamService.WaitSomeTime(btnFootball, 300);
         }
 
         private void FormSportSelection_Load(object sender, EventArgs e) {
@@ -31,7 +31,5 @@ namespace Fantasy_Freaks {
             FFWindow.instance.activeSport = Sport.Football;
             FFWindow.instance.changePanel(new FormTeamMaker(_teamService, _defenseService, _currentPlayer));
         }
-
-        
     }
 }

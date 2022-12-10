@@ -33,8 +33,8 @@ namespace Fantasy_Freaks {
             FFWindow.instance.setFont(this);
             logo.Parent = titleBackground;
             title.Parent = titleBackground;
-            _teamService.WaitSomeTime(btnPlay, 1000);
-            _teamService.WaitSomeTime(btnHelp, 1000);
+            _teamService.WaitSomeTime(btnPlay, 300);
+            _teamService.WaitSomeTime(btnHelp, 300);
         }
 
         private void btnPlay_Click(object sender, EventArgs e) {
