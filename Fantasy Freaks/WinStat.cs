@@ -42,13 +42,19 @@ namespace Fantasy_Freaks {
         }
 
 
-        public static double CalculateOffensiveScore(PlayerPerformanceDataModel player) 
+        public static double CalculateOffensiveScore(IEnumerable<PlayerPerformanceDataModel> players) 
         {
-            return (player.PassingTouchdowns * 4) + (player.RushingTouchdowns * 6) +
+            double totalScore = 0;
+            foreach (var player in players)
+            {
+                var playerScore = (player.PassingTouchdowns * 4) + (player.RushingTouchdowns * 6) +
                 (player.RecievingTouchdowns * 6) + (player.Receptions * 1) + (player.RushingYards * .1) +
                 (player.RecievingYards * .1) + (player.PassingYards * .04) +
                 (player.Interceptions * -3)
-                + (player.Fumbles * -3);
+                + (player.Fumbles * -3); 
+                totalScore += playerScore;
+            }
+            return totalScore;
         }
 
     }

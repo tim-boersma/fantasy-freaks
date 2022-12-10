@@ -1,4 +1,5 @@
-﻿using DataAccess.Interfaces;
+﻿using DataAccess;
+using DataAccess.Interfaces;
 using DataAccess.Services;
 using System;
 using System.Collections.Generic;
@@ -41,17 +42,22 @@ namespace Fantasy_Freaks {
             labelGoodDay.Text = _teamService.TotalGoodDays.ToString();
             labelMiraclePlay.Text = _teamService.TotalMiraclePlays.ToString();
 
+            var userTotalWins = _teamService.PlayerPerformance.Where(x => x.UserWon).Count();
+            var userTotalLosses = _teamService.PlayerPerformance.Where(x => !x.UserWon).Count();
 
-            //FF Total Score
-            labelFFTotalScore.Text = 0/*wins*/ + " - " + 12/*loses*/;
+            labelFFTotalScore.Text = userTotalWins+ " - " + userTotalLosses;
+
             //Best Game
-            GenerateBanner(bestFFBanner, bestFFScore, bestButton, 1/*FFBest Week*/, 999/*FFBest Score*/, Properties.Resources.FF);
-            GenerateBanner(bestOppBanner, bestOppScore, worstButton, 1/*OppBest Week*/, 999/*OppBest Score*/, Properties.Resources.Bears/*Opp banner*/);// opponeent
-            
-            //Worst Game
-            GenerateBanner(worstFFBanner, worstFFScore, bestButton, 1/*FFBest Week*/, 999/*FFBest Score*/, Properties.Resources.FF);
-            GenerateBanner(worstOppBanner, worstOppScore, worstButton, 1/*OppBest Week*/, 999/*OppBest Score*/, Properties.Resources.Bears/*Opp banner*/);// opponeent
+            var oppBannerImg = teamDictionary.bannerSeason[_teamService.BestWeek.OpposingTeam.TeamName];
+            var weekNum = _teamService.EnemyTeams.IndexOf(_teamService.BestWeek.OpposingTeam) + 1;
+            GenerateBanner(bestFFBanner, bestFFScore, bestButton, weekNum, _teamService.BestWeek.UserScore, Properties.Resources.FF);
+            GenerateBanner(bestOppBanner, bestOppScore, worstButton, weekNum, _teamService.BestWeek.OppScore, oppBannerImg);// opponeent
 
+            //Worst Game
+            oppBannerImg = teamDictionary.bannerSeason[_teamService.WorstWeek.OpposingTeam.TeamName];
+            weekNum = _teamService.EnemyTeams.IndexOf(_teamService.BestWeek.OpposingTeam) + 1;
+            GenerateBanner(worstFFBanner, worstFFScore, bestButton, weekNum, _teamService.WorstWeek.UserScore, Properties.Resources.FF);
+            GenerateBanner(worstOppBanner, worstOppScore, worstButton, weekNum, _teamService.WorstWeek.OppScore, oppBannerImg);// opponeent
         }
 
         private void GenerateBanner(PictureBox banner, Label scoreLabel, Button button, int weekNum, double score, Image bImg) {

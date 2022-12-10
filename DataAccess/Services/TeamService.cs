@@ -20,8 +20,8 @@ namespace DataAccess.Services
         }
 
         public int CurrentWeek { get; set; } = 1;
-        public double BestWeek { get; set; } = 0;
-        public double WorstWeek { get; set; } = 0;
+        public WeekPerformance BestWeek { get; set; }
+        public WeekPerformance WorstWeek { get; set; }
         public int TotalInjuries { get; set; } = 0;
         public int TotalBadDays { get; set; } = 0;
         public int TotalAveragePoints { get; set; } = 0;
@@ -70,11 +70,17 @@ namespace DataAccess.Services
             };
         }
 
-        public async Task<List<PlayerPerformanceDataModel>> GetActivePlayers()
+        public async Task<List<PlayerPerformanceDataModel>> GetActivePlayerPerformances()
         {
             var playerIDs = GetActivePlayerIDs();
             var players = await GetPlayerPerformances(playerIDs, CurrentWeek);
             return players.ToList();
+        }
+
+        public async Task<List<CurrentPlayerModel>> GetActivePlayers()
+        {
+            var playerIDs = GetActivePlayerIDs();
+            return await _context.CurrentPlayer.Where(x => playerIDs.Contains(x.PlayerID)).ToListAsync();
         }
 
         public async Task<PlayerPerformanceDataModel> GetPlayerPerformance(int playerID, int week)

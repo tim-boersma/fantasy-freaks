@@ -8,8 +8,8 @@ namespace DataAccess.Interfaces
     public interface ITeamService
     {
         int CurrentWeek { get; set; }
-        double BestWeek { get; set; }
-        double WorstWeek { get; set; }
+        WeekPerformance BestWeek { get; set; }
+        WeekPerformance WorstWeek { get; set; }
         int TotalInjuries { get; set; }
         int TotalBadDays { get; set; }
         int TotalAveragePoints { get; set; }
@@ -26,15 +26,14 @@ namespace DataAccess.Interfaces
         List<DefenseDataModel> EnemyTeams { get; set; }
         List<WeekPerformance> PlayerPerformance { get; set; }
 
-        //speculation
         int TotalPoints { get; set; }
         void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer);
         void NextWeek();
-
         Task WaitSomeTime(Button button);
         DefenseDataModel GetCurrentOpponent();
-
-        Task<List<PlayerPerformanceDataModel>> GetActivePlayers();
+        IEnumerable<int> GetActivePlayerIDs();
+        Task<List<CurrentPlayerModel>> GetActivePlayers();
+        Task<List<PlayerPerformanceDataModel>> GetActivePlayerPerformances();
         bool SetPosition(string position, CurrentPlayerModel player);
         bool AllPlayersInitialized();
     }
