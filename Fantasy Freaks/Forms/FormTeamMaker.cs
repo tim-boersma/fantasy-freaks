@@ -21,39 +21,32 @@ namespace Fantasy_Freaks {
         private readonly ICurrentPlayerService _currentPlayer;
         private IEnumerable<CurrentPlayerModel> allPlayers;
         private bool selecting = false;
+        private Dictionary<Button, Label> labelDict;
         public FormTeamMaker(ITeamService teamService, IDefenseService defenseService, ICurrentPlayerService currentPlayer) {
             InitializeComponent();
             _team = teamService;
             _defense = defenseService;
             _currentPlayer = currentPlayer;
-
-            _team.WaitSomeTime(btnRandom, 1250);
-            foreach(var button in this.Controls.OfType<Button>())
+            labelDict = new Dictionary<Button, Label>()
             {
-                if(button.Name != "btnRandom")
-                _team.WaitSomeTime(button, 300);
+                { btnQB, labelQB}, { btnRB1, labelRB1}, { btnRB2, labelRB2}, {btnWR1, labelWR1}, { btnWR2, labelWR2},
+                { btnTE, labelTE}, { btnFL, labelFlex}, { btnBe1, labelBe1}, { btnBe2, labelBe2}, { btnBe3, labelBe3},
+                { btnBe4, labelBe4}, { btnBe5, labelBe5}, { btnBe6, labelBe6}, { btnBe7, labelBe7}, { btnBe8, labelBe8},
+            };
+
+            foreach (var button in this.Controls.OfType<Button>())
+            {
+                _team.WaitSomeTime(button, 1500);
             }
-        }
+         }
 
         private async void FormTeamMaker_Load(object sender, EventArgs e) {
             FFWindow.instance.setFont(this);
 
-            //TODO: turn this into a foreach loop and use a dictionary to connect the buttons to labels
-            TransparentLabelonButton(labelQB, btnQB);
-            TransparentLabelonButton(labelRB1, btnRB1);
-            TransparentLabelonButton(labelRB2, btnRB2);
-            TransparentLabelonButton(labelWR1, btnWR1);
-            TransparentLabelonButton(labelWR2, btnWR2);
-            TransparentLabelonButton(labelTE, btnTE);
-            TransparentLabelonButton(labelFlex, btnFL);
-            TransparentLabelonButton(labelBe1, btnBe1);
-            TransparentLabelonButton(labelBe2, btnBe2);
-            TransparentLabelonButton(labelBe3, btnBe3);
-            TransparentLabelonButton(labelBe4, btnBe4);
-            TransparentLabelonButton(labelBe5, btnBe5);
-            TransparentLabelonButton(labelBe6, btnBe6);
-            TransparentLabelonButton(labelBe7, btnBe7);
-            TransparentLabelonButton(labelBe8, btnBe8);
+            foreach(var keyValuePair in labelDict)
+            {
+                TransparentLabelOnButton(keyValuePair.Value, keyValuePair.Key);
+            }
 
             allPlayers = await _currentPlayer.GetAllPlayers();
         }
@@ -187,14 +180,14 @@ namespace Fantasy_Freaks {
                 return null;
             }
             CurrentPlayerModel selectedPlayer;
-            var activePlayers = _team.GetActivePlayerIDs();
+            var allPlayers = _team.GetAllPlayerIDs();
             var playerPool = players.ToList();
             Random rand = new Random(Guid.NewGuid().GetHashCode());
             do
             {
                 var playerNum = rand.Next(0, playerPool.Count);
                 selectedPlayer = playerPool[playerNum];
-            } while ((selectedPlayer.PlayerPosition != playerType || activePlayers.Contains(selectedPlayer.PlayerID))
+            } while ((selectedPlayer.PlayerPosition != playerType || allPlayers.Contains(selectedPlayer.PlayerID))
                    && playerType != PlayerTypes.Flex);
 
             return selectedPlayer;
@@ -204,6 +197,7 @@ namespace Fantasy_Freaks {
         {
             List<CurrentPlayerModel> selectedPlayers = new List<CurrentPlayerModel>();
             var playerPool = players.ToList();
+            var allPlayers = _team.GetAllPlayerIDs();
             CurrentPlayerModel selectedPlayer;
             Random rand = new Random(Guid.NewGuid().GetHashCode());
             for(int i = 0; i < 8; i++)
@@ -212,12 +206,12 @@ namespace Fantasy_Freaks {
                 {
                     var playerNum = rand.Next(0, playerPool.Count);
                     selectedPlayer = playerPool[playerNum];
-                } while (selectedPlayers.Contains(selectedPlayer));
+                } while (selectedPlayers.Contains(selectedPlayer) || allPlayers.Contains(selectedPlayer.PlayerID));
                 selectedPlayers.Add(selectedPlayer);
             }
             return selectedPlayers;
         }
-        private void TransparentLabelonButton(Label l, Button b) {
+        private void TransparentLabelOnButton(Label l, Button b) {
             l.BackColor = Color.Transparent;
             l.Location = b.PointToClient(l.Parent.PointToScreen(l.Location));
             l.Parent = b;

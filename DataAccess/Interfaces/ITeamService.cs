@@ -32,6 +32,7 @@ namespace DataAccess.Interfaces
         Task WaitSomeTime(Button button, int time);
         DefenseDataModel GetCurrentOpponent();
         IEnumerable<int> GetActivePlayerIDs();
+        IEnumerable<int> GetAllPlayerIDs();
         Task<List<CurrentPlayerModel>> GetActivePlayers();
         Task<List<PlayerPerformanceDataModel>> GetActivePlayerPerformances();
         bool SetPosition(string position, CurrentPlayerModel player);

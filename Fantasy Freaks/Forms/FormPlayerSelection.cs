@@ -30,8 +30,6 @@ namespace Fantasy_Freaks {
             dgvPlayers.DefaultCellStyle.Font = FFWindow.instance.getFont(dgvPlayers);
             dgvPlayers.RowsDefaultCellStyle.Font = FFWindow.instance.getFont(dgvPlayers);
 
-            // TODO: This line of code loads data into the 'fantasyFreaksDataSet.NewSeasonPlayer' table. You can move, or remove it, as needed.
-            //this.newSeasonPlayerTableAdapter.Fill(this.fantasyFreaksDataSet.NewSeasonPlayer);
             players = await _currentPlayer.GetSelectedPlayers(_playerSelection);
 
             dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

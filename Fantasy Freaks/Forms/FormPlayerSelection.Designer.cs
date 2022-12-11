@@ -175,9 +175,8 @@
             this.lblSelection.Location = new System.Drawing.Point(3, 14);
             this.lblSelection.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSelection.Name = "lblSelection";
-            this.lblSelection.Size = new System.Drawing.Size(182, 24);
+            this.lblSelection.Size = new System.Drawing.Size(0, 24);
             this.lblSelection.TabIndex = 2;
-            this.lblSelection.Text = "Select Your Player";
             // 
             // line
             // 

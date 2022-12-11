@@ -21,6 +21,8 @@ namespace Fantasy_Freaks {
         private CurrentPlayerModel initialPlayer;
         private Dictionary<string, Label> benchLabel;
         private List<int> activePlayers;
+        private Dictionary<Button, Label> buttonLabelPairs;
+
         public FormChangeRoster(ITeamService teamService, IDefenseService defenseService)
         {
             InitializeComponent();
@@ -41,6 +43,13 @@ namespace Fantasy_Freaks {
                 { "btnBe6", labelBtnBe6},
                 { "btnBe7", labelBtnBe7},
                 { "btnBe8", labelBtnBe8}
+            };
+
+            buttonLabelPairs = new Dictionary<Button, Label>()
+            {
+                { btnQB, labelBtnQB}, { btnRB1, labelBtnRB1}, { btnRB2, labelBtnRB2}, {btnWR1, labelBtnWR1}, { btnWR2, labelBtnWR2},
+                { btnTE, labelBtnTE}, { btnFlex, labelBtnFlex}, { btnBe1, labelBtnBe1}, { btnBe2, labelBtnBe2}, { btnBe3, labelBtnBe3},
+                { btnBe4, labelBtnBe4}, { btnBe5, labelBtnBe5}, { btnBe6, labelBtnBe6}, { btnBe7, labelBtnBe7}, { btnBe8, labelBtnBe8},
             };
         }
 
@@ -192,7 +201,8 @@ namespace Fantasy_Freaks {
                 MessageBox.Show("You can't select two active players");
                 return false;
             }
-            else if (initialPlayer.PlayerPosition != player.PlayerPosition)
+            else if (initialPlayer.PlayerPosition != player.PlayerPosition 
+                 && initialPlayer.PlayerID != _teamService.Flex.PlayerID && player.PlayerID != _teamService.Flex.PlayerID)
             {
                 MessageBox.Show("Players must share same position");
                 return false;
@@ -205,21 +215,10 @@ namespace Fantasy_Freaks {
         {
             FFWindow.instance.setFont(this);
             RenderPlayerNames();
-            TransparentLabelonButton(labelBtnQB, btnQB);
-            TransparentLabelonButton(labelBtnRB1, btnRB1);
-            TransparentLabelonButton(labelBtnRB2, btnRB2);
-            TransparentLabelonButton(labelBtnWR1, btnWR1);
-            TransparentLabelonButton(labelBtnWR2, btnWR2);
-            TransparentLabelonButton(labelBtnTE, btnTE);
-            TransparentLabelonButton(labelBtnFlex, btnFlex);
-            TransparentLabelonButton(labelBtnBe1, btnBe1);
-            TransparentLabelonButton(labelBtnBe2, btnBe2);
-            TransparentLabelonButton(labelBtnBe3, btnBe3);
-            TransparentLabelonButton(labelBtnBe4, btnBe4);
-            TransparentLabelonButton(labelBtnBe5, btnBe5);
-            TransparentLabelonButton(labelBtnBe6, btnBe6);
-            TransparentLabelonButton(labelBtnBe7, btnBe7);
-            TransparentLabelonButton(labelBtnBe8, btnBe8);
+            foreach (var keyValuePair in buttonLabelPairs)
+            {
+                TransparentLabelOnButton(keyValuePair.Value, keyValuePair.Key);
+            }
         }
 
         private void RenderPlayerNames()
@@ -245,7 +244,7 @@ namespace Fantasy_Freaks {
                 }
             }
         }
-        private void TransparentLabelonButton(Label l, Button b)
+        private void TransparentLabelOnButton(Label l, Button b)
         {
             l.BackColor = Color.Transparent;
             l.Location = b.PointToClient(l.Parent.PointToScreen(l.Location));

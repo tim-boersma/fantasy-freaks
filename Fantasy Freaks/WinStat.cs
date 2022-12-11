@@ -43,7 +43,8 @@ namespace Fantasy_Freaks {
         }
 
         public static int CalculateScoreFromTotalYards(int TotalYards) {
-            TotalYards -= 4301;//lowest score
+
+            TotalYards -= 4451;//lowest score
             int score = 0;
             while (TotalYards >= 0) {
                 TotalYards = TotalYards - 150;//iteration = gap
@@ -73,6 +74,5 @@ namespace Fantasy_Freaks {
             }
             return totalScore;
         }
-
     }
 }

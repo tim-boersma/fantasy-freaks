@@ -78,6 +78,15 @@ namespace DataAccess.Services
             return activePlayerIDs;
         }
 
+        public IEnumerable<int> GetAllPlayerIDs()
+        {
+            List<int> activePlayerIDs = new List<int>();
+            activePlayerIDs.AddRange(GetActivePlayerIDs());
+            var benchedIDs = BenchedPlayers.Select(x => x.PlayerID);
+            activePlayerIDs.AddRange(benchedIDs);
+            return activePlayerIDs;
+        }
+
         public async Task<List<PlayerPerformanceDataModel>> GetActivePlayerPerformances()
         {
             var playerIDs = GetActivePlayerIDs();
