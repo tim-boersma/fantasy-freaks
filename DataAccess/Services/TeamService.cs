@@ -2,10 +2,8 @@
 using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using static DataAccess.GlobalConstants;
 using System.Windows.Forms;
 
@@ -27,7 +25,6 @@ namespace DataAccess.Services
         public int TotalAveragePoints { get; set; } = 0;
         public int TotalGoodDays { get; set; } = 0;
         public int TotalMiraclePlays { get; set; } = 0;
-        public int TotalPoints { get; set; } = 0;
         public CurrentPlayerModel Quarterback { get; set; }
         public CurrentPlayerModel WideReceiverOne { get; set; }
         public CurrentPlayerModel WideReceiverTwo { get; set; }
@@ -37,12 +34,12 @@ namespace DataAccess.Services
         public CurrentPlayerModel Flex { get; set; }
         public List<CurrentPlayerModel> BenchedPlayers { get; set; } = new List<CurrentPlayerModel>();
         public List<DefenseDataModel> EnemyTeams { get; set; }
-        public List<WeekPerformance> PlayerPerformance { get; set; } = new List<WeekPerformance>();
+        public List<WeekPerformance> UserPerformance { get; set; } = new List<WeekPerformance>();
 
-        public async Task WaitSomeTime(Button button)
+        public async Task WaitSomeTime(Button button, int time)
         {
             button.Enabled = false;
-            await Task.Delay(1000);
+            await Task.Delay(time);
             button.Enabled = true;
         }
 
@@ -57,6 +54,7 @@ namespace DataAccess.Services
                   Flex != null &&
                   BenchedPlayers.Count == 8;
         }
+
         public IEnumerable<int> GetActivePlayerIDs()
         {
             List<int> activePlayerIDs = new List<int>();
@@ -75,6 +73,15 @@ namespace DataAccess.Services
             if (Flex != null)
                 activePlayerIDs.Add(Flex.PlayerID);
 
+            return activePlayerIDs;
+        }
+
+        public IEnumerable<int> GetAllPlayerIDs()
+        {
+            List<int> activePlayerIDs = new List<int>();
+            activePlayerIDs.AddRange(GetActivePlayerIDs());
+            var benchedIDs = BenchedPlayers.Select(x => x.PlayerID);
+            activePlayerIDs.AddRange(benchedIDs);
             return activePlayerIDs;
         }
 
@@ -123,7 +130,7 @@ namespace DataAccess.Services
                         return true;
                     }
                     return false;
-                case PlayerTypes.WideReceiver:
+                case PlayerTypes.WideReceiverOne:
                     if (player.PlayerPosition == PlayerTypes.WideReceiver)
                     {
                         WideReceiverOne = player;
@@ -137,7 +144,7 @@ namespace DataAccess.Services
                         return true;
                     }
                     return false;
-                case PlayerTypes.RunningBack:
+                case PlayerTypes.RunningBackOne:
                     if (player.PlayerPosition == PlayerTypes.RunningBack)
                     {
                         RunningBackOne = player;
@@ -167,12 +174,6 @@ namespace DataAccess.Services
                 default:
                     return false;
             }
-        }
-
-        public TeamService()
-        {
-            BenchedPlayers = new List<CurrentPlayerModel>();
-            TotalPoints = 0;
         }
 
         public void NextWeek()

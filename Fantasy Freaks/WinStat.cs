@@ -1,9 +1,6 @@
 ﻿using DataAccess.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Fantasy_Freaks {
     public class WinStat {
@@ -43,7 +40,8 @@ namespace Fantasy_Freaks {
         }
 
         public static int CalculateScoreFromTotalYards(int TotalYards) {
-            TotalYards -= 4301;//lowest score
+
+            TotalYards -= 4451;//lowest score
             int score = 0;
             while (TotalYards >= 0) {
                 TotalYards = TotalYards - 150;//iteration = gap
@@ -58,21 +56,19 @@ namespace Fantasy_Freaks {
             return (int)((defTeam.Interceptions * 3) + (defTeam.ForcedFumbles * 2) + CalculateScoreFromTotalPoints((int)defTeam.PointsAllowed) + CalculateScoreFromTotalYards((int)defTeam.TotalYardsAllowed));
         }
 
-
         public static double CalculateOffensiveScore(IEnumerable<PlayerPerformanceDataModel> players) 
         {
             double totalScore = 0;
             foreach (var player in players)
             {
-                var playerScore = (player.PassingTouchdowns * 4) + (player.RushingTouchdowns * 6) +
-                (player.RecievingTouchdowns * 6) + (player.Receptions * 1) + (player.RushingYards * .1) +
-                (player.RecievingYards * .1) + (player.PassingYards * .04) +
+                var playerScore = (player.PassingTouchdowns * 5) + (player.RushingTouchdowns * 7) +
+                (player.RecievingTouchdowns * 7) + (player.Receptions * 1) + (player.RushingYards * .125) +
+                (player.RecievingYards * .125) + (player.PassingYards * .06) +
                 (player.Interceptions * -3)
                 + (player.Fumbles * -3); 
                 totalScore += playerScore;
             }
             return totalScore;
         }
-
     }
 }

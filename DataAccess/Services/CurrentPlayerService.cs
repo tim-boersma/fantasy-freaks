@@ -1,9 +1,7 @@
 ﻿using DataAccess.Interfaces;
 using DataAccess.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using static DataAccess.GlobalConstants;
@@ -41,11 +39,15 @@ namespace DataAccess.Services
                     return await GetAllQuarterbacks();
                 case PlayerTypes.RunningBack:
                     return await GetAllRunningbacks();
+                case PlayerTypes.RunningBackOne:
+                    return await GetAllRunningbacks();
                 case PlayerTypes.RunningBackTwo:
                     return await GetAllRunningbacks();
                 case PlayerTypes.TightEnd:
                     return await GetAllTightEnds();
                 case PlayerTypes.WideReceiver:
+                    return await GetAllWideReceivers();
+                case PlayerTypes.WideReceiverOne:
                     return await GetAllWideReceivers();
                 case PlayerTypes.WideReceiverTwo:
                     return await GetAllWideReceivers();

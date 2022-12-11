@@ -284,7 +284,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="teamDictionary.cs" />
+    <Compile Include="Resources\ResourceDictionaries.cs" />
     <Compile Include="Forms\FFWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,10 +351,8 @@
     <Compile Include="Forms\FormWeekResults.Designer.cs">
       <DependentUpon>FormWeekResults.cs</DependentUpon>
     </Compile>
-    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GameResult.cs" />
     <Compile Include="WinStat.cs" />
     <EmbeddedResource Include="Forms\FFWindow.resx">
       <DependentUpon>FFWindow.cs</DependentUpon>

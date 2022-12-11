@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DataAccess
 {
@@ -31,6 +27,20 @@ namespace DataAccess
                 Bench,
                 WideReceiverOne,
                 RunningBackOne
+            };
+
+            public static Dictionary<string, string> fullPlayerTypeNames = new Dictionary<string, string>()
+            {
+                {Quarterback, "Quarterback" },
+                {RunningBack, "Running Back" },
+                {RunningBackOne, "Running Back" },
+                {RunningBackTwo, "Running Back" },
+                {WideReceiver, "Wide Receiver" },
+                {WideReceiverOne, "Wide Receiver" },
+                {WideReceiverTwo, "Wide Receiver"  },
+                {TightEnd, "Tight End"  },
+                {Flex, "Flex Player" },
+                {Bench, "Bench" },
             };
         }
     }

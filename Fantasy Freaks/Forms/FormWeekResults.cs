@@ -2,13 +2,7 @@
 using DataAccess.Interfaces;
 using DataAccess.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
@@ -20,10 +14,9 @@ namespace Fantasy_Freaks {
             InitializeComponent();
             _teamService = teamService;
             _defenseService = defenseService;
-            _teamService.WaitSomeTime(buttonChangeRoster);
-            _teamService.WaitSomeTime(btnNext);
+            _teamService.WaitSomeTime(buttonChangeRoster, 500);
+            _teamService.WaitSomeTime(btnNext, 500);
         }
-
 
         private void buttonChangeRoster_Click(object sender, EventArgs e)
         {
@@ -39,11 +32,11 @@ namespace Fantasy_Freaks {
             FFWindow.instance.setFont(this);
             TransparentLabelonBanner(labelFFscore, FFbanner);
             TransparentLabelonBanner(labelOPPscore, OPPbanner);
+
             var enemyTeam = _teamService.GetCurrentOpponent();
-            var teamBanner = teamDictionary.bannerSeason[enemyTeam.TeamName];
+            var teamBanner = ResourceDictionaries.bannerSeason[enemyTeam.TeamName];
             OPPbanner.BackgroundImage = teamBanner;
 
-            FFWindow.instance.setFont(this);
             title.Text = "WEEK " + _teamService.CurrentWeek + " RESULT";
             OPPlabel.Text = enemyTeam.TeamName;
 
@@ -59,10 +52,9 @@ namespace Fantasy_Freaks {
             int defFinalScore = (int)(defScore * oppModifier);
 
             var performance = new WeekPerformance(offFinalScore, defFinalScore, enemyTeam);
-            _teamService.PlayerPerformance.Insert(_teamService.CurrentWeek - 1, performance);
+            _teamService.UserPerformance.Insert(_teamService.CurrentWeek - 1, performance);
             labelOPPscore.Text = defFinalScore.ToString();
             labelFFscore.Text = offFinalScore.ToString();
-
 
             if (_teamService.BestWeek == null || offFinalScore > _teamService.BestWeek.UserScore)
                 _teamService.BestWeek = performance;

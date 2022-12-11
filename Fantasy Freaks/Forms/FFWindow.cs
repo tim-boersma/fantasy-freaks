@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
-using System.IO;
-using System.Diagnostics;
-using System.Reflection;
 using DataAccess.Models;
 using DataAccess.Interfaces;
 using System.Runtime.InteropServices;
@@ -29,20 +20,20 @@ namespace Fantasy_Freaks {
         private readonly IDefenseService _defenseService;
         private readonly ICurrentPlayerService _currentPlayerService;
 
-        public FFWindow(ITeamService teamService, IDefenseService defenseService, ICurrentPlayerService currentPlayerService = null)
+        public FFWindow(ITeamService teamService, IDefenseService defenseService, ICurrentPlayerService currentPlayerService)
         {
             InitializeComponent();
             instance = this;
             _teamService = teamService;
             _defenseService = defenseService;
             _currentPlayerService = currentPlayerService;
-            //activeForm = this;
         }
 
         private void FFWindow_Load(object sender, EventArgs e) {
             loadFont();
             changePanel(new FormHomeScreen(_teamService, _defenseService, _currentPlayerService));
         }
+
         public void changePanel(Form newForm) {
             if (activeForm != null) {
                 activeForm.Close();
@@ -58,6 +49,7 @@ namespace Fantasy_Freaks {
             newForm.BringToFront();
             newForm.Show();
         }
+
         private void loadFont() {
             pfc = new PrivateFontCollection();
             int fontLength = Properties.Resources.SEGUIVAR.Length;
@@ -66,18 +58,15 @@ namespace Fantasy_Freaks {
             Marshal.Copy(fontdata, 0, data, fontLength);
             pfc.AddMemoryFont(data, fontLength);
         }
+
         public Font getFont(Control c) {
             return new Font(pfc.Families[0], c.Font.Size, FontStyle.Bold);
         }
+
         public void setFont(Form form) {
             foreach(Control c in form.Controls) {
                 c.Font = getFont(c);
             }
-        }
-
-        private void mainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

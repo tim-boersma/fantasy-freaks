@@ -1,13 +1,9 @@
 ﻿using DataAccess.Interfaces;
-using DataAccess.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
@@ -22,11 +18,11 @@ namespace Fantasy_Freaks {
     public partial class FormSeasonOpponents : Form {
         private List<WeekPanel> seasonWeek = new List<WeekPanel>();
         private readonly ITeamService _team;
+
         public FormSeasonOpponents(ITeamService teamService) {
             _team = teamService;
             InitializeComponent();
         }
-
 
         private void FormSeasonOpponents_Load(object sender, EventArgs e) {
             for (int i = 0; i < 17; i++) {
@@ -35,20 +31,33 @@ namespace Fantasy_Freaks {
             }
             this.Size = new Size(this.Size.Width, this.Size.Height + 100);
             FFWindow.instance.setFont(this);
+            if(_team.CurrentWeek <= 17)
+                VerticalScroll.Value = scroll(_team.CurrentWeek);
+        }
+
+        private int scroll(int week)
+        {
+            int num = 9;
+            num = num + ((week - 1) * 110);
+            return num;
         }
 
         private void WeekGenerator(int weekNum) {
             var enemyTeam = _team.EnemyTeams[weekNum];
-            var teamBanner = teamDictionary.bannerSeason[enemyTeam.TeamName];
-            Color colorTeam = teamDictionary.labelSeason[enemyTeam.TeamName];
-            double offScore = _team.PlayerPerformance.ElementAtOrDefault(weekNum) != null ? _team.PlayerPerformance[weekNum].UserScore : 0;
-            double defScore = _team.PlayerPerformance.ElementAtOrDefault(weekNum) != null ? _team.PlayerPerformance[weekNum].OppScore : 0;
-
+            var teamBanner = ResourceDictionaries.bannerSeason[enemyTeam.TeamName];
+            Color colorTeam = ResourceDictionaries.labelSeason[enemyTeam.TeamName];
+            double offScore = _team.UserPerformance.ElementAtOrDefault(weekNum) != null ? _team.UserPerformance[weekNum].UserScore : 0;
+            double defScore = _team.UserPerformance.ElementAtOrDefault(weekNum) != null ? _team.UserPerformance[weekNum].OppScore : 0;
 
             WeekPanel week = new WeekPanel();
             GenerateBanner(weekNum, offScore, 12, 280, Properties.Resources.FF, Color.FromArgb(0, 163, 255), true);
             GenerateBanner(weekNum, defScore, 537, 547, teamBanner, colorTeam,false);
 
+            CreateVersusBox(week, weekNum);
+        }
+
+        private void CreateVersusBox(WeekPanel week, int weekNum)
+        {
             week.weekInfo = new Button();
             week.weekInfo.Location = new Point(396, 12 + weekNum * 110);
             week.weekInfo.Size = new Size(135, 99);
@@ -58,14 +67,21 @@ namespace Fantasy_Freaks {
             week.weekInfo.FlatAppearance.BorderSize = 4;
             week.weekInfo.Text = "WEEK " + (weekNum + 1) + "\nVS";
 
-            if (weekNum + 1 == _team.CurrentWeek) {
+            if (weekNum + 1 == _team.CurrentWeek)
+            {
                 week.weekInfo.BackColor = Color.Gold;
-            } else if(_team.PlayerPerformance.ElementAtOrDefault(weekNum) != null && !_team.PlayerPerformance[weekNum].UserWon) {//loss, ffScore < defScore
+            }
+            else if (_team.UserPerformance.ElementAtOrDefault(weekNum) != null && !_team.UserPerformance[weekNum].UserWon)
+            {//loss, ffScore < defScore
                 week.weekInfo.BackColor = Color.Firebrick;
-            } else if (_team.PlayerPerformance.ElementAtOrDefault(weekNum) != null && _team.PlayerPerformance[weekNum].UserWon) {
+            }
+            else if (_team.UserPerformance.ElementAtOrDefault(weekNum) != null && _team.UserPerformance[weekNum].UserWon)
+            {
                 week.weekInfo.BackColor = Color.ForestGreen;
-            } else {
-                week.weekInfo.BackColor = Color.Black;
+            }
+            else
+            {
+                week.weekInfo.BackColor = Color.DimGray;
             }
 
             week.weekInfo.FlatAppearance.MouseOverBackColor = week.weekInfo.BackColor;
@@ -74,11 +90,6 @@ namespace Fantasy_Freaks {
             Controls.Add(week.weekInfo);
             seasonWeek.Add(week);
         }
-        //gap = 110
-        //ffBanner x,y = 12, 12
-        //ffScore x,y = 280, 30
-        //defBanner x,y = 537,12
-        //defScore x,y = 547, 30
 
         private void GenerateBanner(int weekNum, double score, int xBanner, int xScore, Image bImg, Color colorTeam, bool ffteam) {
             var banner = new PictureBox();
@@ -107,5 +118,4 @@ namespace Fantasy_Freaks {
             Controls.Add(banner);
         }
     }
-
 }

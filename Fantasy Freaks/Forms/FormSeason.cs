@@ -1,15 +1,7 @@
 ﻿using DataAccess.Interfaces;
 using DataAccess.Models;
-using DataAccess.Services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
@@ -20,7 +12,7 @@ namespace Fantasy_Freaks {
             InitializeComponent();
             _teamService = teamService;
             _defense = defenseService;
-            _teamService.WaitSomeTime(btnWeekResults);
+            _teamService.WaitSomeTime(btnWeekResults, 500);
         }
 
         private void btnWeekResults_Click(object sender, EventArgs e)
@@ -46,7 +38,6 @@ namespace Fantasy_Freaks {
             }
 
             LoadPanel(new FormSeasonOpponents(_teamService));
-
         }
 
         private void LoadPanel(Form newForm) {

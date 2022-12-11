@@ -45,6 +45,7 @@
             this.line = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBoxBenchSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentPlayerModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.newSeasonPlayerBindingSource)).BeginInit();
@@ -204,12 +205,22 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
+            // textBoxBenchSearch
+            // 
+            this.textBoxBenchSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBenchSearch.Location = new System.Drawing.Point(7, 63);
+            this.textBoxBenchSearch.Name = "textBoxBenchSearch";
+            this.textBoxBenchSearch.Size = new System.Drawing.Size(352, 26);
+            this.textBoxBenchSearch.TabIndex = 0;
+            this.textBoxBenchSearch.TextChanged += new System.EventHandler(this.textBoxBenchSearch_TextChanged);
+            // 
             // FormBenchSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(602, 672);
+            this.Controls.Add(this.textBoxBenchSearch);
             this.Controls.Add(this.line);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblSelection);
@@ -257,5 +268,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn playerPositionDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox textBoxBenchSearch;
     }
 }

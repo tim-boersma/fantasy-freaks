@@ -8,7 +8,7 @@ using static DataAccess.GlobalConstants;
 
 namespace Fantasy_Freaks
 {
-    class teamDictionary
+    class ResourceDictionaries
     {
         public static Dictionary<string, Bitmap> bannerSeason = new Dictionary<string, Bitmap>()
         {
@@ -63,7 +63,7 @@ namespace Fantasy_Freaks
             {"Houston Texans", Color.FromArgb(3,31,47) },
             {"Indianapolis Colts", Color.FromArgb(1,51,105) },
             {"Jacksonville Jaguars", Color.FromArgb(0,103,121) },
-            {"Kansas City Chiefs", Color.FromArgb(227,24,55) }, //CHECK COLOR IS RIGHT
+            {"Kansas City Chiefs", Color.FromArgb(227,24,55) }, 
             {"Oakland Raiders", Color.FromArgb(169,169,169) },
             {"Los Angeles Chargers", Color.FromArgb(0,128,198) },
             {"Los Angeles Rams", Color.FromArgb(0,53,148) },
@@ -81,17 +81,5 @@ namespace Fantasy_Freaks
             {"Tennessee Titans", Color.FromArgb(0,41,91) },
             {"Washington Redskins", Color.FromArgb(90,20,20) }
         }; //takes in location of label in season then sets it equal to that rgb value
-
-        public static Dictionary<string, string> fullPlayerTypeNames = new Dictionary<string, string>()
-        {
-            {PlayerTypes.Quarterback, "Quarterback" },
-            {PlayerTypes.RunningBack, "Running Back" },
-            {PlayerTypes.RunningBackTwo, "Running Back" },
-            {PlayerTypes.WideReceiver, "Wide Receiver" },
-            {PlayerTypes.WideReceiverTwo, "Wide Receiver"  },
-            {PlayerTypes.TightEnd, "Tight End"  },
-            {PlayerTypes.Flex, "Flex Player" },
-            {PlayerTypes.Bench, "Bench" },
-        };
     }
 }

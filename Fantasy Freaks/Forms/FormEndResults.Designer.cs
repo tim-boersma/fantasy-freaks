@@ -24,11 +24,11 @@
         /// </summary>
         private void InitializeComponent() {
             this.labelFF = new System.Windows.Forms.Label();
-            this.labelInjury = new System.Windows.Forms.Label();
-            this.labelBadDay = new System.Windows.Forms.Label();
-            this.labelAverage = new System.Windows.Forms.Label();
-            this.labelGoodDay = new System.Windows.Forms.Label();
-            this.labelMiraclePlay = new System.Windows.Forms.Label();
+            this.labelDayInjury = new System.Windows.Forms.Label();
+            this.labelDayBad = new System.Windows.Forms.Label();
+            this.labelDayAverage = new System.Windows.Forms.Label();
+            this.labelDayGood = new System.Windows.Forms.Label();
+            this.labelDayMiracle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.line = new System.Windows.Forms.PictureBox();
             this.title = new System.Windows.Forms.Label();
@@ -70,71 +70,71 @@
             this.labelFF.TabIndex = 0;
             this.labelFF.Text = "FANTASY FREAKS";
             // 
-            // labelInjury
+            // labelDayInjury
             // 
-            this.labelInjury.BackColor = System.Drawing.Color.Transparent;
-            this.labelInjury.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelInjury.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelInjury.ForeColor = System.Drawing.Color.White;
-            this.labelInjury.Location = new System.Drawing.Point(154, 256);
-            this.labelInjury.Name = "labelInjury";
-            this.labelInjury.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelInjury.Size = new System.Drawing.Size(49, 36);
-            this.labelInjury.TabIndex = 1;
-            this.labelInjury.Text = "00";
-            this.labelInjury.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelDayInjury.BackColor = System.Drawing.Color.Transparent;
+            this.labelDayInjury.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelDayInjury.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDayInjury.ForeColor = System.Drawing.Color.White;
+            this.labelDayInjury.Location = new System.Drawing.Point(154, 256);
+            this.labelDayInjury.Name = "labelDayInjury";
+            this.labelDayInjury.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelDayInjury.Size = new System.Drawing.Size(49, 36);
+            this.labelDayInjury.TabIndex = 1;
+            this.labelDayInjury.Text = "00";
+            this.labelDayInjury.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelBadDay
+            // labelDayBad
             // 
-            this.labelBadDay.BackColor = System.Drawing.Color.Transparent;
-            this.labelBadDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBadDay.ForeColor = System.Drawing.Color.White;
-            this.labelBadDay.Location = new System.Drawing.Point(340, 256);
-            this.labelBadDay.Name = "labelBadDay";
-            this.labelBadDay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelBadDay.Size = new System.Drawing.Size(49, 36);
-            this.labelBadDay.TabIndex = 2;
-            this.labelBadDay.Text = "00";
-            this.labelBadDay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelDayBad.BackColor = System.Drawing.Color.Transparent;
+            this.labelDayBad.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDayBad.ForeColor = System.Drawing.Color.White;
+            this.labelDayBad.Location = new System.Drawing.Point(340, 256);
+            this.labelDayBad.Name = "labelDayBad";
+            this.labelDayBad.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelDayBad.Size = new System.Drawing.Size(49, 36);
+            this.labelDayBad.TabIndex = 2;
+            this.labelDayBad.Text = "00";
+            this.labelDayBad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelAverage
+            // labelDayAverage
             // 
-            this.labelAverage.BackColor = System.Drawing.Color.Transparent;
-            this.labelAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAverage.ForeColor = System.Drawing.Color.White;
-            this.labelAverage.Location = new System.Drawing.Point(530, 256);
-            this.labelAverage.Name = "labelAverage";
-            this.labelAverage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelAverage.Size = new System.Drawing.Size(49, 36);
-            this.labelAverage.TabIndex = 3;
-            this.labelAverage.Text = "00";
-            this.labelAverage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelDayAverage.BackColor = System.Drawing.Color.Transparent;
+            this.labelDayAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDayAverage.ForeColor = System.Drawing.Color.White;
+            this.labelDayAverage.Location = new System.Drawing.Point(530, 256);
+            this.labelDayAverage.Name = "labelDayAverage";
+            this.labelDayAverage.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelDayAverage.Size = new System.Drawing.Size(49, 36);
+            this.labelDayAverage.TabIndex = 3;
+            this.labelDayAverage.Text = "00";
+            this.labelDayAverage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelGoodDay
+            // labelDayGood
             // 
-            this.labelGoodDay.BackColor = System.Drawing.Color.Transparent;
-            this.labelGoodDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGoodDay.ForeColor = System.Drawing.Color.White;
-            this.labelGoodDay.Location = new System.Drawing.Point(716, 256);
-            this.labelGoodDay.Name = "labelGoodDay";
-            this.labelGoodDay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelGoodDay.Size = new System.Drawing.Size(49, 36);
-            this.labelGoodDay.TabIndex = 4;
-            this.labelGoodDay.Text = "00";
-            this.labelGoodDay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelDayGood.BackColor = System.Drawing.Color.Transparent;
+            this.labelDayGood.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDayGood.ForeColor = System.Drawing.Color.White;
+            this.labelDayGood.Location = new System.Drawing.Point(716, 256);
+            this.labelDayGood.Name = "labelDayGood";
+            this.labelDayGood.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelDayGood.Size = new System.Drawing.Size(49, 36);
+            this.labelDayGood.TabIndex = 4;
+            this.labelDayGood.Text = "00";
+            this.labelDayGood.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // labelMiraclePlay
+            // labelDayMiracle
             // 
-            this.labelMiraclePlay.BackColor = System.Drawing.Color.Transparent;
-            this.labelMiraclePlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMiraclePlay.ForeColor = System.Drawing.Color.White;
-            this.labelMiraclePlay.Location = new System.Drawing.Point(905, 256);
-            this.labelMiraclePlay.Name = "labelMiraclePlay";
-            this.labelMiraclePlay.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelMiraclePlay.Size = new System.Drawing.Size(49, 36);
-            this.labelMiraclePlay.TabIndex = 5;
-            this.labelMiraclePlay.Text = "00";
-            this.labelMiraclePlay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelDayMiracle.BackColor = System.Drawing.Color.Transparent;
+            this.labelDayMiracle.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDayMiracle.ForeColor = System.Drawing.Color.White;
+            this.labelDayMiracle.Location = new System.Drawing.Point(905, 256);
+            this.labelDayMiracle.Name = "labelDayMiracle";
+            this.labelDayMiracle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.labelDayMiracle.Size = new System.Drawing.Size(49, 36);
+            this.labelDayMiracle.TabIndex = 5;
+            this.labelDayMiracle.Text = "00";
+            this.labelDayMiracle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pictureBox1
             // 
@@ -396,11 +396,11 @@
             this.Controls.Add(this.bestOppBanner);
             this.Controls.Add(this.bestFFBanner);
             this.Controls.Add(this.labelBest);
-            this.Controls.Add(this.labelMiraclePlay);
-            this.Controls.Add(this.labelGoodDay);
-            this.Controls.Add(this.labelAverage);
-            this.Controls.Add(this.labelBadDay);
-            this.Controls.Add(this.labelInjury);
+            this.Controls.Add(this.labelDayMiracle);
+            this.Controls.Add(this.labelDayGood);
+            this.Controls.Add(this.labelDayAverage);
+            this.Controls.Add(this.labelDayBad);
+            this.Controls.Add(this.labelDayInjury);
             this.Controls.Add(this.pictureDayType);
             this.Controls.Add(this.FFBanner);
             this.Controls.Add(this.labelFF);
@@ -427,11 +427,11 @@
         #endregion
 
         private System.Windows.Forms.Label labelFF;
-        private System.Windows.Forms.Label labelInjury;
-        private System.Windows.Forms.Label labelBadDay;
-        private System.Windows.Forms.Label labelAverage;
-        private System.Windows.Forms.Label labelGoodDay;
-        private System.Windows.Forms.Label labelMiraclePlay;
+        private System.Windows.Forms.Label labelDayInjury;
+        private System.Windows.Forms.Label labelDayBad;
+        private System.Windows.Forms.Label labelDayAverage;
+        private System.Windows.Forms.Label labelDayGood;
+        private System.Windows.Forms.Label labelDayMiracle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox line;
         private System.Windows.Forms.Label title;

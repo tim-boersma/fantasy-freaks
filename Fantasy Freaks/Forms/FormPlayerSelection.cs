@@ -2,10 +2,7 @@
 using DataAccess.Models;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAccess;
-using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
 using static DataAccess.GlobalConstants;
 using System.Linq;
 
@@ -30,14 +27,12 @@ namespace Fantasy_Freaks {
             dgvPlayers.DefaultCellStyle.Font = FFWindow.instance.getFont(dgvPlayers);
             dgvPlayers.RowsDefaultCellStyle.Font = FFWindow.instance.getFont(dgvPlayers);
 
-            // TODO: This line of code loads data into the 'fantasyFreaksDataSet.NewSeasonPlayer' table. You can move, or remove it, as needed.
-            //this.newSeasonPlayerTableAdapter.Fill(this.fantasyFreaksDataSet.NewSeasonPlayer);
             players = await _currentPlayer.GetSelectedPlayers(_playerSelection);
 
             dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlayers.DataSource = players;
 
-            lblSelection.Text = "Select your " + teamDictionary.fullPlayerTypeNames[_playerSelection];
+            lblSelection.Text = "Select your " + PlayerTypes.fullPlayerTypeNames[_playerSelection];
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -52,6 +47,13 @@ namespace Fantasy_Freaks {
             {
                 MessageBox.Show("You already have that player on your team");
             }
+        }
+
+        private void textBoxPlayerSearch_TextChanged(object sender, EventArgs e)
+        {
+            string text = textBoxPlayerSearch.Text;
+            var searchResult = players.Where(x => x.PlayerName.ToLower().Contains(text.ToLower())).ToList();
+            dgvPlayers.DataSource = searchResult;
         }
     }
 }

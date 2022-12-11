@@ -52,7 +52,7 @@ namespace Fantasy_Freaks
             this.WhatIsFFDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WhatIsFFDesc.Location = new System.Drawing.Point(19, 161);
             this.WhatIsFFDesc.Name = "WhatIsFFDesc";
-            this.WhatIsFFDesc.Size = new System.Drawing.Size(953, 140);
+            this.WhatIsFFDesc.Size = new System.Drawing.Size(953, 171);
             this.WhatIsFFDesc.TabIndex = 0;
             this.WhatIsFFDesc.Text = resources.GetString("WhatIsFFDesc.Text");
             // 

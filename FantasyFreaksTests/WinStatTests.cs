@@ -1,56 +1,91 @@
+using DataAccess;
+using DataAccess.Models;
 using Fantasy_Freaks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+using static FantasyFreaksTests.TestingObjects;
 
-namespace WinStat_Unit_Test
+namespace FantasyFreaksTests
 {
     [TestClass]
     public class WinStatTests
     {
-        [TestMethod]
-        public void TestPoints()
+        static List<PlayerPerformanceDataModel> players = new List<PlayerPerformanceDataModel>();
+
+        [ClassInitialize]
+        public static void Setup(TestContext testContext)
         {
-            int result, PointsAllowed, actual;
-            int score;
-            for (int i = 100; i <= 1000; i += 50)
+            players = new List<PlayerPerformanceDataModel>()
             {
-                result = Fantasy_Freaks.WinStat.CalculateScoreFromTotalPoints(i);
-
-                PointsAllowed = i - 201;
-                score = 0;
-                while (PointsAllowed >= 0)
-                {
-                    PointsAllowed = PointsAllowed - 20;
-                    if (PointsAllowed >= 0)
-                        score++;
-                }
-                actual = 48 - 2 * score;
-
-                Assert.IsTrue(result == actual);
-            }
+                player1, player2, player3
+            };
         }
 
         [TestMethod]
-        public void TestYards()
+        [DataRow(250, 44)]
+        [DataRow(315, 38)]
+        [DataRow(350, 34)]
+        [DataRow(420, 28)]
+        [DataRow(490, 20)]
+        public void CalculateScoreFromTotalPoints_ReturnsCorrectValue(int totalPoints, int expected)
         {
-            int result, TotalYards, actual;
-            int score;
-            for (int i = 100; i <= 1000; i += 50)
+            Console.WriteLine(expected);
+            //Act
+            var result = WinStat.CalculateScoreFromTotalPoints(totalPoints);
+
+            //Assert
+            Assert.AreEqual(result, expected);
+        }
+
+        [TestMethod]
+        [DataRow(6000, 26)]
+        [DataRow(5555, 32)]
+        [DataRow(5222, 36)]
+        [DataRow(4444, 46)]
+        public void CalculateScoreFromTotalYards_ReturnsCorrectValue(int totalYards, int expected)
+        {
+            //Act
+            var result = WinStat.CalculateScoreFromTotalYards(totalYards);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        public void CalculateOffensiveScore_ReturnsCorrectScore()
+        {
+            //Arrange
+            var input = players;
+            var expected = 250.55;
+
+            //Act
+            var result = WinStat.CalculateOffensiveScore(input);
+
+            //Assert
+            Assert.AreEqual(expected, result);
+        }
+
+        [TestMethod]
+        [DataRow(20, 15, 444, 6222, 138)]
+        [DataRow(0, 0, 205, 5666,78)]
+        [DataRow(15, 20, 277, 5333, 163)]
+        [DataRow(45, 35, 399, 4666, 279)]
+        public void CalculateDefensiveScore_ReturnsCorrectScore(int interceptions, int forcedFumbles, int pointsAlloweed, int totalYardsAllowed, int expectedScore)
+        {
+            //Arrange
+            var team = new DefenseDataModel()
             {
-                result = Fantasy_Freaks.WinStat.CalculateScoreFromTotalYards(i);
+                Interceptions = interceptions,
+                ForcedFumbles = forcedFumbles,
+                PointsAllowed = pointsAlloweed,
+                TotalYardsAllowed = totalYardsAllowed
+            };
+            var expected = expectedScore;
 
-                TotalYards = i - 4301;
-                score = 0;
-                while (TotalYards >= 0)
-                {
-                    TotalYards = TotalYards - 150;
-                    if (TotalYards >= 0)
-                        score++;
-                }
-                actual = 46 - 2 * score;
+            //Act
+            var result = WinStat.CalculateDefensiveScore(team);
 
-                Assert.IsTrue(result == actual);
-            }
+            //Assert
+            Assert.AreEqual(expected, result);
         }
     }
 }

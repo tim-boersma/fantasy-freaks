@@ -1,14 +1,9 @@
-﻿using DataAccess;
-using DataAccess.Interfaces;
-using DataAccess.Services;
+﻿using DataAccess.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
@@ -16,42 +11,44 @@ namespace Fantasy_Freaks {
 
     public partial class FormEndResults : Form {
         private readonly ITeamService _teamService;
+        private Dictionary<Label, string> labelTextPairs;
 
         public FormEndResults(ITeamService teamService) {
             InitializeComponent();
             _teamService = teamService;
+
+            labelTextPairs = new Dictionary<Label, string>()
+            {
+                { labelDayInjury, _teamService.TotalInjuries.ToString() },
+                { labelDayBad, _teamService.TotalBadDays.ToString() },
+                { labelDayAverage, _teamService.TotalAveragePoints.ToString() },
+                { labelDayGood, _teamService.TotalGoodDays.ToString() },
+                { labelDayMiracle, _teamService.TotalMiraclePlays.ToString() },
+            };
         }
 
         private void FormEndResults_Load(object sender, EventArgs e) {
             FFWindow.instance.setFont(this);
 
-            TransparentBackgroundLabel(labelInjury, pictureDayType);
-            TransparentBackgroundLabel(labelBadDay, pictureDayType);
-            TransparentBackgroundLabel(labelAverage, pictureDayType);
-            TransparentBackgroundLabel(labelGoodDay, pictureDayType);
-            TransparentBackgroundLabel(labelMiraclePlay, pictureDayType);
+            foreach (var keyValuePair in labelTextPairs)
+            {
+                TransparentBackgroundLabel(keyValuePair.Key, pictureDayType);
+                keyValuePair.Key.Text = keyValuePair.Value;
+            }        
 
-            
-
-            labelInjury.Text = _teamService.TotalInjuries.ToString();
-            labelBadDay.Text = _teamService.TotalBadDays.ToString();
-            labelAverage.Text = _teamService.TotalAveragePoints.ToString();
-            labelGoodDay.Text = _teamService.TotalGoodDays.ToString();
-            labelMiraclePlay.Text = _teamService.TotalMiraclePlays.ToString();
-
-            var userTotalWins = _teamService.PlayerPerformance.Where(x => x.UserWon).Count();
-            var userTotalLosses = _teamService.PlayerPerformance.Where(x => !x.UserWon).Count();
+            var userTotalWins = _teamService.UserPerformance.Where(x => x.UserWon).Count();
+            var userTotalLosses = _teamService.UserPerformance.Where(x => !x.UserWon).Count();
 
             labelFFTotalScore.Text = userTotalWins+ " - " + userTotalLosses;
 
             //Best Game
-            var oppBannerImg = teamDictionary.bannerSeason[_teamService.BestWeek.OpposingTeam.TeamName];
+            var oppBannerImg = ResourceDictionaries.bannerSeason[_teamService.BestWeek.OpposingTeam.TeamName];
             var bestWeekNum = _teamService.EnemyTeams.IndexOf(_teamService.BestWeek.OpposingTeam) + 1;
             GenerateBanner(bestFFBanner, bestFFScore, bestButton, bestWeekNum, _teamService.BestWeek.UserScore, Properties.Resources.FF);
             GenerateBanner(bestOppBanner, bestOppScore, bestButton, bestWeekNum, _teamService.BestWeek.OppScore, oppBannerImg);// opponeent
 
             //Worst Game
-            oppBannerImg = teamDictionary.bannerSeason[_teamService.WorstWeek.OpposingTeam.TeamName];
+            oppBannerImg = ResourceDictionaries.bannerSeason[_teamService.WorstWeek.OpposingTeam.TeamName];
             var worstWeekNum = _teamService.EnemyTeams.IndexOf(_teamService.WorstWeek.OpposingTeam) + 1;
             GenerateBanner(worstFFBanner, worstFFScore, worstButton, worstWeekNum, _teamService.WorstWeek.UserScore, Properties.Resources.FF);
             GenerateBanner(worstOppBanner, worstOppScore, worstButton, worstWeekNum, _teamService.WorstWeek.OppScore, oppBannerImg);// opponeent

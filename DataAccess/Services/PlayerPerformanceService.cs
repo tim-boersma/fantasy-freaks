@@ -11,6 +11,10 @@ namespace DataAccess.Services
     public class PlayerPerformanceService : IPlayerPerformanceService
     {
         private readonly FantasyDataContext _context;
+        public PlayerPerformanceService(FantasyDataContext context)
+        {
+            _context = context;
+        }
 
         public async Task<IEnumerable<PlayerPerformanceDataModel>> AllPlayers(int week)
         {

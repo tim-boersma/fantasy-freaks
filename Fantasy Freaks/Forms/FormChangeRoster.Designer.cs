@@ -43,7 +43,7 @@
             this.labelBtnBe1 = new System.Windows.Forms.Label();
             this.btnBe1 = new System.Windows.Forms.Button();
             this.labelBtnFlex = new System.Windows.Forms.Label();
-            this.btnFlex = new System.Windows.Forms.Button();
+            this.btnFL = new System.Windows.Forms.Button();
             this.labelBtnTE = new System.Windows.Forms.Label();
             this.btnTE = new System.Windows.Forms.Button();
             this.labelBtnWR2 = new System.Windows.Forms.Label();
@@ -89,7 +89,7 @@
             this.btnQB.Text = "NAME";
             this.btnQB.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQB.UseVisualStyleBackColor = false;
-            this.btnQB.Click += new System.EventHandler(this.btnQB_Click);
+            this.btnQB.Click += new System.EventHandler(this.ActiveRoster_Click);
             // 
             // labelBtnRB1
             // 
@@ -128,7 +128,7 @@
             this.btnBe8.Text = "NAME";
             this.btnBe8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBe8.UseVisualStyleBackColor = false;
-            this.btnBe8.Click += new System.EventHandler(this.btnBe8_Click);
+            this.btnBe8.Click += new System.EventHandler(this.Bench_Click);
             // 
             // labelBtnBe7
             // 
@@ -155,7 +155,7 @@
             this.btnBe7.Text = "NAME";
             this.btnBe7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBe7.UseVisualStyleBackColor = false;
-            this.btnBe7.Click += new System.EventHandler(this.btnBe7_Click);
+            this.btnBe7.Click += new System.EventHandler(this.Bench_Click);
             // 
             // labelBtnBe6
             // 
@@ -182,7 +182,7 @@
             this.btnBe6.Text = "NAME";
             this.btnBe6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBe6.UseVisualStyleBackColor = false;
-            this.btnBe6.Click += new System.EventHandler(this.btnBe6_Click);
+            this.btnBe6.Click += new System.EventHandler(this.Bench_Click);
             // 
             // labelBtnBe5
             // 
@@ -209,7 +209,7 @@
             this.btnBe5.Text = "NAME";
             this.btnBe5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBe5.UseVisualStyleBackColor = false;
-            this.btnBe5.Click += new System.EventHandler(this.btnBe5_Click);
+            this.btnBe5.Click += new System.EventHandler(this.Bench_Click);
             // 
             // labelBtnBe4
             // 
@@ -236,7 +236,7 @@
             this.btnBe4.Text = "NAME";
             this.btnBe4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBe4.UseVisualStyleBackColor = false;
-            this.btnBe4.Click += new System.EventHandler(this.btnBe4_Click);
+            this.btnBe4.Click += new System.EventHandler(this.Bench_Click);
             // 
             // labelBtnBe3
             // 
@@ -263,7 +263,7 @@
             this.btnBe3.Text = "NAME";
             this.btnBe3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBe3.UseVisualStyleBackColor = false;
-            this.btnBe3.Click += new System.EventHandler(this.btnBe3_Click);
+            this.btnBe3.Click += new System.EventHandler(this.Bench_Click);
             // 
             // labelBtnBe2
             // 
@@ -290,7 +290,7 @@
             this.btnBe2.Text = "NAME";
             this.btnBe2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBe2.UseVisualStyleBackColor = false;
-            this.btnBe2.Click += new System.EventHandler(this.btnBe2_Click);
+            this.btnBe2.Click += new System.EventHandler(this.Bench_Click);
             // 
             // labelBtnBe1
             // 
@@ -317,7 +317,7 @@
             this.btnBe1.Text = "NAME";
             this.btnBe1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBe1.UseVisualStyleBackColor = false;
-            this.btnBe1.Click += new System.EventHandler(this.btnBe1_Click);
+            this.btnBe1.Click += new System.EventHandler(this.Bench_Click);
             // 
             // labelBtnFlex
             // 
@@ -331,20 +331,20 @@
             this.labelBtnFlex.TabIndex = 51;
             this.labelBtnFlex.Text = "FLEX";
             // 
-            // btnFlex
+            // btnFL
             // 
-            this.btnFlex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
-            this.btnFlex.FlatAppearance.BorderSize = 0;
-            this.btnFlex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFlex.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFlex.Location = new System.Drawing.Point(23, 526);
-            this.btnFlex.Name = "btnFlex";
-            this.btnFlex.Size = new System.Drawing.Size(287, 61);
-            this.btnFlex.TabIndex = 50;
-            this.btnFlex.Text = "NAME";
-            this.btnFlex.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFlex.UseVisualStyleBackColor = false;
-            this.btnFlex.Click += new System.EventHandler(this.btnFlex_Click);
+            this.btnFL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(239)))), ((int)(((byte)(254)))));
+            this.btnFL.FlatAppearance.BorderSize = 0;
+            this.btnFL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFL.Location = new System.Drawing.Point(23, 526);
+            this.btnFL.Name = "btnFL";
+            this.btnFL.Size = new System.Drawing.Size(287, 61);
+            this.btnFL.TabIndex = 50;
+            this.btnFL.Text = "NAME";
+            this.btnFL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFL.UseVisualStyleBackColor = false;
+            this.btnFL.Click += new System.EventHandler(this.ActiveRoster_Click);
             // 
             // labelBtnTE
             // 
@@ -371,7 +371,7 @@
             this.btnTE.Text = "NAME";
             this.btnTE.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTE.UseVisualStyleBackColor = false;
-            this.btnTE.Click += new System.EventHandler(this.btnTE_Click);
+            this.btnTE.Click += new System.EventHandler(this.ActiveRoster_Click);
             // 
             // labelBtnWR2
             // 
@@ -398,7 +398,7 @@
             this.btnWR2.Text = "NAME";
             this.btnWR2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWR2.UseVisualStyleBackColor = false;
-            this.btnWR2.Click += new System.EventHandler(this.btnWR2_Click);
+            this.btnWR2.Click += new System.EventHandler(this.ActiveRoster_Click);
             // 
             // labelBtnWR1
             // 
@@ -425,7 +425,7 @@
             this.btnWR1.Text = "NAME";
             this.btnWR1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWR1.UseVisualStyleBackColor = false;
-            this.btnWR1.Click += new System.EventHandler(this.btnWR1_Click);
+            this.btnWR1.Click += new System.EventHandler(this.ActiveRoster_Click);
             // 
             // labelBtnRB2
             // 
@@ -452,7 +452,7 @@
             this.btnRB2.Text = "NAME";
             this.btnRB2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRB2.UseVisualStyleBackColor = false;
-            this.btnRB2.Click += new System.EventHandler(this.btnRB2_Click);
+            this.btnRB2.Click += new System.EventHandler(this.ActiveRoster_Click);
             // 
             // btnRB1
             // 
@@ -467,7 +467,7 @@
             this.btnRB1.Text = "NAME";
             this.btnRB1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRB1.UseVisualStyleBackColor = false;
-            this.btnRB1.Click += new System.EventHandler(this.btnRB1_Click);
+            this.btnRB1.Click += new System.EventHandler(this.ActiveRoster_Click);
             // 
             // labelBtnQB
             // 
@@ -539,7 +539,7 @@
             this.Controls.Add(this.labelBtnBe1);
             this.Controls.Add(this.btnBe1);
             this.Controls.Add(this.labelBtnFlex);
-            this.Controls.Add(this.btnFlex);
+            this.Controls.Add(this.btnFL);
             this.Controls.Add(this.labelBtnTE);
             this.Controls.Add(this.btnTE);
             this.Controls.Add(this.labelBtnWR2);
@@ -585,7 +585,7 @@
         private System.Windows.Forms.Label labelBtnBe1;
         private System.Windows.Forms.Button btnBe1;
         private System.Windows.Forms.Label labelBtnFlex;
-        private System.Windows.Forms.Button btnFlex;
+        private System.Windows.Forms.Button btnFL;
         private System.Windows.Forms.Label labelBtnTE;
         private System.Windows.Forms.Button btnTE;
         private System.Windows.Forms.Label labelBtnWR2;
