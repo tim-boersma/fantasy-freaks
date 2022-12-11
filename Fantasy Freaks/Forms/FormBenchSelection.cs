@@ -154,9 +154,14 @@ namespace Fantasy_Freaks {
             }
 
             var selectedPlayer = (CurrentPlayerModel)dgvPlayers.SelectedRows[0].DataBoundItem;
+            AddPlayerToBench(selectedPlayer);
+        }
+
+        private void AddPlayerToBench(CurrentPlayerModel selectedPlayer)
+        {
             bool selectionIsValid = ValidateBenchSelection(selectedPlayer);
 
-            if(selectionIsValid)
+            if (selectionIsValid)
             {
                 selectedPlayers.Add(selectedPlayer);
                 RemoveSelectedPlayerLabels();
@@ -186,6 +191,7 @@ namespace Fantasy_Freaks {
             string text = textBoxBenchSearch.Text;
             var searchResult = players.Where(x => x.PlayerName.ToLower().Contains(text.ToLower())).ToList();
             dgvPlayers.DataSource = searchResult;
+            dgvPlayers.ClearSelection();
             userIsSearching = false;
         }
     }
