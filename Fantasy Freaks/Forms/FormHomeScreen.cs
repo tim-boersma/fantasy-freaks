@@ -1,13 +1,6 @@
 ﻿using DataAccess.Interfaces;
 using DataAccess.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
@@ -27,14 +20,10 @@ namespace Fantasy_Freaks {
             _currentPlayer = currentPlayer;
         }
 
-
-
         private void FormHomeScreen_Load(object sender, EventArgs e) {
             FFWindow.instance.setFont(this);
             logo.Parent = titleBackground;
             title.Parent = titleBackground;
-            _teamService.WaitSomeTime(btnPlay, 300);
-            _teamService.WaitSomeTime(btnHelp, 300);
         }
 
         private void btnPlay_Click(object sender, EventArgs e) {

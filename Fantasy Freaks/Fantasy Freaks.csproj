@@ -284,7 +284,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ResourceDictionaries.cs" />
+    <Compile Include="Resources\ResourceDictionaries.cs" />
     <Compile Include="Forms\FFWindow.cs">
       <SubType>Form</SubType>
     </Compile>

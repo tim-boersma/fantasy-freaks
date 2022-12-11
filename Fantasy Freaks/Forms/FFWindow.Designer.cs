@@ -38,7 +38,6 @@ namespace Fantasy_Freaks {
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(984, 672);
             this.mainPanel.TabIndex = 0;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // FFWindow
             // 

@@ -1,16 +1,9 @@
 ﻿using DataAccess.Interfaces;
 using DataAccess.Models;
-using DataAccess.Services;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static DataAccess.GlobalConstants;
 
@@ -211,6 +204,7 @@ namespace Fantasy_Freaks {
             }
             return selectedPlayers;
         }
+
         private void TransparentLabelOnButton(Label l, Button b) {
             l.BackColor = Color.Transparent;
             l.Location = b.PointToClient(l.Parent.PointToScreen(l.Location));

@@ -1,13 +1,9 @@
 ﻿using DataAccess.Interfaces;
-using DataAccess.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fantasy_Freaks {
@@ -22,11 +18,11 @@ namespace Fantasy_Freaks {
     public partial class FormSeasonOpponents : Form {
         private List<WeekPanel> seasonWeek = new List<WeekPanel>();
         private readonly ITeamService _team;
+
         public FormSeasonOpponents(ITeamService teamService) {
             _team = teamService;
             InitializeComponent();
         }
-
 
         private void FormSeasonOpponents_Load(object sender, EventArgs e) {
             for (int i = 0; i < 17; i++) {
@@ -50,8 +46,8 @@ namespace Fantasy_Freaks {
             var enemyTeam = _team.EnemyTeams[weekNum];
             var teamBanner = ResourceDictionaries.bannerSeason[enemyTeam.TeamName];
             Color colorTeam = ResourceDictionaries.labelSeason[enemyTeam.TeamName];
-            double offScore = _team.PlayerPerformance.ElementAtOrDefault(weekNum) != null ? _team.PlayerPerformance[weekNum].UserScore : 0;
-            double defScore = _team.PlayerPerformance.ElementAtOrDefault(weekNum) != null ? _team.PlayerPerformance[weekNum].OppScore : 0;
+            double offScore = _team.UserPerformance.ElementAtOrDefault(weekNum) != null ? _team.UserPerformance[weekNum].UserScore : 0;
+            double defScore = _team.UserPerformance.ElementAtOrDefault(weekNum) != null ? _team.UserPerformance[weekNum].OppScore : 0;
 
             WeekPanel week = new WeekPanel();
             GenerateBanner(weekNum, offScore, 12, 280, Properties.Resources.FF, Color.FromArgb(0, 163, 255), true);
@@ -75,11 +71,11 @@ namespace Fantasy_Freaks {
             {
                 week.weekInfo.BackColor = Color.Gold;
             }
-            else if (_team.PlayerPerformance.ElementAtOrDefault(weekNum) != null && !_team.PlayerPerformance[weekNum].UserWon)
+            else if (_team.UserPerformance.ElementAtOrDefault(weekNum) != null && !_team.UserPerformance[weekNum].UserWon)
             {//loss, ffScore < defScore
                 week.weekInfo.BackColor = Color.Firebrick;
             }
-            else if (_team.PlayerPerformance.ElementAtOrDefault(weekNum) != null && _team.PlayerPerformance[weekNum].UserWon)
+            else if (_team.UserPerformance.ElementAtOrDefault(weekNum) != null && _team.UserPerformance[weekNum].UserWon)
             {
                 week.weekInfo.BackColor = Color.ForestGreen;
             }
@@ -122,5 +118,4 @@ namespace Fantasy_Freaks {
             Controls.Add(banner);
         }
     }
-
 }

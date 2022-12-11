@@ -11,6 +11,8 @@ namespace DataAccess.Services
     public class PreviousPlayerService : IPreviousPlayerService
     {
         private readonly FantasyDataContext _context;
+        public string delimiter = "/";
+
         public PreviousPlayerService(FantasyDataContext context)
         {
             _context = context;
@@ -33,7 +35,6 @@ namespace DataAccess.Services
 
         private Expression<Func<LastSeasonPlayerDataModel, bool>> IsPosition(string position)
         {
-            string delimiter = "/";
             return (LastSeasonPlayerDataModel x) => x.PlayerPosition == position || x.PlayerPosition.StartsWith(position + delimiter) ||
             x.PlayerPosition.EndsWith(delimiter + position) || x.PlayerPosition.Contains(delimiter + position + delimiter);
         }

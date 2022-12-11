@@ -7,11 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Security.Authentication.ExtendedProtection;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Fantasy_Freaks {

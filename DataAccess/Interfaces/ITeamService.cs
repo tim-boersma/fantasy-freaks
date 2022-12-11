@@ -24,9 +24,8 @@ namespace DataAccess.Interfaces
         CurrentPlayerModel Flex { get; set; }
         List<CurrentPlayerModel> BenchedPlayers { get; set; }
         List<DefenseDataModel> EnemyTeams { get; set; }
-        List<WeekPerformance> PlayerPerformance { get; set; }
+        List<WeekPerformance> UserPerformance { get; set; }
 
-        int TotalPoints { get; set; }
         void SwapPlayers(CurrentPlayerModel activePlayer, CurrentPlayerModel benchedPlayer);
         void NextWeek();
         Task WaitSomeTime(Button button, int time);

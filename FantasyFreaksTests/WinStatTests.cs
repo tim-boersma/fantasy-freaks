@@ -2,7 +2,6 @@ using DataAccess;
 using DataAccess.Models;
 using Fantasy_Freaks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using static FantasyFreaksTests.TestingObjects;
 
 namespace FantasyFreaksTests

@@ -2,14 +2,9 @@
 using DataAccess.Models;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAccess;
-using Microsoft.EntityFrameworkCore.ValueGeneration.Internal;
-using static DataAccess.GlobalConstants;
 using System.Linq;
 using System.Drawing;
-using System.Security.Cryptography.X509Certificates;
 
 namespace Fantasy_Freaks {
     public partial class FormBenchSelection : Form {
@@ -21,6 +16,7 @@ namespace Fantasy_Freaks {
         private readonly string _playerSelection;
         private int playerLabelTopStart;
         private int removeButtonTopStart;
+        public bool userIsSearching = false;
         public FormBenchSelection(ICurrentPlayerService currentPlayer, ITeamService teamService, string playerSelection) {
             InitializeComponent();
             _currentPlayer = currentPlayer;
@@ -35,36 +31,11 @@ namespace Fantasy_Freaks {
             dgvPlayers.DefaultCellStyle.Font = FFWindow.instance.getFont(dgvPlayers);
             dgvPlayers.RowsDefaultCellStyle.Font = FFWindow.instance.getFont(dgvPlayers);
 
-            //
-            // : This line of code loads data into the 'fantasyFreaksDataSet.NewSeasonPlayer' table. You can move, or remove it, as needed.
-            //this.newSeasonPlayerTableAdapter.Fill(this.fantasyFreaksDataSet.NewSeasonPlayer);
-
-            players = await GetSelectedPlayers();
+            players = await _currentPlayer.GetSelectedPlayers(_playerSelection);
 
             dgvPlayers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvPlayers.DataSource = players;
             dgvPlayers.ClearSelection();
-        }
-
-        private async Task<IEnumerable<CurrentPlayerModel>> GetSelectedPlayers()
-        {
-            switch (_playerSelection)
-            {
-                case PlayerTypes.Quarterback:
-                    return await _currentPlayer.GetAllQuarterbacks();
-                case PlayerTypes.RunningBack:
-                    return await _currentPlayer.GetAllRunningbacks();
-                case PlayerTypes.RunningBackTwo:
-                    return await _currentPlayer.GetAllRunningbacks();
-                case PlayerTypes.TightEnd:
-                    return await _currentPlayer.GetAllTightEnds();
-                case PlayerTypes.WideReceiver:
-                    return await _currentPlayer.GetAllWideReceivers();
-                case PlayerTypes.WideReceiverTwo:
-                    return await _currentPlayer.GetAllWideReceivers();
-                default:
-                    return await _currentPlayer.GetAllPlayers();
-            }
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -95,7 +66,7 @@ namespace Fantasy_Freaks {
         {
             var playerIDs = selectedPlayers.Select(x => x.PlayerID).ToList();
             var buttons = this.Controls.OfType<Button>().ToList();
-            var tags = buttons.Select(x => x.Tag).ToList();
+
             foreach (var button in buttons)
             {
                 if (button.Tag != null && playerIDs.Contains((int)button.Tag))
@@ -108,6 +79,7 @@ namespace Fantasy_Freaks {
         private void RemoveSelectedPlayerLabels()
         {
             var playerIDs = selectedPlayers.Select(x => x.PlayerID).ToList();
+
             foreach (var label in this.Controls.OfType<Label>())
             {
                 if (label.Tag != null && playerIDs.Contains((int)label.Tag))
@@ -169,6 +141,9 @@ namespace Fantasy_Freaks {
 
         private void dgvPlayers_SelectionChanged(object sender, EventArgs e)
         {
+            if (userIsSearching)
+                return;
+
             if(dgvPlayers.SelectedRows.Count == 0)
             {
                 RemoveSelectedPlayerLabels();
@@ -177,16 +152,11 @@ namespace Fantasy_Freaks {
                 RenderPlayerList();
                 return;
             }
+
             var selectedPlayer = (CurrentPlayerModel)dgvPlayers.SelectedRows[0].DataBoundItem;
-            if (selectedPlayers.Count >= 8)
-            {
-                MessageBox.Show("You can only have eight players on your team");
-            }
-            else if (selectedPlayers.Contains(selectedPlayer))
-            {
-                MessageBox.Show("Player is already on the bench");
-            }
-            else
+            bool selectionIsValid = ValidateBenchSelection(selectedPlayer);
+
+            if(selectionIsValid)
             {
                 selectedPlayers.Add(selectedPlayer);
                 RemoveSelectedPlayerLabels();
@@ -195,11 +165,28 @@ namespace Fantasy_Freaks {
             }
         }
 
+        private bool ValidateBenchSelection(CurrentPlayerModel selectedPlayer)
+        {
+            if (selectedPlayers.Count >= 8)
+            {
+                MessageBox.Show("You can only have eight players on your team");
+                return false;
+            }
+            else if (selectedPlayers.Contains(selectedPlayer))
+            {
+                MessageBox.Show("Player is already on the bench");
+                return false;
+            }
+            return true;
+        }
+
         private void textBoxBenchSearch_TextChanged(object sender, EventArgs e)
         {
+            userIsSearching = true;
             string text = textBoxBenchSearch.Text;
             var searchResult = players.Where(x => x.PlayerName.ToLower().Contains(text.ToLower())).ToList();
             dgvPlayers.DataSource = searchResult;
+            userIsSearching = false;
         }
     }
 }
